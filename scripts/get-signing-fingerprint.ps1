@@ -13,7 +13,8 @@ param(
 $ErrorActionPreference = "Stop"
 
 if (-not $Keystore) {
-    $Keystore = Join-Path $env:USERPROFILE ".android\debug.keystore"
+    $homeDir = if ($env:USERPROFILE) { $env:USERPROFILE } elseif ($env:HOME) { $env:HOME } else { $HOME }
+    $Keystore = Join-Path $homeDir ".android/debug.keystore"
 }
 
 if (-not (Test-Path $Keystore)) {
@@ -22,7 +23,8 @@ if (-not (Test-Path $Keystore)) {
 
 if (-not $Keytool) {
     $candidates = @(
-        (Join-Path $env:JAVA_HOME "bin\keytool.exe"),
+        (Join-Path $env:JAVA_HOME "bin/keytool"),
+        (Join-Path $env:JAVA_HOME "bin/keytool.exe"),
         "D:\Android\jbr\bin\keytool.exe",
         "keytool"
     )

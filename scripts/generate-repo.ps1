@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Build Aurora Stub APK and generate Mihon-compatible repo/ artefacts.
+  Build Aurora Stub + MangaDex APKs and generate Mihon-compatible repo/ artefacts.
 #>
 [CmdletBinding()]
 param(
@@ -14,19 +14,30 @@ if (-not $RepoRoot) {
     $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 }
 
-$ExtDir = Join-Path $RepoRoot "extensions" "aurorastub"
+$ExtDir = (Join-Path (Join-Path $RepoRoot "extensions") "aurorastub")
 $RepoDir = Join-Path $RepoRoot "repo"
 $ApkDir = Join-Path $RepoDir "apk"
 $IconDir = Join-Path $RepoDir "icon"
 
-$Pkg = "eu.kanade.tachiyomi.extension.all.aurorastub"
-$VersionName = "1.6.1"
-$VersionCode = 1
-$ApkName = "tachiyomi-all.aurorastub-v$VersionName.apk"
-$SourceName = "Aurora Stub"
-$SourceLang = "en"
-$VersionId = 1
-$BaseUrl = "https://example.invalid"
+# --- Stub ---
+$StubPkg = "eu.kanade.tachiyomi.extension.all.aurorastub"
+$StubVersionName = "1.6.1"
+$StubVersionCode = 1
+$StubApkName = "tachiyomi-all.aurorastub-v$StubVersionName.apk"
+$StubSourceName = "Aurora Stub"
+$StubSourceLang = "en"
+$StubVersionId = 1
+$StubBaseUrl = "https://example.invalid"
+
+# --- MangaDex (pin 1.4.211) ---
+$MdPkg = "eu.kanade.tachiyomi.extension.all.mangadex"
+$MdVersionName = "1.4.211"
+$MdVersionCode = 211
+$MdApkName = "tachiyomi-all.mangadex-v$MdVersionName.apk"
+$MdSourceName = "MangaDex"
+$MdSourceLang = "en"
+$MdVersionId = 1
+$MdBaseUrl = "https://mangadex.org"
 
 function Get-HttpSourceId {
     param([string]$Name, [string]$Lang, [int]$VerId)
@@ -61,8 +72,10 @@ if ($sdkDir) {
     "sdk.dir=$sdkProp" | Set-Content -Encoding ASCII $lp
 }
 
+# --- Build / copy Stub ---
+$builtStubApk = Join-Path $ExtDir "app\build\outputs\apk\debug\app-debug.apk"
 if (-not $SkipBuild) {
-    Write-Host "==> Building :app:assembleDebug"
+    Write-Host "==> Building Stub :app:assembleDebug"
     Push-Location $ExtDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
@@ -71,57 +84,99 @@ if (-not $SkipBuild) {
             & chmod +x ./gradlew
             & ./gradlew :app:assembleDebug --no-daemon
         }
-        if ($LASTEXITCODE -ne 0) { throw "Gradle build failed with exit $LASTEXITCODE" }
+        if ($LASTEXITCODE -ne 0) { throw "Stub Gradle build failed with exit $LASTEXITCODE" }
+    } finally {
+        Pop-Location
+    }
+} elseif (-not (Test-Path $builtStubApk)) {
+    Write-Host "==> Stub APK missing under SkipBuild; assembling Stub"
+    Push-Location $ExtDir
+    try {
+        & .\gradlew.bat :app:assembleDebug --no-daemon
+        if ($LASTEXITCODE -ne 0) { throw "Stub Gradle build failed with exit $LASTEXITCODE" }
     } finally {
         Pop-Location
     }
 }
 
-$builtApk = Join-Path $ExtDir "app" "build" "outputs" "apk" "debug" "app-debug.apk"
-if (-not (Test-Path $builtApk)) {
-    throw "Built APK not found: $builtApk"
+if (-not (Test-Path $builtStubApk)) {
+    throw "Built Stub APK not found: $builtStubApk"
 }
 
-$destApk = Join-Path $ApkDir $ApkName
-Copy-Item -Force $builtApk $destApk
-$apkSize = (Get-Item $destApk).Length
-Write-Host "==> APK -> $destApk ($apkSize bytes)"
-if ($apkSize -gt 100KB) {
-    Write-Warning "APK is larger than 100KB - verify kotlin-stdlib is not packaged."
+$destStubApk = Join-Path $ApkDir $StubApkName
+Copy-Item -Force $builtStubApk $destStubApk
+$stubSize = (Get-Item $destStubApk).Length
+Write-Host "==> Stub APK -> $destStubApk ($stubSize bytes)"
+if ($stubSize -gt 100KB) {
+    Write-Warning "Stub APK is larger than 100KB - verify kotlin-stdlib is not packaged."
 }
 
-$iconPath = Join-Path $IconDir "$Pkg.png"
-if (-not (Test-Path $iconPath)) {
-    throw "Missing icon: $iconPath (place a 128x128 or 512 PNG there)"
+$stubIconPath = Join-Path $IconDir "$StubPkg.png"
+if (-not (Test-Path $stubIconPath)) {
+    throw "Missing Stub icon: $stubIconPath (place a 128x128 or 512 PNG there)"
+}
+
+# --- Vendor MangaDex ---
+$vendorScript = Join-Path $PSScriptRoot "vendor-mangadex.ps1"
+Write-Host "==> Running vendor-mangadex.ps1 (SkipBuild=$SkipBuild)"
+$vendorArgs = @{ RepoRoot = $RepoRoot }
+if ($SkipBuild) { $vendorArgs.SkipBuild = $true }
+$null = & $vendorScript @vendorArgs
+if (-not $?) { throw "vendor-mangadex.ps1 failed" }
+
+$destMdApk = Join-Path $ApkDir $MdApkName
+if (-not (Test-Path $destMdApk)) {
+    throw "MangaDex APK missing after vendor script: $destMdApk"
+}
+$mdIconPath = Join-Path $IconDir "$MdPkg.png"
+if (-not (Test-Path $mdIconPath)) {
+    throw "MangaDex icon missing after vendor script: $mdIconPath"
 }
 
 $fpScript = Join-Path $PSScriptRoot "get-signing-fingerprint.ps1"
 $fingerprint = & $fpScript
 Write-Host "==> signingKeyFingerprint: $fingerprint"
 
-$sourceId = Get-HttpSourceId -Name $SourceName -Lang $SourceLang -VerId $VersionId
-Write-Host "==> source id: $sourceId"
+$stubSourceId = Get-HttpSourceId -Name $StubSourceName -Lang $StubSourceLang -VerId $StubVersionId
+$mdSourceId = Get-HttpSourceId -Name $MdSourceName -Lang $MdSourceLang -VerId $MdVersionId
+Write-Host "==> Stub source id: $stubSourceId"
+Write-Host "==> MangaDex source id: $mdSourceId"
 
 $RepoDirUnix = $RepoDir -replace '\\', '/'
 $py = @"
 import json, pathlib
 repo = pathlib.Path(r'$RepoDirUnix')
-entry = {
+stub = {
   "name": "Tachiyomi: Aurora Stub",
-  "pkg": "$Pkg",
-  "apk": "$ApkName",
+  "pkg": "$StubPkg",
+  "apk": "$StubApkName",
   "lang": "all",
-  "code": $VersionCode,
-  "version": "$VersionName",
+  "code": $StubVersionCode,
+  "version": "$StubVersionName",
   "nsfw": 0,
   "sources": [{
-    "id": $sourceId,
-    "lang": "$SourceLang",
-    "name": "$SourceName",
-    "baseUrl": "$BaseUrl"
+    "id": $stubSourceId,
+    "lang": "$StubSourceLang",
+    "name": "$StubSourceName",
+    "baseUrl": "$StubBaseUrl"
   }]
 }
-index = [entry]
+mangadex = {
+  "name": "Tachiyomi: MangaDex",
+  "pkg": "$MdPkg",
+  "apk": "$MdApkName",
+  "lang": "all",
+  "code": $MdVersionCode,
+  "version": "$MdVersionName",
+  "nsfw": 0,
+  "sources": [{
+    "id": $mdSourceId,
+    "lang": "$MdSourceLang",
+    "name": "$MdSourceName",
+    "baseUrl": "$MdBaseUrl"
+  }]
+}
+index = [stub, mangadex]
 (repo / "index.min.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 (repo / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 repo_meta = {
@@ -133,13 +188,25 @@ repo_meta = {
   }
 }
 (repo / "repo.json").write_text(json.dumps(repo_meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-print("wrote index.min.json, index.json, repo.json")
+print("wrote index.min.json, index.json, repo.json (2 entries)")
 "@
-$python = Get-Command python3 -ErrorAction SilentlyContinue
-if (-not $python) { $python = Get-Command python -ErrorAction SilentlyContinue }
-if (-not $python) { throw "python3/python not found" }
-$py | & $python.Source -
-if ($LASTEXITCODE -ne 0) { throw "Python index generation failed" }
+function Resolve-Python {
+    foreach ($name in @("python", "python3")) {
+        $cmd = Get-Command $name -ErrorAction SilentlyContinue
+        if (-not $cmd) { continue }
+        # Skip WindowsApps Store stubs (exit 9009)
+        if ($cmd.Source -match 'WindowsApps') { continue }
+        return $cmd
+    }
+    throw "python/python3 not found (or only WindowsApps stub present)"
+}
+$python = Resolve-Python
+$tmpPy = Join-Path $env:TEMP "aurora-generate-index.py"
+[System.IO.File]::WriteAllText($tmpPy, $py, (New-Object System.Text.UTF8Encoding $false))
+& $python.Source $tmpPy
+$pyExit = $LASTEXITCODE
+Remove-Item -Force $tmpPy -ErrorAction SilentlyContinue
+if ($pyExit -ne 0) { throw "Python index generation failed (exit $pyExit)" }
 
 Write-Host "==> Done. Repo artefacts in $RepoDir"
 Get-ChildItem $RepoDir -Recurse -File | ForEach-Object {

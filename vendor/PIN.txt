@@ -1,0 +1,6 @@
+﻿repo=https://github.com/keiyoushi/extensions-source
+ref=main
+sha=72979b95438718647d39b8f6133714a4b9b8e2e0
+sparse=src/all/mangadex,lib/i18n,core,compiler,gradle,common
+note=common/ fetched via raw.githubusercontent due to sparse-checkout network reset
+date=2026-07-27

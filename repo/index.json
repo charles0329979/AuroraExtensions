@@ -15,5 +15,22 @@
         "baseUrl": "https://example.invalid"
       }
     ]
+  },
+  {
+    "name": "Tachiyomi: MangaDex",
+    "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
+    "apk": "tachiyomi-all.mangadex-v1.4.211.apk",
+    "lang": "all",
+    "code": 211,
+    "version": "1.4.211",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 2499283573021220255,
+        "lang": "en",
+        "name": "MangaDex",
+        "baseUrl": "https://mangadex.org"
+      }
+    ]
   }
 ]

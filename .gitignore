@@ -1,0 +1,27 @@
+# Build
+**/build/
+**/.gradle/
+**/.idea/
+**/*.iml
+**/local.properties
+**/.DS_Store
+**/captures/
+**/.externalNativeBuild/
+**/.cxx/
+
+# Keys — never commit real production keystores
+*.jks
+*.keystore
+!keystore/.gitkeep
+
+# OS / editor
+Thumbs.db
+*.swp
+*.log
+
+# Temporary
+/tmp/
+*.tmp
+
+# Do NOT ignore repo/apk snapshot (catalogue artefacts are committed for offline/file:// testing)
+# Extension module build outputs remain ignored via **/build/

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Tachiyomi: Aurora Stub",
+    "pkg": "eu.kanade.tachiyomi.extension.all.aurorastub",
+    "apk": "tachiyomi-all.aurorastub-v1.6.1.apk",
+    "lang": "all",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 6249362991217644113,
+        "lang": "en",
+        "name": "Aurora Stub",
+        "baseUrl": "https://example.invalid"
+      }
+    ]
+  }
+]

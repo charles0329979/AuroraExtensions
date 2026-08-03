@@ -1,6 +1,22 @@
-# ScriptedSource Protocol v1 (S1)
+# ScriptedSource Protocol
 
-Aurora Scripted extensions use **JavaScript only to discover URLs**. Kotlin + OkHttp perform all network I/O under host policy.
+Aurora Scripted extensions use **JavaScript only to discover URLs / structured data**. Kotlin + OkHttp perform all network I/O under host / header / scheme policy.
+
+## Protocol v2 (current contract)
+
+- **Version:** `protocolVersion = 2`
+- **Design:** `docs/superpowers/specs/2026-08-03-scripted-source-protocol-v2-design.md`
+- **Kotlin package:** `app.aurora.scripted.protocol` in `scripted-core`
+- **Models:** Manifest, Capability, Operation, ScriptRequest/Response, ResourceRequest → ResourceInstruction, ScriptError
+- **Operations:** `POPULAR` | `LATEST` | `SEARCH` | `DETAILS` | `CHAPTERS` | `PAGES`
+- **Security defaults:** HTTPS-only, host allowlist, header allowlist, size/time caps; JS never sets `Host` / Cookie / Authorization
+- **Status:** Models + validators + unit tests landed; engine / OkHttp executor / Mihon wiring still deferred
+
+---
+
+# Protocol v1 (S1 — legacy)
+
+S1 informal `pageList` JSON (`{pages, allowedHosts}`) remains supported until a migration adapter. Treat as **protocolVersion 1**.
 
 ## Engine (S1)
 

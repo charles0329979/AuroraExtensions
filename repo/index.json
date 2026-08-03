@@ -17,6 +17,23 @@
     ]
   },
   {
+    "name": "Tachiyomi: Aurora Scripted",
+    "pkg": "eu.kanade.tachiyomi.extension.all.aurorascripted",
+    "apk": "tachiyomi-all.aurorascripted-v1.6.1.apk",
+    "lang": "all",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 1195485303194217759,
+        "lang": "en",
+        "name": "Aurora Scripted",
+        "baseUrl": "https://aurora.scripted.invalid"
+      }
+    ]
+  },
+  {
     "name": "Tachiyomi: MangaDex",
     "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
     "apk": "tachiyomi-all.mangadex-v1.4.211.apk",

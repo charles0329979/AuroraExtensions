@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Build Aurora Stub + MangaDex APKs and generate Mihon-compatible repo/ artefacts.
+  Build Aurora Stub + Scripted + MangaDex APKs and generate Mihon-compatible repo/ artefacts.
 #>
 [CmdletBinding()]
 param(
@@ -28,6 +28,17 @@ $StubSourceName = "Aurora Stub"
 $StubSourceLang = "en"
 $StubVersionId = 1
 $StubBaseUrl = "https://example.invalid"
+
+# --- Scripted (S1) ---
+$ScriptedExtDir = (Join-Path (Join-Path $RepoRoot "extensions") "aurorascripted")
+$ScriptedPkg = "eu.kanade.tachiyomi.extension.all.aurorascripted"
+$ScriptedVersionName = "1.6.1"
+$ScriptedVersionCode = 1
+$ScriptedApkName = "tachiyomi-all.aurorascripted-v$ScriptedVersionName.apk"
+$ScriptedSourceName = "Aurora Scripted"
+$ScriptedSourceLang = "en"
+$ScriptedVersionId = 1
+$ScriptedBaseUrl = "https://aurora.scripted.invalid"
 
 # --- MangaDex (pin 1.4.211) ---
 $MdPkg = "eu.kanade.tachiyomi.extension.all.mangadex"
@@ -116,6 +127,50 @@ if (-not (Test-Path $stubIconPath)) {
     throw "Missing Stub icon: $stubIconPath (place a 128x128 or 512 PNG there)"
 }
 
+# --- Build / copy Scripted ---
+$builtScriptedApk = Join-Path $ScriptedExtDir "app\build\outputs\apk\debug\app-debug.apk"
+if (-not $SkipBuild) {
+    Write-Host "==> Building Scripted :app:assembleDebug"
+    if (-not $env:JAVA_HOME -and (Test-Path "D:\Android\jbr")) {
+        $env:JAVA_HOME = "D:\Android\jbr"
+    }
+    if (-not $env:ANDROID_HOME -and (Test-Path "D:\AndroidSDK")) {
+        $env:ANDROID_HOME = "D:\AndroidSDK"
+    }
+    if ($env:ANDROID_HOME) {
+        $lp = Join-Path $ScriptedExtDir "local.properties"
+        $sdkProp = ($env:ANDROID_HOME -replace '\\', '/')
+        "sdk.dir=$sdkProp" | Set-Content -Encoding ASCII $lp
+    }
+    Push-Location $ScriptedExtDir
+    try {
+        if ($IsWindows -or $env:OS -match "Windows") {
+            & .\gradlew.bat :app:assembleDebug --no-daemon
+        } else {
+            & ./gradlew :app:assembleDebug --no-daemon
+        }
+        if ($LASTEXITCODE -ne 0) { throw "Scripted Gradle build failed with exit $LASTEXITCODE" }
+    } finally {
+        Pop-Location
+    }
+} elseif (-not (Test-Path $builtScriptedApk)) {
+    throw "Scripted APK missing under SkipBuild: $builtScriptedApk"
+}
+
+if (-not (Test-Path $builtScriptedApk)) {
+    throw "Built Scripted APK not found: $builtScriptedApk"
+}
+
+$destScriptedApk = Join-Path $ApkDir $ScriptedApkName
+Copy-Item -Force $builtScriptedApk $destScriptedApk
+$scriptedSize = (Get-Item $destScriptedApk).Length
+Write-Host "==> Scripted APK -> $destScriptedApk ($scriptedSize bytes)"
+
+$scriptedIconPath = Join-Path $IconDir "$ScriptedPkg.png"
+if (-not (Test-Path $scriptedIconPath)) {
+    throw "Missing Scripted icon: $scriptedIconPath"
+}
+
 # --- Vendor MangaDex ---
 $vendorScript = Join-Path $PSScriptRoot "vendor-mangadex.ps1"
 Write-Host "==> Running vendor-mangadex.ps1 (SkipBuild=$SkipBuild)"
@@ -138,8 +193,10 @@ $fingerprint = & $fpScript
 Write-Host "==> signingKeyFingerprint: $fingerprint"
 
 $stubSourceId = Get-HttpSourceId -Name $StubSourceName -Lang $StubSourceLang -VerId $StubVersionId
+$scriptedSourceId = Get-HttpSourceId -Name $ScriptedSourceName -Lang $ScriptedSourceLang -VerId $ScriptedVersionId
 $mdSourceId = Get-HttpSourceId -Name $MdSourceName -Lang $MdSourceLang -VerId $MdVersionId
 Write-Host "==> Stub source id: $stubSourceId"
+Write-Host "==> Scripted source id: $scriptedSourceId"
 Write-Host "==> MangaDex source id: $mdSourceId"
 
 $RepoDirUnix = $RepoDir -replace '\\', '/'
@@ -161,6 +218,21 @@ stub = {
     "baseUrl": "$StubBaseUrl"
   }]
 }
+scripted = {
+  "name": "Tachiyomi: Aurora Scripted",
+  "pkg": "$ScriptedPkg",
+  "apk": "$ScriptedApkName",
+  "lang": "all",
+  "code": $ScriptedVersionCode,
+  "version": "$ScriptedVersionName",
+  "nsfw": 0,
+  "sources": [{
+    "id": $scriptedSourceId,
+    "lang": "$ScriptedSourceLang",
+    "name": "$ScriptedSourceName",
+    "baseUrl": "$ScriptedBaseUrl"
+  }]
+}
 mangadex = {
   "name": "Tachiyomi: MangaDex",
   "pkg": "$MdPkg",
@@ -176,7 +248,7 @@ mangadex = {
     "baseUrl": "$MdBaseUrl"
   }]
 }
-index = [stub, mangadex]
+index = [stub, scripted, mangadex]
 (repo / "index.min.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 (repo / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 repo_meta = {
@@ -188,7 +260,7 @@ repo_meta = {
   }
 }
 (repo / "repo.json").write_text(json.dumps(repo_meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-print("wrote index.min.json, index.json, repo.json (2 entries)")
+print("wrote index.min.json, index.json, repo.json (3 entries)")
 "@
 function Resolve-Python {
     foreach ($name in @("python", "python3")) {

@@ -431,22 +431,51 @@ if (-not $SkipBuild) {
     $tasks = $activeSpecs.Module | ForEach-Object { ":$($_ -replace '/', ':'):assembleRelease" }
     Push-Location $VendorDir
     try {
-        & .\gradlew.bat @tasks --no-daemon --no-configuration-cache
+        if ($IsWindows -or $env:OS -match "Windows") {
+            & .\gradlew.bat @tasks --no-daemon --no-configuration-cache
+        } else {
+            & chmod +x ./gradlew
+            & ./gradlew @tasks --no-daemon --no-configuration-cache
+        }
         if ($LASTEXITCODE -ne 0) { throw "Batch extension build failed with exit $LASTEXITCODE" }
     } finally { Pop-Location }
 }
 
 $expectedFingerprint = (Get-Content (Join-Path $RepoDir "repo.json") -Raw | ConvertFrom-Json).meta.signingKeyFingerprint
 $apkSigner = Get-ChildItem (Join-Path $env:ANDROID_HOME "build-tools") -Directory |
-    Sort-Object Name -Descending | ForEach-Object { Join-Path $_.FullName "apksigner.bat" } |
+    Sort-Object Name -Descending | ForEach-Object {
+        @(
+            (Join-Path $_.FullName "apksigner.bat"),
+            (Join-Path $_.FullName "apksigner")
+        )
+    } |
     Where-Object { Test-Path $_ } | Select-Object -First 1
-if (-not $apkSigner) { throw "apksigner.bat not found" }
+if (-not $apkSigner) { throw "apksigner not found under $env:ANDROID_HOME" }
 
 $entries = foreach ($spec in $activeSpecs) {
     $built = Join-Path $VendorDir ($spec.Module + "/build/outputs/apk/release/" + $spec.Apk)
     $dest = Join-Path $ApkDir $spec.Apk
     if (Test-Path $built) { Copy-Item -LiteralPath $built -Destination $dest -Force }
     elseif (-not (Test-Path $dest)) { throw "Missing batch APK: $built" }
+
+    if ($env:AURORA_EXTENSION_SIGNING_KEYSTORE) {
+        if (-not $env:AURORA_EXTENSION_KEY_ALIAS -or
+            -not $env:AURORA_EXTENSION_STORE_PASSWORD -or
+            -not $env:AURORA_EXTENSION_KEY_PASSWORD) {
+            throw "Production signing environment is incomplete"
+        }
+        $signed = "$dest.signed"
+        Remove-Item -LiteralPath $signed -Force -ErrorAction SilentlyContinue
+        & $apkSigner sign `
+            --ks $env:AURORA_EXTENSION_SIGNING_KEYSTORE `
+            --ks-key-alias $env:AURORA_EXTENSION_KEY_ALIAS `
+            --ks-pass env:AURORA_EXTENSION_STORE_PASSWORD `
+            --key-pass env:AURORA_EXTENSION_KEY_PASSWORD `
+            --out $signed `
+            $dest
+        if ($LASTEXITCODE -ne 0) { throw "Failed to production-sign $($spec.Apk)" }
+        Move-Item -LiteralPath $signed -Destination $dest -Force
+    }
 
     $certOutput = (& $apkSigner verify --print-certs $dest) -join "`n"
     if ($certOutput -notmatch 'certificate SHA-256 digest:\s*([0-9a-fA-F]+)') { throw "Unable to read signer: $dest" }

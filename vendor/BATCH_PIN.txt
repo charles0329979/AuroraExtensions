@@ -1,0 +1,10 @@
+repo=https://github.com/keiyoushi/extensions-source.git
+sha=42771052f3e43b09a04d4b3f9073039690607476
+recorded=2026-08-24
+modules=all/webtoons,ja/rawkuma,ja/senmanga,zh/dongmanmanhua,zh/mh1234,zh/miaoqu,zh/tencentcomics,zh/terrahistoricus,zh/zaimanhua
+manwa_shizuku_sha=3b1dd61cd1b0ea358d9e1b7e5cd893b6cf7113dd
+manwa_shizuku_module=zh/manwashizuku
+manwa_note=proposal commit pinned separately; live API/detail/chapter/image-decryption chain verified 2026-08-24
+quality_sources_sha=4453d308244ddcf44abaf9f839558dc5ccc23b46
+quality_sources_modules=zh/kuaikanmanhua
+quality_sources_note=official Chinese source; catalogue/search/detail/chapter/14-page reader chain verified on connected device 2026-08-31

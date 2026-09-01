@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-01T02:16:22Z",
+  "indexed": 40,
+  "installed": 39,
+  "matched": 39,
+  "missing": [
+    "eu.kanade.tachiyomi.extension.all.aurorascripted"
+  ],
+  "extra": [],
+  "versionMismatches": []
+}

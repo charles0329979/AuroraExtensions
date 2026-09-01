@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      allow_signing_key_rotation:
+        description: "Allow one explicit repository signing-key rotation"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -11,6 +17,13 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      AURORA_EXTENSION_BUILD_TYPE: Release
+      AURORA_EXTENSION_SIGNING_KEYSTORE: ${{ github.workspace }}/.signing/aurora-extensions.jks
+      AURORA_EXTENSION_STORE_PASSWORD: ${{ secrets.AURORA_EXTENSION_STORE_PASSWORD }}
+      AURORA_EXTENSION_KEY_ALIAS: ${{ secrets.AURORA_EXTENSION_KEY_ALIAS }}
+      AURORA_EXTENSION_KEY_PASSWORD: ${{ secrets.AURORA_EXTENSION_KEY_PASSWORD }}
+      AURORA_EXTENSION_SIGNING_FINGERPRINT: ${{ secrets.AURORA_EXTENSION_SIGNING_FINGERPRINT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,25 +42,31 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Ensure Android debug keystore
+      - name: Restore production signing keystore
         shell: bash
+        env:
+          KEYSTORE_BASE64: ${{ secrets.AURORA_EXTENSION_KEYSTORE_BASE64 }}
         run: |
-          mkdir -p "$HOME/.android"
-          if [ ! -f "$HOME/.android/debug.keystore" ]; then
-            keytool -genkeypair -v \
-              -keystore "$HOME/.android/debug.keystore" \
-              -storepass android \
-              -alias androiddebugkey \
-              -keypass android \
-              -keyalg RSA \
-              -keysize 2048 \
-              -validity 10000 \
-              -dname "CN=Android Debug,O=Android,C=US"
-          fi
+          test -n "$KEYSTORE_BASE64"
+          test -n "$AURORA_EXTENSION_STORE_PASSWORD"
+          test -n "$AURORA_EXTENSION_KEY_ALIAS"
+          test -n "$AURORA_EXTENSION_KEY_PASSWORD"
+          test -n "$AURORA_EXTENSION_SIGNING_FINGERPRINT"
+          mkdir -p "$(dirname "$AURORA_EXTENSION_SIGNING_KEYSTORE")"
+          printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$AURORA_EXTENSION_SIGNING_KEYSTORE"
 
       - name: Generate repo artefacts
         shell: pwsh
-        run: ./scripts/generate-repo.ps1
+        env:
+          ALLOW_KEY_ROTATION: ${{ inputs.allow_signing_key_rotation || false }}
+        run: |
+          $params = @{}
+          if ($env:ALLOW_KEY_ROTATION -eq "true") { $params.AllowSigningKeyRotation = $true }
+          ./scripts/generate-repo.ps1 @params
+
+      - name: Verify catalog bytes and production signer
+        shell: pwsh
+        run: ./scripts/maintain-repo.ps1 -VerifyOnly
 
       - name: Upload repo/
         uses: actions/upload-artifact@v4
@@ -55,9 +74,29 @@ jobs:
           name: aurora-extensions-repo
           path: repo/
 
-      - name: Publish repo/ to gh-pages
+      - name: Upload testing repo/
+        uses: actions/upload-artifact@v4
+        with:
+          name: aurora-extensions-testing-repo
+          path: repo-testing/
+
+      - name: Upload maintenance report
+        uses: actions/upload-artifact@v4
+        with:
+          name: aurora-extensions-maintenance-report
+          path: reports/
+
+      - name: Compose stable and testing site
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          mkdir -p public-site/testing
+          cp -R repo/. public-site/
+          cp -R repo-testing/. public-site/testing/
+
+      - name: Publish stable and testing repos to gh-pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./repo
+          publish_dir: ./public-site

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aurora-reader.example/schemas/source-catalog-v1.json",
+  "title": "Aurora extension source catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "repository", "packages"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "defaultChannel"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "defaultChannel": { "const": "stable" }
+      }
+    },
+    "packages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "package", "displayName", "language", "versionCode", "versionName",
+          "apk", "icon", "module", "implementation", "role", "channel",
+          "state", "nsfw", "sources"
+        ],
+        "properties": {
+          "package": {
+            "type": "string",
+            "pattern": "^eu\\.kanade\\.tachiyomi\\.extension\\.[a-z0-9_.]+$"
+          },
+          "displayName": { "type": "string", "minLength": 1 },
+          "language": { "type": "string", "minLength": 2 },
+          "versionCode": { "type": "integer", "minimum": 1 },
+          "versionName": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+          "apk": { "type": "string", "pattern": "^[^/\\\\]+\\.apk$" },
+          "icon": { "type": "string", "pattern": "^[^/\\\\]+\\.png$" },
+          "module": { "type": "string", "minLength": 1 },
+          "implementation": {
+            "enum": ["native", "scripted_runtime", "test_fixture"]
+          },
+          "role": {
+            "enum": ["reading_source", "runtime_container", "test_fixture"]
+          },
+          "channel": { "enum": ["stable", "testing"] },
+          "state": { "enum": ["published", "quarantined", "retired"] },
+          "statusReason": { "type": ["string", "null"], "minLength": 1 },
+          "statusChangedAt": {
+            "type": ["string", "null"],
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+          },
+          "nsfw": { "type": "integer", "minimum": 0, "maximum": 2 },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "language", "name", "baseUrl"],
+              "properties": {
+                "id": { "type": "integer", "minimum": 1 },
+                "language": { "type": "string", "minLength": 2 },
+                "name": { "type": "string", "minLength": 1 },
+                "baseUrl": { "type": "string", "pattern": "^https?://" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

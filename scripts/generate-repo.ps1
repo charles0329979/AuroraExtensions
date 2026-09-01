@@ -5,7 +5,13 @@
 [CmdletBinding()]
 param(
     [string]$RepoRoot = "",
-    [switch]$SkipBuild
+    [switch]$SkipBuild,
+    [switch]$AllowSigningKeyRotation,
+    [ValidateSet("Debug", "Release")]
+    [string]$BuildType = $(if ($env:AURORA_EXTENSION_BUILD_TYPE) { $env:AURORA_EXTENSION_BUILD_TYPE } else { "Debug" }),
+    [string]$SigningKeystore = $env:AURORA_EXTENSION_SIGNING_KEYSTORE,
+    [string]$SigningAlias = $env:AURORA_EXTENSION_KEY_ALIAS,
+    [string]$ExpectedSigningFingerprint = $env:AURORA_EXTENSION_SIGNING_FINGERPRINT
 )
 
 $ErrorActionPreference = "Stop"
@@ -18,6 +24,20 @@ $ExtDir = (Join-Path (Join-Path $RepoRoot "extensions") "aurorastub")
 $RepoDir = Join-Path $RepoRoot "repo"
 $ApkDir = Join-Path $RepoDir "apk"
 $IconDir = Join-Path $RepoDir "icon"
+$variant = $BuildType.ToLowerInvariant()
+$assembleTask = ":app:assemble$BuildType"
+
+function Find-BuiltAppApk {
+    param([string]$ProjectDir)
+    $outputDir = Join-Path $ProjectDir "app\build\outputs\apk\$variant"
+    $candidates = @(
+        (Join-Path $outputDir "app-$variant.apk"),
+        (Join-Path $outputDir "app-$variant-unsigned.apk")
+    )
+    $found = $candidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+    if (-not $found) { throw "Built $BuildType APK not found under $outputDir" }
+    return $found
+}
 
 # --- Stub ---
 $StubPkg = "eu.kanade.tachiyomi.extension.all.aurorastub"
@@ -84,39 +104,37 @@ if ($sdkDir) {
 }
 
 # --- Build / copy Stub ---
-$builtStubApk = Join-Path $ExtDir "app\build\outputs\apk\debug\app-debug.apk"
 if (-not $SkipBuild) {
-    Write-Host "==> Building Stub :app:assembleDebug"
+    Write-Host "==> Building Stub $assembleTask"
     Push-Location $ExtDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
-            & .\gradlew.bat :app:assembleDebug --no-daemon
+            & .\gradlew.bat $assembleTask --no-daemon
         } else {
             & chmod +x ./gradlew
-            & ./gradlew :app:assembleDebug --no-daemon
+            & ./gradlew $assembleTask --no-daemon
         }
         if ($LASTEXITCODE -ne 0) { throw "Stub Gradle build failed with exit $LASTEXITCODE" }
     } finally {
         Pop-Location
     }
-} elseif (-not (Test-Path $builtStubApk)) {
+} elseif (-not (Test-Path (Join-Path $ExtDir "app\build\outputs\apk\$variant"))) {
     Write-Host "==> Stub APK missing under SkipBuild; assembling Stub"
     Push-Location $ExtDir
     try {
-        & .\gradlew.bat :app:assembleDebug --no-daemon
+        & .\gradlew.bat $assembleTask --no-daemon
         if ($LASTEXITCODE -ne 0) { throw "Stub Gradle build failed with exit $LASTEXITCODE" }
     } finally {
         Pop-Location
     }
 }
 
-if (-not (Test-Path $builtStubApk)) {
-    throw "Built Stub APK not found: $builtStubApk"
-}
+$builtStubApk = Find-BuiltAppApk $ExtDir
 
 $destStubApk = Join-Path $ApkDir $StubApkName
 Copy-Item -Force $builtStubApk $destStubApk
 $stubSize = (Get-Item $destStubApk).Length
+$stubSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destStubApk).Hash.ToLowerInvariant()
 Write-Host "==> Stub APK -> $destStubApk ($stubSize bytes)"
 if ($stubSize -gt 100KB) {
     Write-Warning "Stub APK is larger than 100KB - verify kotlin-stdlib is not packaged."
@@ -128,9 +146,8 @@ if (-not (Test-Path $stubIconPath)) {
 }
 
 # --- Build / copy Scripted ---
-$builtScriptedApk = Join-Path $ScriptedExtDir "app\build\outputs\apk\debug\app-debug.apk"
 if (-not $SkipBuild) {
-    Write-Host "==> Building Scripted :app:assembleDebug"
+    Write-Host "==> Building Scripted $assembleTask"
     if (-not $env:JAVA_HOME -and (Test-Path "D:\Android\jbr")) {
         $env:JAVA_HOME = "D:\Android\jbr"
     }
@@ -145,25 +162,24 @@ if (-not $SkipBuild) {
     Push-Location $ScriptedExtDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
-            & .\gradlew.bat :app:assembleDebug --no-daemon
+            & .\gradlew.bat $assembleTask --no-daemon
         } else {
-            & ./gradlew :app:assembleDebug --no-daemon
+            & ./gradlew $assembleTask --no-daemon
         }
         if ($LASTEXITCODE -ne 0) { throw "Scripted Gradle build failed with exit $LASTEXITCODE" }
     } finally {
         Pop-Location
     }
-} elseif (-not (Test-Path $builtScriptedApk)) {
-    throw "Scripted APK missing under SkipBuild: $builtScriptedApk"
+} elseif (-not (Test-Path (Join-Path $ScriptedExtDir "app\build\outputs\apk\$variant"))) {
+    throw "Scripted $BuildType APK output missing under SkipBuild"
 }
 
-if (-not (Test-Path $builtScriptedApk)) {
-    throw "Built Scripted APK not found: $builtScriptedApk"
-}
+$builtScriptedApk = Find-BuiltAppApk $ScriptedExtDir
 
 $destScriptedApk = Join-Path $ApkDir $ScriptedApkName
 Copy-Item -Force $builtScriptedApk $destScriptedApk
 $scriptedSize = (Get-Item $destScriptedApk).Length
+$scriptedSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destScriptedApk).Hash.ToLowerInvariant()
 Write-Host "==> Scripted APK -> $destScriptedApk ($scriptedSize bytes)"
 
 $scriptedIconPath = Join-Path $IconDir "$ScriptedPkg.png"
@@ -183,14 +199,78 @@ $destMdApk = Join-Path $ApkDir $MdApkName
 if (-not (Test-Path $destMdApk)) {
     throw "MangaDex APK missing after vendor script: $destMdApk"
 }
+$mdSize = (Get-Item $destMdApk).Length
+$mdSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destMdApk).Hash.ToLowerInvariant()
 $mdIconPath = Join-Path $IconDir "$MdPkg.png"
 if (-not (Test-Path $mdIconPath)) {
     throw "MangaDex icon missing after vendor script: $mdIconPath"
 }
 
+if ($SigningKeystore) {
+    if (-not (Test-Path $SigningKeystore)) { throw "Signing keystore not found: $SigningKeystore" }
+    if (-not $SigningAlias) { throw "AURORA_EXTENSION_KEY_ALIAS is required for production signing" }
+    if (-not $env:AURORA_EXTENSION_STORE_PASSWORD -or -not $env:AURORA_EXTENSION_KEY_PASSWORD) {
+        throw "AURORA_EXTENSION_STORE_PASSWORD and AURORA_EXTENSION_KEY_PASSWORD are required"
+    }
+    $sdkRoot = if ($env:ANDROID_HOME) { $env:ANDROID_HOME } else { "D:\AndroidSDK" }
+    $apkSigner = Get-ChildItem (Join-Path $sdkRoot "build-tools") -Directory |
+        Sort-Object Name -Descending |
+        ForEach-Object {
+            @(
+                (Join-Path $_.FullName "apksigner.bat"),
+                (Join-Path $_.FullName "apksigner")
+            )
+        } |
+        Where-Object { Test-Path $_ } |
+        Select-Object -First 1
+    if (-not $apkSigner) { throw "apksigner not found under $sdkRoot" }
+    foreach ($apk in @($destStubApk, $destScriptedApk, $destMdApk)) {
+        $signed = "$apk.signed"
+        Remove-Item -Force $signed -ErrorAction SilentlyContinue
+        & $apkSigner sign `
+            --ks $SigningKeystore `
+            --ks-key-alias $SigningAlias `
+            --ks-pass env:AURORA_EXTENSION_STORE_PASSWORD `
+            --key-pass env:AURORA_EXTENSION_KEY_PASSWORD `
+            --out $signed `
+            $apk
+        if ($LASTEXITCODE -ne 0) { throw "Failed to sign $apk" }
+        Move-Item -Force $signed $apk
+    }
+}
+
+$stubSize = (Get-Item $destStubApk).Length
+$stubSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destStubApk).Hash.ToLowerInvariant()
+$scriptedSize = (Get-Item $destScriptedApk).Length
+$scriptedSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destScriptedApk).Hash.ToLowerInvariant()
+$mdSize = (Get-Item $destMdApk).Length
+$mdSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destMdApk).Hash.ToLowerInvariant()
+
 $fpScript = Join-Path $PSScriptRoot "get-signing-fingerprint.ps1"
-$fingerprint = & $fpScript
+$fingerprint = if ($SigningKeystore) {
+    & $fpScript `
+        -Keystore $SigningKeystore `
+        -StorePass $env:AURORA_EXTENSION_STORE_PASSWORD `
+        -Alias $SigningAlias
+} else {
+    & $fpScript
+}
 Write-Host "==> signingKeyFingerprint: $fingerprint"
+
+if ($ExpectedSigningFingerprint) {
+    $expected = ($ExpectedSigningFingerprint -replace ":", "").ToLowerInvariant()
+    if ($expected -ne $fingerprint) {
+        throw "Signing fingerprint mismatch: expected $expected, got $fingerprint"
+    }
+}
+
+$existingRepoJson = Join-Path $RepoDir "repo.json"
+if ((Test-Path $existingRepoJson) -and -not $AllowSigningKeyRotation) {
+    $existingFingerprint = (Get-Content $existingRepoJson -Raw | ConvertFrom-Json).meta.signingKeyFingerprint
+    if ($existingFingerprint -and $existingFingerprint -ne $fingerprint) {
+        throw "Signing key changed from $existingFingerprint to $fingerprint. Use -AllowSigningKeyRotation only after explicit rotation approval."
+    }
+}
 
 $stubSourceId = Get-HttpSourceId -Name $StubSourceName -Lang $StubSourceLang -VerId $StubVersionId
 $scriptedSourceId = Get-HttpSourceId -Name $ScriptedSourceName -Lang $ScriptedSourceLang -VerId $ScriptedVersionId
@@ -207,6 +287,8 @@ stub = {
   "name": "Tachiyomi: Aurora Stub",
   "pkg": "$StubPkg",
   "apk": "$StubApkName",
+  "sha256": "$stubSha256",
+  "size": $stubSize,
   "lang": "all",
   "code": $StubVersionCode,
   "version": "$StubVersionName",
@@ -222,6 +304,8 @@ scripted = {
   "name": "Tachiyomi: Aurora Scripted",
   "pkg": "$ScriptedPkg",
   "apk": "$ScriptedApkName",
+  "sha256": "$scriptedSha256",
+  "size": $scriptedSize,
   "lang": "all",
   "code": $ScriptedVersionCode,
   "version": "$ScriptedVersionName",
@@ -237,6 +321,8 @@ mangadex = {
   "name": "Tachiyomi: MangaDex",
   "pkg": "$MdPkg",
   "apk": "$MdApkName",
+  "sha256": "$mdSha256",
+  "size": $mdSize,
   "lang": "all",
   "code": $MdVersionCode,
   "version": "$MdVersionName",
@@ -255,7 +341,7 @@ repo_meta = {
   "meta": {
     "name": "Aurora Extensions",
     "shortName": "Aurora",
-    "website": "https://github.com/aurora-reader/AuroraExtensions",
+    "website": "https://github.com/charles0329979/AuroraExtensions",
     "signingKeyFingerprint": "$fingerprint"
   }
 }
@@ -279,6 +365,18 @@ $tmpPy = Join-Path $env:TEMP "aurora-generate-index.py"
 $pyExit = $LASTEXITCODE
 Remove-Item -Force $tmpPy -ErrorAction SilentlyContinue
 if ($pyExit -ne 0) { throw "Python index generation failed (exit $pyExit)" }
+
+# Append the curated website batch without replacing Stub, Scripted, or MangaDex.
+$batchVendorScript = Join-Path $PSScriptRoot "vendor-batch-sources.ps1"
+$batchVendorArgs = @{ RepoRoot = $RepoRoot }
+if ($SkipBuild) { $batchVendorArgs.SkipBuild = $true }
+& $batchVendorScript @batchVendorArgs
+if (-not $?) { throw "vendor-batch-sources.ps1 failed" }
+
+# The source catalogue owns all user-visible package metadata. Build scripts may
+# create intermediate indexes, but the final published bytes always come from it.
+& (Join-Path $PSScriptRoot "sync-source-catalog.ps1") -RepoRoot $RepoRoot -Mode WriteDerived
+if (-not $?) { throw "sync-source-catalog.ps1 failed" }
 
 Write-Host "==> Done. Repo artefacts in $RepoDir"
 Get-ChildItem $RepoDir -Recurse -File | ForEach-Object {

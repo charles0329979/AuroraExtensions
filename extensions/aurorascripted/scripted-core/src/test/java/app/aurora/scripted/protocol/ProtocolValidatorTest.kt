@@ -34,7 +34,7 @@ class ProtocolValidatorTest {
     @Test
     fun needResourceBuildsInstructionWithoutHost() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",
@@ -78,7 +78,7 @@ class ProtocolValidatorTest {
     @Test
     fun completePagesOk() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",
@@ -98,7 +98,7 @@ class ProtocolValidatorTest {
     @Test
     fun envelopeMismatch() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "other-id",
@@ -132,7 +132,7 @@ class ProtocolValidatorTest {
     @Test
     fun capabilityDenied() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.SEARCH,
             requestId = "req-1",
@@ -158,7 +158,7 @@ class ProtocolValidatorTest {
     @Test
     fun timeoutAboveMaxFailsClosed() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",
@@ -183,7 +183,7 @@ class ProtocolValidatorTest {
     fun tooManyPages() {
         val pages = (0 until 201).map { PagePayload(it, "https://cdn.example.com/$it.jpg") }
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",
@@ -200,7 +200,7 @@ class ProtocolValidatorTest {
     @Test
     fun failedUnsupportedPreserved() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",
@@ -217,7 +217,7 @@ class ProtocolValidatorTest {
     @Test
     fun rejectsJavascriptImageUrl() {
         val response = ScriptResponse(
-            protocolVersion = 2,
+            protocolVersion = 3,
             sourceId = manifest.sourceId,
             operationId = ScriptedOperation.PAGES,
             requestId = "req-1",

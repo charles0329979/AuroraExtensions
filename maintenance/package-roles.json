@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.all.aurorastub",
+      "role": "test_fixture",
+      "excludeFromReadingHealth": true
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.all.aurorascripted",
+      "role": "runtime_container",
+      "excludeFromReadingHealth": true
+    }
+  ]
+}

@@ -9,7 +9,7 @@ class ScriptResponseParserTest {
     fun parsesNeedResource() {
         val json = """
             {
-              "protocolVersion": 2,
+              "protocolVersion": 3,
               "sourceId": "aurora.scripted.demo",
               "operationId": "PAGES",
               "requestId": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
@@ -45,7 +45,7 @@ class ScriptResponseParserTest {
     fun parsesCompletePages() {
         val json = """
             {
-              "protocolVersion": 2,
+              "protocolVersion": 3,
               "sourceId": "aurora.scripted.demo",
               "operationId": "PAGES",
               "requestId": "a1b2c3d4-1111-2222-3333-444455556666",
@@ -72,7 +72,7 @@ class ScriptResponseParserTest {
     fun rejectsUnknownResourceField() {
         val json = """
             {
-              "protocolVersion": 2,
+              "protocolVersion": 3,
               "sourceId": "aurora.scripted.demo",
               "operationId": "PAGES",
               "requestId": "req-1",
@@ -97,7 +97,7 @@ class ScriptResponseParserTest {
     fun rejectsBadEnum() {
         val json = """
             {
-              "protocolVersion": 2,
+              "protocolVersion": 3,
               "sourceId": "aurora.scripted.demo",
               "operationId": "PAGES",
               "requestId": "req-1",

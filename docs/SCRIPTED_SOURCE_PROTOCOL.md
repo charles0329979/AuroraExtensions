@@ -1,16 +1,20 @@
-# ScriptedSource Protocol
+# ScriptedSource Protocol Registry
 
-Aurora Scripted extensions use **JavaScript only to discover URLs / structured data**. Kotlin + OkHttp perform all network I/O under host / header / scheme policy.
+Aurora Scripted extensions use **JavaScript only to parse structured data**. Kotlin + OkHttp perform all network I/O under host / header / scheme policy.
 
-## Protocol v2 (current contract)
+## Host Contract v2 (current and authoritative)
 
 - **Version:** `protocolVersion = 2`
-- **Design:** `docs/superpowers/specs/2026-08-03-scripted-source-protocol-v2-design.md`
-- **Kotlin package:** `app.aurora.scripted.protocol` in `scripted-core`
-- **Models:** Manifest, Capability, Operation, ScriptRequest/Response, ResourceRequest → ResourceInstruction, ScriptError
+- **Authority:** `AuroraReader-mihon/docs/SCRIPTED_SOURCE_PROTOCOL_V2.md` plus reader tests
+- **Reference package:** `extensions/aurorascripteclan`
+- **Host implementation:** `app.aurora.scripted` in AuroraReader
 - **Operations:** `POPULAR` | `LATEST` | `SEARCH` | `DETAILS` | `CHAPTERS` | `PAGES`
 - **Security defaults:** HTTPS-only, host allowlist, header allowlist, size/time caps; JS never sets `Host` / Cookie / Authorization
-- **Status:** Models + validators + unit tests landed; engine / OkHttp executor / Mihon wiring still deferred
+- **Status:** manifest loading, isolated QuickJS, controlled OkHttp bridge, Mihon mapping, and tests are wired
+
+The experimental request/response envelope under `extensions/aurorascripted/scripted-core` is a
+research draft, not the published Host Contract v2. It must receive a distinct future protocol
+version and a migration adapter before it can be loaded by AuroraReader.
 
 ---
 

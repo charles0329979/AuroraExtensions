@@ -123,7 +123,12 @@ if (-not $SkipBuild) {
     Write-Host "==> Building :src:all:mangadex:assembleRelease"
     Push-Location $VendorDir
     try {
-        & .\gradlew.bat :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache
+        if ($IsWindows -or $env:OS -match "Windows") {
+            & .\gradlew.bat :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache
+        } else {
+            & chmod +x ./gradlew
+            & ./gradlew :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache
+        }
         if ($LASTEXITCODE -ne 0) { throw "MangaDex Gradle build failed with exit $LASTEXITCODE" }
     } finally {
         Pop-Location

@@ -1,0 +1,32 @@
+{
+  "previousDate": "2026-08-26",
+  "currentDate": "2026-08-28",
+  "previousCount": 287,
+  "currentCount": 440,
+  "exactUnchanged": 259,
+  "exactAdded": 181,
+  "exactRemoved": 28,
+  "sameNameUrlChanged": 4,
+  "changed": [
+    {
+      "name": "香香腐宅（轻小说）",
+      "oldUrl": "https://www.8lover.com",
+      "newUrl": "https://boyloveheaven13.cc"
+    },
+    {
+      "name": "香香腐宅防走失",
+      "oldUrl": "https://boyloveheaven9.cc",
+      "newUrl": "https://boyloveheaven14.cc"
+    },
+    {
+      "name": "漫蛙",
+      "oldUrl": "https://manwaqh.cc",
+      "newUrl": "https://manwaqj.cc"
+    },
+    {
+      "name": "香香腐宅",
+      "oldUrl": "https://www.8lover.com",
+      "newUrl": "https://boyloveheaven13.cc"
+    }
+  ]
+}

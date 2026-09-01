@@ -1,0 +1,1189 @@
+﻿"Index","Name","Url","FinalGrade","FunctionalClass","ResultTiles","TestedCategory","NetworkClass1","Status1","NetworkClass2","Status2","FinalUrl","Error"
+"1","腾讯漫画（正版）","https://m.ac.qq.com","可用","BrowseWorks","15","条漫","Reachable","200","Reachable","200","https://m.ac.qq.com/",""
+"2","再漫画","https://manhua.zaimanhua.com","可用","BrowseWorks","20","最新更新","Dead","","Dead","","https://manhua.zaimanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"3","漫漫漫画（正版）","https://m.manmanapp.com","可用","BrowseWorks","10","恋爱","Dead","","Dead","","https://m.manmanapp.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"4","漫漫漫画（PC）","https://www.manmanapp.com","可用","BrowseWorks","20","全部","Dead","","Dead","","https://www.manmanapp.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"5","爱奇艺漫画（正版）","https://www.iqiyi.com/manhua","部分可用","NoResultsOrError","0","最新更新","Reachable","302","Reachable","302","https://www.iqiyi.com/manhua",""
+"6","Toptoon（正版）","https://www.toptoon.net","部分可用","NoResultsOrError","0","免费/特价","Reachable","200","Reachable","200","https://www.toptoon.net/",""
+"7","搜漫","https://www.hisoman.com","可用","BrowseWorks","10","少女","Reachable","200","Reachable","200","https://www.hisoman.com/",""
+"8","免费漫画全集（APP）","https://c.myshanxun.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://c.myshanxun.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"9","极速漫画","http://m.1kkk.com","可用","BrowseWorks","20","全部","Reachable","200","Reachable","200","https://m.1kkk.com/",""
+"10","极速漫画（PC）","http://www.1kkk.com","可用","BrowseWorks","20","全部","Reachable","200","Reachable","200","https://m.1kkk.com/",""
+"11","漫画人","http://www.manhuaren.com","可用","BrowseWorks","20","热门","Reachable","200","Reachable","200","https://www.manhuaren.com/",""
+"12","图库漫画","https://www.tuku.cc","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.tuku.cc/",""
+"13","733动漫","https://73mh.app","可用","BrowseWorks","20","总点击","Blocked","","Blocked","","https://73mh.app","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"14","布卡漫画","https://www.bukamh.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.bukamh.com/",""
+"15","古风漫画","https://www.gfmh.app","可用","BrowseWorks","16","全部","Reachable","200","Reachable","200","https://www.gfmh.app/",""
+"16","追漫画","http://www.ycymh.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.ycymh.com/",""
+"17","KOLA漫画","https://www.kolamanga.com","可用","BrowseWorks","20","更新","Dead","","Dead","","https://www.kolamanga.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"18","OH漫画","https://www.ohmanhua.com","可用","BrowseWorks","20","更新","Reachable","302","Reachable","200","https://www.ohmanhua.com/",""
+"19","漫蛙","https://manwaqj.cc","可用","BrowseWorks","15","更新","Reachable","200","Reachable","200","https://www.google.com/?v=",""
+"20","漫蛙防走失","https://manwaqg.cc","可用","SearchWorks","25","真理面具","Reachable","200","Reachable","200","https://www.google.com/?v=",""
+"21","漫蛙AI","https://manwa.me","可用","SearchWorks","25","真理面具","Blocked","403","Blocked","403","https://manwa.me/",""
+"22","喵趣漫画","https://www.miaoqumh.org","可用","BrowseWorks","20","首页","Blocked","200","Blocked","200","https://www.miaoqumh.org/",""
+"23","漫画之家","http://www.mhzj54.com","部分可用","NoResultsOrError","0","热血","Reachable","200","Reachable","200","http://www.mhzj54.com/",""
+"24","七夕漫画","https://www.qiximanhua.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.qiximanhua.com/",""
+"25","漫画星球","https://www.comichare.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://www.comichare.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"26","读漫屋","http://m.dumanwu1.com","可用","BrowseWorks","20","精品榜","Reachable","200","Reachable","200","http://m.dumanwu1.com/",""
+"27","漫画客","http://yumanhua.com","可用","BrowseWorks","20","新漫画","Reachable","200","Reachable","200","http://yumanhua.com/",""
+"28","仙漫画","https://m.xianmanwang.com","失效","NoResultsOrError","0","全部","Dead","","Dead","","https://m.xianmanwang.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"29","仙漫画（PC）","https://www.xianmanwang.com","部分可用","NoResultsOrError","0","全部","Blocked","403","Blocked","403","https://www.xianmanwang.com/",""
+"30","野蛮漫画","https://yemancomic.com","可用","BrowseWorks","20","连载中","Blocked","403","Blocked","403","https://yemancomic.com/",""
+"31","漫神漫画","https://m.mhkami.com","可用","BrowseWorks","20","连载中","Blocked","403","Blocked","403","https://m.mhkami.com/",""
+"32","YYDS漫画","https://www.yydsmh.com","可用","BrowseWorks","20","连载中","Blocked","403","Blocked","403","https://www.yydsmh.com/",""
+"33","次元漫画","https://2cycomic.com","部分可用","NoResultsOrError","0","连载中","Blocked","403","Blocked","403","https://2cycomic.com/",""
+"34","番木瓜漫画","http://www.1fbm.com","失效","SkippedNetwork","0","连载中","Dead","","Dead","","http://www.1fbm.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"35","艾米免费漫画","http://www.aymry.com","可用","BrowseWorks","20","连载中","Blocked","403","Blocked","403","http://www.aymry.com/",""
+"36","CC178漫画","https://cc178.cn","部分可用","NoResultsOrError","0","连载中","Reachable","200","Reachable","200","https://cc178.cn/",""
+"37","多漫吧","https://www.duomanba.com","部分可用","NoResultsOrError","0","总点击","Reachable","200","Reachable","200","https://aaabbb.72.chat/8d/?duomanba.com",""
+"38","毒牙漫画","https://www.duya.cc","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.duya.cc/",""
+"39","羞羞漫画","http://www.xiuxmanhua.com","失效","SkippedNetwork","0","总点击","Dead","502","Dead","502","http://www.xiuxmanhua.com/",""
+"40","潇潇漫画","http://www.xiaocunwai.com","失效","NoResultsOrError","0","总点击","Dead","","Dead","","http://www.xiaocunwai.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"41","漫画屋","https://www.mh5.xyz","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://www.mh5.xyz","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"42","哩咔漫画","http://www.likamanhua.com","失效","NoResultsOrError","0","总点击","Blocked","","Blocked","","http://www.likamanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (www.likamanhua.com:80)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (www.likamanhua.com:80)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableS"
+"43","全本漫画","http://www.zhichengxuan.com","失效","NoResultsOrError","0","韩漫","Blocked","","Blocked","","http://www.zhichengxuan.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (www.zhichengxuan.com:80)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (www.zhichengxuan.com:80)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.Awaita"
+"44","非麻瓜漫画","http://cqxzyedu.com","可用","BrowseWorks","20","总点击","Blocked","","Blocked","","http://cqxzyedu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"45","250漫画","http://www.mh250.com","可用","BrowseWorks","20","阅读总榜","Reachable","200","Reachable","200","http://www.mh250.com/",""
+"46","糖心漫画","http://tangxin666.net","失效","NoResultsOrError","0","最新韩漫","Dead","","Dead","","http://tangxin666.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"47","飞漫画","https://m.feimh5.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.feimh5.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"48","一起看动漫","http://www.17kdm.net","部分可用","NoResultsOrError","0","排行","Reachable","200","Reachable","200","http://www.17kdm.net/",""
+"49","九啦啦漫画","http://www.9la.la","失效","SkippedNetwork","0","全部","Dead","","Dead","","http://www.9la.la","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"50","土豆漫画","https://m.xm124.com","失效","NotTestedNoCategory","0","","Blocked","","Blocked","","https://m.xm124.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (m.xm124.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (m.xm124.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEv"
+"51","13漫画","https://m.w13k.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.w13k.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"52","包子漫画","https://cn.webmota.com","可用","BrowseWorks","20","连载中","Reachable","200","Reachable","200","https://cn.webmota.com/",""
+"53","包子青漫","https://www.lwhyxx.net","失效","SkippedNetwork","0","最新上架","Dead","","Dead","","https://www.lwhyxx.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"54","漫圈子","https://www.9mqz.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.9mqz.com/",""
+"55","漫蛙TW","https://www.manwatw.cc","部分可用","NoResultsOrError","0","更新","Blocked","403","Blocked","403","https://www.manwatw.cc/",""
+"56","漫蛙漫画","https://www.manwamh5.com","可用","BrowseWorks","20","最新上架","Blocked","403","Blocked","403","https://www.manwamh5.com/",""
+"57","奈斯漫画","https://www.nicemh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://www.nicemh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"58","开心漫画","https://www.kaixinman.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.kaixinman.com/",""
+"59","思思漫画","https://m.sisimanhua.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://m.sisimanhua.com/",""
+"60","楠楠漫画","https://nnmh.info","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://nnmh.info/",""
+"61","168漫画","https://m.quarkmanhua.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.quarkmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"62","168漫画（PC）","http://www.quarkmanhua.com","失效","SkippedNetwork","0","发布排序","Dead","","Dead","","http://www.quarkmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"63","悠闲漫画","https://m.yxtun.com","部分可用","NoResultsOrError","0","更新","Blocked","403","Blocked","403","https://m.yxtun.com/",""
+"64","粉丝漫画","https://h5.yxtun.com","部分可用","NoResultsOrError","0","更新","Blocked","403","Blocked","403","https://h5.yxtun.com/",""
+"65","都市漫画","https://m.guofengmh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.guofengmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"66","都市漫画（APP）","https://apifans.dushimh.com","失效","SkippedNetwork","0","最新漫画","Dead","","Dead","","https://apifans.dushimh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"67","土豪漫画","https://m.tuhaomh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.tuhaomh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090308): 给函数提供的标志无效
+   --- End of inner exception stack "
+"68","漫画网","https://www.manhua3.com","可用","BrowseWorks","20","最新更新","Reachable","200","Reachable","200","https://www.manhua3.com/",""
+"69","漫士多","https://manshiduo.org","可用","BrowseWorks","10","最新更新","Reachable","200","Reachable","200","https://manshiduo.org/",""
+"70","如漫画网","https://m.rumanhua.org","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://m.rumanhua.org/",""
+"71","读漫屋网","https://m.dumanwu.org","可用","BrowseWorks","10","最新更新","Reachable","200","Reachable","200","https://m.dumanwu.org/",""
+"72","次元漫","https://ciyuanman.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://ciyuanman.com/",""
+"73","BikaBika漫画","https://m.bikamanhua.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://m.bikamanhua.com/",""
+"74","卡拉漫画","https://www.kalamanhua.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.kalamanhua.com/",""
+"75","六漫画","https://m.liumanhua.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://m.liumanhua.com/",""
+"76","秀十八漫画","https://mip.xiushiba.com","失效","SkippedNetwork","0","热血","Dead","","Dead","","https://mip.xiushiba.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"77","久五漫画","http://m.99wushu.com","失效","SkippedNetwork","0","排行","Dead","","Dead","","http://m.99wushu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"78","国人漫画","http://m.grmanhua.com","失效","SkippedNetwork","0","排行","Dead","702","Dead","702","http://m.grmanhua.com/",""
+"79","漫画居","http://m.manhuaju.com","部分可用","NoResultsOrError","0","完结","Reachable","200","Reachable","200","https://2i.xdxjofalzgmgfotfjrecwrpttn.com/djkfe/5106/mp2ga3",""
+"80","爱漫之家","http://m.17fuman.com/","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","http://m.17fuman.com/",""
+"81","一念漫画","http://m.yn887.com","失效","NoResultsOrError","0","更新","Dead","","Dead","","http://m.yn887.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"82","漫画驴","https://m.manhualv.com","失效","SkippedNetwork","0","排行","Dead","","Dead","","https://m.manhualv.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"83","漫画殿","http://m.manhuadian.com","失效","SkippedNetwork","0","排行","Dead","503","Dead","503","http://m.manhuadian.com/",""
+"84","漫画1234","https://m.wmh1234.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://m.wmh1234.com/",""
+"85","漫画160","https://m.mh160mh.com","可用","BrowseWorks","20","排行榜","Reachable","200","Reachable","200","https://m.mh160mh.com/",""
+"86","57漫画","http://m.wuqimh.net","部分可用","NoResultsOrError","0","全部","Dead","","Reachable","200","http://ww547.wuqimh.net/?tkn=19vnMT3S","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"87","92漫画","https://wap.92mh.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://wap.92mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"88","31漫画","https://m.31mh.cc","部分可用","NoResultsOrError","0","最新更新","Blocked","403","Blocked","200","https://m.31mh.cc/",""
+"89","咚漫","https://m.dongmanmanhua.cn","失效","SkippedNetwork","0","发现","Dead","","Dead","","https://m.dongmanmanhua.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"90","咚漫（PC）","https://www.dongmanmanhua.cn","失效","SkippedNetwork","0","连载和完结","Dead","","Dead","","https://www.dongmanmanhua.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"91","Webtoon","https://www.webtoons.com","部分可用","NoResultsOrError","0","Genre","Reachable","200","Reachable","200","https://www.webtoons.com/",""
+"92","Webtoon中文","https://us-m.webtoons.com/zh-hant","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://us-m.webtoons.com/zh-hant",""
+"93","忆漫画","https://m.yimmh.com","失效","NoResultsOrError","0","连载","Dead","","Dead","","https://m.yimmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"94","酷爱漫画","https://www.kuimh.com","失效","SkippedNetwork","0","连载","Dead","","Dead","","https://www.kuimh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"95","我爱漫画","https://www.woimh.com","可用","BrowseWorks","20","连载","Reachable","200","Reachable","200","https://www.woimh.com/",""
+"96","旧城漫画","https://www.jc2007.com","部分可用","NoResultsOrError","0","人气","Reachable","200","Reachable","200","https://www.jc2007.com/",""
+"97","聚合漫画屋","https://www.52hah.com","部分可用","NoResultsOrError","0","最新","Reachable","200","Reachable","200","https://www.52hah.com/",""
+"98","漫画屋网","https://www.mhw1.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://www.mhw1.com/",""
+"99","秀漫网","https://zhuishudashi.net","失效","NoResultsOrError","0","人气","Dead","","Dead","","https://zhuishudashi.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"100","松鼠漫画","http://zhongq.net","失效","SkippedNetwork","0","更新","Dead","523","Dead","520","http://zhongq.net/",""
+"101","酷看漫画","https://www.kukanmanhua.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://www.kukanmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"102","国漫吧（PC）","http://www.guoman8.cc","可用","BrowseWorks","20","日本","Reachable","200","Reachable","200","http://www.guoman8.cc/",""
+"103","汉化吧","http://www.hanhuaba.com","部分可用","NoResultsOrError","0","分类一","Reachable","200","Reachable","200","http://www.hanhuaba.com/",""
+"104","韩漫吧","https://m.hmba.vip","部分可用","NoResultsOrError","0","免费漫画","Reachable","200","Reachable","200","https://m.hmba.vip/",""
+"105","趣漫吧","https://www.qumanba.cc","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.qumanba.cc","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"106","海猫吧","http://www.haimaoba.com","部分可用","NoResultsOrError","0","分类一","Blocked","403","Blocked","403","https://www.haimaoba.com/",""
+"107","韩漫大全","https://www.hanmandq.com","失效","NoResultsOrError","0","最新","Dead","","Dead","","https://www.hanmandq.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"108","猕猴桃漫画","https://www.manwaye.cc","可用","BrowseWorks","10","更新","Reachable","200","Reachable","200","https://www.manwaye.cc/",""
+"109","51漫画","https://www.51comics.com","可用","BrowseWorks","20","少年","Dead","","Reachable","200","https://www.favcomic.xyz/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"110","菠萝动漫","http://www.boluodm.com","失效","NoResultsOrError","0","连载","Dead","","Dead","","http://www.boluodm.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"111","特漫网","https://www.17te.com","失效","NoResultsOrError","0","连载","Dead","","Dead","","https://www.17te.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"112","云漫画","http://manhua10.yueriji.com","失效","NoResultsOrError","0","排行榜","Dead","","Dead","","http://manhua10.yueriji.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"113","好好漫画","https://www.haohao25.com","失效","NoResultsOrError","0","更新","Dead","","Dead","","https://www.haohao25.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"114","RoozFun漫画","http://www.roozfun.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","http://www.roozfun.com/",""
+"115","笔趣漫画","https://biqug.org","失效","SkippedNetwork","0","连载","Dead","","Dead","","https://biqug.org","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"116","笔趣阁漫画","https://www.23biquge.com","部分可用","NoResultsOrError","0","新更","Reachable","200","Reachable","200","https://www.23biquge.com/",""
+"117","61漫画","https://www.m7478.cn","部分可用","NoResultsOrError","0","人气","Blocked","403","Blocked","403","https://www.m7478.cn/",""
+"118","亲亲漫画","http://m.acgwd.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","http://m.acgwd.com/",""
+"119","顶漫画","https://www.dingmanhua.com","部分可用","NoResultsOrError","0","最新","Reachable","200","Reachable","200","https://www.dingmanhua.com/",""
+"120","可漫画","https://www.dmanhua.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.dmanhua.com/",""
+"121","大魔兔","http://www.damotu.com","可用","BrowseWorks","20","新番连载","Dead","","Dead","","http://www.damotu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"122","漫画看","https://m.mhkan.com","部分可用","NoResultsOrError","0","最新","Reachable","200","Reachable","200","https://m.mhkan.com/",""
+"123","漫画看（PC）","https://www.mhkan.com","部分可用","SkippedNetwork","0","最新发布","Reachable","200","Reachable","200","https://www.mhkan.com/",""
+"124","MOXI动漫","http://www.moxidongman.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","http://www.moxidongman.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"125","暴走漫画","http://baozoumanhua.com","部分可用","SkippedNetwork","0","全部","Blocked","","Dead","","http://baozoumanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"126","动漫星空","http://acg.gamersky.com","可用","BrowseWorks","6","最新热门","Dead","","Reachable","200","http://acg.gamersky.com/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"127","90漫画（PC）","http://www.90mh.org","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","http://www.90mh.org/",""
+"128","笨狗漫画","http://m.bengou.co","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","http://m.bengou.co/",""
+"129","漫画大全","http://www.yueman1.cc","可用","BrowseWorks","20","更新","Blocked","403","Blocked","403","http://www.yueman1.cc/",""
+"130","晴天漫画","https://m.zxmh.net","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.zxmh.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"131","点拉漫画","https://www.dianlamh.com","失效","SkippedNetwork","0","连载","Dead","","Dead","","https://www.dianlamh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"132","CC漫画","http://m.ccdmb.com","部分可用","NoResultsOrError","0","最新更新","Blocked","200","Blocked","200","https://www.hugedomains.com/domain_profile.cfm?d=ccdmb.com",""
+"133","CC漫画（PC）","http://www.ccdmb.com","部分可用","NoResultsOrError","0","最新更新","Blocked","200","Blocked","200","https://www.hugedomains.com/domain_profile.cfm?d=ccdmb.com",""
+"134","CC漫画网","http://www.ccmh16.com","失效","SkippedNetwork","0","最新更新","Dead","503","Dead","503","http://www.ccmh16.com/",""
+"135","CCC追漫台","https://creative-comic.tw","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.creative-comic.tw/",""
+"136","漫画皮网","http://www.amanhuapi.net","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","http://www.amanhuapi.net/",""
+"137","皮皮漫画","https://www.pipimanhua.com","部分可用","NoResultsOrError","0","完本","Reachable","200","Reachable","200","https://www.pipimanhua.com/",""
+"138","沐沐漫画","https://www.talkmanhua.com","可用","BrowseWorks","4","全部漫画","Dead","","Dead","","https://www.talkmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"139","X18漫画","https://m.x18mh.com","失效","SkippedNetwork","0","最近更新","Dead","","Dead","","https://m.x18mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"140","X18漫画（PC）","https://www.x18mh.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://www.x18mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"141","七七漫画屋","https://m.0373xx.com","可用","BrowseWorks","18","更新","Reachable","200","Reachable","200","https://m.0373xx.com/",""
+"142","精品漫画","https://m.bjzf.org","可用","BrowseWorks","18","更新","Reachable","200","Reachable","200","https://m.bjzf.org/",""
+"143","七七漫画","https://qiim.cc","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://hqqh.cc/",""
+"144","7漫画网","https://m.mom7.net","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.mom7.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"145","360漫画","https://www.360mh.cc","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.360mh.cc/",""
+"146","奇葩漫画","http://www.qipamh.com","可用","BrowseWorks","12","全部","Reachable","200","Reachable","200","http://www.qipamh.com/",""
+"147","纸盒漫画","https://www.yi40.com","可用","BrowseWorks","20","首页","Reachable","200","Reachable","200","https://www.yi40.com/",""
+"148","酷漫漫画","https://kumanapp.com","失效","SkippedNetwork","0","热血","Dead","","Dead","","https://kumanapp.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"149","酷米漫画","https://n.kimlulu.com","失效","NoResultsOrError","0","更新","Dead","","Dead","","https://n.kimlulu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"150","雪梨漫画","https://m.nxueli.com","部分可用","NoResultsOrError","0","排行","Reachable","200","Reachable","200","https://m.nxueli.com/",""
+"151","369漫画","https://m.369manhua.com","部分可用","NoResultsOrError","0","排行","Reachable","200","Reachable","200","https://m.369manhua.com/",""
+"152","风之漫画","https://m.fengmh.com","部分可用","NoResultsOrError","0","更新","Blocked","","Blocked","","https://m.fengmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"153","世纪漫画","https://m.manhua111.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.manhua111.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"154","憨憨的漫画","http://m.hhdmh.net","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","http://m.hhdmh.net/",""
+"155","乙女漫画M","https://m.yinvmh.com","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://m.yinvmh.com/",""
+"156","腐漫画","http://www.fumanhua2.com","部分可用","NoResultsOrError","0","热门点击","Reachable","200","Reachable","200","https://www.fumanhua2.com/",""
+"157","腐漫画（APP）","http://app.fmmhua.com","部分可用","NoResultsOrError","0","最热","Reachable","200","Reachable","200","http://app.fmmhua.com/",""
+"158","GAYRB漫画","https://gaygg.cc","失效","SkippedNetwork","0","排行","Dead","","Dead","","https://gaygg.cc","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"159","漫画天堂","http://www.manhuatt.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","http://www.manhuatt.com/",""
+"160","漫画吧","https://m.dmhua8.com","失效","SkippedNetwork","0","排行","Dead","","Dead","","https://m.dmhua8.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"161","漫画淘","https://www.manhuatao.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.manhuatao.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"162","美女漫画","http://mm2.shazi8.com","部分可用","NoResultsOrError","0","推荐","Reachable","200","Reachable","200","http://mm2.shazi8.com/",""
+"163","飞卢漫画","https://mh.faloo.com","失效","NoResultsOrError","0","少年漫画","Dead","","Dead","","https://mh.faloo.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"164","爱看漫画","https://m.ikmhua.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://m.ikmhua.com/",""
+"165","爱看漫画网","http://wap.65dm.com","部分可用","NoResultsOrError","0","连载","Reachable","200","Reachable","200","http://wap.65dm.com/",""
+"166","MYCOMIC","https://mycomic.com","可用","BrowseWorks","20","最新上架","Blocked","403","Dead","","https://mycomic.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"167","爱看漫（APP）","https://ymcdnyfqdapp.ikmmh.com","部分可用","NotTestedNoCategory","0","","Blocked","403","Blocked","403","https://ymcdnyfqdapp.ikmmh.com/",""
+"168","超爱看漫","https://tmsmh.com","部分可用","NotTestedNoCategory","0","","Blocked","403","Blocked","403","https://tmsmh.com/",""
+"169","雪之漫画","https://m.xuemh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.xuemh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"170","叮当漫画","https://m.dingdangmh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.dingdangmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"171","恋爱漫画","https://m.lianaimh.com","失效","SkippedNetwork","0","人气排行","Dead","","Dead","","https://m.lianaimh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"172","二狗漫画","https://m.zsc2.com","失效","NoResultsOrError","0","人气排行","Blocked","","Blocked","","https://m.zsc2.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (m.zsc2.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (m.zsc2.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHos"
+"173","无敌漫画","https://m.55dmh.com","失效","SkippedNetwork","0","全部漫画","Dead","","Dead","","https://m.55dmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"174","85漫画","https://m.888sns.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.888sns.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"175","壹壹漫画","https://m.11dmh.com","失效","NoResultsOrError","0","更新","Blocked","","Blocked","","https://m.11dmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (m.11dmh.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (m.11dmh.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpH"
+"176","163漫画","https://m.163dmh.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://m.163dmh.com/",""
+"177","品悦漫画","https://m.pinmh.com","失效","NoResultsOrError","0","人气排行","Dead","","Dead","","https://m.pinmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"178","爱漫画","https://m.imanhua.in","失效","NoResultsOrError","0","全部","Dead","","Dead","","https://m.imanhua.in","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"179","受漫画","http://m.shoumanhua.com","失效","NoResultsOrError","0","更新","Dead","","Dead","","http://m.shoumanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"180","一漫网","http://m.bx117.com","部分可用","NoResultsOrError","0","完结","Blocked","","Dead","","http://m.bx117.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"181","八极漫画","http://www.8jj.com","部分可用","NoResultsOrError","0","最近更新","Reachable","200","Reachable","200","https://8jj.com/",""
+"182","鼠绘漫画","https://www.ishuhui.com/comics","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.ishuhui.com/comics","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"183","漫画Love","http://vip.php06.com","部分可用","NoResultsOrError","0","热血","Reachable","200","Reachable","200","http://vip.php06.com/",""
+"184","漫画Love（PC）","http://www.php06.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","http://www.php06.com/",""
+"185","新漫画","https://xapi.xinmanhua.net","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://xapi.xinmanhua.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"186","漫画铺（PC）","https://www.manhuapu.com","部分可用","NoResultsOrError","0","少年热血","Blocked","","Dead","","https://www.manhuapu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"187","草蜢漫画","http://www.caomengcc.com","部分可用","NoResultsOrError","0","少女漫画","Reachable","200","Reachable","200","http://www.caomengcc.com/",""
+"188","178漫画","http://178mh.com","部分可用","NoResultsOrError","0","热血","Blocked","","Dead","","http://178mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"189","漫画哥","https://m.manhuag.com","部分可用","NoResultsOrError","0","点击榜","Reachable","200","Reachable","200","https://m.manhuag.com/",""
+"190","正规漫画","http://mh-zg.7qh.net","失效","NoResultsOrError","0","耽美","Dead","","Dead","","http://mh-zg.7qh.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"191","好通漫","http://haotoon.com.cn","部分可用","NoResultsOrError","0","最新","Reachable","200","Reachable","200","http://haotoon.com.cn/",""
+"192","黑白漫话","http://m.heibaimanhua.com","部分可用","NoResultsOrError","0","搞笑","Blocked","","Dead","","http://m.heibaimanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"193","漫本","http://www.manben.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://www.manben.com/",""
+"194","517漫画","http://m.517mh.net","失效","NotTestedNoCategory","0","","Dead","","Dead","","http://m.517mh.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"195","看漫画","https://m.kanman.com","失效","SkippedNetwork","0","全部·人气","Dead","","Dead","","https://m.kanman.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"196","大树漫画","https://www.dashumanhua.com","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://www.dashumanhua.com/",""
+"197","欢乐漫画","https://m.0a1t.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://m.0a1t.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"198","本子漫画","https://www.399bz.com","失效","SkippedNetwork","0","人气","Dead","","Dead","","https://www.399bz.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"199","滴滴漫画网","http://txydd.com","部分可用","NoResultsOrError","0","连载中","Reachable","200","Reachable","200","http://txydd.com/",""
+"200","漫画楼","https://www.manhualou.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.manhualou.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"201","147漫画","https://m.xmh124.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.xmh124.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"202","58漫画","https://m.58puxin.com","失效","NoResultsOrError","0","最新更新","Dead","","Dead","","https://m.58puxin.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"203","催漫漫画","http://www.cuimanhua.com","部分可用","NoResultsOrError","0","今日更新","Reachable","200","Dead","","http://www.cuimanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"204","天天看漫画","https://www.ttkmh.com","可用","BrowseWorks","20","最新更新","Reachable","200","Reachable","200","https://www.ttkmh.com/",""
+"205","呆哥哥","https://www.daigege.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://www.daigege.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"206","来漫画","https://m.comemh8.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://m.comemh8.com/",""
+"207","来漫画（PC）","https://www.laimanhua88.com","可用","BrowseWorks","20","少年热血","Reachable","200","Reachable","200","https://m.laimanhua88.com/",""
+"208","来漫画网","https://m.laimanhua.org","可用","BrowseWorks","20","首页","Reachable","200","Reachable","200","https://m.laimanhua.org/",""
+"209","L漫画","https://lmanhua.com","可用","BrowseWorks","20","最新更新","Reachable","200","Reachable","200","https://lmanhua.com/",""
+"210","嬉皮漫画","https://m.hipmh.com","可用","BrowseWorks","18","推荐","Reachable","200","Reachable","200","https://m.hipmh.com/",""
+"211","崩坏3漫画","https://comic.bh3.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://comic.bh3.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"212","泰拉记事社","https://terra-historicus.hypergryph.com","可用","BrowseWorks","20","漫画","Dead","","Dead","","https://terra-historicus.hypergryph.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"213","百合会","https://www.yamibo.com","可用","BrowseWorks","20","最新漫画","Reachable","200","Reachable","200","https://www.yamibo.com/site/novel",""
+"214","龙王传说","https://www.longwangchuanshuo.com","可用","BrowseWorks","20","漫画","Blocked","403","Blocked","403","https://www.longwangchuanshuo.com/",""
+"215","追书大师漫画","https://www.zhuishudashi.net","失效","NoResultsOrError","0","本日榜","Dead","","Dead","","https://www.zhuishudashi.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"216","漫外音","http://m.manwaiyin.com","部分可用","NoResultsOrError","0","搞笑","Reachable","200","Reachable","200","http://m.manwaiyin.com/",""
+"217","鬼萝莉漫画","http://www.gllmh.com","部分可用","NoResultsOrError","0","惊奇手札","Reachable","200","Reachable","200","http://www.gllmh.com/",""
+"218","僵尸王漫画","http://www.jswvip.net","部分可用","NoResultsOrError","0","恐怖漫画","Reachable","200","Reachable","200","http://www.jswvip.net/",""
+"219","魔趣阁","https://m.moquge.com","失效","SkippedNetwork","0","首页","Dead","","Dead","","https://m.moquge.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Authentication failed because the remote party sent a TLS alert: 'InternalError'.
+ ---> System.ComponentModel.Win32Exception (0x80090326): 接收到的消息异常，或"
+"220","1359漫画（PC）","https://www.espipe.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.espipe.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Authentication failed because the remote party sent a TLS alert: 'InternalError'.
+ ---> System.ComponentModel.Win32Exception (0x80090326): 接收到的消息异常，或"
+"221","猪猪漫画","https://www.zhuzhumh.com","失效","SkippedNetwork","0","更新","Dead","521","Dead","521","https://www.zhuzhumh.com/",""
+"222","118漫画","http://m.ccshwy.com","失效","SkippedNetwork","0","连载中","Dead","","Dead","","http://m.ccshwy.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"223","118漫画（PC）","http://www.ccshwy.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","http://www.ccshwy.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"224","动漫啦","http://www.dongman.la","可用","BrowseWorks","20","完结","Reachable","200","Reachable","200","http://www.dongman.la/",""
+"225","冷月漫画","http://9000w.com","部分可用","NoResultsOrError","0","全部","Blocked","","Blocked","","http://9000w.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"226","学外漫画","https://www.xuewailx.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.xuewailx.com/",""
+"227","BuffACG漫画","https://www.51hman.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.51hman.com/",""
+"228","得意漫画","https://mh.dymanhua.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://mh.dymanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"229","漫画456","https://m.manhua456.com","可用","BrowseWorks","20","最新更新","Reachable","200","Reachable","200","https://m.manhua456.com/",""
+"230","258漫画","http://m.wnixk.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","http://m.wnixk.com/",""
+"231","258漫画（PC）","https://www.wnixk.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://www.wnixk.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"232","1316漫画","https://m.mm1316.com","部分可用","NoResultsOrError","0","更新","Dead","","Blocked","403","https://m.mm1316.com/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"233","木马动漫","https://omyschool.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://omyschool.com/",""
+"234","漫画牛","https://www.manhua666.cc","可用","BrowseWorks","6","首页","Reachable","200","Reachable","200","https://www.manhua666.cc/",""
+"235","武侠漫画","https://m.wuxiamh.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://m.wuxiamh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"236","漫画台","https://m.manhuatai.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.manhuatai.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"237","神漫画","https://m.taomanhua.com","失效","SkippedNetwork","0","每日更新","Dead","","Dead","","https://m.taomanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"238","神漫画（APP）","https://getconfig-globalapi.yyhao.com","失效","SkippedNetwork","0","热度","Dead","","Dead","","https://getconfig-globalapi.yyhao.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"239","爱优漫","https://m.iyouman.com","失效","SkippedNetwork","0","人气","Dead","","Dead","","https://m.iyouman.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"240","爱优漫（APP）","https://getconfig-globalapi.yyhao.com","可用","BrowseWorks","20","人气","Dead","","Dead","","https://getconfig-globalapi.yyhao.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"241","漫画码","https://m.manhuama.com","失效","NoResultsOrError","0","人气","Blocked","","Blocked","","https://m.manhuama.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (m.manhuama.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (m.manhuama.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.Connect"
+"242","漫画码（PC）","https://www.manhuama.com","失效","NoResultsOrError","0","全部","Dead","","Dead","","https://www.manhuama.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"243","40漫画","https://www.40manhua.com","部分可用","NoResultsOrError","0","全部","Blocked","","Blocked","","https://www.40manhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"244","漫客栈","https://www.mkzhan.com","可用","BrowseWorks","20","全部","Dead","","Dead","","https://www.mkzhan.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"245","知音漫客","https://m.zymk.cn","可用","BrowseWorks","16","热血","Dead","","Dead","","https://m.zymk.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"246","知音漫客（APP）","https://m.zymk.cn","失效","SkippedNetwork","0","热血-更新","Dead","","Dead","","https://m.zymk.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"247","咪咕动漫","https://m.migudm.cn","失效","SkippedNetwork","0","人气","Dead","","Dead","","https://m.migudm.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"248","爱飒漫画","https://m.isamanhua.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://m.isamanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"249","爱飒漫画（PC）","https://www.isamanhua.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.isamanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"250","77动漫","https://m.77dmh.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.77dmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"251","漫画芯","https://m.mhxin.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://m.mhxin.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Authentication failed because the remote party sent a TLS alert: 'InternalError'.
+ ---> System.ComponentModel.Win32Exception (0x80090326): 接收到的消息异常，或"
+"252","爱米推漫画","https://m.imitui.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://m.imitui.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"253","爱米推漫画（PC）","https://www.imitui.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://www.imitui.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"254","ACG和谐漫画","https://m.acgz1.com","失效","NoResultsOrError","0","人气排行","Dead","","Dead","","https://m.acgz1.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"255","蒂亚漫画","https://m.diya1.com","失效","NoResultsOrError","0","人气排行","Dead","","Dead","","https://m.diya1.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"256","前未漫画","https://m.qianmh.com","失效","NoResultsOrError","0","最新更新","Dead","502","Dead","502","https://m.qianmh.com/",""
+"257","最漫画","https://m.zuimh.com","失效","SkippedNetwork","0","最新更新","Dead","","Dead","","https://m.zuimh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"258","呱呱漫画","https://mip.guagua456.com","部分可用","NoResultsOrError","0","最热","Blocked","403","Blocked","403","https://mip.guagua456.com/",""
+"259","果果漫画","https://m.guoguomh.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.guoguomh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Cannot determine the frame size or a corrupted frame was received.
+   at System.Net.Security.SslStream.GetFrameSize(ReadOnlySpan`1 buffer)
+   at Sys"
+"260","多多漫画","https://m.duoduomh.com","失效","SkippedNetwork","0","人气排行","Dead","","Dead","","https://m.duoduomh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"261","多多漫画（APP）","https://api.duoduomh.1a3.net","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://api.duoduomh.1a3.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"262","686漫画","https://www.686mh.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.686mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"263","666漫画","http://m.201jl.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","http://m.201jl.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"264","飞飞漫画","http://www.ffmh123.com","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","http://www.feifeimanhua.vip/",""
+"265","去去漫画","http://www.ququmh.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","http://www.ququmh.vip/",""
+"266","滴答漫画","http://ddmanhua.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","http://ddmanhua.com/",""
+"267","咱追漫画","http://www.zanzhui.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.zanzhui.com/",""
+"268","漫画站","https://m.manhuazhan.org","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://m.manhuazhan.org/",""
+"269","最新漫画","https://www.zuixinmanhua.com","失效","NoResultsOrError","0","更新","Dead","","Dead","","https://www.zuixinmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"270","可亚漫画","http://www.keyamanhua.com","部分可用","NoResultsOrError","0","连载中","Reachable","200","Reachable","200","http://www.keyamanhua.com/",""
+"271","飞雪漫画","https://www.feixuemh.com","部分可用","NoResultsOrError","0","总点击","Reachable","200","Reachable","200","https://www.feixuemh.com/",""
+"272","百漫谷","https://darpou.com","失效","NotTestedNoCategory","0","","Dead","521","Dead","521","https://darpou.com/",""
+"273","千漫谷","https://www.wuforcongress.com","失效","SkippedNetwork","0","漫画更新","Dead","523","Dead","523","https://www.wuforcongress.com/",""
+"274","付梓漫畫","https://4un.net","失效","SkippedNetwork","0","漫画更新","Dead","","Dead","523","https://4un.net/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"275","豆豆漫画","https://www.cbfpay.com","失效","SkippedNetwork","0","总点击","Dead","","Dead","","https://www.cbfpay.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"276","大古漫画","https://www.dgmanhua.com","部分可用","NoResultsOrError","0","更新","Reachable","301","Reachable","301","https://www.dgmanhua.com/",""
+"277","动漫在线","http://m.dmzx.com","部分可用","SkippedNetwork","0","最近更新","Dead","","Blocked","","http://m.dmzx.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"278","4399动漫","http://www.4399dmw.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","http://www.4399dmw.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"279","ACG456","http://m.acg456.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","http://m.acg456.com/",""
+"280","下拉式漫画","https://m.xlsmh.com","部分可用","NoResultsOrError","0","已完结","Reachable","200","Reachable","200","https://m.xlsmh.com/",""
+"281","优酷漫画","http://m.ykmh.net","部分可用","NoResultsOrError","0","排行","Blocked","403","Blocked","403","http://m.ykmh.net/",""
+"282","猎奇漫画","https://www.lieqiman.com","部分可用","NoResultsOrError","0","首页","Reachable","200","Reachable","200","https://www.lieqimh.com/",""
+"283","奇妙漫画","https://www.qimiaomanhua.com","失效","NoResultsOrError","0","更新","Blocked","","Blocked","","https://www.qimiaomanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (www.qimiaomanhua.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (www.qimiaomanhua.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection"
+"284","奇妙漫画网","https://www.cxjob.com.cn","可用","BrowseWorks","20","连载","Reachable","200","Reachable","200","https://www.cxjob.com.cn/",""
+"285","考拉漫画","http://cn.colacomic.com","部分可用","NoResultsOrError","0","更新","Blocked","403","Blocked","403","http://cn.colacomic.com/",""
+"286","野蛮考拉","http://mhbao.colacomic.com","部分可用","NotTestedNoCategory","0","","Blocked","403","Blocked","403","http://mhbao.colacomic.com/",""
+"287","TIBIU漫画","https://comic.tibiu.net","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://comic.tibiu.net/",""
+"288","奇漫屋","https://www.mqzjw.com","失效","SkippedNetwork","0","最新上架","Dead","","Dead","","https://www.mqzjw.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"289","奇漫屋网","https://m.qimanwu.app","可用","BrowseWorks","10","最新更新","Reachable","200","Reachable","200","https://m.qimanwu.app/",""
+"290","36漫画","https://m.36mh.org","可用","BrowseWorks","10","最新更新","Reachable","200","Reachable","200","https://m.36mh.org/",""
+"291","漫漫睇","https://m.manmantai.com","失效","SkippedNetwork","0","热门排行","Dead","","Dead","","https://m.manmantai.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"292","啵乐漫画","https://boysyo.cc","可用","BrowseWorks","20","最新","Blocked","403","Blocked","403","https://boysyo.cc/",""
+"293","啵乐漫画防走失","https://aboboy.cc","部分可用","NotTestedNoCategory","0","","Blocked","403","Blocked","403","https://aboboy.cc/",""
+"294","一耽女孩","https://yidan7.club","部分可用","NoResultsOrError","0","青梅竹马","Reachable","200","Reachable","200","https://yidan7.club/",""
+"295","线上漫画","https://www.xianshangmanhua.com","失效","NoResultsOrError","0","最新","Dead","","Dead","","https://www.xianshangmanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"296","香香腐宅","https://boyloveheaven13.cc","可用","BrowseWorks","20","每日更新","Reachable","200","Dead","","https://boyloveheaven13.cc","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"297","香香腐宅防走失","https://boyloveheaven14.cc","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://boylove.cc/",""
+"298","言耽社","https://yandanshe.net","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://yandanshe.net/",""
+"299","哈哈漫画","https://www.mh01.net","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.mh01.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"300","Vomic漫画","https://www.vomicmh.com","可用","BrowseWorks","20","主页","Reachable","200","Reachable","200","https://www.vomicmh.com/",""
+"301","V漫画（APP）","https://api.vmh.com","失效","SkippedNetwork","0","漫评榜","Dead","","Dead","","https://api.vmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"302","酷漫星（APP）","https://d9zfb53b.lstool.xyz","部分可用","NoResultsOrError","0","连载","Reachable","200","Reachable","200","https://d9zfb53b.lstool.xyz/",""
+"303","43漫画","https://www.43mh.com","部分可用","SkippedNetwork","0","国产","Dead","","Reachable","200","https://www.43manhua.org/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"304","UC漫画","https://m.ucmh.app","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.ucmh.app","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"305","11漫画","https://www.11manhua.net","部分可用","NoResultsOrError","0","主页","Blocked","403","Blocked","403","https://www.11manhua.net/",""
+"306","嗨皮漫画","https://m.happymh.com","失效","NoResultsOrError","0","全部","Blocked","","Blocked","","https://m.happymh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (m.happymh.com:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (m.happymh.com:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectTo"
+"307","向日葵连环画","https://m.lhh1.com","可用","BrowseWorks","20","今日最新","Dead","","Dead","","https://m.lhh1.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"308","非常爱漫","https://www.veryim.com","可用","BrowseWorks","20","近期更新","Reachable","200","Reachable","200","https://www.veryim.com/",""
+"309","漫画DB","https://www.manhuadb.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.manhuadb.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"310","漫画猫","https://www.maofly.com","部分可用","NoResultsOrError","0","最近更新","Reachable","200","Reachable","200","https://www.maofly.com/",""
+"311","漫画飞","https://m.manhuafei.com","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://m.manhuafei.com/",""
+"312","92字幕","https://92pu.com","失效","NoResultsOrError","0","最近更新","Dead","","Dead","","https://92pu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"313","KuKu动漫","http://m.dididm.cc","失效","SkippedNetwork","0","更新","Dead","","Dead","","http://m.dididm.cc","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"314","漫漫聚漫画","http://m.manmanju.cc","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://aaabbb.72.chat/8d/?manmanju.cc",""
+"315","新新漫画","https://www.77mh.com","失效","SkippedNetwork","0","最新上架","Dead","","Dead","","https://www.77mh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"316","新新漫画网","https://xxmh749.com","可用","BrowseWorks","20","总点击","Reachable","200","Reachable","200","https://xxmh749.com/",""
+"317","XX漫画","https://www.xxim.cc","部分可用","NoResultsOrError","0","连载","Reachable","200","Reachable","200","https://www.xxim.cc/",""
+"318","肉漫画","https://www.roumanhua.net","可用","BrowseWorks","20","全部","Blocked","403","Blocked","403","https://www.roumanhua.net/",""
+"319","zero搬运网","https://www.zerobyw33.com","可用","BrowseWorks","20","上架","Reachable","200","Reachable","200","https://www.zerobyw33.com/Android/Android/",""
+"320","ant搬运网","https://www.antbyw.com","可用","BrowseWorks","20","更新","Reachable","200","Reachable","200","https://www.antbyw.com/plugin.php?id=jameson_manhua",""
+"321","漫画联合国","https://www.comicun.com","部分可用","NoResultsOrError","0","最新更新","Blocked","200","Blocked","200","https://www.comicun.com/",""
+"322","Mangabz（PC）","https://www.mangabz.com","部分可用","NoResultsOrError","0","人气","Reachable","200","Reachable","200","https://www.mangabz.com/",""
+"323","X漫画","https://www.xmanhua.com","部分可用","NoResultsOrError","0","连载","Reachable","200","Reachable","200","https://www.xmanhua.com/",""
+"324","X漫画（PC）","https://www.xmanhua.com","部分可用","NoResultsOrError","0","人气","Reachable","200","Reachable","200","https://www.xmanhua.com/",""
+"325","YY漫画","https://www.yymanhua.com","部分可用","NoResultsOrError","0","连载","Reachable","200","Reachable","200","https://www.yymanhua.com/",""
+"326","XiangKan漫畫","https://www.2kju.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://www.2kju.com/",""
+"327","G漫画","http://www.gmanhua.com","可用","BrowseWorks","20","最近更新","Reachable","200","Reachable","200","https://www.gmanhua.com/",""
+"328","热辣漫画","https://www.manga2026.xyz","部分可用","NoResultsOrError","0","更新時間","Reachable","200","Reachable","200","https://m.manga2026.xyz/v2h5",""
+"329","拷贝漫画","https://www.copy4000.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://www.copy4000.com/h5",""
+"330","开车漫画","http://18pfun.com","失效","SkippedNetwork","0","每周限免","Dead","502","Dead","502","http://18pfun.com/",""
+"331","玉米动漫","https://aymdm.com","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://aymdm.com/",""
+"332","2Comic","https://m.twobili.com","失效","SkippedNetwork","0","最新","Dead","","Dead","","https://m.twobili.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"333","8Comic","https://www.comicabc.com","部分可用","NoResultsOrError","0","每日更新","Blocked","403","Blocked","403","https://www.comicabc.com/",""
+"334","HiComic","https://hicomic.net","失效","SkippedNetwork","0","最近更新","Dead","","Dead","","https://hicomic.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"335","HiComic（APP）","https://m.hicomic.net/h5","失效","SkippedNetwork","0","最近更新","Dead","","Dead","","https://m.hicomic.net/h5","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"336","漫百库","https://www.manhuabaiku.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.manhuabaiku.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"337","G站漫画","https://m.g-mh.org","可用","BrowseWorks","18","热门排行","Reachable","200","Reachable","200","https://m.g-mh.org/",""
+"338","好国漫","https://m.haoguoman8.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.haoguoman8.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"339","漫画鱼","https://m.manhuayu88.com","失效","NotTestedNoCategory","0","","Dead","","Dead","","https://m.manhuayu88.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"340","好多漫","https://m.haoduoman.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.haoduoman.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"341","漫画100","https://m.manhua100.com","失效","SkippedNetwork","0","更新","Dead","","Dead","","https://m.manhua100.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"342","每日漫画","https://www.meirimanhua.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.meirimanhua.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"343","漫画狗","https://m.manhuagou.net","部分可用","NoResultsOrError","0","最新","Blocked","200","Blocked","200","https://m.manhuagou.net/",""
+"344","漫畫狗","https://dogemanga.com","可用","BrowseWorks","20","首页","Reachable","200","Reachable","200","https://dogemanga.com/",""
+"345","看漫畫","https://www.k886.net","部分可用","NoResultsOrError","0","最新更新","Reachable","200","Reachable","200","https://m.k886.net/",""
+"346","TVBS漫画","https://www.tvbsmh.com","失效","SkippedNetwork","0","更新時間","Dead","","Dead","","https://www.tvbsmh.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"347","漫画库","https://www.mhku.net","失效","NoResultsOrError","0","最新更新","Blocked","","Blocked","","https://www.mhku.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (www.mhku.net:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (www.mhku.net:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTc"
+"348","风之动漫","https://manhua.fffdm.com","部分可用","NoResultsOrError","0","日漫","Reachable","200","Reachable","200","https://manhua.fffdm.com/",""
+"349","动漫戏说","https://comic.acgn.cc","可用","BrowseWorks","20","冒險","Reachable","200","Reachable","200","https://comic.acgn.cc/",""
+"350","漫画柜","https://www.mhgui.com","部分可用","NoResultsOrError","0","全部","Blocked","403","Blocked","403","https://www.mhgui.com/",""
+"351","漫画柜（PC）","https://www.manhuagui.com","部分可用","NoResultsOrError","0","全部","Reachable","301","Reachable","301","https://www.manhuagui.com/",""
+"352","漫畫櫃","https://tw.manhuagui.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://tw.manhuagui.com/",""
+"353","Komiic漫畫","https://komiic.com","部分可用","NoResultsOrError","0","最新更新","Blocked","200","Blocked","200","https://komiic.com/",""
+"354","奴奴漫画","https://www.2nunu.com","失效","SkippedNetwork","0","今日更新","Dead","","Dead","","https://www.2nunu.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"355","二次元动漫","https://www.2animx.com","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://www.2animx.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"356","98漫畫網","https://www.98comic.com","部分可用","NoResultsOrError","0","最新發佈","Reachable","200","Reachable","200","https://www.98comic.com/",""
+"357","動漫花園","http://share.dmhy.org","部分可用","NoResultsOrError","0","漫畫類組","Reachable","200","Reachable","200","https://share.dmhy.org/",""
+"358","マンガクロス","https://mangacross.jp","部分可用","NoResultsOrError","0","掲載作品一覧","Reachable","200","Reachable","200","https://championcross.jp/",""
+"359","韩漫漫画","https://www.manhwa.cc","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.manhwa.cc/",""
+"360","韩漫热","https://www.hanmanhot.com","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.hanmanhot.com/",""
+"361","哈哈韩漫","https://www.hpicc.org","部分可用","NoResultsOrError","0","每日更新","Blocked","","Blocked","","https://www.hpicc.org","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"362","急速韩漫","https://www.sckaichi.com","失效","SkippedNetwork","0","连载中","Dead","","Dead","","https://www.sckaichi.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"363","韩国污漫画","http://wuman.org","部分可用","NoResultsOrError","0","韩国漫画","Reachable","200","Reachable","200","http://wuman.org/",""
+"364","乐乐韩漫","https://www.hmwu.cc","部分可用","NoResultsOrError","0","全部","Reachable","200","Reachable","200","https://www.hmwu.cc/",""
+"365","九九韩漫","https://www.99mh1.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://www.glwxye.cc:9672/",""
+"366","Funbe韩漫","https://funbe578.com","失效","SkippedNetwork","0","웹툰","Dead","","Dead","","https://funbe578.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"367","蚂蚁漫画","https://m.xuxumh.com","部分可用","NoResultsOrError","0","剧情","Reachable","200","Reachable","200","https://m.xuxumh.com/",""
+"368","BL漫画","https://www.ybsight.com","部分可用","NoResultsOrError","0","连载","Blocked","403","Blocked","403","https://www.ybsight.com/",""
+"369","BL漫画网","https://www.kanbl.com","部分可用","NoResultsOrError","0","排行","Reachable","302","Reachable","200","https://www.kanbl.com/",""
+"370","爱漫画吧","https://www.ikanm8.com","失效","SkippedNetwork","0","最新","Dead","","Dead","","https://www.ikanm8.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"371","书屋漫画","https://www.hhggm.com","部分可用","NoResultsOrError","0","最新","Reachable","200","Reachable","200","https://www.swmm.cc/",""
+"372","砂之船漫画","https://www.szcdmj.com","部分可用","NoResultsOrError","0","连载","Reachable","301","Reachable","301","https://www.szcdmj.com/",""
+"373","看妹子漫画","https://www.kanmeizi.cc","部分可用","NoResultsOrError","0","全部","Reachable","302","Reachable","200","https://www.kanmeizi.cc/",""
+"374","CocoManga","https://cocomanga.xyz","部分可用","NoResultsOrError","0","最新发布","Reachable","200","Reachable","200","https://cocomanga.xyz/",""
+"375","COMICO","http://www.comico.com.tw","失效","NoResultsOrError","0","男性排行榜","Dead","","Dead","","http://www.comico.com.tw","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"376","Toptoon","https://m.toptoon.vip","失效","NoResultsOrError","0","连载","Dead","","Dead","","https://m.toptoon.vip","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"377","Rawdevart","https://rawdevart.com","部分可用","NoResultsOrError","0","Lastest","Reachable","200","Reachable","200","https://rawdevart.com/",""
+"378","SenManga","https://raw.senmanga.com","部分可用","NoResultsOrError","0","Last Update","Reachable","200","Reachable","200","https://raw.senmanga.com/",""
+"379","ViewComics","https://viewcomics.me","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://viewcomics.me/",""
+"380","MangaRaw","https://mangaraw.to/","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://mangaraw.to/",""
+"381","ComicK","https://comick.top","部分可用","NoResultsOrError","0","トップ","Reachable","302","Reachable","302","https://comick.top/",""
+"382","Rawkuma","https://rawkuma.net","可用","BrowseWorks","20","Updated","Reachable","200","Reachable","200","https://rawkuma.net/",""
+"383","KumaScans","https://kumascans.com","部分可用","NoResultsOrError","0","Update","Reachable","200","Reachable","200","https://kumascans.com/",""
+"384","Retsu","https://retsu.org","失效","SkippedNetwork","0","Manga","Dead","","Dead","","https://retsu.org","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"385","KissAway","https://klz9.com","可用","BrowseWorks","20","最新更新","Blocked","200","Blocked","200","https://klz9.com/",""
+"386","MangaDex","https://mangadex.org","可用","BrowseWorks","6","全部","Blocked","200","Blocked","200","https://mangadex.org/",""
+"387","MangaHasu","https://mangahasu.se","部分可用","NoResultsOrError","0","Lastest releases","Blocked","200","Blocked","200","https://mangahasu.se/",""
+"388","Reaper Scans","https://reaperscans.com","失效","SkippedNetwork","0","Last Update","Dead","","Dead","","https://reaperscans.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"389","Toonily","https://toonily.net","失效","NoResultsOrError","0","HOME","Blocked","","Blocked","","https://toonily.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (toonily.net:443)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (toonily.net:443)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpH"
+"390","WebtoonXYZ","https://www.webtoon.xyz","部分可用","NoResultsOrError","0","ALL","Blocked","403","Blocked","403","https://www.webtoon.xyz/",""
+"391","Shield Manga","https://shieldmanga.club","部分可用","NoResultsOrError","0","Action","Reachable","200","Reachable","200","https://shieldmanga.club/",""
+"392","365Manga","https://365manga.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://365manga.com/",""
+"393","MangaSum","https://mangasum.com","部分可用","NoResultsOrError","0","All genres","Reachable","200","Reachable","200","https://mangasum.com/",""
+"394","MyReadingManga","https://myreadingmanga.info","部分可用","NoResultsOrError","0","Manga","Blocked","403","Blocked","403","https://myreadingmanga.info/",""
+"395","MangaRock","http://mangarock.club","部分可用","NoResultsOrError","0","Latest Manga","Reachable","200","Reachable","200","http://mangarock.club/",""
+"396","MangaHatachi","https://hachimanga.com","部分可用","NoResultsOrError","0","ホーム ","Reachable","302","Reachable","200","https://hachimanga.com/",""
+"397","MangaBat","https://m.mangabat.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://emojilar.com/",""
+"398","MangaToro","https://mangatoro.com","部分可用","NoResultsOrError","0","Last updated","Reachable","200","Reachable","200","https://mangatoro.com/",""
+"399","ReadComicsOnline","https://readcomicsonline.ru","部分可用","NoResultsOrError","0","Latest","Blocked","403","Blocked","403","https://readcomicsonline.ru/",""
+"400","MangaOwl","https://mangaowl.net","部分可用","NoResultsOrError","0","4 koma","Reachable","200","Reachable","200","https://mangaowl.net/",""
+"401","MangaKakalot","https://mangakakalot.com","部分可用","NoResultsOrError","0","ALL","Blocked","403","Blocked","403","https://mangakakalot.com/",""
+"402","Manganelo","https://manganelo.com","部分可用","NoResultsOrError","0","Newest","Blocked","403","Blocked","403","https://manganelo.com/",""
+"403","Mangahere","http://mangahere.today","部分可用","NoResultsOrError","0","Lastest","Reachable","200","Reachable","200","http://mangahere.today/",""
+"404","LoveHug","https://weloma.art","可用","BrowseWorks","20","Most views","Blocked","200","Blocked","200","https://weloma.net/",""
+"405","Isekaiscan","https://isekaiscan.com","部分可用","NoResultsOrError","0","Lastest","Reachable","200","Reachable","200","https://isekaiscan.com/",""
+"406","剧能玩","http://appserver.jnwtv.com:8080","失效","NotTestedNoCategory","0","","Dead","","Dead","","http://appserver.jnwtv.com:8080","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"407","杂志迷","https://android2024.zazhimi.net","失效","SkippedNetwork","0","热门","Dead","","Dead","","https://android2024.zazhimi.net","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"408","次元小镇","https://dimtown.com","失效","SkippedNetwork","0","摄影","Dead","","Dead","","https://dimtown.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"409","堆糖图库","https://www.duitang.com","失效","SkippedNetwork","0","壁纸","Dead","","Dead","","https://www.duitang.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"410","哔哩相簿","https://h.bilibili.com","可用","BrowseWorks","1","首页","Reachable","200","Reachable","200","https://h.bilibili.com/",""
+"411","美桌网","http://www.win4000.com","部分可用","NoResultsOrError","0","风景","Reachable","200","Reachable","200","http://www.win4000.com/",""
+"412","萌图社","https://moetu.club","失效","SkippedNetwork","0","全部","Dead","","Dead","","https://moetu.club","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"413","瞎扯","https://xcxsd.org","失效","SkippedNetwork","0","养眼图片","Dead","","Dead","","https://xcxsd.org","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"414","Ammmi二次元","https://www.ammmi.com","失效","SkippedNetwork","0","动漫图片","Dead","","Dead","","https://www.ammmi.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   a"
+"415","和邪社","https://www.hexieshe.cn","失效","NoResultsOrError","0","图毒生灵","Dead","","Dead","","https://www.hexieshe.cn","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"416","绝对领域","http://www.jdlingyu.com","需要登录","NoResultsOrError","0","绅士好物","Login","200","Login","200","https://www.jdlingyu.com/",""
+"417","Cosplay啦","http://ciyuandao.com/photo","可用","BrowseWorks","20","COS正片","Dead","","Dead","","http://ciyuandao.com/photo","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"418","天极图片","http://pic.yesky.com","失效","NoResultsOrError","0","明星写真","Dead","","Dead","","http://pic.yesky.com","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"419","唯美女生","https://www.vmgirls.com","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://forsale.godaddy.com/forsale/vmgirls.com?traffic_id=GoDaddy_DLS&traffic_type=TDFS&utm_campaign=TDFS_GoDaddy_DLS&utm_medium=sn_affiliate_click&utm_source=TDFS",""
+"420","秀人集","http://98.987328.xyz","失效","SkippedNetwork","0","最近更新","Dead","","Dead","","http://98.987328.xyz","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"421","唯一图库","http://www.mmonly.cc","可用","BrowseWorks","20","美女图片","Reachable","200","Reachable","200","http://www.mmonly.cc/",""
+"422","羁绊图库","http://www.005.tv","失效","NoResultsOrError","0","动漫美图","Blocked","","Blocked","","http://www.005.tv","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""请求的名称有效，但是找不到请求的类型的数据。 (www.005.tv:80)""
+ ---> System.Net.Http.HttpRequestException: 请求的名称有效，但是找不到请求的类型的数据。 (www.005.tv:80)
+ ---> System.Net.Sockets.SocketException (11004): 请求的名称有效，但是找不到请求的类型的数据。
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostA"
+"423","必应壁纸","https://bing.ioliu.cn","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","https://bing.ioliu.cn/",""
+"424","轻小说文库（轻小说）","https://www.wenku8.cc","可用","BrowseWorks","20","电击文库","Blocked","403","Blocked","403","https://www.wenku8.net/",""
+"425","哔哩轻漫画","https://www.bilimanga.net","可用","BrowseWorks","20","最近更新","Reachable","200","Reachable","200","https://www.bilimanga.net/",""
+"426","哔哩轻小说（轻小说）","https://m.bilinovel.com","可用","BrowseWorks","20","最近更新","Reachable","200","Reachable","200","https://www.bilinovel.net/",""
+"427","神凑轻小说（轻小说）","https://m.shencou.com","可用","BrowseWorks","20","电击文库","Blocked","403","Blocked","403","https://m.shencou.com/",""
+"428","ESJ轻小说（轻小说）","https://www.esjzone.cc","部分可用","NoResultsOrError","0","全部","Blocked","200","Blocked","200","https://www.esjzone.cc/",""
+"429","香香腐宅（轻小说）","https://boyloveheaven13.cc","可用","BrowseWorks","20","每日更新","Reachable","200","Reachable","200","https://boylove.cc/",""
+"430","拷贝轻小说（轻小说）","https://www.copy4000.com/h5/discover","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://www.copy4000.com/h5/discover",""
+"431","真白萌轻小说（轻小说）","https://masiro.me","需要登录","SkippedNetwork","0","全部小说","Login","403","Login","403","https://masiro.me/admin/auth/login",""
+"432","樱花动漫ACD（动画）","http://m.yinghuadm.io","部分可用","NotTestedNoCategory","0","","Reachable","200","Reachable","200","http://m.yinghuadm.io/",""
+"433","AGE动漫（动画）","https://www.agemys.org","失效","SkippedNetwork","0","更新时间","Dead","","Dead","","https://www.agemys.org","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The SSL connection could not be established, see inner exception.""
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid because of errors in the certificate chain: NotTimeValid
+   at System.Net.Security.SslStream.CompleteHandshake(SslA"
+"434","NT动漫（动画）","http://www.ntdm.tv","失效","NoResultsOrError","0","每日更新","Dead","","Dead","","http://www.ntdm.tv","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"435","OmoFun动漫（动画）","https://www.omofuns.com","可用","BrowseWorks","20","日漫","Dead","","Reachable","200","https://www.omofuns.com/","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO"
+"436","囧次元（动画）","http://tv.yy-fun.cc","失效","NoResultsOrError","0","最新","Dead","","Dead","","http://tv.yy-fun.cc","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.""
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 10 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks."
+"437","曼波动画（动画）","https://app.omofun1.top","部分可用","NoResultsOrError","0","最新","Blocked","","Blocked","","https://app.omofun1.top","System.Management.Automation.MethodInvocationException: Exception calling ""GetResult"" with ""0"" argument(s): ""An error occurred while sending the request.""
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack tr"
+"438","MiFun动画（动画）","https://ios.mifun.org","可用","BrowseWorks","20","最新","Reachable","200","Reachable","200","https://ios.mifun.org/",""
+"439","爱云影视（动画）","https://www.iyunys.com","部分可用","NoResultsOrError","0","更新","Reachable","200","Reachable","200","https://www.iyunys.com/",""
+"440","小霸王（游戏）","https://www.yikm.net","可用","BrowseWorks","20","FC","Reachable","200","Reachable","200","https://www.yikm.net/",""

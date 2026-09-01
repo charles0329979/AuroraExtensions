@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "audit": {
+    "currentWithinDays": 7,
+    "publishableWithinDays": 14,
+    "staleWithinDays": 30
+  },
+  "requiredReadingChain": [
+    "browse",
+    "search",
+    "details",
+    "chapters",
+    "pages",
+    "image"
+  ],
+  "grades": {
+    "A": "Complete reading chain verified on a real device",
+    "B": "Readable with a documented limitation",
+    "C": "Login, challenge, regional access, or device verification required",
+    "D": "Core reading chain failed",
+    "Q": "Quarantined for security or provenance review",
+    "U": "Published reading package has no current device audit",
+    "N": "Non-reading test fixture or runtime container"
+  },
+  "transitions": {
+    "degradeAfterConsecutiveFailures": 3,
+    "recoverAfterConsecutiveSuccesses": 3
+  }
+}

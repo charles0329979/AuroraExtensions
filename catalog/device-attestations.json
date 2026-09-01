@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "attestations": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
+      "checkedAt": "2026-08-31",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "browse, search, details, 126 chapters, 14 pages, and first-image rendering passed on a connected Android test device",
+      "sources": [
+        {
+          "name": "快看漫画",
+          "baseUrl": "https://www.kuaikanmanhua.com",
+          "limitation": null
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.all.webtoons",
+      "checkedAt": "2026-08-31",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "popular listing, game search, details, 10 chapters, 103 pages, and first-image rendering passed on a connected Android test device",
+      "sources": [
+        {
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "limitation": null
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.ja.senmanga",
+      "checkedAt": "2026-08-31",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "popular listing, jujutsu search endpoint and target result, details, 274 chapters, 22 pages, and first-image rendering passed on a connected Android test device",
+      "sources": [
+        {
+          "name": "Sen Manga",
+          "baseUrl": "https://raw.senmanga.com",
+          "limitation": null
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+      "checkedAt": "2026-08-31",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "daily listing, S search, details, 8 chapters, 40 pages, and first-image rendering passed on a connected Android test device",
+      "sources": [
+        {
+          "name": "Dongman Manhua",
+          "baseUrl": "https://www.dongmanmanhua.cn",
+          "limitation": null
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
+      "checkedAt": "2026-08-31",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "popular listing, Alpha search, details, 203 chapters, 26 pages, and first-image rendering passed on a connected Android test device",
+      "sources": [
+        {
+          "name": "如漫画",
+          "baseUrl": "https://m.rumanhua2.com",
+          "limitation": null
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+      "checkedAt": "2026-09-01",
+      "state": "active_degraded",
+      "validation": "device_degraded",
+      "passedStages": ["browse", "details", "chapters", "pages"],
+      "evidence": "catalogue and detail parsing still resolve 120 chapters and page URLs; the site search backend currently alternates between empty and truncated responses, while both image proxy hosts return Cloudflare HTTP 403 on the connected Android test device and desktop network probes",
+      "sources": [
+        {
+          "name": "古风漫画",
+          "baseUrl": "https://www.gfmh.app",
+          "limitation": "site_search_is_intermittently_empty_and_image_proxies_return_cloudflare_403"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manquanzi",
+      "checkedAt": "2026-09-01",
+      "state": "active_degraded",
+      "validation": "device_degraded",
+      "passedStages": ["browse", "search", "details", "chapters", "pages"],
+      "evidence": "v1.6.3 search, details, 168 chapters, and 20 page URLs passed on the connected Android test device; reader remains at page 1/20 because the site's legacy http://img.9mqz.com image host does not return a usable response and its HTTPS endpoint fails TLS negotiation",
+      "sources": [
+        {
+          "name": "漫圈子",
+          "baseUrl": "https://www.9mqz.com",
+          "limitation": "legacy_image_host_unreachable_and_https_tls_unavailable"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhua360",
+      "checkedAt": "2026-09-01",
+      "state": "active_degraded",
+      "validation": "device_degraded",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "search, details, 670 chapters, page extraction, and an older 36-page chapter remain readable on the connected Android test device; current top chapters can contain unrelated Baozi-hosted placeholder or promotion images supplied by the website",
+      "sources": [
+        {
+          "name": "360漫画",
+          "baseUrl": "https://www.360mh.cc",
+          "limitation": "recent_chapters_may_contain_site_supplied_placeholder_or_promotion_images"
+        }
+      ]
+    }
+  ]
+}

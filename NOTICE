@@ -25,18 +25,24 @@ tachiyomix (compile-only API surface)
   the public Mihon tachiyomix 1.6 API for compileOnly use. Runtime Source
   classes are provided by the host app (AuroraReader / Mihon).
 
-keiyoushi/extensions-source (MangaDex extension)
-  The MangaDex extension (`eu.kanade.tachiyomi.extension.all.mangadex`) is
-  built from upstream Apache-2.0 sources at a fixed pin:
+keiyoushi/extensions-source (MangaDex and audited website extensions)
+  MangaDex and the curated website batch are built from upstream Apache-2.0
+  sources at fixed pins:
 
     Repository: https://github.com/keiyoushi/extensions-source
     Pin SHA:    72979b95438718647d39b8f6133714a4b9b8e2e0
     Recorded:   vendor/PIN.txt
     Module:     src/all/mangadex (+ lib/i18n, core, compiler, common, gradle)
 
+  The website batch pin is recorded in `vendor/BATCH_PIN.txt` and covers
+  Webtoons, Rawkuma, Sen Manga, Dongman Manhua, MH1234, Miaoqu Manhua,
+  Tencent Comics, Terra Historicus, Zaimanhua, and Manwa (Shizuku). The Manwa
+  implementation is pinned separately to proposal commit
+  3b1dd61cd1b0ea358d9e1b7e5cd893b6cf7113dd; see `vendor/BATCH_PIN.txt`.
+
   Copyright and license for that code remain with the Keiyoushi / Tachiyomi
-  extension contributors. Only MangaDex is vendored here — this is not a full
-  mirror of the Keiyoushi catalogue.
+  extension contributors. This is a curated subset, not a full mirror of the
+  Keiyoushi catalogue.
 
   MangaDex public API: https://api.mangadex.org (subject to MangaDex ToS).
 

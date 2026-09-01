@@ -1,0 +1,23 @@
+{
+  "package": "eu.kanade.tachiyomi.extension.zh.example",
+  "displayName": "Tachiyomi: Example",
+  "language": "zh",
+  "versionCode": 1,
+  "versionName": "1.4.1",
+  "apk": "tachiyomi-zh.example-v1.4.1.apk",
+  "icon": "eu.kanade.tachiyomi.extension.zh.example.png",
+  "module": "extensions/example",
+  "implementation": "native",
+  "role": "reading_source",
+  "channel": "testing",
+  "state": "published",
+  "nsfw": 0,
+  "sources": [
+    {
+      "id": 1,
+      "language": "zh",
+      "name": "示例书源",
+      "baseUrl": "https://example.invalid"
+    }
+  ]
+}

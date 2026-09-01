@@ -16,8 +16,9 @@ Thumbs.db
 *.tmp
 extensions/**/build/
 /vendor/extensions-source/
+/vendor/batch-extensions-source/
+/vendor/ppcat_store/
 
 # Local Gradle dist used by vendor builds
 vendor/*.zip
 vendor/gradle-*-bin.zip
-

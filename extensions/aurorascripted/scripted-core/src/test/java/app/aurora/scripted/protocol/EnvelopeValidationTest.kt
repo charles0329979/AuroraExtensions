@@ -5,8 +5,8 @@ import org.junit.Test
 
 class EnvelopeValidationTest {
     @Test
-    fun protocolVersionConstantIsTwo() {
-        assertEquals(2, SCRIPTED_PROTOCOL_VERSION)
+    fun experimentalEnvelopeVersionIsDistinctFromHostV2() {
+        assertEquals(3, SCRIPTED_PROTOCOL_VERSION)
     }
 
     @Test

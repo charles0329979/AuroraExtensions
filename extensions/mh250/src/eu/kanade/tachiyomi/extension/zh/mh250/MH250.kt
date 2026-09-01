@@ -85,11 +85,10 @@ abstract class MH250 : HttpSource() {
         }
     }
 
-    private fun meta(document: Document, property: String): String? =
-        document.selectFirst("meta[property=$property]")
-            ?.attr("content")
-            ?.trim()
-            ?.takeIf(String::isNotEmpty)
+    private fun meta(document: Document, property: String): String? = document.selectFirst("meta[property=$property]")
+        ?.attr("content")
+        ?.trim()
+        ?.takeIf(String::isNotEmpty)
 
     override fun chapterListParse(response: Response): List<SChapter> = response.asJsoup()
         .select("#ncp3_ul a[href$=.html]")

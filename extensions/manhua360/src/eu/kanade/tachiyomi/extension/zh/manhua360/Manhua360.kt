@@ -31,8 +31,7 @@ abstract class Manhua360 : HttpSource() {
 
     override fun latestUpdatesParse(response: Response) = parseMangaList(response)
 
-    private fun listUrl(order: String, page: Int): String =
-        "$baseUrl/index.php/category/order/$order" + if (page > 1) "/page/$page" else ""
+    private fun listUrl(order: String, page: Int): String = "$baseUrl/index.php/category/order/$order" + if (page > 1) "/page/$page" else ""
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
         val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()

@@ -335,7 +335,11 @@ function Ensure-QualitySources {
 }
 
 function Ensure-AuroraCustomSources {
-    foreach ($module in @("gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo", "mh250", "bikabika", "dmanhua", "manhua360", "manhua36", "manhua456", "soman")) {
+    foreach ($module in @(
+        "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan",
+        "gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo",
+        "mh250", "bikabika", "dmanhua", "manhua360", "manhua36", "manhua456", "soman"
+    )) {
         $source = Join-Path $RepoRoot "extensions\$module"
         $target = Join-Path $VendorDir "src\zh\$module"
         if (-not (Test-Path -LiteralPath (Join-Path $source "build.gradle.kts"))) {

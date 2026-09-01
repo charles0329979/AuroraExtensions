@@ -164,6 +164,7 @@ if (-not $SkipBuild) {
         if ($IsWindows -or $env:OS -match "Windows") {
             & .\gradlew.bat $assembleTask --no-daemon
         } else {
+            & chmod +x ./gradlew
             & ./gradlew $assembleTask --no-daemon
         }
         if ($LASTEXITCODE -ne 0) { throw "Scripted Gradle build failed with exit $LASTEXITCODE" }

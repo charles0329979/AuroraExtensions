@@ -360,7 +360,7 @@ function Resolve-Python {
     throw "python/python3 not found (or only WindowsApps stub present)"
 }
 $python = Resolve-Python
-$tmpPy = Join-Path $env:TEMP "aurora-generate-index.py"
+$tmpPy = Join-Path ([IO.Path]::GetTempPath()) "aurora-generate-index-$PID.py"
 [System.IO.File]::WriteAllText($tmpPy, $py, (New-Object System.Text.UTF8Encoding $false))
 & $python.Source $tmpPy
 $pyExit = $LASTEXITCODE

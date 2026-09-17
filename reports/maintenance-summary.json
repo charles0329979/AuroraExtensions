@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T03:05:24Z",
+  "generatedAt": "2026-09-17T02:30:58Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "bdad9277107238147f0650197a40acde8063a6c5889af3cfd4837e1091242770",
@@ -9,7 +9,7 @@
   "audit": {
     "snapshot": "healthy-sources-20260911.json",
     "snapshotDate": "2026-09-11",
-    "ageDays": 5,
+    "ageDays": 6,
     "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [

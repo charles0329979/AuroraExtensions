@@ -1,6 +1,6 @@
 # User release readiness
 
-Current checked state: 2026-09-16.
+Current checked state: 2026-09-17.
 
 The local repository maintenance gate passes with 41 stable packages and no
 testing publications. GitHub Pages and all five required production-signing
@@ -15,9 +15,14 @@ package `tools` was requested by `android-actions/setup-android@v3`. The local
 workflows now use the current Node 24 action generations and request only
 `platform-tools` during SDK setup. A branch audit confirmed that requesting
 `platforms;android-37` at setup time fails on GitHub's current SDK mirror, so
-the build step must resolve its own compile SDK. The repair is not active on
-the remote `main` branch until the reviewed
-changes are committed and pushed. Public release therefore remains blocked.
+the build step must resolve its own compile SDK. The feature-branch maintenance
+audit now passes. A feature-branch build restored the production keystore and
+built source modules, then stopped because the current development-signed
+catalogue has a different signing identity. The workflow now checks this before
+compilation. The repair is not active on the remote `main` branch until reviewed
+and merged. Public release therefore remains blocked pending explicit approval
+for the initial production-signing migration, a clean-device install test, and
+an upgrade test on a device with the existing plugins installed.
 
 Recheck the complete state at any time:
 

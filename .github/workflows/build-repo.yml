@@ -57,6 +57,24 @@ jobs:
           mkdir -p "$(dirname "$AURORA_EXTENSION_SIGNING_KEYSTORE")"
           printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$AURORA_EXTENSION_SIGNING_KEYSTORE"
 
+      - name: Check signing identity before build
+        shell: pwsh
+        env:
+          ALLOW_KEY_ROTATION: ${{ inputs.allow_signing_key_rotation || false }}
+        run: |
+          $actual = ./scripts/get-signing-fingerprint.ps1 `
+            -Keystore $env:AURORA_EXTENSION_SIGNING_KEYSTORE `
+            -StorePass $env:AURORA_EXTENSION_STORE_PASSWORD `
+            -Alias $env:AURORA_EXTENSION_KEY_ALIAS
+          $expected = ($env:AURORA_EXTENSION_SIGNING_FINGERPRINT -replace ':', '').ToLowerInvariant()
+          if ($actual -ne $expected) {
+            throw 'Production keystore does not match the configured signing fingerprint.'
+          }
+          $catalog = (Get-Content repo/repo.json -Raw | ConvertFrom-Json).meta.signingKeyFingerprint
+          if ($catalog -and $catalog -ne $actual -and $env:ALLOW_KEY_ROTATION -ne 'true') {
+            throw 'Existing catalog uses a different signing identity. Production-key migration requires explicit approval and allow_signing_key_rotation=true; no build or publication was attempted.'
+          }
+
       - name: Generate repo artefacts
         shell: pwsh
         env:

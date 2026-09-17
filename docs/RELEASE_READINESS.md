@@ -12,8 +12,11 @@ The published stable catalogue does not yet match the local package/version/hash
 set, and the testing URL returns HTTP 404. Remote daily audits from 2026-09-12
 through 2026-09-15 also failed before the gate because the retired Android SDK
 package `tools` was requested by `android-actions/setup-android@v3`. The local
-workflows now use the current Node 24 action generations and request Android 37
-packages explicitly, but that repair is not active remotely until the reviewed
+workflows now use the current Node 24 action generations and request only
+`platform-tools` during SDK setup. A branch audit confirmed that requesting
+`platforms;android-37` at setup time fails on GitHub's current SDK mirror, so
+the build step must resolve its own compile SDK. The repair is not active on
+the remote `main` branch until the reviewed
 changes are committed and pushed. Public release therefore remains blocked.
 
 Recheck the complete state at any time:

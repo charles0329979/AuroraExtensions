@@ -383,16 +383,23 @@ function Ensure-GoDaMirrorOverride {
 function Ensure-ManwaNuMirrorOverride {
     $buildFile = Join-Path $VendorDir "src\zh\manwashizuku\build.gradle.kts"
     $text = Get-Content -LiteralPath $buildFile -Raw
-    $updated = $text.Replace("versionCode = 2", "versionCode = 4").Replace("versionCode = 3", "versionCode = 4")
-    if ($updated -notmatch [regex]::Escape("https://manwanu.cc")) {
-        $updated = $updated.Replace(
-            '                "https://manwari.cc",',
-            "                `"https://manwari.cc`",`n                `"https://manwanu.cc`","
-        )
+    $versionPattern = '(?m)^    versionCode = [1-4]$'
+    $mirrorsPattern = '(?s)            mirrors\(\r?\n.*?            \)'
+    if ([regex]::Matches($text, $versionPattern).Count -ne 1 -or
+        [regex]::Matches($text, $mirrorsPattern).Count -ne 1) {
+        throw "Pinned Manwa Shizuku metadata changed; review the mirror override"
     }
-    if ($updated -notmatch 'versionCode = 4' -or $updated -notmatch [regex]::Escape("https://manwanu.cc")) {
-        throw "Unable to add the audited Manwanu mirror"
-    }
+    $canonicalMirrors = @'
+            mirrors(
+                "https://manwari.cc",
+                "https://manwanu.cc",
+                "https://manwali.cc",
+                "https://mwuu.cc",
+                "https://www.manwayi.cc",
+            )
+'@
+    $updated = [regex]::Replace($text, $versionPattern, '    versionCode = 4')
+    $updated = [regex]::Replace($updated, $mirrorsPattern, $canonicalMirrors)
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 
     $sourceFile = Join-Path $VendorDir "src\zh\manwashizuku\src\eu\kanade\tachiyomi\extension\zh\manwashizuku\ManwaShizuku.kt"

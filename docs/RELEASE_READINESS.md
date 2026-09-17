@@ -1,6 +1,6 @@
 # User release readiness
 
-Current checked state: 2026-09-17.
+Current checked state: 2026-09-18.
 
 The local repository maintenance gate passes with 41 stable packages and no
 testing publications. GitHub Pages and all five required production-signing
@@ -19,9 +19,13 @@ workflows now use the current Node 24 action generations and request only
 the build step must resolve its own compile SDK. The feature-branch maintenance
 audit now passes. The workflow checks signing identity before compilation. The
 repair and production-signed catalogue are not active on remote `main` until
-reviewed and merged. Public release remains blocked pending separate publication
-approval, a clean-device install test, and a migration test on a device with
-existing development-signed plugins.
+reviewed and merged. A clean-emulator install/read pass and an isolated
+development-to-production-signing migration pass are recorded in
+`docs/EXTENSION_SIGNING_MIGRATION_SMOKE_2026-09-18.md` and the app repository's
+`docs/EXTENSION_CLEAN_INSTALL_SMOKE_2026-09-17.md`. Public release remains
+blocked pending separate publication approval and the stable URL's acceptance
+pass after publication. Neither emulator pass covers all 41 packages or offline
+reading.
 
 Recheck the complete state at any time:
 

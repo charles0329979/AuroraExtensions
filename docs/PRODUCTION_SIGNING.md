@@ -54,6 +54,24 @@ signer. Trigger `Build extension repo` once with the explicit signing-key rotati
 input enabled. Later builds must leave rotation disabled and will fail closed if
 the signing identity changes.
 
+## First migration for existing development installs
+
+The development-signed APKs cannot be upgraded in place to the production
+signer. In particular, the old Kuaikanmanhua development APK used version code
+104013 while the pinned source builds version code 13, so it also cannot be
+treated as a normal update. Do not silently replace or uninstall plugins on a
+reader's device.
+
+Before publishing, verify the production-signed catalogue on a clean device and
+back up an existing reader's app data. For a device with development plugins,
+remove the old extension repository from the app (this clears its package-scoped
+trust grants), uninstall the affected development-signed plugins, add the new
+repository, and install the production-signed plugins. Then confirm that the
+same source IDs restore library access and that search, chapters, images, and
+offline reading work. Keep the old repository and APKs available for recovery
+until this acceptance pass succeeds. A feature-branch build does not publish to
+GitHub Pages.
+
 ## Recovery rule
 
 Never generate a replacement key simply because one workstation lost its copy.

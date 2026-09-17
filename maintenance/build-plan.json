@@ -105,7 +105,7 @@
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/kuaikanmanhua",
       "gradleModule": "src/zh/kuaikanmanhua",
-      "versionCode": 104013,
+      "versionCode": 13,
       "versionName": "1.4.13",
       "apk": "tachiyomi-zh.kuaikanmanhua-v1.4.13.apk",
       "channel": "stable",

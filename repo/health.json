@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T02:30:58Z",
+  "generatedAt": "2026-09-17T03:11:11Z",
   "repository": {
     "name": "Aurora Extensions",
-    "signingKeyFingerprint": "bdad9277107238147f0650197a40acde8063a6c5889af3cfd4837e1091242770",
+    "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
     "indexedPackages": 41
   },
   "audit": {
@@ -529,7 +529,7 @@
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
       "name": "Tachiyomi: Kuaikanmanhua",
       "version": "1.4.13",
-      "versionCode": 104013,
+      "versionCode": 13,
       "grade": "U",
       "state": "unassessed",
       "role": "reading_source",

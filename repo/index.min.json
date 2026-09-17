@@ -266,19 +266,19 @@
   {
     "name": "Tachiyomi: Manwa (Shizuku)",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
-    "apk": "tachiyomi-zh.manwashizuku-v1.6.1.apk",
-    "sha256": "b889b6ac6bbe7aa3aeb31cfa2360c99ea4e54c49350cb360c6cfe962a5deab68",
-    "size": 87407,
+    "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
+    "sha256": "3713ff2e8d90b9338d2e304d71ad2dfacf54e23512006976f7ad61b8bf83c365",
+    "size": 87471,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 1,
     "sources": [
       {
         "id": 7453499921408758404,
         "lang": "zh",
         "name": "漫蛙(雫)",
-        "baseUrl": "https://manwali.cc"
+        "baseUrl": "https://manwari.cc"
       }
     ]
   },
@@ -342,12 +342,12 @@
   {
     "name": "Tachiyomi: BoyLove",
     "pkg": "eu.kanade.tachiyomi.extension.zh.boylove",
-    "apk": "tachiyomi-zh.boylove-v1.4.18.apk",
-    "sha256": "682392f350b6943323253ded0abe9d0181ac70061e6fa11b9a699eb9ee57d71a",
-    "size": 46435,
+    "apk": "tachiyomi-zh.boylove-v1.4.19.apk",
+    "sha256": "87c0664df33e7202dd877f86128a4669d3e649c3c631fc894b10b7f4267b2f68",
+    "size": 46439,
     "lang": "zh",
-    "code": 18,
-    "version": "1.4.18",
+    "code": 19,
+    "version": "1.4.19",
     "nsfw": 1,
     "sources": [
       {
@@ -362,8 +362,8 @@
     "name": "Tachiyomi: TTKMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.ttkmh",
     "apk": "tachiyomi-zh.ttkmh-v1.4.1.apk",
-    "sha256": "9ff94e82262f05f9535b8d6b30bae7dc7fb03bc07f59d1ec41662d2dfeafbda3",
-    "size": 27971,
+    "sha256": "e3945cd216aea19111340bb7983cf1feaa5b4d88b289211c5a24d31095796390",
+    "size": 26351,
     "lang": "zh",
     "code": 1,
     "version": "1.4.1",
@@ -381,8 +381,8 @@
     "name": "Tachiyomi: Kaixinman",
     "pkg": "eu.kanade.tachiyomi.extension.zh.kaixinman",
     "apk": "tachiyomi-zh.kaixinman-v1.4.1.apk",
-    "sha256": "bd0aafb7dab71a38aa55dbc4d760120fb038d492a391c42fb60f310a7f016b54",
-    "size": 28431,
+    "sha256": "80c88f19ea4cf695aada786196a7ae57f47b099ddacc80943a8a1581ad3e14af",
+    "size": 26811,
     "lang": "zh",
     "code": 1,
     "version": "1.4.1",
@@ -400,8 +400,8 @@
     "name": "Tachiyomi: Sisi Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.sisimanhua",
     "apk": "tachiyomi-zh.sisimanhua-v1.4.1.apk",
-    "sha256": "cf39d550a896ccbb0b2cb3f0eb56d518ec4867ef0524b48ff69e938a8a07c60b",
-    "size": 25547,
+    "sha256": "ca5cc9f380ca5aa924a1efab1ff5c1d6249593d597956b93bbd89b2fc12570b2",
+    "size": 23927,
     "lang": "zh",
     "code": 1,
     "version": "1.4.1",
@@ -419,8 +419,8 @@
     "name": "Tachiyomi: Yumanhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.yumanhua",
     "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
-    "sha256": "15e637c0fd6fca28788e332ef930bc595ec4b7e61f74a24aee997267fcd00d99",
-    "size": 29339,
+    "sha256": "31d7e7fa1bebcd7b18ac7d2da797fa846ebb483bef508e1c8a0330e830ff6395",
+    "size": 27719,
     "lang": "zh",
     "code": 3,
     "version": "1.4.3",
@@ -457,8 +457,8 @@
     "name": "Tachiyomi: Manhua Daquan",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
     "apk": "tachiyomi-zh.manhuadaquan-v1.4.1.apk",
-    "sha256": "8658383bbb53e30301947acf20e6ea712c0b633f9cd2ef98de93b346e888c85b",
-    "size": 25763,
+    "sha256": "302005a2acf952848267c1172954fb3b2d72d8527438f57678a0b6140b33cb6c",
+    "size": 24143,
     "lang": "zh",
     "code": 1,
     "version": "1.4.1",
@@ -779,19 +779,38 @@
   {
     "name": "Tachiyomi: Soman",
     "pkg": "eu.kanade.tachiyomi.extension.zh.soman",
-    "apk": "tachiyomi-zh.soman-v1.6.2.apk",
-    "sha256": "8123349bcbbce9ec6d5f1645718df49bb867beb06cc23cdeed958f8c2c87f86f",
-    "size": 24767,
+    "apk": "tachiyomi-zh.soman-v1.6.3.apk",
+    "sha256": "2e5fb6e6df92c90f11e0154fffa7a09c6f0429e3b11749319d9129ac5093657f",
+    "size": 24779,
     "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
+    "code": 3,
+    "version": "1.6.3",
     "nsfw": 1,
     "sources": [
       {
         "id": 4379597560628642163,
         "lang": "zh",
         "name": "搜漫",
-        "baseUrl": "https://www.veryim.com"
+        "baseUrl": "http://www.veryim.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: Kanman",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.kanman",
+    "apk": "tachiyomi-zh.kanman-v1.6.4.apk",
+    "sha256": "a7c83884f60304f4a48147c115aeffcdcc1c99e90a231439077ed3e70ef1e95f",
+    "size": 33067,
+    "lang": "zh",
+    "code": 4,
+    "version": "1.6.4",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 6760527258454776894,
+        "lang": "zh",
+        "name": "看漫画（免费章节）",
+        "baseUrl": "https://m.kanman.com"
       }
     ]
   }

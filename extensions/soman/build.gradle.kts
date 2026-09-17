@@ -6,13 +6,13 @@ plugins {
 
 keiyoushi {
     name = "Soman"
-    versionCode = 2
+    versionCode = 3
     contentWarning = ContentWarning.MIXED
     libVersion = "1.6"
 
     source {
         name = "搜漫"
         lang = "zh"
-        baseUrl = "https://www.veryim.com"
+        baseUrl = "http://www.veryim.com"
     }
 }

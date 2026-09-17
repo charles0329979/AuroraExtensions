@@ -26,19 +26,21 @@ jobs:
       AURORA_EXTENSION_SIGNING_FINGERPRINT: ${{ secrets.AURORA_EXTENSION_SIGNING_FINGERPRINT }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: "17"
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: "platform-tools platforms;android-37 build-tools;37.0.0"
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -69,19 +71,19 @@ jobs:
         run: ./scripts/maintain-repo.ps1 -VerifyOnly
 
       - name: Upload repo/
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aurora-extensions-repo
           path: repo/
 
       - name: Upload testing repo/
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aurora-extensions-testing-repo
           path: repo-testing/
 
       - name: Upload maintenance report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aurora-extensions-maintenance-report
           path: reports/

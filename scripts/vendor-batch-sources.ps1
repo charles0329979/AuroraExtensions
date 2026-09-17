@@ -86,9 +86,9 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/manwashizuku"; Package = "eu.kanade.tachiyomi.extension.zh.manwashizuku"
-        Name = "Tachiyomi: Manwa (Shizuku)"; Apk = "tachiyomi-zh.manwashizuku-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
-        Sources = @(@{ id = 7453499921408758404L; lang = "zh"; name = "漫蛙(雫)"; baseUrl = "https://manwali.cc" })
+        Name = "Tachiyomi: Manwa (Shizuku)"; Apk = "tachiyomi-zh.manwashizuku-v1.6.4.apk"
+        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 1
+        Sources = @(@{ id = 7453499921408758404L; lang = "zh"; name = "漫蛙(雫)"; baseUrl = "https://manwari.cc" })
     }
     [pscustomobject]@{
         Module = "src/zh/miaoqu"; Package = "eu.kanade.tachiyomi.extension.zh.miaoqu"
@@ -110,8 +110,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/boylove"; Package = "eu.kanade.tachiyomi.extension.zh.boylove"
-        Name = "Tachiyomi: BoyLove"; Apk = "tachiyomi-zh.boylove-v1.4.18.apk"
-        Lang = "zh"; Code = 18; Version = "1.4.18"; Nsfw = 1
+        Name = "Tachiyomi: BoyLove"; Apk = "tachiyomi-zh.boylove-v1.4.19.apk"
+        Lang = "zh"; Code = 19; Version = "1.4.19"; Nsfw = 1
         Sources = @(@{ id = 1471112097704477289L; lang = "zh"; name = "香香腐宅"; baseUrl = "https://boyloveheaven13.cc" })
     }
     [pscustomobject]@{
@@ -235,6 +235,12 @@ $specs = @(
         Sources = @(@{ id = 228875196645121102L; lang = "zh"; name = "可漫画"; baseUrl = "https://www.dmanhua.com" })
     }
     [pscustomobject]@{
+        Module = "src/zh/kanman"; Package = "eu.kanade.tachiyomi.extension.zh.kanman"
+        Name = "Tachiyomi: Kanman"; Apk = "tachiyomi-zh.kanman-v1.6.4.apk"
+        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
+        Sources = @(@{ id = 6760527258454776894L; lang = "zh"; name = "看漫画（免费章节）"; baseUrl = "https://m.kanman.com" })
+    }
+    [pscustomobject]@{
         Module = "src/zh/manhua360"; Package = "eu.kanade.tachiyomi.extension.zh.manhua360"
         Name = "Tachiyomi: 360 Manhua"; Apk = "tachiyomi-zh.manhua360-v1.6.5.apk"
         Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 1
@@ -254,9 +260,9 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/soman"; Package = "eu.kanade.tachiyomi.extension.zh.soman"
-        Name = "Tachiyomi: Soman"; Apk = "tachiyomi-zh.soman-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
-        Sources = @(@{ id = 4379597560628642163L; lang = "zh"; name = "搜漫"; baseUrl = "https://www.veryim.com" })
+        Name = "Tachiyomi: Soman"; Apk = "tachiyomi-zh.soman-v1.6.3.apk"
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 1
+        Sources = @(@{ id = 4379597560628642163L; lang = "zh"; name = "搜漫"; baseUrl = "http://www.veryim.com" })
     }
 )
 
@@ -338,7 +344,7 @@ function Ensure-AuroraCustomSources {
     foreach ($module in @(
         "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan",
         "gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo",
-        "mh250", "bikabika", "dmanhua", "manhua360", "manhua36", "manhua456", "soman"
+        "mh250", "bikabika", "dmanhua", "kanman", "manhua360", "manhua36", "manhua456", "soman"
     )) {
         $source = Join-Path $RepoRoot "extensions\$module"
         $target = Join-Path $VendorDir "src\zh\$module"
@@ -374,6 +380,38 @@ function Ensure-GoDaMirrorOverride {
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 }
 
+function Ensure-ManwaNuMirrorOverride {
+    $buildFile = Join-Path $VendorDir "src\zh\manwashizuku\build.gradle.kts"
+    $text = Get-Content -LiteralPath $buildFile -Raw
+    $updated = $text.Replace("versionCode = 2", "versionCode = 4").Replace("versionCode = 3", "versionCode = 4")
+    if ($updated -notmatch [regex]::Escape("https://manwanu.cc")) {
+        $updated = $updated.Replace(
+            '                "https://manwari.cc",',
+            "                `"https://manwari.cc`",`n                `"https://manwanu.cc`","
+        )
+    }
+    if ($updated -notmatch 'versionCode = 4' -or $updated -notmatch [regex]::Escape("https://manwanu.cc")) {
+        throw "Unable to add the audited Manwanu mirror"
+    }
+    [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
+
+    $sourceFile = Join-Path $VendorDir "src\zh\manwashizuku\src\eu\kanade\tachiyomi\extension\zh\manwashizuku\ManwaShizuku.kt"
+    $sourceText = Get-Content -LiteralPath $sourceFile -Raw
+    $oldHostCheck = @'
+        val imageHost = preferences.getString(IMAGE_HOST_KEY, IMAGE_HOST_ENTRIES[0])!!.substringBefore(":")
+        if (response.request.url.host != imageHost || !response.request.url.toString().endsWith(".jpg")) {
+'@
+    $newHostCheck = @'
+        val imageHosts = IMAGE_HOST_ENTRIES.map { it.substringBefore(":") }
+        if (response.request.url.host !in imageHosts || !response.request.url.toString().endsWith(".jpg")) {
+'@
+    $sourceUpdated = $sourceText.Replace($oldHostCheck, $newHostCheck)
+    if ($sourceUpdated -notmatch 'response\.request\.url\.host !in imageHosts') {
+        throw "Unable to enable cover decryption across all known image hosts"
+    }
+    [IO.File]::WriteAllText($sourceFile, $sourceUpdated, [Text.UTF8Encoding]::new($false))
+}
+
 function Ensure-BaoziMirrorOverride {
     $buildFile = Join-Path $VendorDir "src\zh\baozimanhua\build.gradle.kts"
     $text = Get-Content -LiteralPath $buildFile -Raw
@@ -399,19 +437,18 @@ function Ensure-BaoziMirrorOverride {
 function Ensure-BoyLoveMirrorOverride {
     $buildFile = Join-Path $VendorDir "src\zh\boylove\build.gradle.kts"
     $text = Get-Content -LiteralPath $buildFile -Raw
-    $oldOrder = @'
-                "https://boylove.cc",
-                "https://boylove4.xyz",
-'@
-    $newOrder = @'
+    $mirrorPattern = '(?s)            mirrors\(\r?\n.*?            \)'
+    $canonicalMirrors = @'
+            mirrors(
                 "https://boyloveheaven13.cc",
                 "https://boyloveheaven14.cc",
                 "https://boylove.cc",
                 "https://boylove4.xyz",
+            )
 '@
-    $updated = $text.Replace($oldOrder, $newOrder)
+    $updated = [regex]::Replace($text, $mirrorPattern, $canonicalMirrors, 1)
     if ($updated -notmatch 'mirrors\(\s*"https://boyloveheaven13\.cc"') {
-        throw "Unable to add the audited BoyLove mirrors"
+        throw "Unable to normalize the BoyLove mirror list"
     }
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 }
@@ -423,6 +460,7 @@ Ensure-Checkout
 Ensure-AuroraCustomSources
 Ensure-ManwaShizukuSource
 Ensure-QualitySources
+Ensure-ManwaNuMirrorOverride
 Ensure-GoDaMirrorOverride
 Ensure-BaoziMirrorOverride
 Ensure-BoyLoveMirrorOverride

@@ -1,14 +1,20 @@
 # User release readiness
 
-Current checked state: 2026-09-01.
+Current checked state: 2026-09-16.
 
-The local repository maintenance gate passes with 40 stable packages. GitHub
-Pages is enabled with enforced HTTPS, but its current `gh-pages` snapshot only
-contains the old one-package development catalogue. The testing URL is not yet
-present, and the repository has none of the five required production signing
-secrets. Public release remains intentionally blocked until the permanent
-signing identity exists and a production workflow publishes the current local
-catalogue. The reader must not embed the stable URL until all checks pass.
+The local repository maintenance gate passes with 41 stable packages and no
+testing publications. GitHub Pages and all five required production-signing
+secret names are configured. Their secret values remain unreadable by design
+and will only be proven when the production workflow restores the keystore and
+verifies its certificate fingerprint.
+
+The published stable catalogue does not yet match the local package/version/hash
+set, and the testing URL returns HTTP 404. Remote daily audits from 2026-09-12
+through 2026-09-15 also failed before the gate because the retired Android SDK
+package `tools` was requested by `android-actions/setup-android@v3`. The local
+workflows now use the current Node 24 action generations and request Android 37
+packages explicitly, but that repair is not active remotely until the reviewed
+changes are committed and pushed. Public release therefore remains blocked.
 
 Recheck the complete state at any time:
 

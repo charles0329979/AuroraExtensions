@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T14:44:53Z",
+  "generatedAt": "2026-09-16T03:05:24Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "bdad9277107238147f0650197a40acde8063a6c5889af3cfd4837e1091242770",
-    "indexedPackages": 40
+    "indexedPackages": 41
   },
   "audit": {
-    "snapshot": "healthy-sources-20260828.json",
-    "snapshotDate": "2026-08-28",
-    "ageDays": 4,
+    "snapshot": "healthy-sources-20260911.json",
+    "snapshotDate": "2026-09-11",
+    "ageDays": 5,
     "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
@@ -23,18 +23,18 @@
   },
   "summary": {
     "grades": {
-      "A": 35,
-      "B": 3,
+      "A": 28,
+      "B": 4,
       "C": 0,
       "D": 0,
       "Q": 0,
-      "U": 0,
+      "U": 7,
       "N": 2
     },
-    "assessedPackages": 38,
-    "unassessedPackages": 0,
+    "assessedPackages": 32,
+    "unassessedPackages": 7,
     "nonReadingPackages": 2,
-    "implementationBacklog": 62
+    "implementationBacklog": 75
   },
   "packages": [
     {
@@ -84,7 +84,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 386,
+          "id": 383,
           "name": "MangaDex",
           "baseUrl": "https://mangadex.org",
           "validation": "device_verified",
@@ -101,33 +101,15 @@
       "name": "Tachiyomi: Webtoons.com",
       "version": "1.4.57",
       "versionCode": 57,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "U",
+      "state": "unassessed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": null,
-          "name": "Webtoons.com",
-          "baseUrl": "https://www.webtoons.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": "2026-08-31",
-          "evidence": "popular listing, game search, details, 10 chapters, 103 pages, and first-image rendering passed on a connected Android test device",
-          "passedStages": [
-            "browse",
-            "search",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
-        }
-      ],
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -145,7 +127,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 382,
+          "id": 378,
           "name": "Rawkuma",
           "baseUrl": "https://rawkuma.net",
           "validation": "device_verified",
@@ -162,33 +144,15 @@
       "name": "Tachiyomi: Sen Manga",
       "version": "1.4.8",
       "versionCode": 8,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "U",
+      "state": "unassessed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": null,
-          "name": "Sen Manga",
-          "baseUrl": "https://raw.senmanga.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": "2026-08-31",
-          "evidence": "popular listing, jujutsu search endpoint and target result, details, 274 chapters, 22 pages, and first-image rendering passed on a connected Android test device",
-          "passedStages": [
-            "browse",
-            "search",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
-        }
-      ],
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -206,7 +170,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 52,
+          "id": 49,
           "name": "包子漫画",
           "baseUrl": "https://cn.webmota.com",
           "validation": "device_verified",
@@ -235,7 +199,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 337,
+          "id": 332,
           "name": "G站漫画",
           "baseUrl": "https://m.g-mh.org",
           "validation": "device_verified",
@@ -262,7 +226,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 73,
+          "id": 68,
           "name": "BikaBika漫画",
           "baseUrl": "https://m.bikamanhua.com",
           "validation": "device_verified",
@@ -289,7 +253,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 425,
+          "id": 423,
           "name": "哔哩轻漫画",
           "baseUrl": "https://www.bilimanga.net",
           "validation": "device_verified",
@@ -304,8 +268,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.boylove",
       "name": "Tachiyomi: BoyLove",
-      "version": "1.4.18",
-      "versionCode": 18,
+      "version": "1.4.19",
+      "versionCode": 19,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
@@ -313,10 +277,10 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
+      "auditedSources": 2,
       "sources": [
         {
-          "id": 296,
+          "id": 291,
           "name": "香香腐宅",
           "baseUrl": "https://boyloveheaven13.cc",
           "validation": "device_verified",
@@ -324,9 +288,28 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
+        },
+        {
+          "id": null,
+          "name": "香香腐宅",
+          "baseUrl": "https://boyloveheaven13.cc",
+          "validation": "device_verified",
+          "limitation": "current canonical domain times out on the connected device, so the verified legacy mirror remains primary and duplicate fallback entries were removed",
+          "checkedAt": "2026-09-11",
+          "evidence": "v1.4.19 popular listing and Anastasia search returned results; 代号Anastasia details, 74 chapters, 第73话 with 69 pages, and first-image rendering passed on the connected Android test device",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "current canonical domain times out on the connected device, so the verified legacy mirror remains primary and duplicate fallback entries were removed"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.creativecomic",
@@ -343,7 +326,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 135,
+          "id": 130,
           "name": "CCC追漫台",
           "baseUrl": "https://creative-comic.tw",
           "validation": "device_verified",
@@ -360,26 +343,15 @@
       "name": "Tachiyomi: Dida Manhua",
       "version": "1.6.2",
       "versionCode": 2,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "U",
+      "state": "unassessed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": 266,
-          "name": "滴答漫画",
-          "baseUrl": "http://ddmanhua.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        }
-      ],
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -397,7 +369,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 120,
+          "id": 116,
           "name": "可漫画",
           "baseUrl": "https://www.dmanhua.com",
           "validation": "device_verified",
@@ -414,33 +386,15 @@
       "name": "Tachiyomi: Dongman Manhua",
       "version": "1.4.6",
       "versionCode": 6,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "U",
+      "state": "unassessed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": null,
-          "name": "Dongman Manhua",
-          "baseUrl": "https://www.dongmanmanhua.cn",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": "2026-08-31",
-          "evidence": "daily listing, S search, details, 8 chapters, 40 pages, and first-image rendering passed on a connected Android test device",
-          "passedStages": [
-            "browse",
-            "search",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
-        }
-      ],
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -458,7 +412,7 @@
       "auditedSources": 2,
       "sources": [
         {
-          "id": 26,
+          "id": 25,
           "name": "读漫屋",
           "baseUrl": "http://m.dumanwu1.com",
           "validation": "device_verified",
@@ -468,7 +422,7 @@
           "passedStages": null
         },
         {
-          "id": 71,
+          "id": 67,
           "name": "读漫屋网",
           "baseUrl": "https://m.dumanwu.org",
           "validation": "device_verified",
@@ -492,7 +446,7 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 2,
+      "auditedSources": 1,
       "sources": [
         {
           "id": 15,
@@ -503,26 +457,9 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
-        },
-        {
-          "id": null,
-          "name": "古风漫画",
-          "baseUrl": "https://www.gfmh.app",
-          "validation": "device_degraded",
-          "limitation": "site_search_is_intermittently_empty_and_image_proxies_return_cloudflare_403",
-          "checkedAt": "2026-09-01",
-          "evidence": "catalogue and detail parsing still resolve 120 chapters and page URLs; the site search backend currently alternates between empty and truncated responses, while both image proxy hosts return Cloudflare HTTP 403 on the connected Android test device and desktop network probes",
-          "passedStages": [
-            "browse",
-            "details",
-            "chapters",
-            "pages"
-          ]
         }
       ],
-      "limitations": [
-        "site_search_is_intermittently_empty_and_image_proxies_return_cloudflare_403"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kaixinman",
@@ -539,7 +476,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 58,
+          "id": 53,
           "name": "开心漫画",
           "baseUrl": "https://www.kaixinman.com",
           "validation": "device_verified",
@@ -552,10 +489,10 @@
       "limitations": []
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
-      "name": "Tachiyomi: Kuaikanmanhua",
-      "version": "1.4.13",
-      "versionCode": 104013,
+      "package": "eu.kanade.tachiyomi.extension.zh.kanman",
+      "name": "Tachiyomi: Kanman",
+      "version": "1.6.4",
+      "versionCode": 4,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
@@ -567,15 +504,16 @@
       "sources": [
         {
           "id": null,
-          "name": "快看漫画",
-          "baseUrl": "https://www.kuaikanmanhua.com",
+          "name": "看漫画（免费章节）",
+          "baseUrl": "https://m.kanman.com",
           "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": "2026-08-31",
-          "evidence": "browse, search, details, 126 chapters, 14 pages, and first-image rendering passed on a connected Android test device",
+          "limitation": "only chapters marked price=0 and islock=0 by the official catalogue are exposed; paid chapters remain available through the official platform",
+          "checkedAt": "2026-09-14",
+          "evidence": "v1.6.3 popular catalogue loaded on the connected Android device; the current search API returned 我是大仙尊; its detail response reported 876 total chapters and the extension exposed the 49 officially public chapters only; the chapter list showed 49 chapters with zero false missing-chapter notices; 第38话 opened in the reader with 22 pages and rendered the first image successfully",
           "passedStages": [
             "browse",
             "search",
+            "covers",
             "details",
             "chapters",
             "pages",
@@ -583,6 +521,24 @@
           ]
         }
       ],
+      "limitations": [
+        "only chapters marked price=0 and islock=0 by the official catalogue are exposed; paid chapters remain available through the official platform"
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
+      "name": "Tachiyomi: Kuaikanmanhua",
+      "version": "1.4.13",
+      "versionCode": 104013,
+      "grade": "U",
+      "state": "unassessed",
+      "role": "reading_source",
+      "implementation": "native",
+      "channel": "stable",
+      "publicationState": "published",
+      "catalogueFreshness": "current",
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -600,7 +556,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 290,
+          "id": 285,
           "name": "36漫画",
           "baseUrl": "https://m.36mh.org",
           "validation": "device_verified",
@@ -624,10 +580,10 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 2,
+      "auditedSources": 1,
       "sources": [
         {
-          "id": 145,
+          "id": 141,
           "name": "360漫画",
           "baseUrl": "https://www.360mh.cc",
           "validation": "device_degraded",
@@ -635,28 +591,10 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
-        },
-        {
-          "id": null,
-          "name": "360漫画",
-          "baseUrl": "https://www.360mh.cc",
-          "validation": "device_degraded",
-          "limitation": "recent_chapters_may_contain_site_supplied_placeholder_or_promotion_images",
-          "checkedAt": "2026-09-01",
-          "evidence": "search, details, 670 chapters, page extraction, and an older 36-page chapter remain readable on the connected Android test device; current top chapters can contain unrelated Baozi-hosted placeholder or promotion images supplied by the website",
-          "passedStages": [
-            "browse",
-            "search",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
         }
       ],
       "limitations": [
-        "recent_chapters_may_be_app_promo_only",
-        "recent_chapters_may_contain_site_supplied_placeholder_or_promotion_images"
+        "recent_chapters_may_be_app_promo_only"
       ]
     },
     {
@@ -674,7 +612,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 229,
+          "id": 225,
           "name": "漫画456",
           "baseUrl": "https://m.manhua456.com",
           "validation": "device_verified",
@@ -701,9 +639,9 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 129,
+          "id": 125,
           "name": "漫画大全",
-          "baseUrl": "http://www.yueman1.cc",
+          "baseUrl": "http://m.yueman1.cc",
           "validation": "device_verified",
           "limitation": null,
           "checkedAt": null,
@@ -725,10 +663,10 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 2,
+      "auditedSources": 1,
       "sources": [
         {
-          "id": 54,
+          "id": 50,
           "name": "漫圈子",
           "baseUrl": "https://www.9mqz.com",
           "validation": "device_degraded",
@@ -736,27 +674,9 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
-        },
-        {
-          "id": null,
-          "name": "漫圈子",
-          "baseUrl": "https://www.9mqz.com",
-          "validation": "device_degraded",
-          "limitation": "legacy_image_host_unreachable_and_https_tls_unavailable",
-          "checkedAt": "2026-09-01",
-          "evidence": "v1.6.3 search, details, 168 chapters, and 20 page URLs passed on the connected Android test device; reader remains at page 1/20 because the site's legacy http://img.9mqz.com image host does not return a usable response and its HTTPS endpoint fails TLS negotiation",
-          "passedStages": [
-            "browse",
-            "search",
-            "details",
-            "chapters",
-            "pages"
-          ]
         }
       ],
-      "limitations": [
-        "legacy_image_host_unreachable_and_https_tls_unavailable"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
@@ -773,7 +693,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 69,
+          "id": 65,
           "name": "漫士多",
           "baseUrl": "https://manshiduo.org",
           "validation": "device_verified",
@@ -788,8 +708,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
       "name": "Tachiyomi: Manwa (Shizuku)",
-      "version": "1.6.1",
-      "versionCode": 1,
+      "version": "1.6.4",
+      "versionCode": 4,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
@@ -797,10 +717,10 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 3,
+      "auditedSources": 6,
       "sources": [
         {
-          "id": 19,
+          "id": 17,
           "name": "漫蛙",
           "baseUrl": "https://manwaqj.cc",
           "validation": "device_verified",
@@ -810,7 +730,7 @@
           "passedStages": null
         },
         {
-          "id": 20,
+          "id": 18,
           "name": "漫蛙防走失",
           "baseUrl": "https://manwaqg.cc",
           "validation": "device_verified",
@@ -820,7 +740,7 @@
           "passedStages": null
         },
         {
-          "id": 21,
+          "id": 19,
           "name": "漫蛙AI",
           "baseUrl": "https://manwa.me",
           "validation": "device_verified",
@@ -828,9 +748,58 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
+        },
+        {
+          "id": 103,
+          "name": "猕猴桃漫画",
+          "baseUrl": "https://manwanu.cc",
+          "validation": "device_verified",
+          "limitation": "published as the manwanu.cc mirror of 漫蛙(雫), not as a duplicate source",
+          "checkedAt": null,
+          "evidence": null,
+          "passedStages": null
+        },
+        {
+          "id": null,
+          "name": "漫蛙(雫)",
+          "baseUrl": "https://manwari.cc",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-09-12",
+          "evidence": "v1.6.4 switched to the manwanu.cc mirror; a fresh Naruto search rendered encrypted covers from the alternate mwtuwu.cc image host, &alpha;拥抱&alpha;的方法 details returned 6 chapters, and chapter reading rendered decrypted images on the connected Android test device (43 pages shown in reader)",
+          "passedStages": [
+            "browse",
+            "search",
+            "covers",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        },
+        {
+          "id": null,
+          "name": "猕猴桃漫画",
+          "baseUrl": "https://manwanu.cc",
+          "validation": "device_verified",
+          "limitation": "same catalogue and backend as 漫蛙(雫); exposed as a selectable mirror to preserve one source identity",
+          "checkedAt": "2026-09-12",
+          "evidence": "v1.6.4 switched to the manwanu.cc mirror; a fresh Naruto search rendered encrypted covers from the alternate mwtuwu.cc image host, &alpha;拥抱&alpha;的方法 details returned 6 chapters, and chapter reading rendered decrypted images on the connected Android test device (43 pages shown in reader)",
+          "passedStages": [
+            "browse",
+            "search",
+            "covers",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "published as the manwanu.cc mirror of 漫蛙(雫), not as a duplicate source",
+        "same catalogue and backend as 漫蛙(雫); exposed as a selectable mirror to preserve one source identity"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mh1234",
@@ -847,7 +816,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 84,
+          "id": 79,
           "name": "漫画1234",
           "baseUrl": "https://m.wmh1234.com",
           "validation": "device_verified",
@@ -874,7 +843,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 45,
+          "id": 43,
           "name": "250漫画",
           "baseUrl": "http://www.mh250.com",
           "validation": "device_verified",
@@ -901,7 +870,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 22,
+          "id": 20,
           "name": "喵趣漫画",
           "baseUrl": "https://www.miaoqumh.org",
           "validation": "device_verified",
@@ -925,10 +894,10 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
+      "auditedSources": 2,
       "sources": [
         {
-          "id": 166,
+          "id": 161,
           "name": "MYCOMIC",
           "baseUrl": "https://mycomic.com",
           "validation": "device_verified",
@@ -936,32 +905,15 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
-        }
-      ],
-      "limitations": []
-    },
-    {
-      "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
-      "name": "Tachiyomi: Rumanhua",
-      "version": "1.4.5",
-      "versionCode": 5,
-      "grade": "A",
-      "state": "healthy",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
+        },
         {
           "id": null,
-          "name": "如漫画",
-          "baseUrl": "https://m.rumanhua2.com",
+          "name": "MyComic",
+          "baseUrl": "https://mycomic.com",
           "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": "2026-08-31",
-          "evidence": "popular listing, Alpha search, details, 203 chapters, 26 pages, and first-image rendering passed on a connected Android test device",
+          "limitation": "generic desktop homepage probes return HTTP 403, while the extension request flow is fully readable on the connected Android device",
+          "checkedAt": "2026-09-11",
+          "evidence": "popular listing and ONE search returned results; ONE PIECE航海王 details, 603 listed chapters, 第1150話 with 12 pages, and first-image rendering passed on the connected Android test device",
           "passedStages": [
             "browse",
             "search",
@@ -972,6 +924,24 @@
           ]
         }
       ],
+      "limitations": [
+        "generic desktop homepage probes return HTTP 403, while the extension request flow is fully readable on the connected Android device"
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
+      "name": "Tachiyomi: Rumanhua",
+      "version": "1.4.5",
+      "versionCode": 5,
+      "grade": "U",
+      "state": "unassessed",
+      "role": "reading_source",
+      "implementation": "native",
+      "channel": "stable",
+      "publicationState": "published",
+      "catalogueFreshness": "current",
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -989,7 +959,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 59,
+          "id": 55,
           "name": "思思漫画",
           "baseUrl": "https://m.sisimanhua.com",
           "validation": "device_verified",
@@ -1004,16 +974,16 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.soman",
       "name": "Tachiyomi: Soman",
-      "version": "1.6.2",
-      "versionCode": 2,
-      "grade": "A",
-      "state": "healthy",
+      "version": "1.6.3",
+      "versionCode": 3,
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
+      "auditedSources": 2,
       "sources": [
         {
           "id": 7,
@@ -1024,10 +994,28 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
+        },
+        {
+          "id": null,
+          "name": "搜漫",
+          "baseUrl": "http://www.veryim.com",
+          "validation": "device_degraded",
+          "limitation": "site_https_certificate_expired_using_plain_http_fallback",
+          "checkedAt": "2026-09-11",
+          "evidence": "v1.6.3 popular listing and HTTP search returned results; 顶加套房的春天 details, 82 chapters, 第81话 with 37 pages, and first-image rendering passed on the connected Android test device",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": [
-        "filters_out_paid_and_unreadable_external_routes"
+        "filters_out_paid_and_unreadable_external_routes",
+        "site_https_certificate_expired_using_plain_http_fallback"
       ]
     },
     {
@@ -1072,7 +1060,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 212,
+          "id": 208,
           "name": "泰拉记事社",
           "baseUrl": "https://terra-historicus.hypergryph.com",
           "validation": "device_verified",
@@ -1099,7 +1087,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 204,
+          "id": 200,
           "name": "天天看漫画",
           "baseUrl": "https://www.ttkmh.com",
           "validation": "device_verified",
@@ -1143,26 +1131,15 @@
       "name": "Tachiyomi: Yumanhua",
       "version": "1.4.3",
       "versionCode": 3,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "U",
+      "state": "unassessed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": 27,
-          "name": "漫画客",
-          "baseUrl": "http://yumanhua.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        }
-      ],
+      "auditedSources": 0,
+      "sources": [],
       "limitations": []
     },
     {
@@ -1207,7 +1184,7 @@
       "auditedSources": 1,
       "sources": [
         {
-          "id": 319,
+          "id": 314,
           "name": "zero搬运网",
           "baseUrl": "https://www.zerobyw33.com",
           "validation": "device_verified",

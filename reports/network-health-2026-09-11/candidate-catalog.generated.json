@@ -1,0 +1,224 @@
+{
+  "sources": [
+    {
+      "originIndex": 0,
+      "name": "MangaDex",
+      "url": "https://mangadex.org"
+    },
+    {
+      "originIndex": 1,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 2,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 3,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 4,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 5,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 6,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 7,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com"
+    },
+    {
+      "originIndex": 8,
+      "name": "Rawkuma",
+      "url": "https://rawkuma.net"
+    },
+    {
+      "originIndex": 9,
+      "name": "腾讯动漫",
+      "url": "https://m.ac.qq.com"
+    },
+    {
+      "originIndex": 10,
+      "name": "Sen Manga",
+      "url": "https://raw.senmanga.com"
+    },
+    {
+      "originIndex": 11,
+      "name": "泰拉记事社",
+      "url": "https://comic.hypergryph.com"
+    },
+    {
+      "originIndex": 12,
+      "name": "Dongman Manhua",
+      "url": "https://www.dongmanmanhua.cn"
+    },
+    {
+      "originIndex": 13,
+      "name": "快看漫画",
+      "url": "https://www.kuaikanmanhua.com"
+    },
+    {
+      "originIndex": 14,
+      "name": "再漫画",
+      "url": "https://manhua.zaimanhua.com"
+    },
+    {
+      "originIndex": 15,
+      "name": "漫画1234",
+      "url": "https://m.wmh1234.com"
+    },
+    {
+      "originIndex": 16,
+      "name": "漫蛙(雫)",
+      "url": "https://manwari.cc"
+    },
+    {
+      "originIndex": 17,
+      "name": "喵趣漫画",
+      "url": "https://www.miaoqumh.org"
+    },
+    {
+      "originIndex": 18,
+      "name": "包子漫画",
+      "url": "https://cn.webmota.com"
+    },
+    {
+      "originIndex": 19,
+      "name": "MyComic",
+      "url": "https://mycomic.com"
+    },
+    {
+      "originIndex": 20,
+      "name": "香香腐宅",
+      "url": "https://boyloveheaven13.cc"
+    },
+    {
+      "originIndex": 21,
+      "name": "天天看漫画",
+      "url": "https://www.ttkmh.com"
+    },
+    {
+      "originIndex": 22,
+      "name": "开心漫画",
+      "url": "https://www.kaixinman.com"
+    },
+    {
+      "originIndex": 23,
+      "name": "思思漫画",
+      "url": "https://m.sisimanhua.com"
+    },
+    {
+      "originIndex": 24,
+      "name": "漫画客",
+      "url": "http://yumanhua.com"
+    },
+    {
+      "originIndex": 25,
+      "name": "如漫画",
+      "url": "https://m.rumanhua2.com"
+    },
+    {
+      "originIndex": 26,
+      "name": "漫画大全",
+      "url": "http://www.yueman1.cc"
+    },
+    {
+      "originIndex": 27,
+      "name": "CCC追漫台",
+      "url": "https://www.creative-comic.tw"
+    },
+    {
+      "originIndex": 28,
+      "name": "嗶哩漫畫",
+      "url": "https://www.bilimanga.net"
+    },
+    {
+      "originIndex": 29,
+      "name": "zero搬运网",
+      "url": "http://www.zerobyw33.com"
+    },
+    {
+      "originIndex": 30,
+      "name": "GoDa漫画",
+      "url": "https://baozimh.org"
+    },
+    {
+      "originIndex": 31,
+      "name": "古风漫画",
+      "url": "https://www.gfmh.app"
+    },
+    {
+      "originIndex": 32,
+      "name": "读漫屋",
+      "url": "https://m.dumanwu.org"
+    },
+    {
+      "originIndex": 33,
+      "name": "滴答漫画",
+      "url": "http://ddmanhua.com"
+    },
+    {
+      "originIndex": 34,
+      "name": "追漫画",
+      "url": "https://www.ycymh.com"
+    },
+    {
+      "originIndex": 35,
+      "name": "漫圈子",
+      "url": "https://www.9mqz.com"
+    },
+    {
+      "originIndex": 36,
+      "name": "漫士多",
+      "url": "https://manshiduo.org"
+    },
+    {
+      "originIndex": 37,
+      "name": "250漫画",
+      "url": "http://www.mh250.com"
+    },
+    {
+      "originIndex": 38,
+      "name": "BikaBika漫画",
+      "url": "https://m.bikamanhua.com"
+    },
+    {
+      "originIndex": 39,
+      "name": "可漫画",
+      "url": "https://www.dmanhua.com"
+    },
+    {
+      "originIndex": 40,
+      "name": "360漫画",
+      "url": "https://www.360mh.cc"
+    },
+    {
+      "originIndex": 41,
+      "name": "36漫画",
+      "url": "https://m.36mh.org"
+    },
+    {
+      "originIndex": 42,
+      "name": "漫画456",
+      "url": "https://m.manhua456.com"
+    },
+    {
+      "originIndex": 43,
+      "name": "搜漫",
+      "url": "http://www.veryim.com"
+    }
+  ]
+}

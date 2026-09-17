@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-11T12:07:12.3212718+08:00",
+  "throttleLimit": 8,
+  "timeoutSeconds": 15,
+  "results": [
+    {
+      "originIndex": 0,
+      "name": "MangaDex",
+      "url": "https://mangadex.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://mangadex.org/",
+      "elapsedMs": 418,
+      "error": ""
+    },
+    {
+      "originIndex": 1,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 4500,
+      "error": ""
+    },
+    {
+      "originIndex": 2,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 3588,
+      "error": ""
+    },
+    {
+      "originIndex": 3,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 1699,
+      "error": ""
+    },
+    {
+      "originIndex": 4,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 2606,
+      "error": ""
+    },
+    {
+      "originIndex": 5,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 5373,
+      "error": ""
+    },
+    {
+      "originIndex": 6,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 6278,
+      "error": ""
+    },
+    {
+      "originIndex": 7,
+      "name": "Webtoons.com",
+      "url": "https://www.webtoons.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.webtoons.com/en/",
+      "elapsedMs": 7237,
+      "error": ""
+    },
+    {
+      "originIndex": 8,
+      "name": "Rawkuma",
+      "url": "https://rawkuma.net",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://rawkuma.net/",
+      "elapsedMs": 886,
+      "error": ""
+    },
+    {
+      "originIndex": 9,
+      "name": "腾讯动漫",
+      "url": "https://m.ac.qq.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.ac.qq.com/",
+      "elapsedMs": 927,
+      "error": ""
+    },
+    {
+      "originIndex": 10,
+      "name": "Sen Manga",
+      "url": "https://raw.senmanga.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://raw.senmanga.com/",
+      "elapsedMs": 743,
+      "error": ""
+    },
+    {
+      "originIndex": 11,
+      "name": "泰拉记事社",
+      "url": "https://comic.hypergryph.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://comic.hypergryph.com/",
+      "elapsedMs": 965,
+      "error": ""
+    },
+    {
+      "originIndex": 12,
+      "name": "Dongman Manhua",
+      "url": "https://www.dongmanmanhua.cn",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.dongmanmanhua.cn/",
+      "elapsedMs": 1286,
+      "error": ""
+    },
+    {
+      "originIndex": 13,
+      "name": "快看漫画",
+      "url": "https://www.kuaikanmanhua.com",
+      "classification": "Online",
+      "statusCode": 302,
+      "finalUrl": "https://www.kuaikanmanhua.com/",
+      "elapsedMs": 467,
+      "error": ""
+    },
+    {
+      "originIndex": 14,
+      "name": "再漫画",
+      "url": "https://manhua.zaimanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://manhua.zaimanhua.com/",
+      "elapsedMs": 1976,
+      "error": ""
+    },
+    {
+      "originIndex": 15,
+      "name": "漫画1234",
+      "url": "https://m.wmh1234.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.wmh1234.com/",
+      "elapsedMs": 443,
+      "error": ""
+    },
+    {
+      "originIndex": 16,
+      "name": "漫蛙(雫)",
+      "url": "https://manwari.cc",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://manwari.cc/",
+      "elapsedMs": 378,
+      "error": ""
+    },
+    {
+      "originIndex": 17,
+      "name": "喵趣漫画",
+      "url": "https://www.miaoqumh.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.miaoqumh.org/",
+      "elapsedMs": 565,
+      "error": ""
+    },
+    {
+      "originIndex": 18,
+      "name": "包子漫画",
+      "url": "https://cn.webmota.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://cn.webmota.com/",
+      "elapsedMs": 563,
+      "error": ""
+    },
+    {
+      "originIndex": 19,
+      "name": "MyComic",
+      "url": "https://mycomic.com",
+      "classification": "Restricted",
+      "statusCode": 403,
+      "finalUrl": "https://mycomic.com/",
+      "elapsedMs": 425,
+      "error": ""
+    },
+    {
+      "originIndex": 20,
+      "name": "香香腐宅",
+      "url": "https://boyloveheaven13.cc",
+      "classification": "RedirectedAway",
+      "statusCode": 200,
+      "finalUrl": "https://boylove.cc/",
+      "elapsedMs": 1275,
+      "error": ""
+    },
+    {
+      "originIndex": 21,
+      "name": "天天看漫画",
+      "url": "https://www.ttkmh.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.ttkmh.com/",
+      "elapsedMs": 603,
+      "error": ""
+    },
+    {
+      "originIndex": 22,
+      "name": "开心漫画",
+      "url": "https://www.kaixinman.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.kaixinman.com/",
+      "elapsedMs": 944,
+      "error": ""
+    },
+    {
+      "originIndex": 23,
+      "name": "思思漫画",
+      "url": "https://m.sisimanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.sisimanhua.com/",
+      "elapsedMs": 814,
+      "error": ""
+    },
+    {
+      "originIndex": 24,
+      "name": "漫画客",
+      "url": "http://yumanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://yumanhua.com/",
+      "elapsedMs": 946,
+      "error": ""
+    },
+    {
+      "originIndex": 25,
+      "name": "如漫画",
+      "url": "https://m.rumanhua2.com",
+      "classification": "NetworkError",
+      "statusCode": 0,
+      "finalUrl": "",
+      "elapsedMs": 878,
+      "error": "The remote certificate is invalid according to the validation procedure: RemoteCertificateNameMismatch"
+    },
+    {
+      "originIndex": 26,
+      "name": "漫画大全",
+      "url": "http://www.yueman1.cc",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://www.yueman1.cc/",
+      "elapsedMs": 1184,
+      "error": ""
+    },
+    {
+      "originIndex": 27,
+      "name": "CCC追漫台",
+      "url": "https://www.creative-comic.tw",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.creative-comic.tw/",
+      "elapsedMs": 248,
+      "error": ""
+    },
+    {
+      "originIndex": 28,
+      "name": "嗶哩漫畫",
+      "url": "https://www.bilimanga.net",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.bilimanga.net/",
+      "elapsedMs": 384,
+      "error": ""
+    },
+    {
+      "originIndex": 29,
+      "name": "zero搬运网",
+      "url": "http://www.zerobyw33.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://www.zerobyw33.com/Android/Android/",
+      "elapsedMs": 1374,
+      "error": ""
+    },
+    {
+      "originIndex": 30,
+      "name": "GoDa漫画",
+      "url": "https://baozimh.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://baozimh.org/",
+      "elapsedMs": 629,
+      "error": ""
+    },
+    {
+      "originIndex": 31,
+      "name": "古风漫画",
+      "url": "https://www.gfmh.app",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.gfmh.app/",
+      "elapsedMs": 356,
+      "error": ""
+    },
+    {
+      "originIndex": 32,
+      "name": "读漫屋",
+      "url": "https://m.dumanwu.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.dumanwu.org/",
+      "elapsedMs": 602,
+      "error": ""
+    },
+    {
+      "originIndex": 33,
+      "name": "滴答漫画",
+      "url": "http://ddmanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://ddmanhua.com/",
+      "elapsedMs": 952,
+      "error": ""
+    },
+    {
+      "originIndex": 34,
+      "name": "追漫画",
+      "url": "https://www.ycymh.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.ycymh.com/",
+      "elapsedMs": 928,
+      "error": ""
+    },
+    {
+      "originIndex": 35,
+      "name": "漫圈子",
+      "url": "https://www.9mqz.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.9mqz.com/",
+      "elapsedMs": 656,
+      "error": ""
+    },
+    {
+      "originIndex": 36,
+      "name": "漫士多",
+      "url": "https://manshiduo.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://manshiduo.org/",
+      "elapsedMs": 563,
+      "error": ""
+    },
+    {
+      "originIndex": 37,
+      "name": "250漫画",
+      "url": "http://www.mh250.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://www.mh250.com/",
+      "elapsedMs": 424,
+      "error": ""
+    },
+    {
+      "originIndex": 38,
+      "name": "BikaBika漫画",
+      "url": "https://m.bikamanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.bikamanhua.com/",
+      "elapsedMs": 558,
+      "error": ""
+    },
+    {
+      "originIndex": 39,
+      "name": "可漫画",
+      "url": "https://www.dmanhua.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.dmanhua.com/",
+      "elapsedMs": 1435,
+      "error": ""
+    },
+    {
+      "originIndex": 40,
+      "name": "360漫画",
+      "url": "https://www.360mh.cc",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://www.360mh.cc/",
+      "elapsedMs": 612,
+      "error": ""
+    },
+    {
+      "originIndex": 41,
+      "name": "36漫画",
+      "url": "https://m.36mh.org",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.36mh.org/",
+      "elapsedMs": 586,
+      "error": ""
+    },
+    {
+      "originIndex": 42,
+      "name": "漫画456",
+      "url": "https://m.manhua456.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "https://m.manhua456.com/",
+      "elapsedMs": 426,
+      "error": ""
+    },
+    {
+      "originIndex": 43,
+      "name": "搜漫",
+      "url": "http://www.veryim.com",
+      "classification": "Online",
+      "statusCode": 200,
+      "finalUrl": "http://www.veryim.com/",
+      "elapsedMs": 168,
+      "error": ""
+    }
+  ]
+}

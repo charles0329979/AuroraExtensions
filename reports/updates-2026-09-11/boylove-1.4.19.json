@@ -1,0 +1,23 @@
+{
+  "package": "eu.kanade.tachiyomi.extension.zh.boylove",
+  "displayName": "Tachiyomi: BoyLove",
+  "language": "zh",
+  "versionCode": 19,
+  "versionName": "1.4.19",
+  "apk": "tachiyomi-zh.boylove-v1.4.19.apk",
+  "icon": "eu.kanade.tachiyomi.extension.zh.boylove.png",
+  "module": "vendor/batch-extensions-source/src/zh/boylove",
+  "implementation": "native",
+  "role": "reading_source",
+  "channel": "stable",
+  "state": "published",
+  "nsfw": 1,
+  "sources": [
+    {
+      "id": 1471112097704477289,
+      "language": "zh",
+      "name": "香香腐宅",
+      "baseUrl": "https://boyloveheaven13.cc"
+    }
+  ]
+}

@@ -23,15 +23,17 @@ if (-not $?) { throw "Source catalogue verification failed" }
 $repoDir = Join-Path $RepoRoot "repo"
 $apkDir = (Resolve-Path (Join-Path $repoDir "apk")).Path
 $policyPath = Join-Path (Join-Path $RepoRoot "maintenance") "policy.json"
-$policy = Get-Content -LiteralPath $policyPath -Raw | ConvertFrom-Json
+$policy = Get-Content -LiteralPath $policyPath -Raw -Encoding UTF8 | ConvertFrom-Json
 if ([int]$policy.schemaVersion -ne 1) { throw "Unsupported maintenance policy schemaVersion" }
 $rolesPath = Join-Path (Join-Path $RepoRoot "maintenance") "package-roles.json"
-$rolesDocument = Get-Content -LiteralPath $rolesPath -Raw | ConvertFrom-Json
+$rolesDocument = Get-Content -LiteralPath $rolesPath -Raw -Encoding UTF8 | ConvertFrom-Json
 if ([int]$rolesDocument.schemaVersion -ne 1) { throw "Unsupported package roles schemaVersion" }
-$repoMeta = Get-Content (Join-Path $repoDir "repo.json") -Raw | ConvertFrom-Json
-$index = @(Get-Content (Join-Path $repoDir "index.min.json") -Raw | ConvertFrom-Json)
-$fullIndex = @(Get-Content (Join-Path $repoDir "index.json") -Raw | ConvertFrom-Json)
-$sourceCatalog = Get-Content (Join-Path $RepoRoot "catalog\sources.yaml") -Raw | ConvertFrom-Json
+$repoMeta = Get-Content (Join-Path $repoDir "repo.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+$indexDocument = Get-Content (Join-Path $repoDir "index.min.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+$fullIndexDocument = Get-Content (Join-Path $repoDir "index.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+$index = @($indexDocument)
+$fullIndex = @($fullIndexDocument)
+$sourceCatalog = Get-Content (Join-Path $RepoRoot "catalog\sources.yaml") -Raw -Encoding UTF8 | ConvertFrom-Json
 $catalogByPackage = @{}
 foreach ($package in @($sourceCatalog.packages)) { $catalogByPackage[[string]$package.package] = $package }
 if (($index | ConvertTo-Json -Depth 20 -Compress) -ne ($fullIndex | ConvertTo-Json -Depth 20 -Compress)) {
@@ -151,7 +153,7 @@ if ($orphanIcons.Count -gt 0) { throw "Orphan icon(s): $($orphanIcons.Name -join
 $healthCatalogPaths = @(Get-ChildItem -LiteralPath (Join-Path $RepoRoot "catalog") -Filter "healthy-sources-*.json" -File -ErrorAction SilentlyContinue | Sort-Object Name)
 foreach ($healthCatalogFile in $healthCatalogPaths) {
     $healthCatalogPath = $healthCatalogFile.FullName
-    $healthCatalog = Get-Content -LiteralPath $healthCatalogPath -Raw | ConvertFrom-Json
+    $healthCatalog = Get-Content -LiteralPath $healthCatalogPath -Raw -Encoding UTF8 | ConvertFrom-Json
     $healthSources = @($healthCatalog.sources)
     $declaredTotal = if ($null -ne $healthCatalog.summary.totalUsable) {
         [int]$healthCatalog.summary.totalUsable
@@ -206,7 +208,7 @@ foreach ($healthCatalogFile in $healthCatalogPaths) {
 
 $candidateCatalogPaths = @(Get-ChildItem -LiteralPath (Join-Path $RepoRoot "catalog") -Filter "source-candidates-*.json" -File -ErrorAction SilentlyContinue | Sort-Object Name)
 foreach ($candidateCatalogFile in $candidateCatalogPaths) {
-    $candidateCatalog = Get-Content -LiteralPath $candidateCatalogFile.FullName -Raw | ConvertFrom-Json
+    $candidateCatalog = Get-Content -LiteralPath $candidateCatalogFile.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
     foreach ($source in @($candidateCatalog.sources)) {
         if ($source.publishable -eq $true) {
             throw "Candidate catalogue must not mark a source publishable: $($source.name)"
@@ -224,7 +226,7 @@ foreach ($candidateCatalogFile in $candidateCatalogPaths) {
 
 $attestationPath = Join-Path (Join-Path $RepoRoot "catalog") "device-attestations.json"
 if (Test-Path -LiteralPath $attestationPath) {
-    $attestationDocument = Get-Content -LiteralPath $attestationPath -Raw | ConvertFrom-Json
+    $attestationDocument = Get-Content -LiteralPath $attestationPath -Raw -Encoding UTF8 | ConvertFrom-Json
     if ([int]$attestationDocument.schemaVersion -ne 1) { throw "Unsupported device attestation schemaVersion" }
     $allowedStates = @('active_verified', 'active_degraded', 'active_device_pending')
     foreach ($attestation in @($attestationDocument.attestations)) {
@@ -252,7 +254,7 @@ if (Test-Path -LiteralPath $attestationPath) {
 
 $healthReportPath = Join-Path $repoDir "health.json"
 if (Test-Path -LiteralPath $healthReportPath) {
-    $healthReport = Get-Content -LiteralPath $healthReportPath -Raw | ConvertFrom-Json
+    $healthReport = Get-Content -LiteralPath $healthReportPath -Raw -Encoding UTF8 | ConvertFrom-Json
     if ([int]$healthReport.schemaVersion -ne 1) { throw "Unsupported health.json schemaVersion" }
     if ([string]$healthReport.repository.signingKeyFingerprint -ne $signer) {
         throw "health.json signer does not match repo.json"

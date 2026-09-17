@@ -69,7 +69,7 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/kuaikanmanhua"; Package = "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua"
         Name = "Tachiyomi: Kuaikanmanhua"; Apk = "tachiyomi-zh.kuaikanmanhua-v1.4.13.apk"
-        Lang = "zh"; Code = 104013; Version = "1.4.13"; Nsfw = 0
+        Lang = "zh"; Code = 13; Version = "1.4.13"; Nsfw = 0
         Sources = @(@{ id = 8099870292642776005L; lang = "zh-Hans"; name = "快看漫画"; baseUrl = "https://www.kuaikanmanhua.com" })
     }
     [pscustomobject]@{
@@ -524,6 +524,7 @@ $entries = foreach ($spec in $activeSpecs) {
             $dest
         if ($LASTEXITCODE -ne 0) { throw "Failed to production-sign $($spec.Apk)" }
         Move-Item -LiteralPath $signed -Destination $dest -Force
+        Remove-Item -LiteralPath "$signed.idsig" -Force -ErrorAction SilentlyContinue
     }
 
     $certOutput = (& $apkSigner verify --print-certs $dest) -join "`n"

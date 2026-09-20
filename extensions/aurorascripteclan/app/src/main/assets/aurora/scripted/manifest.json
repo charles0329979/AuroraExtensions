@@ -1,0 +1,22 @@
+{
+  "protocolVersion": 2,
+  "sourceId": "aurora.scripted.lan",
+  "name": "Aurora Scripted LAN",
+  "lang": "en",
+  "baseUrl": "http://127.0.0.1:8765",
+  "capabilities": {
+    "operations": ["POPULAR","LATEST","SEARCH","DETAILS","CHAPTERS","PAGES"],
+    "allowedHosts": ["127.0.0.1"],
+    "allowedImageHosts": ["127.0.0.1"],
+    "allowHttp": true,
+    "endpoints": {
+      "popular": "/popular?page={page}",
+      "latest": "/latest?page={page}",
+      "search": "/search?q={query}&page={page}",
+      "details": "{mangaUrl}",
+      "chapters": "{mangaUrl}/chapters",
+      "pages": "{chapterUrl}/pages"
+    }
+  },
+  "scriptEntry": "main.js"
+}

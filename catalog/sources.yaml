@@ -237,7 +237,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -246,13 +246,15 @@
           "name": "Dongman Manhua",
           "baseUrl": "https://www.dongmanmanhua.cn"
         }
-      ]
+      ],
+      "statusReason": "Previous complete device attestation is outside the publishable window and no current full reading-chain recheck is available.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
       "displayName": "Tachiyomi: Kuaikanmanhua",
       "language": "zh",
-      "versionCode": 104013,
+      "versionCode": 13,
       "versionName": "1.4.13",
       "apk": "tachiyomi-zh.kuaikanmanhua-v1.4.13.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua.png",
@@ -321,9 +323,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
       "displayName": "Tachiyomi: Manwa (Shizuku)",
       "language": "zh",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-zh.manwashizuku-v1.6.1.apk",
+      "versionCode": 4,
+      "versionName": "1.6.4",
+      "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.manwashizuku.png",
       "module": "vendor/batch-extensions-source/src/zh/manwashizuku",
       "implementation": "native",
@@ -336,7 +338,7 @@
           "id": 7453499921408758404,
           "language": "zh",
           "name": "漫蛙(雫)",
-          "baseUrl": "https://manwali.cc"
+          "baseUrl": "https://manwari.cc"
         }
       ]
     },
@@ -413,9 +415,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.boylove",
       "displayName": "Tachiyomi: BoyLove",
       "language": "zh",
-      "versionCode": 18,
-      "versionName": "1.4.18",
-      "apk": "tachiyomi-zh.boylove-v1.4.18.apk",
+      "versionCode": 19,
+      "versionName": "1.4.19",
+      "apk": "tachiyomi-zh.boylove-v1.4.19.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.boylove.png",
       "module": "vendor/batch-extensions-source/src/zh/boylove",
       "implementation": "native",
@@ -513,7 +515,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -522,7 +524,9 @@
           "name": "漫画客",
           "baseUrl": "http://yumanhua.com"
         }
-      ]
+      ],
+      "statusReason": "No current complete device attestation exists and the HTTP source endpoint is not suitable for the stable user catalogue.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
@@ -536,7 +540,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -545,7 +549,9 @@
           "name": "如漫画",
           "baseUrl": "https://m.rumanhua2.com"
         }
-      ]
+      ],
+      "statusReason": "Previous complete device attestation is outside the publishable window and the current canonical site probe fails; requires a fresh device recheck.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
@@ -674,7 +680,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -683,7 +689,9 @@
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app"
         }
-      ]
+      ],
+      "statusReason": "Reader image hosts remain blocked by Cloudflare HTTP 403 and the search backend is intermittent; core reading chain is incomplete.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -720,7 +728,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -729,7 +737,9 @@
           "name": "滴答漫画",
           "baseUrl": "http://ddmanhua.com"
         }
-      ]
+      ],
+      "statusReason": "Current device recheck reached browse, details, and 220 chapters but the device disconnected before pages and image verification; keep out of stable until the complete chain is repeated.",
+      "statusChangedAt": "2026-09-20T14:51:22Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -766,7 +776,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {
@@ -775,7 +785,9 @@
           "name": "漫圈子",
           "baseUrl": "https://www.9mqz.com"
         }
-      ]
+      ],
+      "statusReason": "Legacy image host remains unreachable and HTTPS fails negotiation; reader image stage is incomplete.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
@@ -942,9 +954,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.soman",
       "displayName": "Tachiyomi: Soman",
       "language": "zh",
-      "versionCode": 2,
-      "versionName": "1.6.2",
-      "apk": "tachiyomi-zh.soman-v1.6.2.apk",
+      "versionCode": 3,
+      "versionName": "1.6.3",
+      "apk": "tachiyomi-zh.soman-v1.6.3.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.soman.png",
       "module": "extensions/soman",
       "implementation": "native",
@@ -957,7 +969,30 @@
           "id": 4379597560628642163,
           "language": "zh",
           "name": "搜漫",
-          "baseUrl": "https://www.veryim.com"
+          "baseUrl": "http://www.veryim.com"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kanman",
+      "displayName": "Tachiyomi: Kanman",
+      "language": "zh",
+      "versionCode": 4,
+      "versionName": "1.6.4",
+      "apk": "tachiyomi-zh.kanman-v1.6.4.apk",
+      "icon": "eu.kanade.tachiyomi.extension.zh.kanman.png",
+      "module": "extensions/kanman",
+      "implementation": "native",
+      "role": "reading_source",
+      "channel": "stable",
+      "state": "published",
+      "nsfw": 0,
+      "sources": [
+        {
+          "id": 6760527258454776894,
+          "language": "zh",
+          "name": "看漫画（免费章节）",
+          "baseUrl": "https://m.kanman.com"
         }
       ]
     }

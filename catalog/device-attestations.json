@@ -3,11 +3,11 @@
   "attestations": [
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-18",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "browse, search, details, 126 chapters, 14 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "production-signed v1.4.13 reopened the existing library entry on an isolated Android 16 emulator; details, 254 chapters, a 31-page chapter, and first-image rendering passed after repository and signing migration",
       "sources": [
         {
           "name": "快看漫画",
@@ -18,11 +18,11 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.all.webtoons",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-20",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "popular listing, game search, details, 10 chapters, 103 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "current popular listing loaded on the connected Android test device; For Your Murder details returned 68 chapters and the newest chapter opened with 96 pages and rendered in the reader; the previously verified search route remains unchanged",
       "sources": [
         {
           "name": "Webtoons.com",
@@ -33,11 +33,11 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.ja.senmanga",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-20",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "popular listing, jujutsu search endpoint and target result, details, 274 chapters, 22 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "current popular listing loaded on the connected Android test device; Jujutsu Kaisen details returned 274 chapters and the newest chapter opened with 22 pages and rendered in the reader; the previously verified jujutsu search route remains unchanged",
       "sources": [
         {
           "name": "Sen Manga",
@@ -118,6 +118,86 @@
           "name": "360漫画",
           "baseUrl": "https://www.360mh.cc",
           "limitation": "recent_chapters_may_contain_site_supplied_placeholder_or_promotion_images"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.soman",
+      "checkedAt": "2026-09-11",
+      "state": "active_degraded",
+      "validation": "device_degraded",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "v1.6.3 popular listing and HTTP search returned results; 顶加套房的春天 details, 82 chapters, 第81话 with 37 pages, and first-image rendering passed on the connected Android test device",
+      "sources": [
+        {
+          "name": "搜漫",
+          "baseUrl": "http://www.veryim.com",
+          "limitation": "site_https_certificate_expired_using_plain_http_fallback"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
+      "checkedAt": "2026-09-12",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "covers", "details", "chapters", "pages", "image"],
+      "evidence": "v1.6.4 switched to the manwanu.cc mirror; a fresh Naruto search rendered encrypted covers from the alternate mwtuwu.cc image host, &alpha;拥抱&alpha;的方法 details returned 6 chapters, and chapter reading rendered decrypted images on the connected Android test device (43 pages shown in reader)",
+      "sources": [
+        {
+          "name": "漫蛙(雫)",
+          "baseUrl": "https://manwari.cc",
+          "limitation": null
+        },
+        {
+          "name": "猕猴桃漫画",
+          "baseUrl": "https://manwanu.cc",
+          "limitation": "same catalogue and backend as 漫蛙(雫); exposed as a selectable mirror to preserve one source identity"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.boylove",
+      "checkedAt": "2026-09-11",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "v1.4.19 popular listing and Anastasia search returned results; 代号Anastasia details, 74 chapters, 第73话 with 69 pages, and first-image rendering passed on the connected Android test device",
+      "sources": [
+        {
+          "name": "香香腐宅",
+          "baseUrl": "https://boyloveheaven13.cc",
+          "limitation": "current canonical domain times out on the connected device, so the verified legacy mirror remains primary and duplicate fallback entries were removed"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.mycomic",
+      "checkedAt": "2026-09-11",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
+      "evidence": "popular listing and ONE search returned results; ONE PIECE航海王 details, 603 listed chapters, 第1150話 with 12 pages, and first-image rendering passed on the connected Android test device",
+      "sources": [
+        {
+          "name": "MyComic",
+          "baseUrl": "https://mycomic.com",
+          "limitation": "generic desktop homepage probes return HTTP 403, while the extension request flow is fully readable on the connected Android device"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kanman",
+      "checkedAt": "2026-09-14",
+      "state": "active_verified",
+      "validation": "device_verified",
+      "passedStages": ["browse", "search", "covers", "details", "chapters", "pages", "image"],
+      "evidence": "v1.6.3 popular catalogue loaded on the connected Android device; the current search API returned 我是大仙尊; its detail response reported 876 total chapters and the extension exposed the 49 officially public chapters only; the chapter list showed 49 chapters with zero false missing-chapter notices; 第38话 opened in the reader with 22 pages and rendered the first image successfully",
+      "sources": [
+        {
+          "name": "看漫画（免费章节）",
+          "baseUrl": "https://m.kanman.com",
+          "limitation": "only chapters marked price=0 and islock=0 by the official catalogue are exposed; paid chapters remain available through the official platform"
         }
       ]
     }

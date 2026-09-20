@@ -46,6 +46,36 @@ function Write-JsonArrayDocument {
     [IO.File]::WriteAllText($Path, $json + "`n", $utf8)
 }
 
+function ConvertTo-CanonicalValue {
+    param([AllowNull()][object]$Value)
+    if ($null -eq $Value) { return $null }
+    if ($Value -is [string] -or $Value -is [ValueType]) { return $Value }
+    if ($Value -is [Collections.IDictionary]) {
+        $ordered = [ordered]@{}
+        foreach ($key in @($Value.Keys | Sort-Object)) {
+            $ordered[[string]$key] = ConvertTo-CanonicalValue $Value[$key]
+        }
+        return $ordered
+    }
+    if ($Value -is [Collections.IEnumerable]) {
+        return @($Value | ForEach-Object { ConvertTo-CanonicalValue $_ })
+    }
+    $properties = @($Value.PSObject.Properties | Where-Object MemberType -in @('NoteProperty', 'Property') | Sort-Object Name)
+    if ($properties.Count -gt 0) {
+        $ordered = [ordered]@{}
+        foreach ($property in $properties) {
+            $ordered[$property.Name] = ConvertTo-CanonicalValue $property.Value
+        }
+        return $ordered
+    }
+    return $Value
+}
+
+function ConvertTo-CanonicalJson {
+    param([AllowNull()][object]$Value, [int]$Depth = 20)
+    return ConvertTo-Json -InputObject (ConvertTo-CanonicalValue $Value) -Depth $Depth -Compress
+}
+
 function Get-ModuleForPackage {
     param([string]$Package)
     $slug = $Package.Split('.')[-1]
@@ -62,10 +92,10 @@ function Import-CurrentIndex {
     if (Test-Path -LiteralPath $catalogPath) {
         throw "Refusing to overwrite existing source catalogue: $catalogPath"
     }
-    $index = @(Get-Content -LiteralPath $indexPath -Raw | ConvertFrom-Json)
+    $index = @(Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8 | ConvertFrom-Json)
     $rolesByPackage = @{}
     if (Test-Path -LiteralPath $rolesPath) {
-        $roles = Get-Content -LiteralPath $rolesPath -Raw | ConvertFrom-Json
+        $roles = Get-Content -LiteralPath $rolesPath -Raw -Encoding UTF8 | ConvertFrom-Json
         foreach ($item in @($roles.packages)) { $rolesByPackage[[string]$item.package] = [string]$item.role }
     }
     $packages = foreach ($entry in $index) {
@@ -114,10 +144,14 @@ function Read-AndValidateCatalog {
         throw "Missing source catalogue: $catalogPath"
     }
     try {
-        $raw = Get-Content -LiteralPath $catalogPath -Raw
-        if (-not ($raw | Test-Json -SchemaFile $schemaPath -ErrorAction Stop)) {
+        $raw = Get-Content -LiteralPath $catalogPath -Raw -Encoding UTF8
+        $testJsonCommand = Get-Command Test-Json -ErrorAction SilentlyContinue
+        if ($testJsonCommand -and -not ($raw | Test-Json -SchemaFile $schemaPath -ErrorAction Stop)) {
             throw "catalog/sources.yaml does not satisfy catalog/sources.schema.json"
         }
+        # Windows PowerShell 5.1 has no Test-Json. ConvertFrom-Json still
+        # verifies the document syntax there, and the explicit catalogue
+        # checks below enforce the fields used by the generator.
         $document = $raw | ConvertFrom-Json
     } catch {
         throw "catalog/sources.yaml must be JSON-compatible YAML: $($_.Exception.Message)"
@@ -194,7 +228,7 @@ function Get-ChannelIndex {
 }
 
 function Get-TestingRepoMetadata {
-    $stableMetadata = Get-Content -LiteralPath (Join-Path $RepoRoot "repo\repo.json") -Raw | ConvertFrom-Json
+    $stableMetadata = Get-Content -LiteralPath (Join-Path $RepoRoot "repo\repo.json") -Raw -Encoding UTF8 | ConvertFrom-Json
     return [ordered]@{
         meta = [ordered]@{
             name = "$($stableMetadata.meta.name) Testing"
@@ -284,28 +318,28 @@ if ($Mode -eq "WriteDerived") {
     Assert-ChannelAssets -AssetRoot (Join-Path $RepoRoot 'repo-testing') -Index $expectedTestingIndex
     Write-Host "Generated repository index and package roles from $(@($catalog.packages).Count) catalogue packages"
 } else {
-    $actualIndex = @(Get-Content -LiteralPath $indexPath -Raw | ConvertFrom-Json)
-    $actualFullIndex = @(Get-Content -LiteralPath $fullIndexPath -Raw | ConvertFrom-Json)
-    $actualTestingIndex = @(Get-Content -LiteralPath $testingIndexPath -Raw | ConvertFrom-Json)
-    $actualTestingFullIndex = @(Get-Content -LiteralPath $testingFullIndexPath -Raw | ConvertFrom-Json)
-    $actualRoles = Get-Content -LiteralPath $rolesPath -Raw | ConvertFrom-Json
-    $actualBuildPlan = Get-Content -LiteralPath $buildPlanPath -Raw | ConvertFrom-Json
-    $expectedIndexJson = ConvertTo-Json -InputObject @($expectedIndex) -Depth 20 -Compress
-    if ((ConvertTo-Json -InputObject @($actualIndex) -Depth 20 -Compress) -ne $expectedIndexJson) {
+    $actualIndex = @(Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8 | ConvertFrom-Json)
+    $actualFullIndex = @(Get-Content -LiteralPath $fullIndexPath -Raw -Encoding UTF8 | ConvertFrom-Json)
+    $actualTestingIndex = @(Get-Content -LiteralPath $testingIndexPath -Raw -Encoding UTF8 | ConvertFrom-Json)
+    $actualTestingFullIndex = @(Get-Content -LiteralPath $testingFullIndexPath -Raw -Encoding UTF8 | ConvertFrom-Json)
+    $actualRoles = Get-Content -LiteralPath $rolesPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $actualBuildPlan = Get-Content -LiteralPath $buildPlanPath -Raw -Encoding UTF8 | ConvertFrom-Json
+    $expectedIndexJson = ConvertTo-CanonicalJson -Value @($expectedIndex)
+    if ((ConvertTo-CanonicalJson -Value @($actualIndex)) -ne $expectedIndexJson) {
         throw "repo/index.min.json drifted from catalog/sources.yaml; run sync-source-catalog.ps1 -Mode WriteDerived"
     }
-    if ((ConvertTo-Json -InputObject @($actualFullIndex) -Depth 20 -Compress) -ne $expectedIndexJson) {
+    if ((ConvertTo-CanonicalJson -Value @($actualFullIndex)) -ne $expectedIndexJson) {
         throw "repo/index.json drifted from catalog/sources.yaml; run sync-source-catalog.ps1 -Mode WriteDerived"
     }
-    $expectedTestingJson = ConvertTo-Json -InputObject @($expectedTestingIndex) -Depth 20 -Compress
-    if ((ConvertTo-Json -InputObject @($actualTestingIndex) -Depth 20 -Compress) -ne $expectedTestingJson -or
-        (ConvertTo-Json -InputObject @($actualTestingFullIndex) -Depth 20 -Compress) -ne $expectedTestingJson) {
+    $expectedTestingJson = ConvertTo-CanonicalJson -Value @($expectedTestingIndex)
+    if ((ConvertTo-CanonicalJson -Value @($actualTestingIndex)) -ne $expectedTestingJson -or
+        (ConvertTo-CanonicalJson -Value @($actualTestingFullIndex)) -ne $expectedTestingJson) {
         throw "repo-testing index drifted from catalog/sources.yaml"
     }
-    if (($actualRoles | ConvertTo-Json -Depth 10 -Compress) -ne ($expectedRoles | ConvertTo-Json -Depth 10 -Compress)) {
+    if ((ConvertTo-CanonicalJson -Value $actualRoles -Depth 10) -ne (ConvertTo-CanonicalJson -Value $expectedRoles -Depth 10)) {
         throw "maintenance/package-roles.json drifted from catalog/sources.yaml"
     }
-    if (($actualBuildPlan | ConvertTo-Json -Depth 10 -Compress) -ne ($expectedBuildPlan | ConvertTo-Json -Depth 10 -Compress)) {
+    if ((ConvertTo-CanonicalJson -Value $actualBuildPlan -Depth 10) -ne (ConvertTo-CanonicalJson -Value $expectedBuildPlan -Depth 10)) {
         throw "maintenance/build-plan.json drifted from catalog/sources.yaml"
     }
     Assert-ChannelAssets -AssetRoot (Join-Path $RepoRoot 'repo-testing') -Index $expectedTestingIndex

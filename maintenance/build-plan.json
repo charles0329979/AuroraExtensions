@@ -98,14 +98,14 @@
       "versionName": "1.4.6",
       "apk": "tachiyomi-zh.dongmanmanhua-v1.4.6.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/kuaikanmanhua",
       "gradleModule": "src/zh/kuaikanmanhua",
-      "versionCode": 104013,
+      "versionCode": 13,
       "versionName": "1.4.13",
       "apk": "tachiyomi-zh.kuaikanmanhua-v1.4.13.apk",
       "channel": "stable",
@@ -138,9 +138,9 @@
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/manwashizuku",
       "gradleModule": "src/zh/manwashizuku",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-zh.manwashizuku-v1.6.1.apk",
+      "versionCode": 4,
+      "versionName": "1.6.4",
+      "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
       "channel": "stable",
       "state": "published"
     },
@@ -182,9 +182,9 @@
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/boylove",
       "gradleModule": "src/zh/boylove",
-      "versionCode": 18,
-      "versionName": "1.4.18",
-      "apk": "tachiyomi-zh.boylove-v1.4.18.apk",
+      "versionCode": 19,
+      "versionName": "1.4.19",
+      "apk": "tachiyomi-zh.boylove-v1.4.19.apk",
       "channel": "stable",
       "state": "published"
     },
@@ -230,7 +230,7 @@
       "versionName": "1.4.3",
       "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
@@ -241,7 +241,7 @@
       "versionName": "1.4.5",
       "apk": "tachiyomi-zh.rumanhua-v1.4.5.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
@@ -307,7 +307,7 @@
       "versionName": "1.6.2",
       "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -329,7 +329,7 @@
       "versionName": "1.6.2",
       "apk": "tachiyomi-zh.didamanhua-v1.6.2.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -351,7 +351,7 @@
       "versionName": "1.6.3",
       "apk": "tachiyomi-zh.manquanzi-v1.6.3.apk",
       "channel": "stable",
-      "state": "published"
+      "state": "quarantined"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
@@ -435,9 +435,20 @@
       "builder": "vendor_batch",
       "ownerModule": "extensions/soman",
       "gradleModule": "src/zh/soman",
-      "versionCode": 2,
-      "versionName": "1.6.2",
-      "apk": "tachiyomi-zh.soman-v1.6.2.apk",
+      "versionCode": 3,
+      "versionName": "1.6.3",
+      "apk": "tachiyomi-zh.soman-v1.6.3.apk",
+      "channel": "stable",
+      "state": "published"
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kanman",
+      "builder": "vendor_batch",
+      "ownerModule": "extensions/kanman",
+      "gradleModule": "src/zh/kanman",
+      "versionCode": 4,
+      "versionName": "1.6.4",
+      "apk": "tachiyomi-zh.kanman-v1.6.4.apk",
       "channel": "stable",
       "state": "published"
     }

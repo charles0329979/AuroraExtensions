@@ -237,6 +237,7 @@ if ($SigningKeystore) {
             $apk
         if ($LASTEXITCODE -ne 0) { throw "Failed to sign $apk" }
         Move-Item -Force $signed $apk
+        Remove-Item -LiteralPath "$signed.idsig" -Force -ErrorAction SilentlyContinue
     }
 }
 

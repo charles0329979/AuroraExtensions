@@ -1,0 +1,22 @@
+{
+  "previousDate": "2026-08-28",
+  "currentDate": "2026-09-11",
+  "previousCount": 440,
+  "currentCount": 438,
+  "exactUnchanged": 394,
+  "exactAdded": 44,
+  "exactRemoved": 46,
+  "sameNameUrlChanged": 2,
+  "changed": [
+    {
+      "name": "猕猴桃漫画",
+      "oldUrl": "https://www.manwaye.cc",
+      "newUrl": "https://manwanu.cc"
+    },
+    {
+      "name": "漫画大全",
+      "oldUrl": "http://www.yueman1.cc",
+      "newUrl": "http://m.yueman1.cc"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="tachiyomi.extension" />
+
+    <application
+        android:label="Aurora Scripted LAN"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+        <meta-data
+            android:name="tachiyomi.extension.nsfw"
+            android:value="0" />
+        <meta-data
+            android:name="tachiyomix.name"
+            android:value="Aurora Scripted LAN" />
+        <meta-data
+            android:name="tachiyomix.extensionLib"
+            android:value="1.6" />
+
+        <!-- Host Phase 3+ ScriptedSource opt-in -->
+        <meta-data
+            android:name="aurora.scripted"
+            android:value="1" />
+        <meta-data
+            android:name="aurora.scripted.manifest"
+            android:value="aurora/scripted/manifest.json" />
+    </application>
+</manifest>

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-20T14:43:54Z",
+  "indexed": 41,
+  "installed": 40,
+  "matched": 40,
+  "missing": [
+    "eu.kanade.tachiyomi.extension.all.aurorascripted"
+  ],
+  "extra": [],
+  "versionMismatches": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
+      "repositoryVersionCode": 13,
+      "deviceVersionCode": 104013
+    }
+  ]
+}

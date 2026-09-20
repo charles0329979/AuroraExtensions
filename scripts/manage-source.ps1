@@ -18,6 +18,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$script:ManageSourceCmdlet = $PSCmdlet
 if (-not $RepoRoot) { $RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path }
 if (-not $env:JAVA_HOME -and (Test-Path "D:\Android\jbr")) { $env:JAVA_HOME = "D:\Android\jbr" }
 if (-not $env:ANDROID_HOME -and (Test-Path "D:\AndroidSDK")) { $env:ANDROID_HOME = "D:\AndroidSDK" }
@@ -26,16 +27,27 @@ $schemaPath = Join-Path $RepoRoot "catalog\sources.schema.json"
 $syncScript = Join-Path $PSScriptRoot "sync-source-catalog.ps1"
 $utf8 = [Text.UTF8Encoding]::new($false)
 
+function Assert-CatalogJson {
+    param([string]$Json, [string]$Message)
+    $testJsonCommand = Get-Command Test-Json -ErrorAction SilentlyContinue
+    if ($testJsonCommand -and -not ($Json | Test-Json -SchemaFile $schemaPath -ErrorAction Stop)) {
+        throw $Message
+    }
+    # ConvertFrom-Json supplies syntax validation on Windows PowerShell 5.1;
+    # sync-source-catalog.ps1 performs the semantic catalogue validation.
+    $null = $Json | ConvertFrom-Json
+}
+
 function Read-Catalog {
-    $raw = Get-Content -LiteralPath $catalogPath -Raw
-    if (-not ($raw | Test-Json -SchemaFile $schemaPath -ErrorAction Stop)) { throw "Invalid source catalogue" }
+    $raw = Get-Content -LiteralPath $catalogPath -Raw -Encoding UTF8
+    Assert-CatalogJson -Json $raw -Message "Invalid source catalogue"
     return [pscustomobject]@{ Raw = $raw; Value = ($raw | ConvertFrom-Json) }
 }
 
 function Write-Catalog {
     param([object]$Catalog)
     $json = ($Catalog | ConvertTo-Json -Depth 20) + "`n"
-    if (-not ($json | Test-Json -SchemaFile $schemaPath -ErrorAction Stop)) { throw "Updated source catalogue is invalid" }
+    Assert-CatalogJson -Json $json -Message "Updated source catalogue is invalid"
     $temporary = "$catalogPath.tmp"
     [IO.File]::WriteAllText($temporary, $json, $utf8)
     Move-Item -LiteralPath $temporary -Destination $catalogPath -Force
@@ -95,7 +107,7 @@ function Test-Artifact {
     $certificate = & $apkSigner verify --print-certs $ArtifactPath 2>&1 | Out-String
     if ($LASTEXITCODE -ne 0) { throw "APK signature verification failed" }
     $signerMatch = [regex]::Match($certificate, 'certificate SHA-256 digest:\s*([0-9a-fA-F]+)')
-    $expectedSigner = [string](Get-Content (Join-Path $RepoRoot "repo\repo.json") -Raw | ConvertFrom-Json).meta.signingKeyFingerprint
+    $expectedSigner = [string](Get-Content (Join-Path $RepoRoot "repo\repo.json") -Raw -Encoding UTF8 | ConvertFrom-Json).meta.signingKeyFingerprint
     if (-not $signerMatch.Success -or $signerMatch.Groups[1].Value.ToLowerInvariant() -ne $expectedSigner.ToLowerInvariant()) {
         throw "APK signer does not match the repository signing identity"
     }
@@ -113,7 +125,7 @@ function Invoke-AddOrUpdate {
     if ([string]::IsNullOrWhiteSpace($DefinitionPath) -or -not (Test-Path -LiteralPath $DefinitionPath -PathType Leaf)) {
         throw "-DefinitionPath is required for $Action"
     }
-    $definition = Get-Content -LiteralPath $DefinitionPath -Raw | ConvertFrom-Json
+    $definition = Get-Content -LiteralPath $DefinitionPath -Raw -Encoding UTF8 | ConvertFrom-Json
     $definitionPackage = [string]$definition.package
     if ($Package -and $Package -ne $definitionPackage) { throw "-Package does not match the definition" }
     $script:Package = $definitionPackage
@@ -146,7 +158,7 @@ function Invoke-AddOrUpdate {
     $archiveMoves = @()
     $written = @()
     $operation = "$Action $definitionPackage $($definition.versionName) to $($definition.channel)"
-    if (-not $PSCmdlet.ShouldProcess($definitionPackage, $operation)) { return }
+    if (-not $script:ManageSourceCmdlet.ShouldProcess($definitionPackage, $operation)) { return }
 
     try {
         if ($Action -eq "Update") {

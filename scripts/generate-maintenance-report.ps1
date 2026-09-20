@@ -21,11 +21,12 @@ $repoMetaPath = Join-Path $repoDir "repo.json"
 $policyPath = Join-Path (Join-Path $RepoRoot "maintenance") "policy.json"
 $sourceCatalogPath = Join-Path $catalogDir "sources.yaml"
 
-$index = @(Get-Content -LiteralPath $indexPath -Raw | ConvertFrom-Json)
-$repoMeta = Get-Content -LiteralPath $repoMetaPath -Raw | ConvertFrom-Json
-$policy = Get-Content -LiteralPath $policyPath -Raw | ConvertFrom-Json
+$indexDocument = Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$index = @($indexDocument)
+$repoMeta = Get-Content -LiteralPath $repoMetaPath -Raw -Encoding UTF8 | ConvertFrom-Json
+$policy = Get-Content -LiteralPath $policyPath -Raw -Encoding UTF8 | ConvertFrom-Json
 if ([int]$policy.schemaVersion -ne 1) { throw "Unsupported maintenance policy schemaVersion" }
-$sourceCatalog = Get-Content -LiteralPath $sourceCatalogPath -Raw | ConvertFrom-Json
+$sourceCatalog = Get-Content -LiteralPath $sourceCatalogPath -Raw -Encoding UTF8 | ConvertFrom-Json
 if ([int]$sourceCatalog.schemaVersion -ne 1) { throw "Unsupported source catalogue schemaVersion" }
 $catalogByPackage = @{}
 foreach ($package in @($sourceCatalog.packages)) { $catalogByPackage[[string]$package.package] = $package }
@@ -33,10 +34,10 @@ $healthFile = Get-ChildItem -LiteralPath $catalogDir -Filter "healthy-sources-*.
     Sort-Object Name -Descending |
     Select-Object -First 1
 if (-not $healthFile) { throw "No healthy-sources-*.json catalogue found" }
-$health = Get-Content -LiteralPath $healthFile.FullName -Raw | ConvertFrom-Json
+$health = Get-Content -LiteralPath $healthFile.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
 $attestationPath = Join-Path $catalogDir "device-attestations.json"
 $attestations = if (Test-Path -LiteralPath $attestationPath) {
-    $attestationDocument = Get-Content -LiteralPath $attestationPath -Raw | ConvertFrom-Json
+    $attestationDocument = Get-Content -LiteralPath $attestationPath -Raw -Encoding UTF8 | ConvertFrom-Json
     if ([int]$attestationDocument.schemaVersion -ne 1) { throw "Unsupported device attestation schemaVersion" }
     @($attestationDocument.attestations)
 } else {

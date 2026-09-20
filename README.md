@@ -2,15 +2,15 @@
 
 Mihon-compatible **extension repository** for [AuroraReader](https://github.com/aurora-reader/AuroraReader) Phase 5.
 
-Hosts a curated catalogue with the Aurora test extensions and 37 website-source
-extension packages (40 indexed packages in total). The website batch is intentionally bounded so
+Hosts a curated catalogue with the Aurora test extensions and 38 website-source
+extension packages (41 indexed packages in total). The website batch is intentionally bounded so
 each package can be pinned, signed, and tested instead of mirroring thousands
 of unreviewed APKs.
 
 The maintained batch includes Webtoons, Rawkuma, Sen Manga, 咚漫,
 漫画1234, 喵趣漫画, 腾讯动漫, 泰拉记事社, 再漫画, 漫蛙(雫),
 CCC追漫台, 哔哩轻漫画, zero搬运网, GoDa漫画, 古风漫画, 读漫屋, 滴答漫画,
-追漫画, 漫圈子, and 漫士多. See
+追漫画, 漫圈子, 漫士多, and 看漫画（免费章节）. See
 `docs/BATCH_SOURCES_REPORT.md` for its validation status and limitations.
 
 The connected-device health audit is imported separately under `catalog/`.

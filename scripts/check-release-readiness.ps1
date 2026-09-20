@@ -71,9 +71,15 @@ foreach ($publication in @(
         if ($response.StatusCode -ne 200) { throw "HTTP $($response.StatusCode)" }
         $entries = @($response.Content | ConvertFrom-Json)
         $localEntries = @(Get-Content -LiteralPath $publication.LocalPath -Raw | ConvertFrom-Json)
-        $difference = @(Compare-Object `
-            (Get-CatalogueIdentity -Entries $localEntries) `
-            (Get-CatalogueIdentity -Entries $entries))
+        $localIdentity = @(Get-CatalogueIdentity -Entries $localEntries)
+        $publishedIdentity = @(Get-CatalogueIdentity -Entries $entries)
+        $difference = if ($localIdentity.Count -eq 0 -and $publishedIdentity.Count -eq 0) {
+            @()
+        } else {
+            @(Compare-Object `
+                -ReferenceObject $localIdentity `
+                -DifferenceObject $publishedIdentity)
+        }
         if ($difference.Count -gt 0) {
             throw "published catalogue does not match the local package/version/hash set"
         }

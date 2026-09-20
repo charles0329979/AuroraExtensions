@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T03:11:11Z",
+  "generatedAt": "2026-09-20T14:51:33Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
-    "indexedPackages": 41
+    "indexedPackages": 35
   },
   "audit": {
     "snapshot": "healthy-sources-20260911.json",
     "snapshotDate": "2026-09-11",
-    "ageDays": 6,
-    "freshness": "current",
+    "ageDays": 9,
+    "freshness": "stale",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
       "browse",
@@ -23,16 +23,16 @@
   },
   "summary": {
     "grades": {
-      "A": 28,
-      "B": 4,
+      "A": 31,
+      "B": 2,
       "C": 0,
       "D": 0,
       "Q": 0,
-      "U": 7,
+      "U": 0,
       "N": 2
     },
-    "assessedPackages": 32,
-    "unassessedPackages": 7,
+    "assessedPackages": 33,
+    "unassessedPackages": 0,
     "nonReadingPackages": 2,
     "implementationBacklog": 75
   },
@@ -48,7 +48,7 @@
       "implementation": "scripted_runtime",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 0,
       "sources": [],
       "limitations": []
@@ -64,7 +64,7 @@
       "implementation": "test_fixture",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 0,
       "sources": [],
       "limitations": []
@@ -80,7 +80,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -101,15 +101,33 @@
       "name": "Tachiyomi: Webtoons.com",
       "version": "1.4.57",
       "versionCode": 57,
-      "grade": "U",
-      "state": "unassessed",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
+      "catalogueFreshness": "stale",
+      "auditedSources": 1,
+      "sources": [
+        {
+          "id": null,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-09-20",
+          "evidence": "current popular listing loaded on the connected Android test device; For Your Murder details returned 68 chapters and the newest chapter opened with 96 pages and rendered in the reader; the previously verified search route remains unchanged",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        }
+      ],
       "limitations": []
     },
     {
@@ -123,7 +141,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -144,15 +162,33 @@
       "name": "Tachiyomi: Sen Manga",
       "version": "1.4.8",
       "versionCode": 8,
-      "grade": "U",
-      "state": "unassessed",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
+      "catalogueFreshness": "stale",
+      "auditedSources": 1,
+      "sources": [
+        {
+          "id": null,
+          "name": "Sen Manga",
+          "baseUrl": "https://raw.senmanga.com",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-09-20",
+          "evidence": "current popular listing loaded on the connected Android test device; Jujutsu Kaisen details returned 274 chapters and the newest chapter opened with 22 pages and rendered in the reader; the previously verified jujutsu search route remains unchanged",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        }
+      ],
       "limitations": []
     },
     {
@@ -166,7 +202,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -195,7 +231,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -222,7 +258,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -249,7 +285,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -276,7 +312,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 2,
       "sources": [
         {
@@ -322,7 +358,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -339,22 +375,6 @@
       "limitations": []
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.didamanhua",
-      "name": "Tachiyomi: Dida Manhua",
-      "version": "1.6.2",
-      "versionCode": 2,
-      "grade": "U",
-      "state": "unassessed",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.zh.dmanhua",
       "name": "Tachiyomi: DManhua",
       "version": "1.6.1",
@@ -365,7 +385,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -382,22 +402,6 @@
       "limitations": []
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
-      "name": "Tachiyomi: Dongman Manhua",
-      "version": "1.4.6",
-      "versionCode": 6,
-      "grade": "U",
-      "state": "unassessed",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
       "name": "Tachiyomi: Dumanwu",
       "version": "1.6.3",
@@ -408,7 +412,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 2,
       "sources": [
         {
@@ -435,33 +439,6 @@
       "limitations": []
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-      "name": "Tachiyomi: Gufeng Manhua",
-      "version": "1.6.2",
-      "versionCode": 2,
-      "grade": "B",
-      "state": "degraded",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": 15,
-          "name": "古风漫画",
-          "baseUrl": "https://www.gfmh.app",
-          "validation": "device_degraded",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        }
-      ],
-      "limitations": []
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.zh.kaixinman",
       "name": "Tachiyomi: Kaixinman",
       "version": "1.4.1",
@@ -472,7 +449,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -499,7 +476,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -530,15 +507,33 @@
       "name": "Tachiyomi: Kuaikanmanhua",
       "version": "1.4.13",
       "versionCode": 13,
-      "grade": "U",
-      "state": "unassessed",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
+      "catalogueFreshness": "stale",
+      "auditedSources": 1,
+      "sources": [
+        {
+          "id": null,
+          "name": "快看漫画",
+          "baseUrl": "https://www.kuaikanmanhua.com",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-09-18",
+          "evidence": "production-signed v1.4.13 reopened the existing library entry on an isolated Android 16 emulator; details, 254 chapters, a 31-page chapter, and first-image rendering passed after repository and signing migration",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        }
+      ],
       "limitations": []
     },
     {
@@ -552,7 +547,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -579,7 +574,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -608,7 +603,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -635,7 +630,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -643,33 +638,6 @@
           "name": "漫画大全",
           "baseUrl": "http://m.yueman1.cc",
           "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        }
-      ],
-      "limitations": []
-    },
-    {
-      "package": "eu.kanade.tachiyomi.extension.zh.manquanzi",
-      "name": "Tachiyomi: Manquanzi",
-      "version": "1.6.3",
-      "versionCode": 3,
-      "grade": "B",
-      "state": "degraded",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 1,
-      "sources": [
-        {
-          "id": 50,
-          "name": "漫圈子",
-          "baseUrl": "https://www.9mqz.com",
-          "validation": "device_degraded",
           "limitation": null,
           "checkedAt": null,
           "evidence": null,
@@ -689,7 +657,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -716,7 +684,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 6,
       "sources": [
         {
@@ -812,7 +780,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -839,7 +807,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -866,7 +834,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -893,7 +861,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 2,
       "sources": [
         {
@@ -929,22 +897,6 @@
       ]
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
-      "name": "Tachiyomi: Rumanhua",
-      "version": "1.4.5",
-      "versionCode": 5,
-      "grade": "U",
-      "state": "unassessed",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.zh.sisimanhua",
       "name": "Tachiyomi: Sisi Manhua",
       "version": "1.4.1",
@@ -955,7 +907,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -982,7 +934,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 2,
       "sources": [
         {
@@ -1029,7 +981,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -1056,7 +1008,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -1083,7 +1035,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -1110,7 +1062,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -1127,22 +1079,6 @@
       "limitations": []
     },
     {
-      "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
-      "name": "Tachiyomi: Yumanhua",
-      "version": "1.4.3",
-      "versionCode": 3,
-      "grade": "U",
-      "state": "unassessed",
-      "role": "reading_source",
-      "implementation": "native",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.zh.zaimanhua",
       "name": "Tachiyomi: Zaimanhua",
       "version": "1.4.19",
@@ -1153,7 +1089,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {
@@ -1180,7 +1116,7 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "current",
+      "catalogueFreshness": "stale",
       "auditedSources": 1,
       "sources": [
         {

@@ -237,7 +237,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -246,7 +246,9 @@
           "name": "Dongman Manhua",
           "baseUrl": "https://www.dongmanmanhua.cn"
         }
-      ]
+      ],
+      "statusReason": "Previous complete device attestation is outside the publishable window and no current full reading-chain recheck is available.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
@@ -513,7 +515,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -522,7 +524,9 @@
           "name": "漫画客",
           "baseUrl": "http://yumanhua.com"
         }
-      ]
+      ],
+      "statusReason": "No current complete device attestation exists and the HTTP source endpoint is not suitable for the stable user catalogue.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
@@ -536,7 +540,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -545,7 +549,9 @@
           "name": "如漫画",
           "baseUrl": "https://m.rumanhua2.com"
         }
-      ]
+      ],
+      "statusReason": "Previous complete device attestation is outside the publishable window and the current canonical site probe fails; requires a fresh device recheck.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
@@ -674,7 +680,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -683,7 +689,9 @@
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app"
         }
-      ]
+      ],
+      "statusReason": "Reader image hosts remain blocked by Cloudflare HTTP 403 and the search backend is intermittent; core reading chain is incomplete.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -720,7 +728,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 0,
       "sources": [
         {
@@ -729,7 +737,9 @@
           "name": "滴答漫画",
           "baseUrl": "http://ddmanhua.com"
         }
-      ]
+      ],
+      "statusReason": "Current device recheck reached browse, details, and 220 chapters but the device disconnected before pages and image verification; keep out of stable until the complete chain is repeated.",
+      "statusChangedAt": "2026-09-20T14:51:22Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -766,7 +776,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {
@@ -775,7 +785,9 @@
           "name": "漫圈子",
           "baseUrl": "https://www.9mqz.com"
         }
-      ]
+      ],
+      "statusReason": "Legacy image host remains unreachable and HTTPS fails negotiation; reader image stage is incomplete.",
+      "statusChangedAt": "2026-09-20T14:51:24Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",

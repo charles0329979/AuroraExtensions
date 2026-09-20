@@ -3,11 +3,11 @@
   "attestations": [
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-18",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "browse, search, details, 126 chapters, 14 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "production-signed v1.4.13 reopened the existing library entry on an isolated Android 16 emulator; details, 254 chapters, a 31-page chapter, and first-image rendering passed after repository and signing migration",
       "sources": [
         {
           "name": "快看漫画",
@@ -18,11 +18,11 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.all.webtoons",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-20",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "popular listing, game search, details, 10 chapters, 103 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "current popular listing loaded on the connected Android test device; For Your Murder details returned 68 chapters and the newest chapter opened with 96 pages and rendered in the reader; the previously verified search route remains unchanged",
       "sources": [
         {
           "name": "Webtoons.com",
@@ -33,11 +33,11 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.ja.senmanga",
-      "checkedAt": "2026-08-31",
+      "checkedAt": "2026-09-20",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "details", "chapters", "pages", "image"],
-      "evidence": "popular listing, jujutsu search endpoint and target result, details, 274 chapters, 22 pages, and first-image rendering passed on a connected Android test device",
+      "evidence": "current popular listing loaded on the connected Android test device; Jujutsu Kaisen details returned 274 chapters and the newest chapter opened with 22 pages and rendered in the reader; the previously verified jujutsu search route remains unchanged",
       "sources": [
         {
           "name": "Sen Manga",

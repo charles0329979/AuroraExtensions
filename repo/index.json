@@ -188,25 +188,6 @@
     ]
   },
   {
-    "name": "Tachiyomi: Dongman Manhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
-    "apk": "tachiyomi-zh.dongmanmanhua-v1.4.6.apk",
-    "sha256": "f239237369436fde138e0a9aaa11b621eb84e7724d37aa865ceda072c96f0e6f",
-    "size": 41746,
-    "lang": "zh",
-    "code": 6,
-    "version": "1.4.6",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 4222375517460530289,
-        "lang": "zh-Hans",
-        "name": "Dongman Manhua",
-        "baseUrl": "https://www.dongmanmanhua.cn"
-      }
-    ]
-  },
-  {
     "name": "Tachiyomi: Kuaikanmanhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
     "apk": "tachiyomi-zh.kuaikanmanhua-v1.4.13.apk",
@@ -416,44 +397,6 @@
     ]
   },
   {
-    "name": "Tachiyomi: Yumanhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.yumanhua",
-    "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
-    "sha256": "5f1949af957f459e555137c9685e1118a1da00dfc11e04eccbca4c8aa477e383",
-    "size": 37650,
-    "lang": "zh",
-    "code": 3,
-    "version": "1.4.3",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 4853252437674834413,
-        "lang": "zh",
-        "name": "漫画客",
-        "baseUrl": "http://yumanhua.com"
-      }
-    ]
-  },
-  {
-    "name": "Tachiyomi: Rumanhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.rumanhua",
-    "apk": "tachiyomi-zh.rumanhua-v1.4.5.apk",
-    "sha256": "c306277eb896989bd2258816ef7866f22e5a4e95fb3258bd49c32510b3042bb9",
-    "size": 86802,
-    "lang": "zh",
-    "code": 5,
-    "version": "1.4.5",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 392262758488714109,
-        "lang": "zh",
-        "name": "如漫画",
-        "baseUrl": "https://m.rumanhua2.com"
-      }
-    ]
-  },
-  {
     "name": "Tachiyomi: Manhua Daquan",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
     "apk": "tachiyomi-zh.manhuadaquan-v1.4.1.apk",
@@ -549,25 +492,6 @@
     ]
   },
   {
-    "name": "Tachiyomi: Gufeng Manhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-    "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
-    "sha256": "63d9a534fc3b0e3add37f142bea1e1e8d903e3ab008609a5861e82c169a1c800",
-    "size": 37650,
-    "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 8452091260243947804,
-        "lang": "zh",
-        "name": "古风漫画",
-        "baseUrl": "https://www.gfmh.app"
-      }
-    ]
-  },
-  {
     "name": "Tachiyomi: Dumanwu",
     "pkg": "eu.kanade.tachiyomi.extension.zh.dumanwu",
     "apk": "tachiyomi-zh.dumanwu-v1.6.3.apk",
@@ -587,25 +511,6 @@
     ]
   },
   {
-    "name": "Tachiyomi: Dida Manhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.didamanhua",
-    "apk": "tachiyomi-zh.didamanhua-v1.6.2.apk",
-    "sha256": "a0ba75cb1f2688ac7ccccc7bf8f87bfd9ffc4ba39156264d636f6f2baf4f6c22",
-    "size": 37650,
-    "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 3861039501235360034,
-        "lang": "zh",
-        "name": "滴答漫画",
-        "baseUrl": "http://ddmanhua.com"
-      }
-    ]
-  },
-  {
     "name": "Tachiyomi: YiciYuan Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.ycymh",
     "apk": "tachiyomi-zh.ycymh-v1.6.2.apk",
@@ -621,25 +526,6 @@
         "lang": "zh",
         "name": "追漫画",
         "baseUrl": "https://www.ycymh.com"
-      }
-    ]
-  },
-  {
-    "name": "Tachiyomi: Manquanzi",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.manquanzi",
-    "apk": "tachiyomi-zh.manquanzi-v1.6.3.apk",
-    "sha256": "d5ef7e250679f3e60cbc01db111cbc338d624ad1192770f3bc25b5df87ae6896",
-    "size": 33554,
-    "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
-    "nsfw": 1,
-    "sources": [
-      {
-        "id": 746250823392626617,
-        "lang": "zh",
-        "name": "漫圈子",
-        "baseUrl": "https://www.9mqz.com"
       }
     ]
   },

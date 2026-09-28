@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "name": "Tachiyomi: Tuku",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.tuku",
+    "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
+    "sha256": "9d31248b0c3f8e9eaac7a6f44981fda543cab8c0ba5f39a7574b2aee6435d6a4",
+    "size": 33554,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 1,
+    "sources": [
+      {
+        "id": 8561993354455553651,
+        "lang": "zh",
+        "name": "图库漫画",
+        "baseUrl": "https://www.tuku.cc"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: BukaMH",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.bukamh",
+    "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
+    "sha256": "4720a45e90965351bbb92387c578b55a64a8b2051ade9ec8973385dc8652ac48",
+    "size": 37650,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 1,
+    "sources": [
+      {
+        "id": 3269491245867055703,
+        "lang": "zh",
+        "name": "布卡漫画",
+        "baseUrl": "https://www.bukamh.com"
+      }
+    ]
+  }
+]

@@ -10,6 +10,11 @@ on:
         required: false
         type: boolean
         default: false
+      allow_stale_health_for_testing:
+        description: "Allow a stale (not expired) stable-source audit for an explicit testing-channel publication"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -86,7 +91,14 @@ jobs:
 
       - name: Verify catalog bytes and production signer
         shell: pwsh
-        run: ./scripts/maintain-repo.ps1 -VerifyOnly
+        env:
+          ALLOW_STALE_HEALTH_FOR_TESTING: ${{ inputs.allow_stale_health_for_testing || false }}
+        run: |
+          $params = @{ VerifyOnly = $true }
+          if ($env:ALLOW_STALE_HEALTH_FOR_TESTING -eq "true") {
+            $params.AllowStaleHealthForTesting = $true
+          }
+          ./scripts/maintain-repo.ps1 @params
 
       - name: Upload repo/
         uses: actions/upload-artifact@v7

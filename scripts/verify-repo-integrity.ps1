@@ -6,7 +6,8 @@
 param(
     [string]$RepoRoot = "",
     [string]$ApkSigner = "",
-    [string]$Aapt2 = ""
+    [string]$Aapt2 = "",
+    [switch]$AllowStaleHealthForTesting
 )
 
 $ErrorActionPreference = "Stop"
@@ -262,8 +263,21 @@ if (Test-Path -LiteralPath $healthReportPath) {
     if (@($healthReport.packages).Count -ne @($index).Count) {
         throw "health.json package count does not match the repository index"
     }
-    if ([int]$healthReport.audit.ageDays -gt [int]$policy.audit.publishableWithinDays) {
-        throw "Health audit is too old to publish: $($healthReport.audit.ageDays) day(s)"
+    $auditAge = [int]$healthReport.audit.ageDays
+    if ($auditAge -gt [int]$policy.audit.publishableWithinDays) {
+        $testingPublications = @($sourceCatalog.packages | Where-Object {
+            [string]$_.channel -eq 'testing' -and [string]$_.state -eq 'published'
+        })
+        if (-not $AllowStaleHealthForTesting) {
+            throw "Health audit is too old to publish: $auditAge day(s)"
+        }
+        if ($testingPublications.Count -eq 0) {
+            throw "Stale-health override requires at least one testing publication"
+        }
+        if ($auditAge -gt [int]$policy.audit.staleWithinDays) {
+            throw "Health audit is expired even for testing publication: $auditAge day(s)"
+        }
+        Write-Warning "Allowing a stale stable-source audit for an explicit testing-channel publication ($auditAge day(s) old)"
     }
     $requiredChain = @($policy.requiredReadingChain)
     $reportedChain = @($healthReport.audit.requiredReadingChain)

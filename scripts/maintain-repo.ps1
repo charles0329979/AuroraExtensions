@@ -7,7 +7,8 @@ param(
     [string]$RepoRoot = "",
     [switch]$SkipBuild,
     [switch]$VerifyOnly,
-    [switch]$AllowSigningKeyRotation
+    [switch]$AllowSigningKeyRotation,
+    [switch]$AllowStaleHealthForTesting
 )
 
 $ErrorActionPreference = "Stop"
@@ -35,7 +36,9 @@ if (-not $?) { throw "Source catalogue verification failed" }
 & (Join-Path $PSScriptRoot "generate-maintenance-report.ps1") -RepoRoot $RepoRoot
 if (-not $?) { throw "Maintenance report generation failed" }
 
-& (Join-Path $PSScriptRoot "verify-repo-integrity.ps1") -RepoRoot $RepoRoot
+$verifyArgs = @{ RepoRoot = $RepoRoot }
+if ($AllowStaleHealthForTesting) { $verifyArgs.AllowStaleHealthForTesting = $true }
+& (Join-Path $PSScriptRoot "verify-repo-integrity.ps1") @verifyArgs
 if (-not $?) { throw "Repository verification failed" }
 
 Write-Host "Maintenance gate passed"

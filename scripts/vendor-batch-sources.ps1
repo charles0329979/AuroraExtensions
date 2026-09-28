@@ -20,6 +20,7 @@ $VendorDir = if ($SourceDir) { $SourceDir } else { Join-Path $RepoRoot "vendor\b
 $RepoDir = Join-Path $RepoRoot "repo"
 $ApkDir = Join-Path $RepoDir "apk"
 $IconDir = Join-Path $RepoDir "icon"
+$TestingRepoDir = Join-Path $RepoRoot "repo-testing"
 
 $specs = @(
     [pscustomobject]@{
@@ -264,6 +265,18 @@ $specs = @(
         Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 1
         Sources = @(@{ id = 4379597560628642163L; lang = "zh"; name = "搜漫"; baseUrl = "http://www.veryim.com" })
     }
+    [pscustomobject]@{
+        Module = "src/zh/tuku"; Package = "eu.kanade.tachiyomi.extension.zh.tuku"
+        Name = "Tachiyomi: Tuku"; Apk = "tachiyomi-zh.tuku-v1.6.1.apk"
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Sources = @(@{ id = 8561993354455553651L; lang = "zh"; name = "图库漫画"; baseUrl = "https://www.tuku.cc" })
+    }
+    [pscustomobject]@{
+        Module = "src/zh/bukamh"; Package = "eu.kanade.tachiyomi.extension.zh.bukamh"
+        Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.1.apk"
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Sources = @(@{ id = 3269491245867055703L; lang = "zh"; name = "布卡漫画"; baseUrl = "https://www.bukamh.com" })
+    }
 )
 
 $catalog = Get-Content -LiteralPath (Join-Path $RepoRoot "catalog\sources.yaml") -Raw | ConvertFrom-Json
@@ -293,7 +306,7 @@ foreach ($spec in $specs) {
     }
 }
 $publishedBatchPackages = @($catalogBatch | Where-Object {
-    [string]$_.channel -eq 'stable' -and [string]$_.state -eq 'published'
+    [string]$_.state -eq 'published'
 } | ForEach-Object { [string]$_.package })
 $activeSpecs = @($specs | Where-Object Package -in $publishedBatchPackages)
 
@@ -344,7 +357,8 @@ function Ensure-AuroraCustomSources {
     foreach ($module in @(
         "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan",
         "gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo",
-        "mh250", "bikabika", "dmanhua", "kanman", "manhua360", "manhua36", "manhua456", "soman"
+        "mh250", "bikabika", "dmanhua", "kanman", "manhua360", "manhua36", "manhua456", "soman",
+        "tuku", "bukamh"
     )) {
         $source = Join-Path $RepoRoot "extensions\$module"
         $target = Join-Path $VendorDir "src\zh\$module"
@@ -471,7 +485,11 @@ Ensure-ManwaNuMirrorOverride
 Ensure-GoDaMirrorOverride
 Ensure-BaoziMirrorOverride
 Ensure-BoyLoveMirrorOverride
-New-Item -ItemType Directory -Force -Path $ApkDir, $IconDir | Out-Null
+New-Item -ItemType Directory -Force -Path `
+    $ApkDir,
+    $IconDir,
+    (Join-Path $TestingRepoDir "apk"),
+    (Join-Path $TestingRepoDir "icon") | Out-Null
 
 if (-not $SkipBuild) {
     if (-not $env:ANDROID_HOME) { throw "ANDROID_HOME is required to build batch sources" }
@@ -502,8 +520,12 @@ $apkSigner = Get-ChildItem (Join-Path $env:ANDROID_HOME "build-tools") -Director
 if (-not $apkSigner) { throw "apksigner not found under $env:ANDROID_HOME" }
 
 $entries = foreach ($spec in $activeSpecs) {
+    $planned = $catalogBatch | Where-Object package -eq $spec.Package | Select-Object -First 1
+    $assetRoot = if ([string]$planned.channel -eq "testing") { $TestingRepoDir } else { $RepoDir }
+    $assetApkDir = Join-Path $assetRoot "apk"
+    $assetIconDir = Join-Path $assetRoot "icon"
     $built = Join-Path $VendorDir ($spec.Module + "/build/outputs/apk/release/" + $spec.Apk)
-    $dest = Join-Path $ApkDir $spec.Apk
+    $dest = Join-Path $assetApkDir $spec.Apk
     if (Test-Path $built) { Copy-Item -LiteralPath $built -Destination $dest -Force }
     elseif (-not (Test-Path $dest)) { throw "Missing batch APK: $built" }
 
@@ -540,7 +562,7 @@ $entries = foreach ($spec in $activeSpecs) {
         $spec.Module + "/res/mipmap-hdpi/ic_launcher.png"
     }
     $iconSource = Join-Path $VendorDir $iconRelative
-    $iconDest = Join-Path $IconDir ($spec.Package + ".png")
+    $iconDest = Join-Path $assetIconDir ($spec.Package + ".png")
     if (Test-Path $iconSource) { Copy-Item -LiteralPath $iconSource -Destination $iconDest -Force }
     elseif (-not (Test-Path $iconDest)) { throw "Missing batch icon: $iconSource" }
 
@@ -549,12 +571,10 @@ $entries = foreach ($spec in $activeSpecs) {
         name = $spec.Name; pkg = $spec.Package; apk = $spec.Apk
         sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $dest).Hash.ToLowerInvariant()
         size = $file.Length; lang = $spec.Lang; code = $spec.Code; version = $spec.Version
-        nsfw = $spec.Nsfw; sources = $spec.Sources
+        nsfw = $spec.Nsfw; sources = $spec.Sources; channel = [string]$planned.channel
     }
 }
 
-$indexPath = Join-Path $RepoDir "index.min.json"
-$existing = if (Test-Path $indexPath) { @(Get-Content $indexPath -Raw | ConvertFrom-Json) } else { @() }
 $retiredPackages = @(
     "eu.kanade.tachiyomi.extension.en.mangabat"
     "eu.kanade.tachiyomi.extension.en.mangakakalot"
@@ -567,11 +587,23 @@ $retiredPackages = @(
     "eu.kanade.tachiyomi.extension.zh.vomic"
 )
 $batchPackages = @($specs.Package) + $retiredPackages
-$merged = @($existing | Where-Object { $_.pkg -notin $batchPackages }) + @($entries)
-$json = $merged | ConvertTo-Json -Depth 10
 $encoding = [Text.UTF8Encoding]::new($false)
-[IO.File]::WriteAllText((Join-Path $RepoDir "index.min.json"), $json + "`n", $encoding)
-[IO.File]::WriteAllText((Join-Path $RepoDir "index.json"), $json + "`n", $encoding)
+foreach ($channel in @("stable", "testing")) {
+    $channelRoot = if ($channel -eq "testing") { $TestingRepoDir } else { $RepoDir }
+    $indexPath = Join-Path $channelRoot "index.min.json"
+    $existing = if (Test-Path $indexPath) { @(Get-Content $indexPath -Raw | ConvertFrom-Json) } else { @() }
+    $channelEntries = @($entries | Where-Object channel -eq $channel | ForEach-Object {
+        $copy = [ordered]@{}
+        foreach ($property in $_.GetEnumerator()) {
+            if ($property.Key -ne "channel") { $copy[$property.Key] = $property.Value }
+        }
+        [pscustomobject]$copy
+    })
+    $merged = @($existing | Where-Object { $_.pkg -notin $batchPackages }) + $channelEntries
+    $json = $merged | ConvertTo-Json -Depth 10
+    [IO.File]::WriteAllText((Join-Path $channelRoot "index.min.json"), $json + "`n", $encoding)
+    [IO.File]::WriteAllText((Join-Path $channelRoot "index.json"), $json + "`n", $encoding)
+}
 
-Write-Host "==> Added $($entries.Count) audited website extensions; catalogue now has $($merged.Count) packages"
+Write-Host "==> Added $($entries.Count) audited website extensions across stable and testing channels"
 $entries | ForEach-Object { Write-Host ("{0}`t{1}`t{2}" -f $_.pkg, $_.version, $_.apk) }

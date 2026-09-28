@@ -995,6 +995,52 @@
           "baseUrl": "https://m.kanman.com"
         }
       ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.tuku",
+      "displayName": "Tachiyomi: Tuku",
+      "language": "zh",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
+      "icon": "eu.kanade.tachiyomi.extension.zh.tuku.png",
+      "module": "extensions/tuku",
+      "implementation": "native",
+      "role": "reading_source",
+      "channel": "testing",
+      "state": "published",
+      "nsfw": 1,
+      "sources": [
+        {
+          "id": 8561993354455553651,
+          "language": "zh",
+          "name": "图库漫画",
+          "baseUrl": "https://www.tuku.cc"
+        }
+      ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
+      "displayName": "Tachiyomi: BukaMH",
+      "language": "zh",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
+      "icon": "eu.kanade.tachiyomi.extension.zh.bukamh.png",
+      "module": "extensions/bukamh",
+      "implementation": "native",
+      "role": "reading_source",
+      "channel": "testing",
+      "state": "published",
+      "nsfw": 1,
+      "sources": [
+        {
+          "id": 3269491245867055703,
+          "language": "zh",
+          "name": "布卡漫画",
+          "baseUrl": "https://www.bukamh.com"
+        }
+      ]
     }
   ]
 }

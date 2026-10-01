@@ -36,5 +36,24 @@
         "baseUrl": "https://www.bukamh.com"
       }
     ]
+  },
+  {
+    "name": "Tachiyomi: ManhuaBa",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.1.apk",
+    "sha256": "0248d788917f4a6758435c4389331b5e389095b16bd7b2b454f1a2055e0eeb53",
+    "size": 37650,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 1,
+    "sources": [
+      {
+        "id": 2463343216724262794,
+        "lang": "zh",
+        "name": "漫画吧",
+        "baseUrl": "https://www.manhuaba.com"
+      }
+    ]
   }
 ]

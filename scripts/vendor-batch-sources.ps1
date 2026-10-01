@@ -583,6 +583,26 @@ $entries = foreach ($spec in $activeSpecs) {
     }
 }
 
+# Keep exactly one APK per managed package. Version bumps otherwise leave the
+# previous tracked APK in the generated site, which the integrity gate rejects
+# as an orphan even though the catalogue points at the new artifact.
+foreach ($spec in $activeSpecs) {
+    $versionMarker = $spec.Apk.LastIndexOf("-v")
+    if ($versionMarker -lt 0) { throw "Unable to identify APK version suffix: $($spec.Apk)" }
+    $apkPrefix = $spec.Apk.Substring(0, $versionMarker + 2)
+    $planned = $catalogBatch | Where-Object package -eq $spec.Package | Select-Object -First 1
+    $expectedRoot = if ([string]$planned.channel -eq "testing") { $TestingRepoDir } else { $RepoDir }
+    foreach ($channelRoot in @($RepoDir, $TestingRepoDir)) {
+        $channelApkDir = Join-Path $channelRoot "apk"
+        Get-ChildItem -LiteralPath $channelApkDir -Filter "$apkPrefix*.apk" -File -ErrorAction SilentlyContinue |
+            Where-Object {
+                $_.Name -ne $spec.Apk -or
+                [IO.Path]::GetFullPath($channelRoot) -ne [IO.Path]::GetFullPath($expectedRoot)
+            } |
+            Remove-Item -Force
+    }
+}
+
 $retiredPackages = @(
     "eu.kanade.tachiyomi.extension.en.mangabat"
     "eu.kanade.tachiyomi.extension.en.mangakakalot"

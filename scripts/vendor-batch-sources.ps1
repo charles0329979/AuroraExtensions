@@ -277,6 +277,12 @@ $specs = @(
         Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
         Sources = @(@{ id = 3269491245867055703L; lang = "zh"; name = "布卡漫画"; baseUrl = "https://www.bukamh.com" })
     }
+    [pscustomobject]@{
+        Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
+        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.1.apk"
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
+    }
 )
 
 $catalog = Get-Content -LiteralPath (Join-Path $RepoRoot "catalog\sources.yaml") -Raw | ConvertFrom-Json
@@ -358,7 +364,7 @@ function Ensure-AuroraCustomSources {
         "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan",
         "gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo",
         "mh250", "bikabika", "dmanhua", "kanman", "manhua360", "manhua36", "manhua456", "soman",
-        "tuku", "bukamh"
+        "tuku", "bukamh", "manhuaba"
     )) {
         $source = Join-Path $RepoRoot "extensions\$module"
         $target = Join-Path $VendorDir "src\zh\$module"

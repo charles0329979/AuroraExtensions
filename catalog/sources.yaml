@@ -1064,6 +1064,29 @@
           "baseUrl": "https://www.manhuaba.com"
         }
       ]
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+      "displayName": "Tachiyomi: TalkManhua",
+      "language": "zh",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.talkmanhua-v1.6.1.apk",
+      "icon": "eu.kanade.tachiyomi.extension.zh.talkmanhua.png",
+      "module": "extensions/talkmanhua",
+      "implementation": "native",
+      "role": "reading_source",
+      "channel": "testing",
+      "state": "published",
+      "nsfw": 1,
+      "sources": [
+        {
+          "id": 5728547098385256324,
+          "language": "zh",
+          "name": "沐沐漫画",
+          "baseUrl": "https://www.talkmanhua.com"
+        }
+      ]
     }
   ]
 }

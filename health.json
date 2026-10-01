@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T05:28:47Z",
+  "generatedAt": "2026-10-01T08:07:39Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -636,8 +636,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
       "name": "Tachiyomi: Manwa (Shizuku)",
-      "version": "1.6.4",
-      "versionCode": 4,
+      "version": "1.6.5",
+      "versionCode": 5,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
@@ -645,7 +645,7 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "stale",
-      "auditedSources": 4,
+      "auditedSources": 5,
       "sources": [
         {
           "id": 17,
@@ -686,6 +686,24 @@
           "checkedAt": null,
           "evidence": null,
           "passedStages": null
+        },
+        {
+          "id": null,
+          "name": "漫蛙(雫)",
+          "baseUrl": "https://manwaxu.cc",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-10-01",
+          "evidence": "v1.6.5 replaced the redirecting legacy mirrors with the canonical manwaxu.cc host. On connected device HA1XJZHC, popular browse returned results, Naruto search returned results and cover images, 错撩 details returned 129 chapters, chapter 2127548 returned 100 pages, and encrypted images from tu.mwzu.cc rendered successfully with HTTP 200 responses.",
+          "passedStages": [
+            "browse",
+            "search",
+            "covers",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": [

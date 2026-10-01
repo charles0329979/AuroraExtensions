@@ -323,9 +323,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
       "displayName": "Tachiyomi: Manwa (Shizuku)",
       "language": "zh",
-      "versionCode": 4,
-      "versionName": "1.6.4",
-      "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
+      "versionCode": 5,
+      "versionName": "1.6.5",
+      "apk": "tachiyomi-zh.manwashizuku-v1.6.5.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.manwashizuku.png",
       "module": "vendor/batch-extensions-source/src/zh/manwashizuku",
       "implementation": "native",
@@ -338,7 +338,7 @@
           "id": 7453499921408758404,
           "language": "zh",
           "name": "漫蛙(雫)",
-          "baseUrl": "https://manwari.cc"
+          "baseUrl": "https://manwaxu.cc"
         }
       ]
     },

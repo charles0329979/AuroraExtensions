@@ -138,21 +138,16 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
-      "checkedAt": "2026-09-12",
+      "checkedAt": "2026-10-01",
       "state": "active_verified",
       "validation": "device_verified",
       "passedStages": ["browse", "search", "covers", "details", "chapters", "pages", "image"],
-      "evidence": "v1.6.4 switched to the manwanu.cc mirror; a fresh Naruto search rendered encrypted covers from the alternate mwtuwu.cc image host, &alpha;拥抱&alpha;的方法 details returned 6 chapters, and chapter reading rendered decrypted images on the connected Android test device (43 pages shown in reader)",
+      "evidence": "v1.6.5 replaced the redirecting legacy mirrors with the canonical manwaxu.cc host. On connected device HA1XJZHC, popular browse returned results, Naruto search returned results and cover images, 错撩 details returned 129 chapters, chapter 2127548 returned 100 pages, and encrypted images from tu.mwzu.cc rendered successfully with HTTP 200 responses.",
       "sources": [
         {
           "name": "漫蛙(雫)",
-          "baseUrl": "https://manwari.cc",
+          "baseUrl": "https://manwaxu.cc",
           "limitation": null
-        },
-        {
-          "name": "猕猴桃漫画",
-          "baseUrl": "https://manwanu.cc",
-          "limitation": "same catalogue and backend as 漫蛙(雫); exposed as a selectable mirror to preserve one source identity"
         }
       ]
     },

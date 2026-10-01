@@ -87,9 +87,9 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/manwashizuku"; Package = "eu.kanade.tachiyomi.extension.zh.manwashizuku"
-        Name = "Tachiyomi: Manwa (Shizuku)"; Apk = "tachiyomi-zh.manwashizuku-v1.6.4.apk"
-        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 1
-        Sources = @(@{ id = 7453499921408758404L; lang = "zh"; name = "漫蛙(雫)"; baseUrl = "https://manwari.cc" })
+        Name = "Tachiyomi: Manwa (Shizuku)"; Apk = "tachiyomi-zh.manwashizuku-v1.6.5.apk"
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 1
+        Sources = @(@{ id = 7453499921408758404L; lang = "zh"; name = "漫蛙(雫)"; baseUrl = "https://manwaxu.cc" })
     }
     [pscustomobject]@{
         Module = "src/zh/miaoqu"; Package = "eu.kanade.tachiyomi.extension.zh.miaoqu"
@@ -406,10 +406,10 @@ function Ensure-GoDaMirrorOverride {
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 }
 
-function Ensure-ManwaNuMirrorOverride {
+function Ensure-ManwaMirrorOverride {
     $buildFile = Join-Path $VendorDir "src\zh\manwashizuku\build.gradle.kts"
     $text = Get-Content -LiteralPath $buildFile -Raw
-    $versionPattern = '(?m)^    versionCode = [1-4]$'
+    $versionPattern = '(?m)^    versionCode = [1-5]$'
     $mirrorsPattern = '(?s)            mirrors\(\r?\n.*?            \)'
     if ([regex]::Matches($text, $versionPattern).Count -ne 1 -or
         [regex]::Matches($text, $mirrorsPattern).Count -ne 1) {
@@ -417,14 +417,10 @@ function Ensure-ManwaNuMirrorOverride {
     }
     $canonicalMirrors = @'
             mirrors(
-                "https://manwari.cc",
-                "https://manwanu.cc",
-                "https://manwali.cc",
-                "https://mwuu.cc",
-                "https://www.manwayi.cc",
+                "https://manwaxu.cc",
             )
 '@
-    $updated = [regex]::Replace($text, $versionPattern, '    versionCode = 4')
+    $updated = [regex]::Replace($text, $versionPattern, '    versionCode = 5')
     $updated = [regex]::Replace($updated, $mirrorsPattern, $canonicalMirrors)
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 
@@ -493,7 +489,7 @@ Ensure-Checkout
 Ensure-AuroraCustomSources
 Ensure-ManwaShizukuSource
 Ensure-QualitySources
-Ensure-ManwaNuMirrorOverride
+Ensure-ManwaMirrorOverride
 Ensure-GoDaMirrorOverride
 Ensure-BaoziMirrorOverride
 Ensure-BoyLoveMirrorOverride

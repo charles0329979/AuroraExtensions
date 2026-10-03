@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T09:55:11.821139Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 0,
+    "partial": 1,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.ttkmh",
+      "versionCode": 2,
+      "sourceId": 1608992848159007798,
+      "sourceName": "天天看漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1526,
+          "message": null
+        },
+        "search": {
+          "status": "fail",
+          "durationMs": 1137,
+          "message": "Search returned no manga for tested queries"
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 474,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 458,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 25,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 6455,
+          "message": null
+        }
+      }
+    }
+  ]
+}

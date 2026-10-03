@@ -178,6 +178,10 @@ foreach ($healthCatalogFile in $healthCatalogPaths) {
         if ($isActive -and [string]$catalogPackage.state -eq 'published' -and -not $seenPackages.Contains($sourcePackage)) {
             throw "Active healthy source has no indexed APK: $($source.id) $($source.name)"
         }
+        if ([int]$healthCatalog.schemaVersion -ge 3 -and $isActive -and
+            [long]$source.packageVersionCode -ne [long]$catalogPackage.versionCode) {
+            throw "Active health evidence version does not match the catalogue: $($source.id) $($source.name)"
+        }
         if (-not $isActive -and $source.validation -eq "device_verified") {
             throw "Verified healthy source is not active: $($source.id) $($source.name)"
         }
@@ -186,10 +190,12 @@ foreach ($healthCatalogFile in $healthCatalogPaths) {
     $degradedCount = @($healthSources | Where-Object importState -eq "active_degraded").Count
     $pendingCount = @($healthSources | Where-Object importState -eq "active_device_pending").Count
     $missingCount = @($healthSources | Where-Object { $_.importState -like "implementation_*" }).Count
+    $failedCount = @($healthSources | Where-Object importState -eq "active_failed").Count
     if (
         $verifiedCount -ne [int]$healthCatalog.summary.activeVerified -or
         $degradedCount -ne [int]$healthCatalog.summary.activeDegraded -or
         $pendingCount -ne [int]$healthCatalog.summary.activeDevicePending -or
+        ([int]$healthCatalog.schemaVersion -ge 3 -and $failedCount -ne [int]$healthCatalog.summary.activeFailed) -or
         $missingCount -ne [int]$healthCatalog.summary.implementationMissing
     ) {
         throw "Healthy source catalogue summary does not match its rows"

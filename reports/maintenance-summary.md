@@ -1,51 +1,51 @@
 # Aurora Extensions maintenance summary
 
-Generated: 2026-10-03T04:22:57Z
+Generated: 2026-10-03T09:55:46Z
 
 - Indexed packages: 35
-- Assessed packages: 31
-- Grade A: 30
-- Grade B: 1
+- Assessed packages: 33
+- Grade A: 22
+- Grade B: 9
 - Grade C: 0
-- Unassessed: 2
+- Unassessed: 0
 - Non-reading containers: 2
 - Implementation backlog: 75
-- Audit snapshot: healthy-sources-20260911.json (stale, 22 day(s) old)
+- Audit snapshot: healthy-sources-20261003.json (current, 0 day(s) old)
 
 | Grade | Package | Version | State | Audited sources |
 |---|---|---:|---|---:|
 | N | eu.kanade.tachiyomi.extension.all.aurorascripted | 1.6.1 | not_applicable | 0 |
 | A | eu.kanade.tachiyomi.extension.zh.manhua456 | 1.6.2 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.manhuadaquan | 1.4.1 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.manshiduo | 1.6.1 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.manwashizuku | 1.6.5 | healthy | 5 |
-| A | eu.kanade.tachiyomi.extension.zh.mh1234 | 1.6.4 | healthy | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.manhuadaquan | 1.4.1 | degraded | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.manshiduo | 1.6.1 | degraded | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.manwashizuku | 1.6.5 | healthy | 2 |
+| B | eu.kanade.tachiyomi.extension.zh.mh1234 | 1.6.4 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.mh250 | 1.6.1 | healthy | 1 |
-| B | eu.kanade.tachiyomi.extension.zh.manhua360 | 1.6.5 | degraded | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.miaoqu | 1.4.8 | healthy | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.manhua360 | 1.6.5 | healthy | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.miaoqu | 1.4.8 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.sisimanhua | 1.4.1 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.soman | 1.6.3 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.tencentcomics | 1.4.10 | healthy | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.tencentcomics | 1.4.10 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.terrahistoricus | 1.4.4 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.ttkmh | 1.4.1 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.ycymh | 1.6.2 | healthy | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.ttkmh | 1.4.1 | degraded | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.ycymh | 1.6.2 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.mycomic | 1.4.4 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.zaimanhua | 1.4.19 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.manhua36 | 1.6.2 | healthy | 1 |
-| U | eu.kanade.tachiyomi.extension.zh.kanman | 1.6.4 | unassessed | 0 |
+| A | eu.kanade.tachiyomi.extension.zh.kanman | 1.6.4 | healthy | 1 |
 | N | eu.kanade.tachiyomi.extension.all.aurorastub | 1.6.1 | not_applicable | 0 |
 | A | eu.kanade.tachiyomi.extension.all.mangadex | 1.4.211 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.all.webtoons | 1.4.57 | healthy | 1 |
+| D | eu.kanade.tachiyomi.extension.all.webtoons | 1.4.57 | failed | 8 |
 | A | eu.kanade.tachiyomi.extension.ja.rawkuma | 1.4.39 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.ja.senmanga | 1.4.8 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.baozimanhua | 1.6.29 | healthy | 1 |
-| U | eu.kanade.tachiyomi.extension.zh.kuaikanmanhua | 1.4.13 | unassessed | 0 |
+| A | eu.kanade.tachiyomi.extension.ja.senmanga | 1.4.8 | healthy | 2 |
+| B | eu.kanade.tachiyomi.extension.zh.baozimanhua | 1.6.29 | degraded | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.kuaikanmanhua | 1.4.13 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.baozimhorg | 1.6.38 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.bilimanga | 1.6.14 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.boylove | 1.4.19 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.creativecomic | 1.4.2 | healthy | 1 |
+| D | eu.kanade.tachiyomi.extension.zh.creativecomic | 1.4.2 | failed | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.dmanhua | 1.6.1 | healthy | 1 |
-| A | eu.kanade.tachiyomi.extension.zh.dumanwu | 1.6.3 | healthy | 2 |
+| B | eu.kanade.tachiyomi.extension.zh.dumanwu | 1.6.3 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.kaixinman | 1.4.1 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.bikabika | 1.6.3 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.zerobyw | 1.4.21 | healthy | 1 |

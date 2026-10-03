@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T09:26:44.286261Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.mh250",
+      "versionCode": 2,
+      "sourceId": 5175541392364239409,
+      "sourceName": "250漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1381,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 88,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 467,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 731,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 300,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 981,
+          "message": null
+        }
+      }
+    }
+  ]
+}

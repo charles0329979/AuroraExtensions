@@ -34,7 +34,7 @@ abstract class MH250 : HttpSource() {
     override fun latestUpdatesParse(response: Response) = parseMangaList(response)
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
-        val url = "$baseUrl/a01".toHttpUrl().newBuilder()
+        val url = "$baseUrl/b95".toHttpUrl().newBuilder()
             .addQueryParameter("searchkey", query)
             .build()
         return GET(url, headers)

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T04:35:46Z",
+  "indexed": 35,
+  "installed": 45,
+  "matched": 35,
+  "missing": [],
+  "extra": [
+    "eu.kanade.tachiyomi.extension.zh.gufengmh",
+    "eu.kanade.tachiyomi.extension.zh.manquanzi",
+    "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+    "eu.kanade.tachiyomi.extension.zh.yumanhua",
+    "eu.kanade.tachiyomi.extension.zh.tuku",
+    "eu.kanade.tachiyomi.extension.zh.bukamh",
+    "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+    "eu.kanade.tachiyomi.extension.zh.manhuaba",
+    "eu.kanade.tachiyomi.extension.zh.rumanhua",
+    "eu.kanade.tachiyomi.extension.zh.didamanhua"
+  ],
+  "versionMismatches": []
+}

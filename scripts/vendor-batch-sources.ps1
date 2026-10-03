@@ -117,8 +117,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/ttkmh"; Package = "eu.kanade.tachiyomi.extension.zh.ttkmh"
-        Name = "Tachiyomi: TTKMH"; Apk = "tachiyomi-zh.ttkmh-v1.4.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.4.1"; Nsfw = 0
+        Name = "Tachiyomi: TTKMH"; Apk = "tachiyomi-zh.ttkmh-v1.4.2.apk"
+        Lang = "zh"; Code = 2; Version = "1.4.2"; Nsfw = 0
         Icon = "lib-multisrc/mccms/res/mipmap-hdpi/ic_launcher.png"
         Sources = @(@{ id = 1608992848159007798L; lang = "zh"; name = "天天看漫画"; baseUrl = "https://www.ttkmh.com" })
     }
@@ -219,8 +219,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/mh250"; Package = "eu.kanade.tachiyomi.extension.zh.mh250"
-        Name = "Tachiyomi: 250 Manhua"; Apk = "tachiyomi-zh.mh250-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Name = "Tachiyomi: 250 Manhua"; Apk = "tachiyomi-zh.mh250-v1.6.2.apk"
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
         Sources = @(@{ id = 5175541392364239409L; lang = "zh"; name = "250漫画"; baseUrl = "http://www.mh250.com" })
     }
     [pscustomobject]@{

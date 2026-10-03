@@ -101,6 +101,8 @@ $packages = foreach ($entry in $index | Sort-Object pkg) {
     $rows = @($rows) + @($attestedRows)
     $grade = if ($excludedFromReadingHealth) {
         "N"
+    } elseif (@($rows | Where-Object importState -eq 'active_failed').Count -gt 0) {
+        "D"
     } elseif (@($rows | Where-Object importState -eq 'active_degraded').Count -gt 0) {
         "B"
     } elseif (@($rows | Where-Object importState -eq 'active_device_pending').Count -gt 0) {
@@ -114,6 +116,7 @@ $packages = foreach ($entry in $index | Sort-Object pkg) {
         "A" { "healthy" }
         "B" { "degraded" }
         "C" { "verification_pending" }
+        "D" { "failed" }
         "N" { "not_applicable" }
         default { "unassessed" }
     }
@@ -151,7 +154,7 @@ $gradeCounts = [ordered]@{}
 foreach ($grade in @('A', 'B', 'C', 'D', 'Q', 'U', 'N')) {
     $gradeCounts[$grade] = @($packages | Where-Object grade -eq $grade).Count
 }
-$activePackageCount = @($packages | Where-Object grade -in @('A', 'B', 'C')).Count
+$activePackageCount = @($packages | Where-Object grade -in @('A', 'B', 'C', 'D')).Count
 $implementationMissing = @($health.sources | Where-Object { [string]$_.importState -like 'implementation_*' }).Count
 
 $document = [ordered]@{

@@ -7,6 +7,7 @@ param(
     [string]$RepoRoot = "",
     [string]$DeviceSerial = "",
     [switch]$RequireAll,
+    [switch]$AllowExtraPackages,
     [string]$OutputPath = ""
 )
 
@@ -68,6 +69,8 @@ if ($OutputPath) {
 
 Write-Host "Device extension inventory: $($document.matched)/$($document.indexed) indexed packages installed"
 Write-Host "Missing: $($missing.Count); extra: $($extra.Count); version mismatch: $($mismatches.Count)"
-if ($extra.Count -gt 0 -or $mismatches.Count -gt 0 -or ($RequireAll -and $missing.Count -gt 0)) {
+if ((-not $AllowExtraPackages -and $extra.Count -gt 0) -or
+    $mismatches.Count -gt 0 -or
+    ($RequireAll -and $missing.Count -gt 0)) {
     throw "Device extension inventory verification failed"
 }

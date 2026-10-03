@@ -228,12 +228,12 @@
   {
     "name": "Tachiyomi: MH1234",
     "pkg": "eu.kanade.tachiyomi.extension.zh.mh1234",
-    "apk": "tachiyomi-zh.mh1234-v1.6.4.apk",
-    "sha256": "97aa2a9323aab3cb9fc7873fe9a8cdc3596edcf13b44a0bf496656f8c0240bcd",
-    "size": 62226,
+    "apk": "tachiyomi-zh.mh1234-v1.6.5.apk",
+    "sha256": "30782e93bce16e0e6e82dc43006bf36600d254946a54e4f250f74d5a3f23d707",
+    "size": 58130,
     "lang": "zh",
-    "code": 4,
-    "version": "1.6.4",
+    "code": 5,
+    "version": "1.6.5",
     "nsfw": 0,
     "sources": [
       {
@@ -285,12 +285,12 @@
   {
     "name": "Tachiyomi: Baozi Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
-    "apk": "tachiyomi-zh.baozimanhua-v1.6.29.apk",
-    "sha256": "247785167b73f749decdd24470e0fec1d8a2f6633bebb9daadd48affd8af2c5c",
+    "apk": "tachiyomi-zh.baozimanhua-v1.6.30.apk",
+    "sha256": "dc9a093b2d5fb91058e10fe46253137ff22d658eb156a83d9457e6ed4436d6f8",
     "size": 123666,
     "lang": "zh",
-    "code": 29,
-    "version": "1.6.29",
+    "code": 30,
+    "version": "1.6.30",
     "nsfw": 0,
     "sources": [
       {
@@ -342,12 +342,12 @@
   {
     "name": "Tachiyomi: TTKMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.ttkmh",
-    "apk": "tachiyomi-zh.ttkmh-v1.4.1.apk",
-    "sha256": "2f530a68cc439b5aa98886bb302b8763503e470001ac12a64b3719ac178a5453",
+    "apk": "tachiyomi-zh.ttkmh-v1.4.2.apk",
+    "sha256": "2d71757896396041bd573b9362bd7a8f8e369a0183d0d3e1437242cd44eefa59",
     "size": 37650,
     "lang": "zh",
-    "code": 1,
-    "version": "1.4.1",
+    "code": 2,
+    "version": "1.4.2",
     "nsfw": 0,
     "sources": [
       {
@@ -494,12 +494,12 @@
   {
     "name": "Tachiyomi: Dumanwu",
     "pkg": "eu.kanade.tachiyomi.extension.zh.dumanwu",
-    "apk": "tachiyomi-zh.dumanwu-v1.6.3.apk",
-    "sha256": "9442af7bf4702473089f9838aa83a3fe4ebb618df5bd1bbd57a56492acd53466",
+    "apk": "tachiyomi-zh.dumanwu-v1.6.4.apk",
+    "sha256": "a7d2acacb3253f6ffe091967754c444f004678b1121d1b423b25770d74d6c627",
     "size": 58130,
     "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 0,
     "sources": [
       {
@@ -551,12 +551,12 @@
   {
     "name": "Tachiyomi: 250 Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.mh250",
-    "apk": "tachiyomi-zh.mh250-v1.6.1.apk",
-    "sha256": "e2e355855ec8ab44cf498bab1b238f222bd69996b94dfdb2d057482fc548bcbb",
+    "apk": "tachiyomi-zh.mh250-v1.6.2.apk",
+    "sha256": "fdedb878a179ea176db63f3a8900baaab74210dc34a6c6b691c1331d1955d163",
     "size": 33554,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
+    "code": 2,
+    "version": "1.6.2",
     "nsfw": 1,
     "sources": [
       {

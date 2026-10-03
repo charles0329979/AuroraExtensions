@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T08:07:39Z",
+  "generatedAt": "2026-10-03T16:03:13Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
     "indexedPackages": 35
   },
   "audit": {
-    "snapshot": "healthy-sources-20260911.json",
-    "snapshotDate": "2026-09-11",
-    "ageDays": 20,
-    "freshness": "stale",
+    "snapshot": "healthy-sources-20261003.json",
+    "snapshotDate": "2026-10-03",
+    "ageDays": 0,
+    "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
       "browse",
@@ -23,16 +23,16 @@
   },
   "summary": {
     "grades": {
-      "A": 31,
-      "B": 1,
+      "A": 25,
+      "B": 6,
       "C": 0,
-      "D": 0,
+      "D": 2,
       "Q": 0,
-      "U": 1,
+      "U": 0,
       "N": 2
     },
-    "assessedPackages": 32,
-    "unassessedPackages": 1,
+    "assessedPackages": 33,
+    "unassessedPackages": 0,
     "nonReadingPackages": 2,
     "implementationBacklog": 75
   },
@@ -48,7 +48,7 @@
       "implementation": "scripted_runtime",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 0,
       "sources": [],
       "limitations": []
@@ -64,7 +64,7 @@
       "implementation": "test_fixture",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 0,
       "sources": [],
       "limitations": []
@@ -80,18 +80,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 383,
+          "id": 2499283573021220255,
           "name": "MangaDex",
           "baseUrl": "https://mangadex.org",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -101,15 +108,121 @@
       "name": "Tachiyomi: Webtoons.com",
       "version": "1.4.57",
       "versionCode": 57,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "D",
+      "state": "failed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
-      "auditedSources": 1,
+      "catalogueFreshness": "current",
+      "auditedSources": 8,
       "sources": [
+        {
+          "id": 1486822823904297379,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46218) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
+        {
+          "id": 2522335540328470744,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 56668) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
+        {
+          "id": 2959982438613576472,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_failed",
+          "limitation": "browse=fail:Popular list is empty",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: ",
+          "passedStages": null
+        },
+        {
+          "id": 3330861233813615504,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 57082) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
+        {
+          "id": 8251758253314457060,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46210) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
+        {
+          "id": 8664735734660636295,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46216) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
+        {
+          "id": 8749627068478740298,
+          "name": "Webtoons.com",
+          "baseUrl": "https://www.webtoons.com",
+          "validation": "device_degraded",
+          "limitation": "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 56672) after 30000ms",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages"
+          ]
+        },
         {
           "id": null,
           "name": "Webtoons.com",
@@ -128,7 +241,15 @@
           ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "browse=fail:Popular list is empty",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46210) after 30000ms",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46216) after 30000ms",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f11a:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 46218) after 30000ms",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 56668) after 30000ms",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 56672) after 30000ms",
+        "image=fail:failed to connect to webtoon-phinf.pstatic.net/2a03:2880:f126:83:face:b00c:0:25de (port 443) from /240e:3bc:302f:a7f0:dc5a:41d8:b59b:8c6b (port 57082) after 30000ms"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.ja.rawkuma",
@@ -141,18 +262,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 378,
+          "id": 5746834068092446709,
           "name": "Rawkuma",
           "baseUrl": "https://rawkuma.net",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -168,9 +296,26 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
-      "auditedSources": 1,
+      "catalogueFreshness": "current",
+      "auditedSources": 2,
       "sources": [
+        {
+          "id": 7715542271185249444,
+          "name": "Sen Manga",
+          "baseUrl": "https://raw.senmanga.com",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        },
         {
           "id": null,
           "name": "Sen Manga",
@@ -194,31 +339,36 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
       "name": "Tachiyomi: Baozi Manhua",
-      "version": "1.6.29",
-      "versionCode": 29,
+      "version": "1.6.30",
+      "versionCode": 30,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 49,
+          "id": 5724751873601868259,
           "name": "包子漫画",
           "baseUrl": "https://cn.webmota.com",
           "validation": "device_verified",
-          "limitation": "latest_chapters_may_be_app_only",
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "limitation": null,
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "latest_chapters_may_be_app_only"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.baozimhorg",
@@ -231,18 +381,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 332,
-          "name": "G站漫画",
-          "baseUrl": "https://m.g-mh.org",
+          "id": 774030471139699415,
+          "name": "GoDa漫画",
+          "baseUrl": "https://baozimh.org",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -258,18 +415,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 68,
+          "id": 4569191035934535986,
           "name": "BikaBika漫画",
           "baseUrl": "https://m.bikamanhua.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -285,18 +449,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 423,
-          "name": "哔哩轻漫画",
+          "id": 7289707411592168382,
+          "name": "嗶哩漫畫",
           "baseUrl": "https://www.bilimanga.net",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -312,18 +483,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 291,
+          "id": 1471112097704477289,
           "name": "香香腐宅",
           "baseUrl": "https://boyloveheaven13.cc",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -333,27 +511,29 @@
       "name": "Tachiyomi: Creative Comic Collection",
       "version": "1.4.2",
       "versionCode": 2,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "D",
+      "state": "failed",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 130,
+          "id": 8346821279138091413,
           "name": "CCC追漫台",
-          "baseUrl": "https://creative-comic.tw",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
+          "baseUrl": "https://www.creative-comic.tw",
+          "validation": "device_failed",
+          "limitation": "browse=fail:HTTP error 403",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: ",
           "passedStages": null
         }
       ],
-      "limitations": []
+      "limitations": [
+        "browse=fail:HTTP error 403"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dmanhua",
@@ -366,18 +546,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 116,
+          "id": 228875196645121102,
           "name": "可漫画",
           "baseUrl": "https://www.dmanhua.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -385,36 +572,33 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
       "name": "Tachiyomi: Dumanwu",
-      "version": "1.6.3",
-      "versionCode": 3,
+      "version": "1.6.4",
+      "versionCode": 4,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
-      "auditedSources": 2,
+      "catalogueFreshness": "current",
+      "auditedSources": 1,
       "sources": [
         {
-          "id": 25,
+          "id": 7167507050606280098,
           "name": "读漫屋",
-          "baseUrl": "http://m.dumanwu1.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        },
-        {
-          "id": 67,
-          "name": "读漫屋网",
           "baseUrl": "https://m.dumanwu.org",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -430,18 +614,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 53,
+          "id": 8181148133350199169,
           "name": "开心漫画",
           "baseUrl": "https://www.kaixinman.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -451,15 +642,33 @@
       "name": "Tachiyomi: Kanman",
       "version": "1.6.4",
       "versionCode": 4,
-      "grade": "U",
-      "state": "unassessed",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
-      "auditedSources": 0,
-      "sources": [],
+      "catalogueFreshness": "current",
+      "auditedSources": 1,
+      "sources": [
+        {
+          "id": 6760527258454776894,
+          "name": "看漫画（免费章节）",
+          "baseUrl": "https://m.kanman.com",
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
+        }
+      ],
       "limitations": []
     },
     {
@@ -473,17 +682,17 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": null,
+          "id": 8099870292642776005,
           "name": "快看漫画",
           "baseUrl": "https://www.kuaikanmanhua.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": "2026-09-18",
-          "evidence": "production-signed v1.4.13 reopened the existing library entry on an isolated Android 16 emulator; details, 254 chapters, a 31-page chapter, and first-image rendering passed after repository and signing migration",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
           "passedStages": [
             "browse",
             "search",
@@ -507,18 +716,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 285,
+          "id": 1316982367954300788,
           "name": "36漫画",
           "baseUrl": "https://m.36mh.org",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -528,29 +744,34 @@
       "name": "Tachiyomi: 360 Manhua",
       "version": "1.6.5",
       "versionCode": 5,
-      "grade": "B",
-      "state": "degraded",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 141,
+          "id": 7222744526115460827,
           "name": "360漫画",
           "baseUrl": "https://www.360mh.cc",
-          "validation": "device_degraded",
-          "limitation": "recent_chapters_may_be_app_promo_only",
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "validation": "device_verified",
+          "limitation": null,
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "recent_chapters_may_be_app_promo_only"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhua456",
@@ -563,18 +784,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 225,
+          "id": 8681693108341600879,
           "name": "漫画456",
           "baseUrl": "https://m.manhua456.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -584,54 +812,70 @@
       "name": "Tachiyomi: Manhua Daquan",
       "version": "1.4.1",
       "versionCode": 1,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 125,
+          "id": 6318419290037862216,
           "name": "漫画大全",
-          "baseUrl": "http://m.yueman1.cc",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "baseUrl": "http://www.yueman1.cc",
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:Search returned no manga for tested queries"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
       "name": "Tachiyomi: Manshiduo",
       "version": "1.6.1",
       "versionCode": 1,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 65,
+          "id": 8741951640601575191,
           "name": "漫士多",
           "baseUrl": "https://manshiduo.org",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:Search returned no manga for tested queries"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
@@ -644,48 +888,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
-      "auditedSources": 5,
+      "catalogueFreshness": "current",
+      "auditedSources": 2,
       "sources": [
         {
-          "id": 17,
-          "name": "漫蛙",
-          "baseUrl": "https://manwaqj.cc",
+          "id": 7453499921408758404,
+          "name": "漫蛙(雫)",
+          "baseUrl": "https://manwaxu.cc",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        },
-        {
-          "id": 18,
-          "name": "漫蛙防走失",
-          "baseUrl": "https://manwaqg.cc",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        },
-        {
-          "id": 19,
-          "name": "漫蛙AI",
-          "baseUrl": "https://manwa.me",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
-        },
-        {
-          "id": 103,
-          "name": "猕猴桃漫画",
-          "baseUrl": "https://manwanu.cc",
-          "validation": "device_verified",
-          "limitation": "published as the manwanu.cc mirror of 漫蛙(雫), not as a duplicate source",
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         },
         {
           "id": null,
@@ -706,33 +927,38 @@
           ]
         }
       ],
-      "limitations": [
-        "published as the manwanu.cc mirror of 漫蛙(雫), not as a duplicate source"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mh1234",
       "name": "Tachiyomi: MH1234",
-      "version": "1.6.4",
-      "versionCode": 4,
+      "version": "1.6.5",
+      "versionCode": 5,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 79,
+          "id": 7895725080195720063,
           "name": "漫画1234",
           "baseUrl": "https://m.wmh1234.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -740,26 +966,33 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mh250",
       "name": "Tachiyomi: 250 Manhua",
-      "version": "1.6.1",
-      "versionCode": 1,
+      "version": "1.6.2",
+      "versionCode": 2,
       "grade": "A",
       "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 43,
+          "id": 5175541392364239409,
           "name": "250漫画",
           "baseUrl": "http://www.mh250.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -769,27 +1002,35 @@
       "name": "Tachiyomi: Miaoqu Manhua",
       "version": "1.4.8",
       "versionCode": 8,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 20,
+          "id": 116946528518438525,
           "name": "喵趣漫画",
           "baseUrl": "https://www.miaoqumh.org",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "validation": "device_degraded",
+          "limitation": "search=fail:服务器错误，无法搜索",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:服务器错误，无法搜索"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mycomic",
@@ -802,18 +1043,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 161,
-          "name": "MYCOMIC",
+          "id": 9119537447562549661,
+          "name": "MyComic",
           "baseUrl": "https://mycomic.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -829,18 +1077,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 55,
+          "id": 1760898295611365693,
           "name": "思思漫画",
           "baseUrl": "https://m.sisimanhua.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -856,50 +1111,62 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 7,
+          "id": 4379597560628642163,
           "name": "搜漫",
-          "baseUrl": "https://www.hisoman.com",
+          "baseUrl": "http://www.veryim.com",
           "validation": "device_verified",
-          "limitation": "filters_out_paid_and_unreadable_external_routes",
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "limitation": null,
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "filters_out_paid_and_unreadable_external_routes"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.tencentcomics",
       "name": "Tachiyomi: Tencent Comics (ac.qq.com)",
       "version": "1.4.10",
       "versionCode": 10,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 1,
-          "name": "腾讯漫画（正版）",
+          "id": 6353436350537369479,
+          "name": "腾讯动漫",
           "baseUrl": "https://m.ac.qq.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries; details=fail:No tested manga returned details",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:Search returned no manga for tested queries; details=fail:No tested manga returned details"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.terrahistoricus",
@@ -912,18 +1179,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 208,
+          "id": 4585134706567717130,
           "name": "泰拉记事社",
-          "baseUrl": "https://terra-historicus.hypergryph.com",
+          "baseUrl": "https://comic.hypergryph.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -931,56 +1205,72 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ttkmh",
       "name": "Tachiyomi: TTKMH",
-      "version": "1.4.1",
-      "versionCode": 1,
-      "grade": "A",
-      "state": "healthy",
+      "version": "1.4.2",
+      "versionCode": 2,
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 200,
+          "id": 1608992848159007798,
           "name": "天天看漫画",
           "baseUrl": "https://www.ttkmh.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:Search returned no manga for tested queries"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
       "name": "Tachiyomi: YiciYuan Manhua",
       "version": "1.6.2",
       "versionCode": 2,
-      "grade": "A",
-      "state": "healthy",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 16,
+          "id": 8305264819870690508,
           "name": "追漫画",
-          "baseUrl": "http://www.ycymh.com",
-          "validation": "device_verified",
-          "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "baseUrl": "https://www.ycymh.com",
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": []
+      "limitations": [
+        "search=fail:Search returned no manga for tested queries"
+      ]
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.zaimanhua",
@@ -993,18 +1283,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 2,
+          "id": 524579092615598717,
           "name": "再漫画",
           "baseUrl": "https://manhua.zaimanhua.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []
@@ -1020,18 +1317,25 @@
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
-      "catalogueFreshness": "stale",
+      "catalogueFreshness": "current",
       "auditedSources": 1,
       "sources": [
         {
-          "id": 314,
+          "id": 8743284448117690086,
           "name": "zero搬运网",
-          "baseUrl": "https://www.zerobyw33.com",
+          "baseUrl": "http://www.zerobyw33.com",
           "validation": "device_verified",
           "limitation": null,
-          "checkedAt": null,
-          "evidence": null,
-          "passedStages": null
+          "checkedAt": "2026-10-03",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": []

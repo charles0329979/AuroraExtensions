@@ -8,8 +8,8 @@
     "totalUsable": 126,
     "supportedManga": 114,
     "unsupportedKind": 12,
-    "activeVerified": 22,
-    "activeDegraded": 15,
+    "activeVerified": 23,
+    "activeDegraded": 14,
     "activeDevicePending": 0,
     "activeFailed": 2,
     "implementationMissing": 75
@@ -670,20 +670,24 @@
       "name": "漫画1234",
       "url": "https://m.wmh1234.com",
       "kind": "manga",
-      "health": "部分可用",
-      "functionalClass": "PartialReadingChain",
+      "health": "可用",
+      "functionalClass": "FullReadingChain",
       "resultTiles": 0,
-      "importState": "active_degraded",
+      "importState": "active_verified",
       "package": "eu.kanade.tachiyomi.extension.zh.mh1234",
-      "packageVersionCode": 4,
+      "packageVersionCode": 5,
       "coverage": "exact",
-      "validation": "device_degraded",
-      "limitation": "details=fail:lateinit property title has not been initialized; chapters=fail:No tested manga returned chapters; pages=skipped:Blocked by an earlier stage; image=skipped:Blocked by an earlier stage",
+      "validation": "device_verified",
+      "limitation": null,
       "checkedAt": "2026-10-03",
-      "evidence": "AuroraReader device probe completed: browse, search",
+      "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
       "passedStages": [
         "browse",
-        "search"
+        "search",
+        "details",
+        "chapters",
+        "pages",
+        "image"
       ]
     },
     {

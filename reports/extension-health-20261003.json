@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-03T09:55:11.821139Z",
+  "checkedAt": "2026-10-03T14:49:53.776269Z",
   "completed": true,
   "extensionCount": 33,
   "sourceCount": 39,
   "summary": {
-    "healthy": 22,
-    "partial": 15,
+    "healthy": 23,
+    "partial": 14,
     "failed": 2,
     "login_required": 0
   },
@@ -1043,41 +1043,41 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mh1234",
-      "versionCode": 4,
+      "versionCode": 5,
       "sourceId": 7895725080195720063,
       "sourceName": "漫画1234",
       "language": "zh",
-      "status": "partial",
+      "status": "healthy",
       "stages": {
         "browse": {
           "status": "pass",
-          "durationMs": 1295,
+          "durationMs": 1419,
           "message": null
         },
         "search": {
           "status": "pass",
-          "durationMs": 1082,
+          "durationMs": 1544,
           "message": null
         },
         "details": {
-          "status": "fail",
-          "durationMs": 3463,
-          "message": "lateinit property title has not been initialized"
+          "status": "pass",
+          "durationMs": 3729,
+          "message": null
         },
         "chapters": {
-          "status": "fail",
-          "durationMs": 2750,
-          "message": "No tested manga returned chapters"
+          "status": "pass",
+          "durationMs": 3810,
+          "message": null
         },
         "pages": {
-          "status": "skipped",
-          "durationMs": null,
-          "message": "Blocked by an earlier stage"
+          "status": "pass",
+          "durationMs": 2183,
+          "message": null
         },
         "image": {
-          "status": "skipped",
-          "durationMs": null,
-          "message": "Blocked by an earlier stage"
+          "status": "pass",
+          "durationMs": 118,
+          "message": null
         }
       }
     },

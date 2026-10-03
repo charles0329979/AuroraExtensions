@@ -81,8 +81,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/mh1234"; Package = "eu.kanade.tachiyomi.extension.zh.mh1234"
-        Name = "Tachiyomi: MH1234"; Apk = "tachiyomi-zh.mh1234-v1.6.4.apk"
-        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
+        Name = "Tachiyomi: MH1234"; Apk = "tachiyomi-zh.mh1234-v1.6.5.apk"
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 0
         Sources = @(@{ id = 7895725080195720063L; lang = "zh"; name = "漫画1234"; baseUrl = "https://m.wmh1234.com" })
     }
     [pscustomobject]@{
@@ -367,7 +367,7 @@ function Ensure-QualitySources {
 
 function Ensure-AuroraCustomSources {
     foreach ($module in @(
-        "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan",
+        "ttkmh", "kaixinman", "sisimanhua", "yumanhua", "manhuadaquan", "mh1234",
         "gufengmh", "dumanwu", "didamanhua", "ycymh", "manquanzi", "manshiduo",
         "mh250", "bikabika", "dmanhua", "kanman", "manhua360", "manhua36", "manhua456", "soman",
         "tuku", "bukamh", "manhuaba", "talkmanhua"

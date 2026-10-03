@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T09:55:46Z",
+  "generatedAt": "2026-10-03T14:51:04Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -23,8 +23,8 @@
   },
   "summary": {
     "grades": {
-      "A": 22,
-      "B": 9,
+      "A": 23,
+      "B": 8,
       "C": 0,
       "D": 2,
       "Q": 0,
@@ -935,8 +935,8 @@
       "name": "Tachiyomi: MH1234",
       "version": "1.6.4",
       "versionCode": 4,
-      "grade": "B",
-      "state": "degraded",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -948,19 +948,21 @@
           "id": 7895725080195720063,
           "name": "漫画1234",
           "baseUrl": "https://m.wmh1234.com",
-          "validation": "device_degraded",
-          "limitation": "details=fail:lateinit property title has not been initialized; chapters=fail:No tested manga returned chapters; pages=skipped:Blocked by an earlier stage; image=skipped:Blocked by an earlier stage",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-03",
-          "evidence": "AuroraReader device probe completed: browse, search",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
           "passedStages": [
             "browse",
-            "search"
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
           ]
         }
       ],
-      "limitations": [
-        "details=fail:lateinit property title has not been initialized; chapters=fail:No tested manga returned chapters; pages=skipped:Blocked by an earlier stage; image=skipped:Blocked by an earlier stage"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.mh250",

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T14:49:53.776269Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.mh1234",
+      "versionCode": 5,
+      "sourceId": 7895725080195720063,
+      "sourceName": "漫画1234",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 1419, "message": null },
+        "search": { "status": "pass", "durationMs": 1544, "message": null },
+        "details": { "status": "pass", "durationMs": 3729, "message": null },
+        "chapters": { "status": "pass", "durationMs": 3810, "message": null },
+        "pages": { "status": "pass", "durationMs": 2183, "message": null },
+        "image": { "status": "pass", "durationMs": 118, "message": null }
+      }
+    }
+  ]
+}

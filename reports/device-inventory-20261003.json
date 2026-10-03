@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T04:20:15Z",
+  "indexed": 35,
+  "installed": 44,
+  "matched": 34,
+  "missing": [
+    "eu.kanade.tachiyomi.extension.all.aurorascripted"
+  ],
+  "extra": [
+    "eu.kanade.tachiyomi.extension.zh.gufengmh",
+    "eu.kanade.tachiyomi.extension.zh.manquanzi",
+    "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+    "eu.kanade.tachiyomi.extension.zh.yumanhua",
+    "eu.kanade.tachiyomi.extension.zh.tuku",
+    "eu.kanade.tachiyomi.extension.zh.bukamh",
+    "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+    "eu.kanade.tachiyomi.extension.zh.manhuaba",
+    "eu.kanade.tachiyomi.extension.zh.rumanhua",
+    "eu.kanade.tachiyomi.extension.zh.didamanhua"
+  ],
+  "versionMismatches": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
+      "repositoryVersionCode": 13,
+      "deviceVersionCode": 104013
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
+      "repositoryVersionCode": 4,
+      "deviceVersionCode": 5
+    }
+  ]
+}

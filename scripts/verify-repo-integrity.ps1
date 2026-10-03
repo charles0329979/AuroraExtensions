@@ -237,6 +237,9 @@ if (Test-Path -LiteralPath $attestationPath) {
         if ([string]$attestation.state -notin $allowedStates) {
             throw "Invalid device attestation state for $($attestation.package)"
         }
+        if ([long]$attestation.versionCode -le 0) {
+            throw "Device attestation lacks a valid versionCode for $($attestation.package)"
+        }
         if ([string]$attestation.checkedAt -notmatch '^\d{4}-\d{2}-\d{2}$') {
             throw "Invalid device attestation date for $($attestation.package)"
         }

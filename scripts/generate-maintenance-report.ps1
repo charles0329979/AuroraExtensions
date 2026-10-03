@@ -73,6 +73,7 @@ $packages = foreach ($entry in $index | Sort-Object pkg) {
     })
     $packageAttestations = @($attestations | Where-Object {
         if ([string]$_.package -ne [string]$entry.pkg) { return $false }
+        if ([long]$_.versionCode -ne [long]$entry.code) { return $false }
         $checkedAt = [datetime]::ParseExact(
             [string]$_.checkedAt,
             'yyyy-MM-dd',

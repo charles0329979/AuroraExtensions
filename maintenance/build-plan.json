@@ -138,9 +138,9 @@
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/manwashizuku",
       "gradleModule": "src/zh/manwashizuku",
-      "versionCode": 4,
-      "versionName": "1.6.4",
-      "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
+      "versionCode": 5,
+      "versionName": "1.6.5",
+      "apk": "tachiyomi-zh.manwashizuku-v1.6.5.apk",
       "channel": "stable",
       "state": "published"
     },
@@ -451,6 +451,50 @@
       "apk": "tachiyomi-zh.kanman-v1.6.4.apk",
       "channel": "stable",
       "state": "published"
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.tuku",
+      "builder": "vendor_batch",
+      "ownerModule": "extensions/tuku",
+      "gradleModule": "src/zh/tuku",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
+      "channel": "testing",
+      "state": "quarantined"
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
+      "builder": "vendor_batch",
+      "ownerModule": "extensions/bukamh",
+      "gradleModule": "src/zh/bukamh",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
+      "channel": "testing",
+      "state": "quarantined"
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+      "builder": "vendor_batch",
+      "ownerModule": "extensions/manhuaba",
+      "gradleModule": "src/zh/manhuaba",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.manhuaba-v1.6.1.apk",
+      "channel": "testing",
+      "state": "quarantined"
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+      "builder": "vendor_batch",
+      "ownerModule": "extensions/talkmanhua",
+      "gradleModule": "src/zh/talkmanhua",
+      "versionCode": 1,
+      "versionName": "1.6.1",
+      "apk": "tachiyomi-zh.talkmanhua-v1.6.1.apk",
+      "channel": "testing",
+      "state": "quarantined"
     }
   ]
 }

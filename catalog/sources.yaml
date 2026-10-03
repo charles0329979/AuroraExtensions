@@ -1008,7 +1008,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "testing",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {
@@ -1031,7 +1031,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "testing",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {
@@ -1054,7 +1054,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "testing",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {
@@ -1077,7 +1077,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "testing",
-      "state": "published",
+      "state": "quarantined",
       "nsfw": 1,
       "sources": [
         {

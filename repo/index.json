@@ -247,19 +247,19 @@
   {
     "name": "Tachiyomi: Manwa (Shizuku)",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
-    "apk": "tachiyomi-zh.manwashizuku-v1.6.4.apk",
-    "sha256": "45b7863661015c32ae3dc0d3933e903995a1c4d29646b821d896af2904240d34",
+    "apk": "tachiyomi-zh.manwashizuku-v1.6.5.apk",
+    "sha256": "362cc641556a0c6699cd91302365d14d616236791e81e6cc5c54a8dfd5ff0f9d",
     "size": 94994,
     "lang": "zh",
-    "code": 4,
-    "version": "1.6.4",
+    "code": 5,
+    "version": "1.6.5",
     "nsfw": 1,
     "sources": [
       {
         "id": 7453499921408758404,
         "lang": "zh",
         "name": "漫蛙(雫)",
-        "baseUrl": "https://manwari.cc"
+        "baseUrl": "https://manwaxu.cc"
       }
     ]
   },

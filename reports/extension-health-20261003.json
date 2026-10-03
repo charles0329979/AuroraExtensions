@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-03T14:49:53.776269Z",
+  "checkedAt": "2026-10-03T15:14:27.150123Z",
   "completed": true,
   "extensionCount": 33,
   "sourceCount": 39,
   "summary": {
-    "healthy": 23,
-    "partial": 14,
+    "healthy": 24,
+    "partial": 13,
     "failed": 2,
     "login_required": 0
   },
@@ -388,41 +388,41 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
-      "versionCode": 29,
+      "versionCode": 30,
       "sourceId": 5724751873601868259,
       "sourceName": "包子漫画",
       "language": "zh",
-      "status": "partial",
+      "status": "healthy",
       "stages": {
         "browse": {
           "status": "pass",
-          "durationMs": 129,
+          "durationMs": 4633,
           "message": null
         },
         "search": {
           "status": "pass",
-          "durationMs": 291,
+          "durationMs": 2913,
           "message": null
         },
         "details": {
           "status": "pass",
-          "durationMs": 1812,
+          "durationMs": 3150,
           "message": null
         },
         "chapters": {
           "status": "pass",
-          "durationMs": 1679,
+          "durationMs": 1722,
           "message": null
         },
         "pages": {
-          "status": "fail",
-          "durationMs": 2846,
-          "message": "HTTP error 400"
+          "status": "pass",
+          "durationMs": 784,
+          "message": null
         },
         "image": {
-          "status": "skipped",
-          "durationMs": null,
-          "message": "Blocked by an earlier stage"
+          "status": "pass",
+          "durationMs": 2805,
+          "message": null
         }
       }
     },

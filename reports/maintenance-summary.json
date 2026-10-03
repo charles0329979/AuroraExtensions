@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T14:51:04Z",
+  "generatedAt": "2026-10-03T15:15:25Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -23,8 +23,8 @@
   },
   "summary": {
     "grades": {
-      "A": 23,
-      "B": 8,
+      "A": 24,
+      "B": 7,
       "C": 0,
       "D": 2,
       "Q": 0,
@@ -341,8 +341,8 @@
       "name": "Tachiyomi: Baozi Manhua",
       "version": "1.6.29",
       "versionCode": 29,
-      "grade": "B",
-      "state": "degraded",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -354,21 +354,21 @@
           "id": 5724751873601868259,
           "name": "包子漫画",
           "baseUrl": "https://cn.webmota.com",
-          "validation": "device_degraded",
-          "limitation": "pages=fail:HTTP error 400; image=skipped:Blocked by an earlier stage",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-03",
-          "evidence": "AuroraReader device probe completed: browse, search, details, chapters",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
           "passedStages": [
             "browse",
             "search",
             "details",
-            "chapters"
+            "chapters",
+            "pages",
+            "image"
           ]
         }
       ],
-      "limitations": [
-        "pages=fail:HTTP error 400; image=skipped:Blocked by an earlier stage"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.baozimhorg",

@@ -1,11 +1,11 @@
 # Aurora Extensions maintenance summary
 
-Generated: 2026-10-03T14:51:04Z
+Generated: 2026-10-03T15:15:25Z
 
 - Indexed packages: 35
 - Assessed packages: 33
-- Grade A: 23
-- Grade B: 8
+- Grade A: 24
+- Grade B: 7
 - Grade C: 0
 - Unassessed: 0
 - Non-reading containers: 2
@@ -38,7 +38,7 @@ Generated: 2026-10-03T14:51:04Z
 | D | eu.kanade.tachiyomi.extension.all.webtoons | 1.4.57 | failed | 8 |
 | A | eu.kanade.tachiyomi.extension.ja.rawkuma | 1.4.39 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.ja.senmanga | 1.4.8 | healthy | 2 |
-| B | eu.kanade.tachiyomi.extension.zh.baozimanhua | 1.6.29 | degraded | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.baozimanhua | 1.6.29 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.kuaikanmanhua | 1.4.13 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.baozimhorg | 1.6.38 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.bilimanga | 1.6.14 | healthy | 1 |

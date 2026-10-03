@@ -160,9 +160,9 @@
       "builder": "vendor_batch",
       "ownerModule": "vendor/batch-extensions-source/src/zh/baozimanhua",
       "gradleModule": "src/zh/baozimanhua",
-      "versionCode": 29,
-      "versionName": "1.6.29",
-      "apk": "tachiyomi-zh.baozimanhua-v1.6.29.apk",
+      "versionCode": 30,
+      "versionName": "1.6.30",
+      "apk": "tachiyomi-zh.baozimanhua-v1.6.30.apk",
       "channel": "stable",
       "state": "published"
     },

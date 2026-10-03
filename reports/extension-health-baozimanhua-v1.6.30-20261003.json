@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T15:14:27.150123Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
+      "versionCode": 30,
+      "sourceId": 5724751873601868259,
+      "sourceName": "包子漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 4633, "message": null },
+        "search": { "status": "pass", "durationMs": 2913, "message": null },
+        "details": { "status": "pass", "durationMs": 3150, "message": null },
+        "chapters": { "status": "pass", "durationMs": 1722, "message": null },
+        "pages": { "status": "pass", "durationMs": 784, "message": null },
+        "image": { "status": "pass", "durationMs": 2805, "message": null }
+      }
+    }
+  ]
+}

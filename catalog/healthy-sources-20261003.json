@@ -8,8 +8,8 @@
     "totalUsable": 126,
     "supportedManga": 114,
     "unsupportedKind": 12,
-    "activeVerified": 23,
-    "activeDegraded": 14,
+    "activeVerified": 24,
+    "activeDegraded": 13,
     "activeDevicePending": 0,
     "activeFailed": 2,
     "implementationMissing": 75
@@ -257,22 +257,24 @@
       "name": "包子漫画",
       "url": "https://cn.webmota.com",
       "kind": "manga",
-      "health": "部分可用",
-      "functionalClass": "PartialReadingChain",
+      "health": "可用",
+      "functionalClass": "FullReadingChain",
       "resultTiles": 0,
-      "importState": "active_degraded",
+      "importState": "active_verified",
       "package": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
-      "packageVersionCode": 29,
+      "packageVersionCode": 30,
       "coverage": "exact",
-      "validation": "device_degraded",
-      "limitation": "pages=fail:HTTP error 400; image=skipped:Blocked by an earlier stage",
+      "validation": "device_verified",
+      "limitation": null,
       "checkedAt": "2026-10-03",
-      "evidence": "AuroraReader device probe completed: browse, search, details, chapters",
+      "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
       "passedStages": [
         "browse",
         "search",
         "details",
-        "chapters"
+        "chapters",
+        "pages",
+        "image"
       ]
     },
     {

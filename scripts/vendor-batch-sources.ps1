@@ -99,8 +99,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/baozimanhua"; Package = "eu.kanade.tachiyomi.extension.zh.baozimanhua"
-        Name = "Tachiyomi: Baozi Manhua"; Apk = "tachiyomi-zh.baozimanhua-v1.6.29.apk"
-        Lang = "zh"; Code = 29; Version = "1.6.29"; Nsfw = 0
+        Name = "Tachiyomi: Baozi Manhua"; Apk = "tachiyomi-zh.baozimanhua-v1.6.30.apk"
+        Lang = "zh"; Code = 30; Version = "1.6.30"; Nsfw = 0
         Sources = @(@{ id = 5724751873601868259L; lang = "zh"; name = "包子漫画"; baseUrl = "https://cn.webmota.com" })
     }
     [pscustomobject]@{
@@ -456,11 +456,24 @@ function Ensure-BaoziMirrorOverride {
                 "https://tw.baozimh.com",
                 "https://www.baozimh.com",
 '@
-    $updated = $text.Replace($oldOrder, $newOrder)
+    $updated = $text.Replace($oldOrder, $newOrder).Replace("versionCode = 29", "versionCode = 30")
     if ($updated -notmatch 'mirrors\(\s*"https://cn\.webmota\.com"') {
         throw "Unable to promote the audited Baozi cn.webmota.com mirror"
     }
+    if ($updated -notmatch 'versionCode = 30') {
+        throw "Unable to apply the Baozi chapter redirect fix version"
+    }
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
+
+    $sourceFile = Join-Path $VendorDir "src\zh\baozimanhua\src\eu\kanade\tachiyomi\extension\zh\baozimanhua\Baozi.kt"
+    $sourceText = Get-Content -LiteralPath $sourceFile -Raw
+    $oldCondition = 'if (isAppMirror && isQuickPage) {'
+    $newCondition = 'if ((isAppMirror && isQuickPage) || chapterUrl.toHttpUrl().encodedPath == "/user/page_direct") {'
+    $sourceUpdated = $sourceText.Replace($oldCondition, $newCondition)
+    if ($sourceUpdated -notmatch 'encodedPath == "/user/page_direct"') {
+        throw "Unable to bypass the unstable Baozi page_direct redirect"
+    }
+    [IO.File]::WriteAllText($sourceFile, $sourceUpdated, [Text.UTF8Encoding]::new($false))
 }
 
 function Ensure-BoyLoveMirrorOverride {

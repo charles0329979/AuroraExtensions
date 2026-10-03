@@ -1,11 +1,11 @@
 # Aurora Extensions maintenance summary
 
-Generated: 2026-10-03T15:15:25Z
+Generated: 2026-10-03T15:42:46Z
 
 - Indexed packages: 35
 - Assessed packages: 33
-- Grade A: 24
-- Grade B: 7
+- Grade A: 25
+- Grade B: 6
 - Grade C: 0
 - Unassessed: 0
 - Non-reading containers: 2
@@ -45,7 +45,7 @@ Generated: 2026-10-03T15:15:25Z
 | A | eu.kanade.tachiyomi.extension.zh.boylove | 1.4.19 | healthy | 1 |
 | D | eu.kanade.tachiyomi.extension.zh.creativecomic | 1.4.2 | failed | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.dmanhua | 1.6.1 | healthy | 1 |
-| B | eu.kanade.tachiyomi.extension.zh.dumanwu | 1.6.3 | degraded | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.dumanwu | 1.6.3 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.kaixinman | 1.4.1 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.bikabika | 1.6.3 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.zerobyw | 1.4.21 | healthy | 1 |

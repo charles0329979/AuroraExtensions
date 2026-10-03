@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-03T15:41:57.430180Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
+      "versionCode": 4,
+      "sourceId": 7167507050606280098,
+      "sourceName": "读漫屋",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 3835, "message": null },
+        "search": { "status": "pass", "durationMs": 5325, "message": null },
+        "details": { "status": "pass", "durationMs": 3620, "message": null },
+        "chapters": { "status": "pass", "durationMs": 2168, "message": null },
+        "pages": { "status": "pass", "durationMs": 3171, "message": null },
+        "image": { "status": "pass", "durationMs": 1227, "message": null }
+      }
+    }
+  ]
+}

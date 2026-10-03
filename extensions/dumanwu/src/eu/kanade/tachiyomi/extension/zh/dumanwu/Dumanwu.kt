@@ -49,7 +49,7 @@ abstract class Dumanwu : HttpSource() {
 
     private fun parseMangaList(response: Response): MangasPage {
         val mangas = response.asJsoup()
-            .select("li:has(a[href^=/comic/]):has(img[title])")
+            .select("li:has(a[href^=/comic/])")
             .mapNotNull(::mangaFromCard)
             .distinctBy(SManga::url)
         return MangasPage(mangas, false)
@@ -57,9 +57,13 @@ abstract class Dumanwu : HttpSource() {
 
     private fun mangaFromCard(card: Element): SManga? {
         val anchor = card.selectFirst("a[href^=/comic/]:not([href$=.html])") ?: return null
-        val image = card.selectFirst("img[title]") ?: return null
+        val image = anchor.selectFirst("img") ?: card.selectFirst("img") ?: return null
+        val mangaTitle = image.attr("title").ifBlank { image.attr("alt") }.ifBlank {
+            card.selectFirst(".title")?.text().orEmpty()
+        }
+        if (mangaTitle.isBlank()) return null
         return SManga.create().apply {
-            title = image.attr("title")
+            title = mangaTitle
             setUrlWithoutDomain(anchor.absUrl("href"))
             thumbnail_url = image.absUrl("src")
         }

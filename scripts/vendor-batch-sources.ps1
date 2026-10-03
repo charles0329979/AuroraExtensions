@@ -189,8 +189,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/dumanwu"; Package = "eu.kanade.tachiyomi.extension.zh.dumanwu"
-        Name = "Tachiyomi: Dumanwu"; Apk = "tachiyomi-zh.dumanwu-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
+        Name = "Tachiyomi: Dumanwu"; Apk = "tachiyomi-zh.dumanwu-v1.6.4.apk"
+        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
         Sources = @(@{ id = 7167507050606280098L; lang = "zh"; name = "读漫屋"; baseUrl = "https://m.dumanwu.org" })
     }
     [pscustomobject]@{

@@ -314,9 +314,9 @@
       "builder": "vendor_batch",
       "ownerModule": "extensions/dumanwu",
       "gradleModule": "src/zh/dumanwu",
-      "versionCode": 3,
-      "versionName": "1.6.3",
-      "apk": "tachiyomi-zh.dumanwu-v1.6.3.apk",
+      "versionCode": 4,
+      "versionName": "1.6.4",
+      "apk": "tachiyomi-zh.dumanwu-v1.6.4.apk",
       "channel": "stable",
       "state": "published"
     },

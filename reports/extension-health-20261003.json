@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-03T15:14:27.150123Z",
+  "checkedAt": "2026-10-03T15:41:57.430180Z",
   "completed": true,
   "extensionCount": 33,
   "sourceCount": 39,
   "summary": {
-    "healthy": 24,
-    "partial": 13,
+    "healthy": 25,
+    "partial": 12,
     "failed": 2,
     "login_required": 0
   },
@@ -643,40 +643,40 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
-      "versionCode": 3,
+      "versionCode": 4,
       "sourceId": 7167507050606280098,
       "sourceName": "读漫屋",
       "language": "zh",
-      "status": "partial",
+      "status": "healthy",
       "stages": {
         "browse": {
           "status": "pass",
-          "durationMs": 1985,
+          "durationMs": 3835,
           "message": null
         },
         "search": {
-          "status": "fail",
-          "durationMs": 1339,
-          "message": "Search returned no manga for tested queries"
+          "status": "pass",
+          "durationMs": 5325,
+          "message": null
         },
         "details": {
           "status": "pass",
-          "durationMs": 811,
+          "durationMs": 3620,
           "message": null
         },
         "chapters": {
           "status": "pass",
-          "durationMs": 2109,
+          "durationMs": 2168,
           "message": null
         },
         "pages": {
           "status": "pass",
-          "durationMs": 851,
+          "durationMs": 3171,
           "message": null
         },
         "image": {
           "status": "pass",
-          "durationMs": 1728,
+          "durationMs": 1227,
           "message": null
         }
       }

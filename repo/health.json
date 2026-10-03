@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T15:15:25Z",
+  "generatedAt": "2026-10-03T15:42:46Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -23,8 +23,8 @@
   },
   "summary": {
     "grades": {
-      "A": 24,
-      "B": 7,
+      "A": 25,
+      "B": 6,
       "C": 0,
       "D": 2,
       "Q": 0,
@@ -574,8 +574,8 @@
       "name": "Tachiyomi: Dumanwu",
       "version": "1.6.3",
       "versionCode": 3,
-      "grade": "B",
-      "state": "degraded",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -587,12 +587,13 @@
           "id": 7167507050606280098,
           "name": "读漫屋",
           "baseUrl": "https://m.dumanwu.org",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-03",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
           "passedStages": [
             "browse",
+            "search",
             "details",
             "chapters",
             "pages",
@@ -600,9 +601,7 @@
           ]
         }
       ],
-      "limitations": [
-        "search=fail:Search returned no manga for tested queries"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kaixinman",

@@ -121,7 +121,7 @@ foreach ($entry in $index) {
     if ($LASTEXITCODE -ne 0) { throw "Unable to read APK manifest for $apkName`n$manifestTree" }
     foreach ($metadataName in @('tachiyomi.extension.nsfw', 'tachiyomix.contentWarning')) {
         $metadataPattern = [regex]::Escape($metadataName) +
-            '[\s\S]{0,400}android:value\(0x[0-9a-fA-F]+\)=([0-9]+)'
+            '[\s\S]{0,400}?android:value\(0x[0-9a-fA-F]+\)=([0-9]+)'
         $metadataMatch = [regex]::Match($manifestTree, $metadataPattern)
         if ($metadataMatch.Success -and [int]$metadataMatch.Groups[1].Value -gt 0) {
             throw "Non-neutral content metadata in ${apkName}: $metadataName"

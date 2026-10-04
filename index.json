@@ -836,12 +836,12 @@
   {
     "name": "Tachiyomi: BukaMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.bukamh",
-    "apk": "tachiyomi-zh.bukamh-v1.6.2.apk",
-    "sha256": "493db65159c7b36431ab42fee3da31fefd5b8c339e86e9c5023bf1dff03f9abd",
+    "apk": "tachiyomi-zh.bukamh-v1.6.3.apk",
+    "sha256": "c2c407f5bdd7c0b95daff0bb8cff3f0bb7abda9b417f71502992107da6f7f129",
     "size": 37650,
     "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
+    "code": 3,
+    "version": "1.6.3",
     "nsfw": 0,
     "sources": [
       {
@@ -855,12 +855,12 @@
   {
     "name": "Tachiyomi: ManhuaBa",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
-    "apk": "tachiyomi-zh.manhuaba-v1.6.3.apk",
-    "sha256": "d71212e7c59d47680e8f0985df13aef325d8c0c3e5ba316b8cd379a1ee6428dc",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.4.apk",
+    "sha256": "6ba5f11a76507b5914ff0601958699007fdc383390a912e23842562234290221",
     "size": 37650,
     "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 0,
     "sources": [
       {

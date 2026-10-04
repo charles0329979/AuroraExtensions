@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T11:44:00Z",
+  "generatedAt": "2026-10-04T12:03:00Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -475,10 +475,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
       "name": "Tachiyomi: BukaMH",
-      "version": "1.6.2",
-      "versionCode": 2,
-      "grade": "B",
-      "state": "degraded",
+      "version": "1.6.3",
+      "versionCode": 3,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -490,21 +490,15 @@
           "id": 3269491245867055703,
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries",
+          "validation": "device_pending",
+          "limitation": "Version 3 uses the current suspend search path directly; signed-device verification is pending.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
-          "passedStages": [
-            "browse",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
+          "evidence": "Version 3 compiled verification is pending.",
+          "passedStages": null
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries"
+        "Version 3 uses the current suspend search path directly; signed-device verification is pending."
       ]
     },
     {
@@ -677,8 +671,8 @@
       "name": "Tachiyomi: Gufeng Manhua",
       "version": "1.6.4",
       "versionCode": 4,
-      "grade": "C",
-      "state": "verification_pending",
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -690,15 +684,21 @@
           "id": 8452091260243947804,
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app",
-          "validation": "device_pending",
-          "limitation": "Version 4 accepts both direct image bytes and the legacy encrypted format; signed-device verification is pending.",
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
           "checkedAt": "2026-10-04",
-          "evidence": "Version 4 compiled verification is pending.",
-          "passedStages": null
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": [
-        "Version 4 accepts both direct image bytes and the legacy encrypted format; signed-device verification is pending."
+        "search=fail:Search returned no manga for tested queries"
       ]
     },
     {
@@ -908,8 +908,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
       "name": "Tachiyomi: ManhuaBa",
-      "version": "1.6.3",
-      "versionCode": 3,
+      "version": "1.6.4",
+      "versionCode": 4,
       "grade": "C",
       "state": "verification_pending",
       "role": "reading_source",
@@ -924,14 +924,14 @@
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com",
           "validation": "device_pending",
-          "limitation": "Version 3 routes search through the working current endpoint; signed-device verification is pending.",
+          "limitation": "Version 4 uses the current suspend search path directly; signed-device verification is pending.",
           "checkedAt": "2026-10-04",
-          "evidence": "Version 3 compiled verification is pending.",
+          "evidence": "Version 4 compiled verification is pending.",
           "passedStages": null
         }
       ],
       "limitations": [
-        "Version 3 routes search through the working current endpoint; signed-device verification is pending."
+        "Version 4 uses the current suspend search path directly; signed-device verification is pending."
       ]
     },
     {

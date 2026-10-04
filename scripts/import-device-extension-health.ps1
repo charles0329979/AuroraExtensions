@@ -31,10 +31,16 @@ foreach ($package in @($catalog.packages)) {
     foreach ($source in @($package.sources)) { $sources[[long]$source.id] = $source }
 }
 
-$previous = Get-ChildItem -LiteralPath (Join-Path $RepoRoot 'catalog') -Filter 'healthy-sources-*.json' -File |
-    Where-Object FullName -ne ([IO.Path]::GetFullPath($OutputPath)) |
-    Sort-Object Name -Descending |
-    Select-Object -First 1
+$outputFullPath = [IO.Path]::GetFullPath($OutputPath)
+$previous = if (Test-Path -LiteralPath $outputFullPath) {
+    # Incremental probes commonly update the current day's snapshot. Use that
+    # snapshot as the merge base so earlier probes from the same day survive.
+    Get-Item -LiteralPath $outputFullPath
+} else {
+    Get-ChildItem -LiteralPath (Join-Path $RepoRoot 'catalog') -Filter 'healthy-sources-*.json' -File |
+        Sort-Object Name -Descending |
+        Select-Object -First 1
+}
 $auditedKeys = @{}
 foreach ($result in @($report.sources)) {
     $auditedKeys["$([string]$result.package):$([long]$result.sourceId)"] = $true

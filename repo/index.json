@@ -418,12 +418,12 @@
   {
     "name": "Tachiyomi: Yumanhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.yumanhua",
-    "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
-    "sha256": "5f1949af957f459e555137c9685e1118a1da00dfc11e04eccbca4c8aa477e383",
+    "apk": "tachiyomi-zh.yumanhua-v1.4.4.apk",
+    "sha256": "ab119f9330a144e95b2def6c12de47e7b48e55553bba51cd9f9df30019db9ca1",
     "size": 37650,
     "lang": "zh",
-    "code": 3,
-    "version": "1.4.3",
+    "code": 4,
+    "version": "1.4.4",
     "nsfw": 0,
     "sources": [
       {
@@ -551,12 +551,12 @@
   {
     "name": "Tachiyomi: Gufeng Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-    "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
-    "sha256": "63d9a534fc3b0e3add37f142bea1e1e8d903e3ab008609a5861e82c169a1c800",
+    "apk": "tachiyomi-zh.gufengmh-v1.6.3.apk",
+    "sha256": "91ef0b832a469055acdd06ee1d7a5ae7cd872aa62ba44f8038abe5c259acb1f3",
     "size": 37650,
     "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
+    "code": 3,
+    "version": "1.6.3",
     "nsfw": 0,
     "sources": [
       {
@@ -817,12 +817,12 @@
   {
     "name": "Tachiyomi: Tuku",
     "pkg": "eu.kanade.tachiyomi.extension.zh.tuku",
-    "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
-    "sha256": "ea12130d9fd9231e7dd2287d5c1ec1d0182837b9545303f5fc2d9a4898cf6cd5",
+    "apk": "tachiyomi-zh.tuku-v1.6.2.apk",
+    "sha256": "fcc6d2384833ed941930033e51eff3c730312981e558c7610c7f58498e288fd9",
     "size": 33554,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
+    "code": 2,
+    "version": "1.6.2",
     "nsfw": 0,
     "sources": [
       {
@@ -836,12 +836,12 @@
   {
     "name": "Tachiyomi: BukaMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.bukamh",
-    "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
-    "sha256": "f2c91074425d5a57f7637e3e6ebdeb1e129dea7a811f0c8c1cb7e55049f23288",
+    "apk": "tachiyomi-zh.bukamh-v1.6.2.apk",
+    "sha256": "493db65159c7b36431ab42fee3da31fefd5b8c339e86e9c5023bf1dff03f9abd",
     "size": 37650,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
+    "code": 2,
+    "version": "1.6.2",
     "nsfw": 0,
     "sources": [
       {
@@ -855,12 +855,12 @@
   {
     "name": "Tachiyomi: ManhuaBa",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
-    "apk": "tachiyomi-zh.manhuaba-v1.6.1.apk",
-    "sha256": "56988a3a8120993362e4d2fa6c65783e9fc41f0caf85cd68ac1a8710a02a5454",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.2.apk",
+    "sha256": "629b918d3e1ec59cf73afc5d5015e4a32f7d62f90999c2b27c1f9f9ba1595055",
     "size": 37650,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
+    "code": 2,
+    "version": "1.6.2",
     "nsfw": 0,
     "sources": [
       {

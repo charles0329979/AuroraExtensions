@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-04T11:07:24.754094Z",
+  "completed": true,
+  "extensionCount": 5,
+  "sourceCount": 5,
+  "summary": {
+    "healthy": 2,
+    "partial": 3,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
+      "versionCode": 2,
+      "sourceId": 3269491245867055703,
+      "sourceName": "布卡漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 2867, "message": null },
+        "search": { "status": "fail", "durationMs": 1150, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 241, "message": null },
+        "chapters": { "status": "pass", "durationMs": 312, "message": null },
+        "pages": { "status": "pass", "durationMs": 231, "message": null },
+        "image": { "status": "pass", "durationMs": 1175, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+      "versionCode": 3,
+      "sourceId": 8452091260243947804,
+      "sourceName": "古风漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 1889, "message": null },
+        "search": { "status": "fail", "durationMs": 1793, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 269, "message": null },
+        "chapters": { "status": "pass", "durationMs": 287, "message": null },
+        "pages": { "status": "pass", "durationMs": 492, "message": null },
+        "image": { "status": "fail", "durationMs": 2148, "message": "javax.crypto.IllegalBlockSizeException: error:1e00007b:Cipher functions:OPENSSL_internal:WRONG_FINAL_BLOCK_LENGTH" }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+      "versionCode": 2,
+      "sourceId": 2463343216724262794,
+      "sourceName": "漫画吧",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 2681, "message": null },
+        "search": { "status": "fail", "durationMs": 1631, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 320, "message": null },
+        "chapters": { "status": "pass", "durationMs": 543, "message": null },
+        "pages": { "status": "pass", "durationMs": 347, "message": null },
+        "image": { "status": "pass", "durationMs": 1124, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.tuku",
+      "versionCode": 2,
+      "sourceId": 8561993354455553651,
+      "sourceName": "图库漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 2620, "message": null },
+        "search": { "status": "pass", "durationMs": 525, "message": null },
+        "details": { "status": "pass", "durationMs": 1457, "message": null },
+        "chapters": { "status": "pass", "durationMs": 2488, "message": null },
+        "pages": { "status": "pass", "durationMs": 686, "message": null },
+        "image": { "status": "pass", "durationMs": 1214, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
+      "versionCode": 4,
+      "sourceId": 4853252437674834413,
+      "sourceName": "漫画客",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 545, "message": null },
+        "search": { "status": "pass", "durationMs": 757, "message": null },
+        "details": { "status": "pass", "durationMs": 282, "message": null },
+        "chapters": { "status": "pass", "durationMs": 283, "message": null },
+        "pages": { "status": "pass", "durationMs": 343, "message": null },
+        "image": { "status": "pass", "durationMs": 224, "message": null }
+      }
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 # Aurora Extensions maintenance summary
 
-Generated: 2026-10-04T10:00:12Z
+Generated: 2026-10-04T11:11:45Z
 
 - Indexed packages: 45
 - Assessed packages: 43
-- Grade A: 29
+- Grade A: 31
 - Grade B: 10
 - Grade C: 0
 - Unassessed: 0
@@ -15,7 +15,7 @@ Generated: 2026-10-04T10:00:12Z
 | Grade | Package | Version | State | Audited sources |
 |---|---|---:|---|---:|
 | N | eu.kanade.tachiyomi.extension.all.aurorascripted | 1.6.1 | not_applicable | 0 |
-| D | eu.kanade.tachiyomi.extension.zh.manhuaba | 1.6.1 | failed | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.manhuaba | 1.6.2 | degraded | 1 |
 | B | eu.kanade.tachiyomi.extension.zh.manhuadaquan | 1.4.1 | degraded | 1 |
 | B | eu.kanade.tachiyomi.extension.zh.manquanzi | 1.6.3 | degraded | 1 |
 | B | eu.kanade.tachiyomi.extension.zh.manshiduo | 1.6.1 | degraded | 1 |
@@ -31,9 +31,9 @@ Generated: 2026-10-04T10:00:12Z
 | B | eu.kanade.tachiyomi.extension.zh.tencentcomics | 1.4.10 | degraded | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.terrahistoricus | 1.4.4 | healthy | 1 |
 | B | eu.kanade.tachiyomi.extension.zh.ttkmh | 1.4.2 | degraded | 1 |
-| D | eu.kanade.tachiyomi.extension.zh.tuku | 1.6.1 | failed | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.tuku | 1.6.2 | healthy | 1 |
 | B | eu.kanade.tachiyomi.extension.zh.ycymh | 1.6.2 | degraded | 1 |
-| B | eu.kanade.tachiyomi.extension.zh.yumanhua | 1.4.3 | degraded | 1 |
+| A | eu.kanade.tachiyomi.extension.zh.yumanhua | 1.4.4 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.manhua456 | 1.6.2 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.zaimanhua | 1.4.19 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.manhua360 | 1.6.5 | healthy | 1 |
@@ -48,13 +48,13 @@ Generated: 2026-10-04T10:00:12Z
 | A | eu.kanade.tachiyomi.extension.zh.bikabika | 1.6.3 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.bilimanga | 1.6.14 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.boylove | 1.4.19 | healthy | 1 |
-| B | eu.kanade.tachiyomi.extension.zh.bukamh | 1.6.1 | degraded | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.bukamh | 1.6.2 | degraded | 1 |
 | D | eu.kanade.tachiyomi.extension.zh.creativecomic | 1.4.2 | failed | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.didamanhua | 1.6.2 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.dmanhua | 1.6.1 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.dongmanmanhua | 1.4.6 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.dumanwu | 1.6.4 | healthy | 1 |
-| B | eu.kanade.tachiyomi.extension.zh.gufengmh | 1.6.2 | degraded | 1 |
+| B | eu.kanade.tachiyomi.extension.zh.gufengmh | 1.6.3 | degraded | 2 |
 | A | eu.kanade.tachiyomi.extension.zh.kaixinman | 1.4.1 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.kanman | 1.6.4 | healthy | 1 |
 | A | eu.kanade.tachiyomi.extension.zh.manhua36 | 1.6.2 | healthy | 1 |

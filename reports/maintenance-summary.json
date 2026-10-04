@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T10:00:12Z",
+  "generatedAt": "2026-10-04T11:11:45Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -23,10 +23,10 @@
   },
   "summary": {
     "grades": {
-      "A": 29,
+      "A": 31,
       "B": 10,
       "C": 0,
-      "D": 4,
+      "D": 2,
       "Q": 0,
       "U": 0,
       "N": 2
@@ -475,8 +475,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
       "name": "Tachiyomi: BukaMH",
-      "version": "1.6.1",
-      "versionCode": 1,
+      "version": "1.6.2",
+      "versionCode": 2,
       "grade": "B",
       "state": "degraded",
       "role": "reading_source",
@@ -491,11 +491,12 @@
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com",
           "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries; details=fail:Could not parse query ':scope > .text': unexpected token at ' > .text'",
+          "limitation": "search=fail:Search returned no manga for tested queries",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, chapters, pages, image",
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
           "passedStages": [
             "browse",
+            "details",
             "chapters",
             "pages",
             "image"
@@ -503,7 +504,7 @@
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries; details=fail:Could not parse query ':scope > .text': unexpected token at ' > .text'"
+        "search=fail:Search returned no manga for tested queries"
       ]
     },
     {
@@ -674,8 +675,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
       "name": "Tachiyomi: Gufeng Manhua",
-      "version": "1.6.2",
-      "versionCode": 2,
+      "version": "1.6.3",
+      "versionCode": 3,
       "grade": "B",
       "state": "degraded",
       "role": "reading_source",
@@ -683,14 +684,14 @@
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
+      "auditedSources": 2,
       "sources": [
         {
           "id": 8452091260243947804,
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app",
           "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries; image=fail:HTTP error 403",
+          "limitation": "search=fail:Search returned no manga for tested queries; image=fail:javax.crypto.IllegalBlockSizeException: error:1e00007b:Cipher functions:OPENSSL_internal:WRONG_FINAL_BLOCK_LENGTH",
           "checkedAt": "2026-10-04",
           "evidence": "AuroraReader device probe completed: browse, details, chapters, pages",
           "passedStages": [
@@ -699,10 +700,21 @@
             "chapters",
             "pages"
           ]
+        },
+        {
+          "id": null,
+          "name": "古风漫画",
+          "baseUrl": "https://www.gfmh.app",
+          "validation": "device_pending",
+          "limitation": "signed_device_verification_pending",
+          "checkedAt": "2026-10-04",
+          "evidence": "v1.6.3 adds the required Referer for the primary image host; local compilation and direct endpoint checks passed, while signed-device verification is pending",
+          "passedStages": null
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries; image=fail:HTTP error 403"
+        "search=fail:Search returned no manga for tested queries; image=fail:javax.crypto.IllegalBlockSizeException: error:1e00007b:Cipher functions:OPENSSL_internal:WRONG_FINAL_BLOCK_LENGTH",
+        "signed_device_verification_pending"
       ]
     },
     {
@@ -912,10 +924,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
       "name": "Tachiyomi: ManhuaBa",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "D",
-      "state": "failed",
+      "version": "1.6.2",
+      "versionCode": 2,
+      "grade": "B",
+      "state": "degraded",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -927,15 +939,21 @@
           "id": 2463343216724262794,
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com",
-          "validation": "device_failed",
-          "limitation": "browse=fail:Popular list is empty",
+          "validation": "device_degraded",
+          "limitation": "search=fail:Search returned no manga for tested queries",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: ",
-          "passedStages": null
+          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
       "limitations": [
-        "browse=fail:Popular list is empty"
+        "search=fail:Search returned no manga for tested queries"
       ]
     },
     {
@@ -1474,10 +1492,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.tuku",
       "name": "Tachiyomi: Tuku",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "D",
-      "state": "failed",
+      "version": "1.6.2",
+      "versionCode": 2,
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -1489,16 +1507,21 @@
           "id": 8561993354455553651,
           "name": "图库漫画",
           "baseUrl": "https://www.tuku.cc",
-          "validation": "device_failed",
-          "limitation": "browse=fail:Popular list is empty",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: ",
-          "passedStages": null
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "browse=fail:Popular list is empty"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -1538,10 +1561,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
       "name": "Tachiyomi: Yumanhua",
-      "version": "1.4.3",
-      "versionCode": 3,
-      "grade": "B",
-      "state": "degraded",
+      "version": "1.4.4",
+      "versionCode": 4,
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -1553,12 +1576,13 @@
           "id": 4853252437674834413,
           "name": "漫画客",
           "baseUrl": "http://yumanhua.com",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
           "passedStages": [
             "browse",
+            "search",
             "details",
             "chapters",
             "pages",
@@ -1566,9 +1590,7 @@
           ]
         }
       ],
-      "limitations": [
-        "search=fail:Search returned no manga for tested queries"
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.zaimanhua",

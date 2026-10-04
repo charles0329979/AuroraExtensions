@@ -572,6 +572,25 @@ if (-not $SkipBuild) {
             & ./gradlew @tasks --no-daemon --no-configuration-cache --rerun-tasks
         }
         if ($LASTEXITCODE -ne 0) { throw "Batch extension build failed with exit $LASTEXITCODE" }
+
+        # Rebuild warning-bearing upstream modules in isolation.  The large
+        # multi-project invocation can otherwise retain their original DSL
+        # value while configuring tasks, even though the source file and
+        # manifest generator have already been normalized above.
+        foreach ($module in @("src/zh/boylove")) {
+            if ($module -notin $activeSpecs.Module) { continue }
+            $moduleBuildDir = Join-Path $VendorDir ($module + "\build")
+            if (Test-Path -LiteralPath $moduleBuildDir) {
+                Remove-Item -LiteralPath $moduleBuildDir -Recurse -Force
+            }
+            $task = ":$($module -replace '/', ':'):assembleRelease"
+            if ($IsWindows -or $env:OS -match "Windows") {
+                & .\gradlew.bat $task --no-daemon --no-configuration-cache --rerun-tasks
+            } else {
+                & ./gradlew $task --no-daemon --no-configuration-cache --rerun-tasks
+            }
+            if ($LASTEXITCODE -ne 0) { throw "Isolated extension rebuild failed: $module" }
+        }
     } finally { Pop-Location }
 }
 

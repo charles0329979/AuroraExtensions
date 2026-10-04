@@ -184,8 +184,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/gufengmh"; Package = "eu.kanade.tachiyomi.extension.zh.gufengmh"
-        Name = "Tachiyomi: Gufeng Manhua"; Apk = "tachiyomi-zh.gufengmh-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
+        Name = "Tachiyomi: Gufeng Manhua"; Apk = "tachiyomi-zh.gufengmh-v1.6.4.apk"
+        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
         Sources = @(@{ id = 8452091260243947804L; lang = "zh"; name = "古风漫画"; baseUrl = "https://www.gfmh.app" })
     }
     [pscustomobject]@{
@@ -280,8 +280,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
-        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
+        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.3.apk"
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
         Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
     }
     [pscustomobject]@{

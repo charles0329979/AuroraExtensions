@@ -42,7 +42,7 @@ abstract class ManhuaBa : HttpSource() {
     override fun latestUpdatesParse(response: Response) = parseMangaList(response)
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
-        val url = "$baseUrl/search".toHttpUrl().newBuilder()
+        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
             .addQueryParameter("key", query)
             .build()
         return GET(url, headers)

@@ -129,13 +129,29 @@ abstract class Gufengmh : HttpSource() {
             return response
         }
 
-        val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
-        val key = SecretKeySpec(IMAGE_KEY.toByteArray(Charsets.UTF_8), "AES")
-        cipher.init(Cipher.DECRYPT_MODE, key, IvParameterSpec(IMAGE_KEY.toByteArray(Charsets.UTF_8)))
-        val decrypted = cipher.doFinal(response.body.bytes())
+        val bytes = response.body.bytes()
+        val imageBytes = if (looksLikeImage(bytes)) {
+            bytes
+        } else {
+            val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+            val key = SecretKeySpec(IMAGE_KEY.toByteArray(Charsets.UTF_8), "AES")
+            cipher.init(Cipher.DECRYPT_MODE, key, IvParameterSpec(IMAGE_KEY.toByteArray(Charsets.UTF_8)))
+            cipher.doFinal(bytes)
+        }
         return response.newBuilder()
-            .body(decrypted.toResponseBody("image/webp".toMediaType()))
+            .body(imageBytes.toResponseBody("image/webp".toMediaType()))
             .build()
+    }
+
+    private fun looksLikeImage(bytes: ByteArray): Boolean {
+        fun matches(offset: Int, vararg expected: Int): Boolean =
+            bytes.size >= offset + expected.size && expected.indices.all { index ->
+                bytes[offset + index].toInt() and 0xff == expected[index]
+            }
+        return matches(0, 0xff, 0xd8, 0xff) ||
+            matches(0, 0x89, 0x50, 0x4e, 0x47) ||
+            matches(0, 0x47, 0x49, 0x46, 0x38) ||
+            (matches(0, 0x52, 0x49, 0x46, 0x46) && matches(8, 0x57, 0x45, 0x42, 0x50))
     }
 
     private fun decryptParams(encoded: String): String {

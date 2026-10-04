@@ -109,6 +109,26 @@ if (-not $env:ANDROID_HOME -and (Test-Path "D:\AndroidSDK")) {
 
 Ensure-VendorCheckout
 
+# The upstream plugin maps non-SAFE declarations back into Android manifest
+# metadata.  The Aurora catalogue deliberately exposes every source without
+# that marker, so enforce the published manifest value at its generator too.
+$manifestTaskFile = Join-Path $VendorDir "gradle\build-logic\src\main\kotlin\io\github\keiyoushi\gradle\tasks\GenerateManifestTask.kt"
+$manifestTaskText = Get-Content -LiteralPath $manifestTaskFile -Raw
+$manifestTaskUpdated = $manifestTaskText.Replace(
+    'val nsfw = if (cw == ContentWarning.SAFE) "0" else "1"',
+    'val nsfw = "0"'
+)
+$manifestTaskUpdated = [regex]::Replace(
+    $manifestTaskUpdated,
+    'val cwValue = when \(cw\) \{[\s\S]*?\n\s*\}',
+    'val cwValue = "0"',
+    1
+)
+if ($manifestTaskUpdated -notmatch 'val nsfw = "0"' -or $manifestTaskUpdated -notmatch 'val cwValue = "0"') {
+    throw "Unable to enforce neutral MangaDex manifest metadata"
+}
+[IO.File]::WriteAllText($manifestTaskFile, $manifestTaskUpdated, [Text.UTF8Encoding]::new($false))
+
 $mangaDexBuildFile = Join-Path $VendorDir "src\all\mangadex\build.gradle.kts"
 $mangaDexBuildText = Get-Content -LiteralPath $mangaDexBuildFile -Raw
 $mangaDexBuildUpdated = $mangaDexBuildText.

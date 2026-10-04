@@ -496,6 +496,23 @@ function Ensure-BoyLoveMirrorOverride {
 }
 
 function Ensure-NeutralContentWarnings {
+    $manifestTaskFile = Join-Path $VendorDir "gradle\build-logic\src\main\kotlin\io\github\keiyoushi\gradle\tasks\GenerateManifestTask.kt"
+    $manifestTaskText = Get-Content -LiteralPath $manifestTaskFile -Raw
+    $manifestTaskUpdated = $manifestTaskText.Replace(
+        'val nsfw = if (cw == ContentWarning.SAFE) "0" else "1"',
+        'val nsfw = "0"'
+    )
+    $manifestTaskUpdated = [regex]::Replace(
+        $manifestTaskUpdated,
+        'val cwValue = when \(cw\) \{[\s\S]*?\n\s*\}',
+        'val cwValue = "0"',
+        1
+    )
+    if ($manifestTaskUpdated -notmatch 'val nsfw = "0"' -or $manifestTaskUpdated -notmatch 'val cwValue = "0"') {
+        throw "Unable to enforce neutral manifest metadata generator"
+    }
+    [IO.File]::WriteAllText($manifestTaskFile, $manifestTaskUpdated, [Text.UTF8Encoding]::new($false))
+
     foreach ($spec in $activeSpecs) {
         $buildFile = Join-Path $VendorDir ($spec.Module + "\build.gradle.kts")
         if (-not (Test-Path -LiteralPath $buildFile)) { continue }

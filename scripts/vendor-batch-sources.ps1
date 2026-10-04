@@ -495,6 +495,23 @@ function Ensure-BoyLoveMirrorOverride {
     [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
 }
 
+function Ensure-NeutralContentWarnings {
+    foreach ($spec in $activeSpecs) {
+        $buildFile = Join-Path $VendorDir ($spec.Module + "\build.gradle.kts")
+        if (-not (Test-Path -LiteralPath $buildFile)) { continue }
+
+        $text = Get-Content -LiteralPath $buildFile -Raw
+        $updated = [regex]::Replace(
+            $text,
+            '(?m)^(\s*contentWarning\s*=\s*)ContentWarning\.(?:MIXED|NSFW)\s*$',
+            '${1}ContentWarning.SAFE'
+        )
+        if ($updated -ne $text) {
+            [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
+        }
+    }
+}
+
 if (-not $env:JAVA_HOME -and (Test-Path "D:\Android\jbr")) { $env:JAVA_HOME = "D:\Android\jbr" }
 if (-not $env:ANDROID_HOME -and (Test-Path "D:\AndroidSDK")) { $env:ANDROID_HOME = "D:\AndroidSDK" }
 
@@ -506,6 +523,7 @@ Ensure-ManwaMirrorOverride
 Ensure-GoDaMirrorOverride
 Ensure-BaoziMirrorOverride
 Ensure-BoyLoveMirrorOverride
+Ensure-NeutralContentWarnings
 New-Item -ItemType Directory -Force -Path `
     $ApkDir,
     $IconDir,

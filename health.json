@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T10:16:55Z",
+  "generatedAt": "2026-10-04T11:03:23Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -24,9 +24,9 @@
   "summary": {
     "grades": {
       "A": 29,
-      "B": 10,
-      "C": 0,
-      "D": 4,
+      "B": 7,
+      "C": 5,
+      "D": 2,
       "Q": 0,
       "U": 0,
       "N": 2
@@ -475,10 +475,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
       "name": "Tachiyomi: BukaMH",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "B",
-      "state": "degraded",
+      "version": "1.6.2",
+      "versionCode": 2,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -490,20 +490,15 @@
           "id": 3269491245867055703,
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries; details=fail:Could not parse query ':scope > .text': unexpected token at ' > .text'",
+          "validation": "device_pending",
+          "limitation": "Version 2 repairs the details parser and awaits signed-device verification.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, chapters, pages, image",
-          "passedStages": [
-            "browse",
-            "chapters",
-            "pages",
-            "image"
-          ]
+          "evidence": "Version 2 compiled successfully; signed-device verification is pending.",
+          "passedStages": null
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries; details=fail:Could not parse query ':scope > .text': unexpected token at ' > .text'"
+        "Version 2 repairs the details parser and awaits signed-device verification."
       ]
     },
     {
@@ -674,35 +669,41 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
       "name": "Tachiyomi: Gufeng Manhua",
-      "version": "1.6.2",
-      "versionCode": 2,
-      "grade": "B",
-      "state": "degraded",
+      "version": "1.6.3",
+      "versionCode": 3,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
       "publicationState": "published",
       "catalogueFreshness": "current",
-      "auditedSources": 1,
+      "auditedSources": 2,
       "sources": [
         {
           "id": 8452091260243947804,
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries; image=fail:HTTP error 403",
+          "validation": "device_pending",
+          "limitation": "Version 3 adds the image-host Referer required to avoid HTTP 403 and awaits signed-device verification.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages",
-          "passedStages": [
-            "browse",
-            "details",
-            "chapters",
-            "pages"
-          ]
+          "evidence": "Version 3 compiled successfully; signed-device verification is pending.",
+          "passedStages": null
+        },
+        {
+          "id": null,
+          "name": "古风漫画",
+          "baseUrl": "https://www.gfmh.app",
+          "validation": "device_pending",
+          "limitation": "signed_device_verification_pending",
+          "checkedAt": "2026-10-04",
+          "evidence": "v1.6.3 adds the required Referer for the primary image host; local compilation and direct endpoint checks passed, while signed-device verification is pending",
+          "passedStages": null
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries; image=fail:HTTP error 403"
+        "signed_device_verification_pending",
+        "Version 3 adds the image-host Referer required to avoid HTTP 403 and awaits signed-device verification."
       ]
     },
     {
@@ -912,10 +913,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
       "name": "Tachiyomi: ManhuaBa",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "D",
-      "state": "failed",
+      "version": "1.6.2",
+      "versionCode": 2,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -927,15 +928,15 @@
           "id": 2463343216724262794,
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com",
-          "validation": "device_failed",
-          "limitation": "browse=fail:Popular list is empty",
+          "validation": "device_pending",
+          "limitation": "Version 2 supports the current card layout and awaits signed-device verification.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: ",
+          "evidence": "Version 2 compiled successfully; signed-device verification is pending.",
           "passedStages": null
         }
       ],
       "limitations": [
-        "browse=fail:Popular list is empty"
+        "Version 2 supports the current card layout and awaits signed-device verification."
       ]
     },
     {
@@ -1474,10 +1475,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.tuku",
       "name": "Tachiyomi: Tuku",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "D",
-      "state": "failed",
+      "version": "1.6.2",
+      "versionCode": 2,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -1489,15 +1490,15 @@
           "id": 8561993354455553651,
           "name": "图库漫画",
           "baseUrl": "https://www.tuku.cc",
-          "validation": "device_failed",
-          "limitation": "browse=fail:Popular list is empty",
+          "validation": "device_pending",
+          "limitation": "Version 2 supports the current mobile ranking layout and awaits signed-device verification.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: ",
+          "evidence": "Version 2 compiled successfully; signed-device verification is pending.",
           "passedStages": null
         }
       ],
       "limitations": [
-        "browse=fail:Popular list is empty"
+        "Version 2 supports the current mobile ranking layout and awaits signed-device verification."
       ]
     },
     {
@@ -1538,10 +1539,10 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
       "name": "Tachiyomi: Yumanhua",
-      "version": "1.4.3",
-      "versionCode": 3,
-      "grade": "B",
-      "state": "degraded",
+      "version": "1.4.4",
+      "versionCode": 4,
+      "grade": "C",
+      "state": "verification_pending",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -1553,21 +1554,15 @@
           "id": 4853252437674834413,
           "name": "漫画客",
           "baseUrl": "http://yumanhua.com",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries",
+          "validation": "device_pending",
+          "limitation": "Version 4 routes search through the working desktop host and awaits signed-device verification.",
           "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
-          "passedStages": [
-            "browse",
-            "details",
-            "chapters",
-            "pages",
-            "image"
-          ]
+          "evidence": "Version 4 compiled successfully; signed-device verification is pending.",
+          "passedStages": null
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries"
+        "Version 4 routes search through the working desktop host and awaits signed-device verification."
       ]
     },
     {

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-04T11:45:45.429784Z",
+  "completed": true,
+  "extensionCount": 2,
+  "sourceCount": 2,
+  "summary": { "healthy": 0, "partial": 2, "failed": 0, "login_required": 0 },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+      "versionCode": 4,
+      "sourceId": 8452091260243947804,
+      "sourceName": "古风漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 944, "message": null },
+        "search": { "status": "fail", "durationMs": 1900, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 318, "message": null },
+        "chapters": { "status": "pass", "durationMs": 255, "message": null },
+        "pages": { "status": "pass", "durationMs": 222, "message": null },
+        "image": { "status": "pass", "durationMs": 1967, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+      "versionCode": 3,
+      "sourceId": 2463343216724262794,
+      "sourceName": "漫画吧",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 2084, "message": null },
+        "search": { "status": "fail", "durationMs": 3578, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 431, "message": null },
+        "chapters": { "status": "pass", "durationMs": 218, "message": null },
+        "pages": { "status": "pass", "durationMs": 290, "message": null },
+        "image": { "status": "pass", "durationMs": 446, "message": null }
+      }
+    }
+  ]
+}

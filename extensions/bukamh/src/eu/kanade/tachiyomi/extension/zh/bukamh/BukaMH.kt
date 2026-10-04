@@ -10,6 +10,7 @@ import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.util.asJsoup
 import keiyoushi.annotation.Source
+import keiyoushi.network.get
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -40,6 +41,14 @@ abstract class BukaMH : HttpSource() {
     override fun latestUpdatesRequest(page: Int) = GET("$baseUrl/custom/update", headers)
 
     override fun latestUpdatesParse(response: Response) = parseMangaList(response)
+
+    override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage {
+        if (page > 1 || query.isBlank()) return MangasPage(emptyList(), false)
+        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
+            .addQueryParameter("key", query)
+            .build()
+        return client.get(url, headers).use(::parseMangaList)
+    }
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
         val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()

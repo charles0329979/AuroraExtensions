@@ -274,14 +274,14 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/bukamh"; Package = "eu.kanade.tachiyomi.extension.zh.bukamh"
-        Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
+        Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.3.apk"
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
         Sources = @(@{ id = 3269491245867055703L; lang = "zh"; name = "布卡漫画"; baseUrl = "https://www.bukamh.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
-        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
+        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.4.apk"
+        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
         Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
     }
     [pscustomobject]@{

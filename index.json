@@ -551,12 +551,12 @@
   {
     "name": "Tachiyomi: Gufeng Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-    "apk": "tachiyomi-zh.gufengmh-v1.6.3.apk",
-    "sha256": "91ef0b832a469055acdd06ee1d7a5ae7cd872aa62ba44f8038abe5c259acb1f3",
+    "apk": "tachiyomi-zh.gufengmh-v1.6.4.apk",
+    "sha256": "9dafd0c64bf215b4b371545bb4bf522dcfb4d2daca1efc6d3a40ce2d3ef2da7d",
     "size": 37650,
     "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 0,
     "sources": [
       {
@@ -855,12 +855,12 @@
   {
     "name": "Tachiyomi: ManhuaBa",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
-    "apk": "tachiyomi-zh.manhuaba-v1.6.2.apk",
-    "sha256": "629b918d3e1ec59cf73afc5d5015e4a32f7d62f90999c2b27c1f9f9ba1595055",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.3.apk",
+    "sha256": "d71212e7c59d47680e8f0985df13aef325d8c0c3e5ba316b8cd379a1ee6428dc",
     "size": 37650,
     "lang": "zh",
-    "code": 2,
-    "version": "1.6.2",
+    "code": 3,
+    "version": "1.6.3",
     "nsfw": 0,
     "sources": [
       {

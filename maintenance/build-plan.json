@@ -98,7 +98,7 @@
       "versionName": "1.4.6",
       "apk": "tachiyomi-zh.dongmanmanhua-v1.4.6.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
@@ -230,7 +230,7 @@
       "versionName": "1.4.3",
       "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
@@ -241,7 +241,7 @@
       "versionName": "1.4.5",
       "apk": "tachiyomi-zh.rumanhua-v1.4.5.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
@@ -307,7 +307,7 @@
       "versionName": "1.6.2",
       "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -329,7 +329,7 @@
       "versionName": "1.6.2",
       "apk": "tachiyomi-zh.didamanhua-v1.6.2.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -351,7 +351,7 @@
       "versionName": "1.6.3",
       "apk": "tachiyomi-zh.manquanzi-v1.6.3.apk",
       "channel": "stable",
-      "state": "quarantined"
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
@@ -460,8 +460,8 @@
       "versionCode": 1,
       "versionName": "1.6.1",
       "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
-      "channel": "testing",
-      "state": "quarantined"
+      "channel": "stable",
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
@@ -471,8 +471,8 @@
       "versionCode": 1,
       "versionName": "1.6.1",
       "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
-      "channel": "testing",
-      "state": "quarantined"
+      "channel": "stable",
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
@@ -482,8 +482,8 @@
       "versionCode": 1,
       "versionName": "1.6.1",
       "apk": "tachiyomi-zh.manhuaba-v1.6.1.apk",
-      "channel": "testing",
-      "state": "quarantined"
+      "channel": "stable",
+      "state": "published"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
@@ -493,8 +493,8 @@
       "versionCode": 1,
       "versionName": "1.6.1",
       "apk": "tachiyomi-zh.talkmanhua-v1.6.1.apk",
-      "channel": "testing",
-      "state": "quarantined"
+      "channel": "stable",
+      "state": "published"
     }
   ]
 }

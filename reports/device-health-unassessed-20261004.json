@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-04T09:57:47.174111Z",
+  "completed": true,
+  "extensionCount": 10,
+  "sourceCount": 10,
+  "summary": {
+    "healthy": 4,
+    "partial": 4,
+    "failed": 2,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
+      "versionCode": 1,
+      "sourceId": 3269491245867055703,
+      "sourceName": "布卡漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1504,
+          "message": null
+        },
+        "search": {
+          "status": "fail",
+          "durationMs": 1268,
+          "message": "Search returned no manga for tested queries"
+        },
+        "details": {
+          "status": "fail",
+          "durationMs": 1869,
+          "message": "Could not parse query ':scope > .text': unexpected token at ' > .text'"
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 308,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 286,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 975,
+          "message": null
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.didamanhua",
+      "versionCode": 2,
+      "sourceId": 3861039501235360034,
+      "sourceName": "滴答漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1184,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 666,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 235,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 516,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 460,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 2000,
+          "message": null
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+      "versionCode": 6,
+      "sourceId": 4222375517460530289,
+      "sourceName": "Dongman Manhua",
+      "language": "zh-Hans",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 7345,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 492,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 555,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 905,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 428,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 222,
+          "message": null
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+      "versionCode": 2,
+      "sourceId": 8452091260243947804,
+      "sourceName": "古风漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 831,
+          "message": null
+        },
+        "search": {
+          "status": "fail",
+          "durationMs": 1722,
+          "message": "Search returned no manga for tested queries"
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 391,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 271,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 611,
+          "message": null
+        },
+        "image": {
+          "status": "fail",
+          "durationMs": 1767,
+          "message": "HTTP error 403"
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+      "versionCode": 1,
+      "sourceId": 2463343216724262794,
+      "sourceName": "漫画吧",
+      "language": "zh",
+      "status": "failed",
+      "stages": {
+        "browse": {
+          "status": "fail",
+          "durationMs": 1106,
+          "message": "Popular list is empty"
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manquanzi",
+      "versionCode": 3,
+      "sourceId": 746250823392626617,
+      "sourceName": "漫圈子",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1524,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 180,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 1029,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 419,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 188,
+          "message": null
+        },
+        "image": {
+          "status": "fail",
+          "durationMs": 30103,
+          "message": "failed to connect to img.9mqz.com\/61.111.129.165 (port 80) from \/192.168.1.139 (port 45890) after 30000ms"
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
+      "versionCode": 5,
+      "sourceId": 392262758488714109,
+      "sourceName": "如漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 1912,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 263,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 308,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 805,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 949,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 201,
+          "message": null
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+      "versionCode": 1,
+      "sourceId": 5728547098385256324,
+      "sourceName": "沐沐漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 481,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 524,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 254,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 194,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 321,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 437,
+          "message": null
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.tuku",
+      "versionCode": 1,
+      "sourceId": 8561993354455553651,
+      "sourceName": "图库漫画",
+      "language": "zh",
+      "status": "failed",
+      "stages": {
+        "browse": {
+          "status": "fail",
+          "durationMs": 2367,
+          "message": "Popular list is empty"
+        }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
+      "versionCode": 3,
+      "sourceId": 4853252437674834413,
+      "sourceName": "漫画客",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 516,
+          "message": null
+        },
+        "search": {
+          "status": "fail",
+          "durationMs": 1056,
+          "message": "Search returned no manga for tested queries"
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 277,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 280,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 332,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 101,
+          "message": null
+        }
+      }
+    }
+  ]
+}

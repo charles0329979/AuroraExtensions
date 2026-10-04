@@ -8,7 +8,8 @@ param(
     [string]$ProbeReport,
     [string]$RepoRoot = "",
     [datetime]$AuditDate = (Get-Date),
-    [string]$OutputPath = ""
+    [string]$OutputPath = "",
+    [switch]$PreserveExistingActive
 )
 
 $ErrorActionPreference = "Stop"
@@ -34,9 +35,15 @@ $previous = Get-ChildItem -LiteralPath (Join-Path $RepoRoot 'catalog') -Filter '
     Where-Object FullName -ne ([IO.Path]::GetFullPath($OutputPath)) |
     Sort-Object Name -Descending |
     Select-Object -First 1
+$auditedKeys = @{}
+foreach ($result in @($report.sources)) {
+    $auditedKeys["$([string]$result.package):$([long]$result.sourceId)"] = $true
+}
 $preserved = if ($previous) {
     @((Get-Content -LiteralPath $previous.FullName -Raw -Encoding UTF8 | ConvertFrom-Json).sources | Where-Object {
-        [string]$_.importState -notlike 'active_*'
+        $isActive = [string]$_.importState -like 'active_*'
+        $key = "$([string]$_.package):$([long]$_.id)"
+        (-not $isActive) -or ($PreserveExistingActive -and -not $auditedKeys.ContainsKey($key))
     })
 } else {
     @()

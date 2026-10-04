@@ -41,7 +41,7 @@
     "name": "Tachiyomi: MangaDex",
     "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
     "apk": "tachiyomi-all.mangadex-v1.4.211.apk",
-    "sha256": "dda5c3b1d42b6e551bdc682ede94a71c19c8099abfa21874bc68d654c2098757",
+    "sha256": "2930a3308474899ce593f4b34ecc7b13df48d9692cf6ffe8a574a9ed6a2ad3d3",
     "size": 103509,
     "lang": "all",
     "code": 211,
@@ -115,12 +115,12 @@
     "name": "Tachiyomi: Rawkuma",
     "pkg": "eu.kanade.tachiyomi.extension.ja.rawkuma",
     "apk": "tachiyomi-ja.rawkuma-v1.4.39.apk",
-    "sha256": "212f270c925ec26c442c0a15891655818d62aa5376daa937cb08520018b2a78c",
+    "sha256": "b0a452b54ffdc8fdd7ca2f32c25c4ebd3138492d9cefa56855fe77a081196748",
     "size": 49938,
     "lang": "ja",
     "code": 39,
     "version": "1.4.39",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 5746834068092446709,
@@ -134,12 +134,12 @@
     "name": "Tachiyomi: Tencent Comics (ac.qq.com)",
     "pkg": "eu.kanade.tachiyomi.extension.zh.tencentcomics",
     "apk": "tachiyomi-zh.tencentcomics-v1.4.10.apk",
-    "sha256": "7e5f471bdcaca80ef662cb5a2cfdc1cab744b57ac2b25abf80ecbd3ac32589b7",
+    "sha256": "3bc23fa9fc92733575d2e93766f2ac3372820c5e7b436b5adf1c7ef759fbbbea",
     "size": 90898,
     "lang": "zh",
     "code": 10,
     "version": "1.4.10",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 6353436350537369479,
@@ -153,12 +153,12 @@
     "name": "Tachiyomi: Sen Manga",
     "pkg": "eu.kanade.tachiyomi.extension.ja.senmanga",
     "apk": "tachiyomi-ja.senmanga-v1.4.8.apk",
-    "sha256": "1b3db401242ca3b8bac9d79eb8bd60244a7d5ac8ed330e254e0e3faf6f36dfc2",
+    "sha256": "8b38e52a16b76cdbcfb4828dcaf59c6dd140b7196744293123d92360ef8d2a65",
     "size": 66322,
     "lang": "ja",
     "code": 8,
     "version": "1.4.8",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 7715542271185249444,
@@ -184,6 +184,25 @@
         "lang": "zh",
         "name": "泰拉记事社",
         "baseUrl": "https://comic.hypergryph.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: Dongman Manhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.dongmanmanhua",
+    "apk": "tachiyomi-zh.dongmanmanhua-v1.4.6.apk",
+    "sha256": "f239237369436fde138e0a9aaa11b621eb84e7724d37aa865ceda072c96f0e6f",
+    "size": 41746,
+    "lang": "zh",
+    "code": 6,
+    "version": "1.4.6",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 4222375517460530289,
+        "lang": "zh-Hans",
+        "name": "Dongman Manhua",
+        "baseUrl": "https://www.dongmanmanhua.cn"
       }
     ]
   },
@@ -228,12 +247,12 @@
   {
     "name": "Tachiyomi: MH1234",
     "pkg": "eu.kanade.tachiyomi.extension.zh.mh1234",
-    "apk": "tachiyomi-zh.mh1234-v1.6.4.apk",
-    "sha256": "97aa2a9323aab3cb9fc7873fe9a8cdc3596edcf13b44a0bf496656f8c0240bcd",
-    "size": 62226,
+    "apk": "tachiyomi-zh.mh1234-v1.6.5.apk",
+    "sha256": "30782e93bce16e0e6e82dc43006bf36600d254946a54e4f250f74d5a3f23d707",
+    "size": 58130,
     "lang": "zh",
-    "code": 4,
-    "version": "1.6.4",
+    "code": 5,
+    "version": "1.6.5",
     "nsfw": 0,
     "sources": [
       {
@@ -248,12 +267,12 @@
     "name": "Tachiyomi: Manwa (Shizuku)",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manwashizuku",
     "apk": "tachiyomi-zh.manwashizuku-v1.6.5.apk",
-    "sha256": "362cc641556a0c6699cd91302365d14d616236791e81e6cc5c54a8dfd5ff0f9d",
+    "sha256": "f06e811cb36554e547c8e83b5e72b8033559e5e8e1542979015b2da11cdd0f6a",
     "size": 94994,
     "lang": "zh",
     "code": 5,
     "version": "1.6.5",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 7453499921408758404,
@@ -285,12 +304,12 @@
   {
     "name": "Tachiyomi: Baozi Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.baozimanhua",
-    "apk": "tachiyomi-zh.baozimanhua-v1.6.29.apk",
-    "sha256": "247785167b73f749decdd24470e0fec1d8a2f6633bebb9daadd48affd8af2c5c",
+    "apk": "tachiyomi-zh.baozimanhua-v1.6.30.apk",
+    "sha256": "dc9a093b2d5fb91058e10fe46253137ff22d658eb156a83d9457e6ed4436d6f8",
     "size": 123666,
     "lang": "zh",
-    "code": 29,
-    "version": "1.6.29",
+    "code": 30,
+    "version": "1.6.30",
     "nsfw": 0,
     "sources": [
       {
@@ -305,12 +324,12 @@
     "name": "Tachiyomi: MyComic",
     "pkg": "eu.kanade.tachiyomi.extension.zh.mycomic",
     "apk": "tachiyomi-zh.mycomic-v1.4.4.apk",
-    "sha256": "e479c043339a980686f7cbbe2b760cb0666a83ffb32f5ac084f0509895e531ac",
+    "sha256": "c340c58fb2bae804c6de7eab01a4233dd65d38a22380f571507ce9baea7c625b",
     "size": 58130,
     "lang": "zh",
     "code": 4,
     "version": "1.4.4",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 9119537447562549661,
@@ -329,7 +348,7 @@
     "lang": "zh",
     "code": 19,
     "version": "1.4.19",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 1471112097704477289,
@@ -342,12 +361,12 @@
   {
     "name": "Tachiyomi: TTKMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.ttkmh",
-    "apk": "tachiyomi-zh.ttkmh-v1.4.1.apk",
-    "sha256": "2f530a68cc439b5aa98886bb302b8763503e470001ac12a64b3719ac178a5453",
+    "apk": "tachiyomi-zh.ttkmh-v1.4.2.apk",
+    "sha256": "2d71757896396041bd573b9362bd7a8f8e369a0183d0d3e1437242cd44eefa59",
     "size": 37650,
     "lang": "zh",
-    "code": 1,
-    "version": "1.4.1",
+    "code": 2,
+    "version": "1.4.2",
     "nsfw": 0,
     "sources": [
       {
@@ -397,6 +416,44 @@
     ]
   },
   {
+    "name": "Tachiyomi: Yumanhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.yumanhua",
+    "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
+    "sha256": "5f1949af957f459e555137c9685e1118a1da00dfc11e04eccbca4c8aa477e383",
+    "size": 37650,
+    "lang": "zh",
+    "code": 3,
+    "version": "1.4.3",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 4853252437674834413,
+        "lang": "zh",
+        "name": "漫画客",
+        "baseUrl": "http://yumanhua.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: Rumanhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.rumanhua",
+    "apk": "tachiyomi-zh.rumanhua-v1.4.5.apk",
+    "sha256": "c306277eb896989bd2258816ef7866f22e5a4e95fb3258bd49c32510b3042bb9",
+    "size": 86802,
+    "lang": "zh",
+    "code": 5,
+    "version": "1.4.5",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 392262758488714109,
+        "lang": "zh",
+        "name": "如漫画",
+        "baseUrl": "https://m.rumanhua2.com"
+      }
+    ]
+  },
+  {
     "name": "Tachiyomi: Manhua Daquan",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
     "apk": "tachiyomi-zh.manhuadaquan-v1.4.1.apk",
@@ -438,12 +495,12 @@
     "name": "Tachiyomi: BiliManga",
     "pkg": "eu.kanade.tachiyomi.extension.zh.bilimanga",
     "apk": "tachiyomi-zh.bilimanga-v1.6.14.apk",
-    "sha256": "bd6c4d08aabc091821ac1b8a896ddf1fc2a5ba6e09afb6589ccf593dd1b8889c",
+    "sha256": "1dc1a21fb23c47c8e3ec2a1c19ab980d9d3b1a134b9fa0db0f359e89fe260f52",
     "size": 70418,
     "lang": "zh",
     "code": 14,
     "version": "1.6.14",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 7289707411592168382,
@@ -457,12 +514,12 @@
     "name": "Tachiyomi: Zerobyw",
     "pkg": "eu.kanade.tachiyomi.extension.zh.zerobyw",
     "apk": "tachiyomi-zh.zerobyw-v1.4.21.apk",
-    "sha256": "2b7ed6d4ab424002250ae4bddf334612943893c2f3ae284a0253b56dae766f78",
+    "sha256": "b0681d8a0fb94e7a4727c0c2e8e59dceca78372d4d080e1876602b883aac6268",
     "size": 74514,
     "lang": "zh",
     "code": 21,
     "version": "1.4.21",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 8743284448117690086,
@@ -492,14 +549,33 @@
     ]
   },
   {
+    "name": "Tachiyomi: Gufeng Manhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+    "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
+    "sha256": "63d9a534fc3b0e3add37f142bea1e1e8d903e3ab008609a5861e82c169a1c800",
+    "size": 37650,
+    "lang": "zh",
+    "code": 2,
+    "version": "1.6.2",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 8452091260243947804,
+        "lang": "zh",
+        "name": "古风漫画",
+        "baseUrl": "https://www.gfmh.app"
+      }
+    ]
+  },
+  {
     "name": "Tachiyomi: Dumanwu",
     "pkg": "eu.kanade.tachiyomi.extension.zh.dumanwu",
-    "apk": "tachiyomi-zh.dumanwu-v1.6.3.apk",
-    "sha256": "9442af7bf4702473089f9838aa83a3fe4ebb618df5bd1bbd57a56492acd53466",
+    "apk": "tachiyomi-zh.dumanwu-v1.6.4.apk",
+    "sha256": "a7d2acacb3253f6ffe091967754c444f004678b1121d1b423b25770d74d6c627",
     "size": 58130,
     "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 0,
     "sources": [
       {
@@ -511,15 +587,34 @@
     ]
   },
   {
-    "name": "Tachiyomi: YiciYuan Manhua",
-    "pkg": "eu.kanade.tachiyomi.extension.zh.ycymh",
-    "apk": "tachiyomi-zh.ycymh-v1.6.2.apk",
-    "sha256": "f977760e7401498da55fdc8e30885488b807f787c05275f05ba75cbd0668450c",
+    "name": "Tachiyomi: Dida Manhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.didamanhua",
+    "apk": "tachiyomi-zh.didamanhua-v1.6.2.apk",
+    "sha256": "a0ba75cb1f2688ac7ccccc7bf8f87bfd9ffc4ba39156264d636f6f2baf4f6c22",
     "size": 37650,
     "lang": "zh",
     "code": 2,
     "version": "1.6.2",
-    "nsfw": 1,
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 3861039501235360034,
+        "lang": "zh",
+        "name": "滴答漫画",
+        "baseUrl": "http://ddmanhua.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: YiciYuan Manhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.ycymh",
+    "apk": "tachiyomi-zh.ycymh-v1.6.2.apk",
+    "sha256": "5fe0265c503477db773540d7e45aa629ae8836bc2e06879c75065ea7f76f71ad",
+    "size": 37650,
+    "lang": "zh",
+    "code": 2,
+    "version": "1.6.2",
+    "nsfw": 0,
     "sources": [
       {
         "id": 8305264819870690508,
@@ -530,15 +625,34 @@
     ]
   },
   {
+    "name": "Tachiyomi: Manquanzi",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.manquanzi",
+    "apk": "tachiyomi-zh.manquanzi-v1.6.3.apk",
+    "sha256": "f345785947c0b22d4fada0848ac3f384273d942e9239ceff96d0166f23104b0b",
+    "size": 33554,
+    "lang": "zh",
+    "code": 3,
+    "version": "1.6.3",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 746250823392626617,
+        "lang": "zh",
+        "name": "漫圈子",
+        "baseUrl": "https://www.9mqz.com"
+      }
+    ]
+  },
+  {
     "name": "Tachiyomi: Manshiduo",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manshiduo",
     "apk": "tachiyomi-zh.manshiduo-v1.6.1.apk",
-    "sha256": "76076dd64d5499df043999025333337c75320dc4f403e9cf9c366b0ba52f4b08",
+    "sha256": "444ab1ea434623b852f65fd0bfd5f2cab92f4f3844419be0f6d446ac4cceedc8",
     "size": 37650,
     "lang": "zh",
     "code": 1,
     "version": "1.6.1",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 8741951640601575191,
@@ -551,13 +665,13 @@
   {
     "name": "Tachiyomi: 250 Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.mh250",
-    "apk": "tachiyomi-zh.mh250-v1.6.1.apk",
-    "sha256": "e2e355855ec8ab44cf498bab1b238f222bd69996b94dfdb2d057482fc548bcbb",
+    "apk": "tachiyomi-zh.mh250-v1.6.2.apk",
+    "sha256": "393b71dad760ea87a4790099b822e7b3c6f0df656cd8b0d1f569de1aa1df846d",
     "size": 33554,
     "lang": "zh",
-    "code": 1,
-    "version": "1.6.1",
-    "nsfw": 1,
+    "code": 2,
+    "version": "1.6.2",
+    "nsfw": 0,
     "sources": [
       {
         "id": 5175541392364239409,
@@ -571,12 +685,12 @@
     "name": "Tachiyomi: BikaBika Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.bikabika",
     "apk": "tachiyomi-zh.bikabika-v1.6.3.apk",
-    "sha256": "d2fd9abb3476b91f215aefae9f85f7642d1d82b5ee9ef21ffd64f1a84923e061",
+    "sha256": "d2464d61e8b65750d1b9e4a24e13aded6e797a302653388015581012658bed48",
     "size": 33554,
     "lang": "zh",
     "code": 3,
     "version": "1.6.3",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 4569191035934535986,
@@ -590,12 +704,12 @@
     "name": "Tachiyomi: DManhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.dmanhua",
     "apk": "tachiyomi-zh.dmanhua-v1.6.1.apk",
-    "sha256": "afe7edac46fdbbc4763559e0558cfd3f6df0df254e6dca4155d1f495f32a43ed",
+    "sha256": "22382aeaa15f36d3c426cf11e00578efa894e384a7b499a2a4445a8f5d5bcafb",
     "size": 33554,
     "lang": "zh",
     "code": 1,
     "version": "1.6.1",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 228875196645121102,
@@ -609,12 +723,12 @@
     "name": "Tachiyomi: 360 Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhua360",
     "apk": "tachiyomi-zh.manhua360-v1.6.5.apk",
-    "sha256": "403798efbe43dfc8c6557d6777dca9daea75403d9a8f0839ef8ad3b9366c8c83",
+    "sha256": "19da9f655e2850fa8b5ea34ad47725932671b06c03700b336961ed022c7bbf95",
     "size": 33554,
     "lang": "zh",
     "code": 5,
     "version": "1.6.5",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 7222744526115460827,
@@ -628,12 +742,12 @@
     "name": "Tachiyomi: 36 Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhua36",
     "apk": "tachiyomi-zh.manhua36-v1.6.2.apk",
-    "sha256": "9b3b35525f84caa29e555c8f4f2de5a54f9ed1efb3679e8db04edae72694eca8",
+    "sha256": "ef788e8e49c8346f32167671d02e0a1fd4cd71f51599ddd6c42831fec39c2654",
     "size": 37650,
     "lang": "zh",
     "code": 2,
     "version": "1.6.2",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 1316982367954300788,
@@ -647,12 +761,12 @@
     "name": "Tachiyomi: Manhua456",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhua456",
     "apk": "tachiyomi-zh.manhua456-v1.6.2.apk",
-    "sha256": "2a28bc650c2e03c4a044fdf9b9664b17259dbb10b7a0c7530111c6e384652d33",
+    "sha256": "8e13059b855e8fa522ad02c7b69f0b6990b96a10b34e7354a1fb6dfdfd08b5d4",
     "size": 33554,
     "lang": "zh",
     "code": 2,
     "version": "1.6.2",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 8681693108341600879,
@@ -666,12 +780,12 @@
     "name": "Tachiyomi: Soman",
     "pkg": "eu.kanade.tachiyomi.extension.zh.soman",
     "apk": "tachiyomi-zh.soman-v1.6.3.apk",
-    "sha256": "ca67010d0d2fc1dc63665cb5c950c241d40a9aaba64f754c077924faad684721",
+    "sha256": "35b81d951f8ac9769c3a497d6c03ab21c837a3c8c8e47f05db1011b26091973d",
     "size": 33554,
     "lang": "zh",
     "code": 3,
     "version": "1.6.3",
-    "nsfw": 1,
+    "nsfw": 0,
     "sources": [
       {
         "id": 4379597560628642163,
@@ -697,6 +811,82 @@
         "lang": "zh",
         "name": "看漫画（免费章节）",
         "baseUrl": "https://m.kanman.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: Tuku",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.tuku",
+    "apk": "tachiyomi-zh.tuku-v1.6.1.apk",
+    "sha256": "ea12130d9fd9231e7dd2287d5c1ec1d0182837b9545303f5fc2d9a4898cf6cd5",
+    "size": 33554,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 8561993354455553651,
+        "lang": "zh",
+        "name": "图库漫画",
+        "baseUrl": "https://www.tuku.cc"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: BukaMH",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.bukamh",
+    "apk": "tachiyomi-zh.bukamh-v1.6.1.apk",
+    "sha256": "f2c91074425d5a57f7637e3e6ebdeb1e129dea7a811f0c8c1cb7e55049f23288",
+    "size": 37650,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 3269491245867055703,
+        "lang": "zh",
+        "name": "布卡漫画",
+        "baseUrl": "https://www.bukamh.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: ManhuaBa",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.1.apk",
+    "sha256": "56988a3a8120993362e4d2fa6c65783e9fc41f0caf85cd68ac1a8710a02a5454",
+    "size": 37650,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 2463343216724262794,
+        "lang": "zh",
+        "name": "漫画吧",
+        "baseUrl": "https://www.manhuaba.com"
+      }
+    ]
+  },
+  {
+    "name": "Tachiyomi: TalkManhua",
+    "pkg": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
+    "apk": "tachiyomi-zh.talkmanhua-v1.6.1.apk",
+    "sha256": "a0383e82b344e675d4100af6bea06d1906fcfa4f215bf2feb5558e51ca504dd2",
+    "size": 37650,
+    "lang": "zh",
+    "code": 1,
+    "version": "1.6.1",
+    "nsfw": 0,
+    "sources": [
+      {
+        "id": 5728547098385256324,
+        "lang": "zh",
+        "name": "沐沐漫画",
+        "baseUrl": "https://www.talkmanhua.com"
       }
     ]
   }

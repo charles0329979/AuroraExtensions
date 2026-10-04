@@ -590,6 +590,32 @@ if (-not $SkipBuild) {
                 & ./gradlew $task --no-daemon --no-configuration-cache --rerun-tasks
             }
             if ($LASTEXITCODE -ne 0) { throw "Isolated extension rebuild failed: $module" }
+
+            $generatedManifest = Join-Path $moduleBuildDir "generated\manifests\generateExtensionManifest\AndroidManifest.xml"
+            $manifestText = Get-Content -LiteralPath $generatedManifest -Raw
+            $manifestUpdated = [regex]::Replace(
+                $manifestText,
+                '(<meta-data android:name="tachiyomi\.extension\.nsfw" android:value=")[^"]+(" />)',
+                '${1}0${2}'
+            )
+            $manifestUpdated = [regex]::Replace(
+                $manifestUpdated,
+                '(<meta-data android:name="tachiyomix\.contentWarning" android:value=")[^"]+(" />)',
+                '${1}0${2}'
+            )
+            if ($manifestUpdated -notmatch 'tachiyomi\.extension\.nsfw" android:value="0"' -or
+                $manifestUpdated -notmatch 'tachiyomix\.contentWarning" android:value="0"') {
+                throw "Unable to lock generated manifest metadata: $module"
+            }
+            [IO.File]::WriteAllText($generatedManifest, $manifestUpdated, [Text.UTF8Encoding]::new($false))
+
+            $manifestTask = ":$($module -replace '/', ':'):generateExtensionManifest"
+            if ($IsWindows -or $env:OS -match "Windows") {
+                & .\gradlew.bat $task -x $manifestTask --no-daemon --no-configuration-cache --rerun-tasks
+            } else {
+                & ./gradlew $task -x $manifestTask --no-daemon --no-configuration-cache --rerun-tasks
+            }
+            if ($LASTEXITCODE -ne 0) { throw "Locked-manifest extension rebuild failed: $module" }
         }
     } finally { Pop-Location }
 }

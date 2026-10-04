@@ -609,11 +609,21 @@ if (-not $SkipBuild) {
             }
             [IO.File]::WriteAllText($generatedManifest, $manifestUpdated, [Text.UTF8Encoding]::new($false))
 
-            $manifestTask = ":$($module -replace '/', ':'):generateExtensionManifest"
+            $manifestGeneratorFile = Join-Path $VendorDir "gradle\build-logic\src\main\kotlin\io\github\keiyoushi\gradle\tasks\GenerateManifestTask.kt"
+            $manifestGeneratorText = Get-Content -LiteralPath $manifestGeneratorFile -Raw
+            $manifestGeneratorUpdated = $manifestGeneratorText.Replace(
+                'out.writeText(',
+                'if (!out.exists()) out.writeText('
+            )
+            if ($manifestGeneratorUpdated -notmatch 'if \(!out\.exists\(\)\) out\.writeText\(') {
+                throw "Unable to lock the manifest generator output: $module"
+            }
+            [IO.File]::WriteAllText($manifestGeneratorFile, $manifestGeneratorUpdated, [Text.UTF8Encoding]::new($false))
+
             if ($IsWindows -or $env:OS -match "Windows") {
-                & .\gradlew.bat $task -x $manifestTask --no-daemon --no-configuration-cache --rerun-tasks
+                & .\gradlew.bat $task --no-daemon --no-configuration-cache --rerun-tasks
             } else {
-                & ./gradlew $task -x $manifestTask --no-daemon --no-configuration-cache --rerun-tasks
+                & ./gradlew $task --no-daemon --no-configuration-cache --rerun-tasks
             }
             if ($LASTEXITCODE -ne 0) { throw "Locked-manifest extension rebuild failed: $module" }
         }

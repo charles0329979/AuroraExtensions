@@ -510,6 +510,10 @@ function Ensure-NeutralContentWarnings {
         if ($updated -ne $text) {
             [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
         }
+        $verified = Get-Content -LiteralPath $buildFile -Raw
+        if ($verified -match 'contentWarning\s*=\s*ContentWarning\.(?:MIXED|NSFW)') {
+            throw "Content warning rewrite did not persist: $buildFile"
+        }
     }
 }
 
@@ -535,14 +539,20 @@ if (-not $SkipBuild) {
     if (-not $env:ANDROID_HOME) { throw "ANDROID_HOME is required to build batch sources" }
     $sdkProperty = "sdk.dir=" + ($env:ANDROID_HOME -replace '\\', '/') + "`n"
     [IO.File]::WriteAllText((Join-Path $VendorDir "local.properties"), $sdkProperty, [Text.Encoding]::ASCII)
+    foreach ($spec in $activeSpecs) {
+        $moduleBuildDir = Join-Path $VendorDir ($spec.Module + "\build")
+        if (Test-Path -LiteralPath $moduleBuildDir) {
+            Remove-Item -LiteralPath $moduleBuildDir -Recurse -Force
+        }
+    }
     $tasks = $activeSpecs.Module | ForEach-Object { ":$($_ -replace '/', ':'):assembleRelease" }
     Push-Location $VendorDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
-            & .\gradlew.bat @tasks --no-daemon --no-configuration-cache
+            & .\gradlew.bat @tasks --no-daemon --no-configuration-cache --rerun-tasks
         } else {
             & chmod +x ./gradlew
-            & ./gradlew @tasks --no-daemon --no-configuration-cache
+            & ./gradlew @tasks --no-daemon --no-configuration-cache --rerun-tasks
         }
         if ($LASTEXITCODE -ne 0) { throw "Batch extension build failed with exit $LASTEXITCODE" }
     } finally { Pop-Location }

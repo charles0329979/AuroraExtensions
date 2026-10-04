@@ -118,6 +118,10 @@ if ($mangaDexBuildUpdated -match 'contentWarning\s*=\s*ContentWarning\.(?:MIXED|
     throw "Unable to neutralize MangaDex content warning"
 }
 [IO.File]::WriteAllText($mangaDexBuildFile, $mangaDexBuildUpdated, [Text.UTF8Encoding]::new($false))
+$mangaDexBuildVerified = Get-Content -LiteralPath $mangaDexBuildFile -Raw
+if ($mangaDexBuildVerified -match 'contentWarning\s*=\s*ContentWarning\.(?:MIXED|NSFW)') {
+    throw "MangaDex content warning rewrite did not persist"
+}
 
 $sdkDir = $env:ANDROID_HOME
 if ($sdkDir) {
@@ -130,14 +134,18 @@ if ($sdkDir) {
 $builtApk = Join-Path $VendorDir $BuiltApkRel
 
 if (-not $SkipBuild) {
+    $mangaDexModuleBuildDir = Join-Path $VendorDir "src\all\mangadex\build"
+    if (Test-Path -LiteralPath $mangaDexModuleBuildDir) {
+        Remove-Item -LiteralPath $mangaDexModuleBuildDir -Recurse -Force
+    }
     Write-Host "==> Building :src:all:mangadex:assembleRelease"
     Push-Location $VendorDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
-            & .\gradlew.bat :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache
+            & .\gradlew.bat :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache --rerun-tasks
         } else {
             & chmod +x ./gradlew
-            & ./gradlew :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache
+            & ./gradlew :src:all:mangadex:assembleRelease --no-daemon --no-configuration-cache --rerun-tasks
         }
         if ($LASTEXITCODE -ne 0) { throw "MangaDex Gradle build failed with exit $LASTEXITCODE" }
     } finally {

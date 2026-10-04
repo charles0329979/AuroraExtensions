@@ -36,6 +36,7 @@ abstract class Gufengmh : HttpSource() {
 
     override fun headersBuilder() = Headers.Builder()
         .add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36")
+        .add("Referer", "$baseUrl/")
 
     override fun popularMangaRequest(page: Int) = GET(baseUrl, headers)
 

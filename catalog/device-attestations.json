@@ -83,17 +83,17 @@
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-      "versionCode": 2,
-      "checkedAt": "2026-09-01",
-      "state": "active_degraded",
-      "validation": "device_degraded",
-      "passedStages": ["browse", "details", "chapters", "pages"],
-      "evidence": "catalogue and detail parsing still resolve 120 chapters and page URLs; the site search backend currently alternates between empty and truncated responses, while both image proxy hosts return Cloudflare HTTP 403 on the connected Android test device and desktop network probes",
+      "versionCode": 3,
+      "checkedAt": "2026-10-04",
+      "state": "active_device_pending",
+      "validation": "device_pending",
+      "passedStages": [],
+      "evidence": "v1.6.3 adds the required Referer for the primary image host; local compilation and direct endpoint checks passed, while signed-device verification is pending",
       "sources": [
         {
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app",
-          "limitation": "site_search_is_intermittently_empty_and_image_proxies_return_cloudflare_403"
+          "limitation": "signed_device_verification_pending"
         }
       ]
     },

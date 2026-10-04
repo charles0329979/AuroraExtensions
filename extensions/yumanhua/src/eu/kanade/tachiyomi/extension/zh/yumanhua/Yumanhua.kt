@@ -1,15 +1,28 @@
 package eu.kanade.tachiyomi.extension.zh.yumanhua
 
 import eu.kanade.tachiyomi.multisrc.mmlook.MMLook
+import eu.kanade.tachiyomi.network.POST
+import eu.kanade.tachiyomi.source.model.FilterList
 import eu.kanade.tachiyomi.source.model.MangasPage
 import eu.kanade.tachiyomi.source.model.SChapter
 import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.util.asJsoup
 import keiyoushi.annotation.Source
+import okhttp3.FormBody
+import okhttp3.Request
 import okhttp3.Response
 
 @Source
 abstract class Yumanhua : MMLook() {
+    override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
+        if (query.isBlank()) return super.searchMangaRequest(page, query, filters)
+        return POST(
+            "http://www.yumanhua.com/s",
+            headers,
+            FormBody.Builder().add("k", query.take(12)).build(),
+        )
+    }
+
     override fun popularMangaParse(response: Response): MangasPage {
         val entries = response.asJsoup().select(".rank-list > li").map { element ->
             val link = element.selectFirst(".simple-info > a")!!

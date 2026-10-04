@@ -507,9 +507,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.yumanhua",
       "displayName": "Tachiyomi: Yumanhua",
       "language": "zh",
-      "versionCode": 3,
-      "versionName": "1.4.3",
-      "apk": "tachiyomi-zh.yumanhua-v1.4.3.apk",
+      "versionCode": 4,
+      "versionName": "1.4.4",
+      "apk": "tachiyomi-zh.yumanhua-v1.4.4.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.yumanhua.png",
       "module": "extensions/yumanhua",
       "implementation": "native",
@@ -525,7 +525,7 @@
           "baseUrl": "http://yumanhua.com"
         }
       ],
-      "statusReason": "Published visibly as unassessed; the legacy HTTP endpoint still requires a current complete device reading-chain check.",
+      "statusReason": "Version 4 routes search through the working www host; signed-device verification is pending.",
       "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
@@ -672,9 +672,9 @@
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
       "displayName": "Tachiyomi: Gufeng Manhua",
       "language": "zh",
-      "versionCode": 2,
-      "versionName": "1.6.2",
-      "apk": "tachiyomi-zh.gufengmh-v1.6.2.apk",
+      "versionCode": 3,
+      "versionName": "1.6.3",
+      "apk": "tachiyomi-zh.gufengmh-v1.6.3.apk",
       "icon": "eu.kanade.tachiyomi.extension.zh.gufengmh.png",
       "module": "extensions/gufengmh",
       "implementation": "native",
@@ -690,7 +690,7 @@
           "baseUrl": "https://www.gfmh.app"
         }
       ],
-      "statusReason": "Published visibly as degraded; reader image hosts remain blocked by HTTP 403 and search is intermittent.",
+      "statusReason": "Version 3 supplies the Referer required by the primary image host; signed-device verification is pending.",
       "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {

@@ -6,7 +6,7 @@ plugins {
 
 keiyoushi {
     name = "Yumanhua"
-    versionCode = 1
+    versionCode = 4
     contentWarning = ContentWarning.SAFE
     libVersion = "1.4"
     theme = "mmlook"

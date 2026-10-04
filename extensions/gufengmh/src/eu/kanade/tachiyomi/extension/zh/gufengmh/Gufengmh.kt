@@ -144,10 +144,9 @@ abstract class Gufengmh : HttpSource() {
     }
 
     private fun looksLikeImage(bytes: ByteArray): Boolean {
-        fun matches(offset: Int, vararg expected: Int): Boolean =
-            bytes.size >= offset + expected.size && expected.indices.all { index ->
-                bytes[offset + index].toInt() and 0xff == expected[index]
-            }
+        fun matches(offset: Int, vararg expected: Int): Boolean = bytes.size >= offset + expected.size && expected.indices.all { index ->
+            bytes[offset + index].toInt() and 0xff == expected[index]
+        }
         return matches(0, 0xff, 0xd8, 0xff) ||
             matches(0, 0x89, 0x50, 0x4e, 0x47) ||
             matches(0, 0x47, 0x49, 0x46, 0x38) ||

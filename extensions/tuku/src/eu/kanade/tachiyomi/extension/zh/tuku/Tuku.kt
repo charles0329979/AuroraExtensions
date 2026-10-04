@@ -43,15 +43,21 @@ abstract class Tuku : HttpSource() {
 
     private fun parseMangaList(response: Response, hasNextPage: Boolean): MangasPage {
         val mangas = response.asJsoup()
-            .select("a[href^=/manga-][title]:has(img)")
+            .select(".rank-item, a[href^=\"/manga-\"][title]:has(img)")
             .mapNotNull(::mangaFromElement)
             .distinctBy(SManga::url)
         return MangasPage(mangas, hasNextPage)
     }
 
     private fun mangaFromElement(element: Element): SManga? {
-        val link = if (element.tagName() == "a") element else element.selectFirst("a[href^=/manga-]") ?: return null
-        val title = link.attr("title").ifBlank { link.text() }
+        val link = if (element.tagName() == "a") {
+            element
+        } else {
+            element.selectFirst("a.rank-card[href^=\"/manga-\"]") ?: return null
+        }
+        val title = link.attr("title").ifBlank {
+            element.selectFirst(".rank-title[title]")?.attr("title").orEmpty()
+        }.ifBlank { link.text() }
         if (title.isBlank()) return null
         return SManga.create().apply {
             this.title = title

@@ -6,7 +6,8 @@
 param(
     [string]$RepoRoot = "",
     [string]$SourceDir = "",
-    [switch]$SkipBuild
+    [switch]$SkipBuild,
+    [string[]]$BuildPackages = @()
 )
 
 $ErrorActionPreference = "Stop"
@@ -267,20 +268,20 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/tuku"; Package = "eu.kanade.tachiyomi.extension.zh.tuku"
-        Name = "Tachiyomi: Tuku"; Apk = "tachiyomi-zh.tuku-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
+        Name = "Tachiyomi: Tuku"; Apk = "tachiyomi-zh.tuku-v1.6.2.apk"
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 8561993354455553651L; lang = "zh"; name = "图库漫画"; baseUrl = "https://www.tuku.cc" })
     }
     [pscustomobject]@{
         Module = "src/zh/bukamh"; Package = "eu.kanade.tachiyomi.extension.zh.bukamh"
-        Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
+        Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.2.apk"
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 3269491245867055703L; lang = "zh"; name = "布卡漫画"; baseUrl = "https://www.bukamh.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
-        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
+        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.2.apk"
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
     }
     [pscustomobject]@{
@@ -321,6 +322,15 @@ $publishedBatchPackages = @($catalogBatch | Where-Object {
     [string]$_.state -eq 'published'
 } | ForEach-Object { [string]$_.package })
 $activeSpecs = @($specs | Where-Object Package -in $publishedBatchPackages)
+$unknownBuildPackages = @($BuildPackages | Where-Object { $_ -notin $activeSpecs.Package })
+if ($unknownBuildPackages.Count -gt 0) {
+    throw "Unknown or unpublished build package(s): $($unknownBuildPackages -join ', ')"
+}
+$buildSpecs = if ($BuildPackages.Count -gt 0) {
+    @($activeSpecs | Where-Object Package -in $BuildPackages)
+} else {
+    $activeSpecs
+}
 
 function Ensure-Checkout {
     if (-not (Test-Path (Join-Path $VendorDir ".git"))) {
@@ -513,7 +523,7 @@ function Ensure-NeutralContentWarnings {
     }
     [IO.File]::WriteAllText($manifestTaskFile, $manifestTaskUpdated, [Text.UTF8Encoding]::new($false))
 
-    foreach ($spec in $activeSpecs) {
+    foreach ($spec in $buildSpecs) {
         $buildFile = Join-Path $VendorDir ($spec.Module + "\build.gradle.kts")
         if (-not (Test-Path -LiteralPath $buildFile)) { continue }
 
@@ -556,13 +566,13 @@ if (-not $SkipBuild) {
     if (-not $env:ANDROID_HOME) { throw "ANDROID_HOME is required to build batch sources" }
     $sdkProperty = "sdk.dir=" + ($env:ANDROID_HOME -replace '\\', '/') + "`n"
     [IO.File]::WriteAllText((Join-Path $VendorDir "local.properties"), $sdkProperty, [Text.Encoding]::ASCII)
-    foreach ($spec in $activeSpecs) {
+    foreach ($spec in $buildSpecs) {
         $moduleBuildDir = Join-Path $VendorDir ($spec.Module + "\build")
         if (Test-Path -LiteralPath $moduleBuildDir) {
             Remove-Item -LiteralPath $moduleBuildDir -Recurse -Force
         }
     }
-    $tasks = $activeSpecs.Module | ForEach-Object { ":$($_ -replace '/', ':'):assembleRelease" }
+    $tasks = $buildSpecs.Module | ForEach-Object { ":$($_ -replace '/', ':'):assembleRelease" }
     Push-Location $VendorDir
     try {
         if ($IsWindows -or $env:OS -match "Windows") {
@@ -648,7 +658,9 @@ $entries = foreach ($spec in $activeSpecs) {
     $assetIconDir = Join-Path $assetRoot "icon"
     $built = Join-Path $VendorDir ($spec.Module + "/build/outputs/apk/release/" + $spec.Apk)
     $dest = Join-Path $assetApkDir $spec.Apk
-    if (Test-Path $built) { Copy-Item -LiteralPath $built -Destination $dest -Force }
+    if ($spec.Package -in $buildSpecs.Package -and (Test-Path $built)) {
+        Copy-Item -LiteralPath $built -Destination $dest -Force
+    }
     elseif (-not (Test-Path $dest)) { throw "Missing batch APK: $built" }
 
     if ($env:AURORA_EXTENSION_SIGNING_KEYSTORE) {

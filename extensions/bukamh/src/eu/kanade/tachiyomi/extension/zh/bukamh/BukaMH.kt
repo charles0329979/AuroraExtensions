@@ -86,7 +86,7 @@ abstract class BukaMH : HttpSource() {
                 ?.text()?.substringAfter("作者：")?.trim()
             genre = rows.firstOrNull { it.text().startsWith("类型：") }
                 ?.select("a")?.joinToString { it.text() }
-            description = info.selectFirst(":scope > .text")?.text()
+            description = info.children().firstOrNull { it.hasClass("text") }?.text()
             status = when {
                 rows.any { it.text().contains("完结") } -> SManga.COMPLETED
                 rows.any { it.text().contains("更新") } -> SManga.ONGOING

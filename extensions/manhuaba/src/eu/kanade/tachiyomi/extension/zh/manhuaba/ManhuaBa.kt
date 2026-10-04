@@ -52,7 +52,7 @@ abstract class ManhuaBa : HttpSource() {
 
     private fun parseMangaList(response: Response): MangasPage {
         val document = response.asJsoup()
-        val mangas = document.select("a.module-poster-item[href]")
+        val mangas = document.select("a.module-poster-item[href], .module-card-item")
             .mapNotNull(::mangaFromElement)
             .distinctBy(SManga::url)
         val hasNext = document.selectFirst("a:matchesOwn(下一页)")
@@ -63,14 +63,19 @@ abstract class ManhuaBa : HttpSource() {
     }
 
     private fun mangaFromElement(element: Element): SManga? {
-        val title = element.attr("title").ifBlank {
-            element.selectFirst(".module-poster-item-title")?.text().orEmpty()
+        val link = if (element.tagName() == "a") {
+            element
+        } else {
+            element.selectFirst("a.module-card-item-poster[href]") ?: return null
+        }
+        val title = link.attr("title").ifBlank {
+            element.selectFirst(".module-poster-item-title, .module-card-item-title a")?.text().orEmpty()
         }
         if (title.isBlank()) return null
-        val image = element.selectFirst("img")
+        val image = link.selectFirst("img")
         return SManga.create().apply {
             this.title = title
-            setUrlWithoutDomain(element.absUrl("href"))
+            setUrlWithoutDomain(link.absUrl("href"))
             thumbnail_url = image?.absUrl("data-original")
                 ?.ifBlank { image.absUrl("data-src") }
                 ?.ifBlank { image.absUrl("src") }

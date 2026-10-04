@@ -146,7 +146,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 5746834068092446709,
@@ -169,7 +169,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 6353436350537369479,
@@ -192,7 +192,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 7715542271185249444,
@@ -237,7 +237,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
+      "state": "published",
       "nsfw": 0,
       "sources": [
         {
@@ -247,8 +247,8 @@
           "baseUrl": "https://www.dongmanmanhua.cn"
         }
       ],
-      "statusReason": "Previous complete device attestation is outside the publishable window and no current full reading-chain recheck is available.",
-      "statusChangedAt": "2026-09-20T14:51:24Z"
+      "statusReason": "Published visibly as unassessed; the previous complete device attestation is outside the current verification window.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.kuaikanmanhua",
@@ -332,7 +332,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 7453499921408758404,
@@ -401,7 +401,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 9119537447562549661,
@@ -424,7 +424,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 1471112097704477289,
@@ -515,7 +515,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
+      "state": "published",
       "nsfw": 0,
       "sources": [
         {
@@ -525,8 +525,8 @@
           "baseUrl": "http://yumanhua.com"
         }
       ],
-      "statusReason": "No current complete device attestation exists and the HTTP source endpoint is not suitable for the stable user catalogue.",
-      "statusChangedAt": "2026-09-20T14:51:24Z"
+      "statusReason": "Published visibly as unassessed; the legacy HTTP endpoint still requires a current complete device reading-chain check.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.rumanhua",
@@ -540,7 +540,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
+      "state": "published",
       "nsfw": 0,
       "sources": [
         {
@@ -550,8 +550,8 @@
           "baseUrl": "https://m.rumanhua2.com"
         }
       ],
-      "statusReason": "Previous complete device attestation is outside the publishable window and the current canonical site probe fails; requires a fresh device recheck.",
-      "statusChangedAt": "2026-09-20T14:51:24Z"
+      "statusReason": "Published visibly as degraded; the current canonical site probe fails and a fresh device recheck is required.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
@@ -612,7 +612,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 7289707411592168382,
@@ -635,7 +635,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 8743284448117690086,
@@ -680,7 +680,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
+      "state": "published",
       "nsfw": 0,
       "sources": [
         {
@@ -690,8 +690,8 @@
           "baseUrl": "https://www.gfmh.app"
         }
       ],
-      "statusReason": "Reader image hosts remain blocked by Cloudflare HTTP 403 and the search backend is intermittent; core reading chain is incomplete.",
-      "statusChangedAt": "2026-09-20T14:51:24Z"
+      "statusReason": "Published visibly as degraded; reader image hosts remain blocked by HTTP 403 and search is intermittent.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",
@@ -728,7 +728,7 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
+      "state": "published",
       "nsfw": 0,
       "sources": [
         {
@@ -738,8 +738,8 @@
           "baseUrl": "http://ddmanhua.com"
         }
       ],
-      "statusReason": "Current device recheck reached browse, details, and 220 chapters but the device disconnected before pages and image verification; keep out of stable until the complete chain is repeated.",
-      "statusChangedAt": "2026-09-20T14:51:22Z"
+      "statusReason": "Published visibly as partially verified; browse, details, and chapters passed, while pages and image still need a complete device recheck.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.ycymh",
@@ -754,7 +754,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 8305264819870690508,
@@ -776,8 +776,8 @@
       "implementation": "native",
       "role": "reading_source",
       "channel": "stable",
-      "state": "quarantined",
-      "nsfw": 1,
+      "state": "published",
+      "nsfw": 0,
       "sources": [
         {
           "id": 746250823392626617,
@@ -786,8 +786,8 @@
           "baseUrl": "https://www.9mqz.com"
         }
       ],
-      "statusReason": "Legacy image host remains unreachable and HTTPS fails negotiation; reader image stage is incomplete.",
-      "statusChangedAt": "2026-09-20T14:51:24Z"
+      "statusReason": "Published visibly as degraded; the legacy image host remains unreachable and the reader image stage is incomplete.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
@@ -802,7 +802,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 8741951640601575191,
@@ -825,7 +825,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 5175541392364239409,
@@ -848,7 +848,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 4569191035934535986,
@@ -871,7 +871,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 228875196645121102,
@@ -894,7 +894,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 7222744526115460827,
@@ -917,7 +917,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 1316982367954300788,
@@ -940,7 +940,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 8681693108341600879,
@@ -963,7 +963,7 @@
       "role": "reading_source",
       "channel": "stable",
       "state": "published",
-      "nsfw": 1,
+      "nsfw": 0,
       "sources": [
         {
           "id": 4379597560628642163,
@@ -1007,9 +1007,9 @@
       "module": "extensions/tuku",
       "implementation": "native",
       "role": "reading_source",
-      "channel": "testing",
-      "state": "quarantined",
-      "nsfw": 1,
+      "channel": "stable",
+      "state": "published",
+      "nsfw": 0,
       "sources": [
         {
           "id": 8561993354455553651,
@@ -1017,7 +1017,9 @@
           "name": "图库漫画",
           "baseUrl": "https://www.tuku.cc"
         }
-      ]
+      ],
+      "statusReason": "Published visibly from the connected-device inventory; current complete reading-chain verification is pending.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
@@ -1030,9 +1032,9 @@
       "module": "extensions/bukamh",
       "implementation": "native",
       "role": "reading_source",
-      "channel": "testing",
-      "state": "quarantined",
-      "nsfw": 1,
+      "channel": "stable",
+      "state": "published",
+      "nsfw": 0,
       "sources": [
         {
           "id": 3269491245867055703,
@@ -1040,7 +1042,9 @@
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com"
         }
-      ]
+      ],
+      "statusReason": "Published visibly from the connected-device inventory; current complete reading-chain verification is pending.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
@@ -1053,9 +1057,9 @@
       "module": "extensions/manhuaba",
       "implementation": "native",
       "role": "reading_source",
-      "channel": "testing",
-      "state": "quarantined",
-      "nsfw": 1,
+      "channel": "stable",
+      "state": "published",
+      "nsfw": 0,
       "sources": [
         {
           "id": 2463343216724262794,
@@ -1063,7 +1067,9 @@
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com"
         }
-      ]
+      ],
+      "statusReason": "Published visibly from the connected-device inventory; current complete reading-chain verification is pending.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.talkmanhua",
@@ -1076,9 +1082,9 @@
       "module": "extensions/talkmanhua",
       "implementation": "native",
       "role": "reading_source",
-      "channel": "testing",
-      "state": "quarantined",
-      "nsfw": 1,
+      "channel": "stable",
+      "state": "published",
+      "nsfw": 0,
       "sources": [
         {
           "id": 5728547098385256324,
@@ -1086,7 +1092,9 @@
           "name": "沐沐漫画",
           "baseUrl": "https://www.talkmanhua.com"
         }
-      ]
+      ],
+      "statusReason": "Published visibly from the connected-device inventory; current complete reading-chain verification is pending.",
+      "statusChangedAt": "2026-10-04T00:00:00Z"
     }
   ]
 }

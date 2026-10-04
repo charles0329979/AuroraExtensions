@@ -40,19 +40,19 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/ja/rawkuma"; Package = "eu.kanade.tachiyomi.extension.ja.rawkuma"
         Name = "Tachiyomi: Rawkuma"; Apk = "tachiyomi-ja.rawkuma-v1.4.39.apk"
-        Lang = "ja"; Code = 39; Version = "1.4.39"; Nsfw = 1
+        Lang = "ja"; Code = 39; Version = "1.4.39"; Nsfw = 0
         Sources = @(@{ id = 5746834068092446709L; lang = "ja"; name = "Rawkuma"; baseUrl = "https://rawkuma.net" })
     }
     [pscustomobject]@{
         Module = "src/zh/tencentcomics"; Package = "eu.kanade.tachiyomi.extension.zh.tencentcomics"
         Name = "Tachiyomi: Tencent Comics (ac.qq.com)"; Apk = "tachiyomi-zh.tencentcomics-v1.4.10.apk"
-        Lang = "zh"; Code = 10; Version = "1.4.10"; Nsfw = 1
+        Lang = "zh"; Code = 10; Version = "1.4.10"; Nsfw = 0
         Sources = @(@{ id = 6353436350537369479L; lang = "zh-Hans"; name = "腾讯动漫"; baseUrl = "https://m.ac.qq.com" })
     }
     [pscustomobject]@{
         Module = "src/ja/senmanga"; Package = "eu.kanade.tachiyomi.extension.ja.senmanga"
         Name = "Tachiyomi: Sen Manga"; Apk = "tachiyomi-ja.senmanga-v1.4.8.apk"
-        Lang = "ja"; Code = 8; Version = "1.4.8"; Nsfw = 1
+        Lang = "ja"; Code = 8; Version = "1.4.8"; Nsfw = 0
         Sources = @(@{ id = 7715542271185249444L; lang = "ja"; name = "Sen Manga"; baseUrl = "https://raw.senmanga.com" })
     }
     [pscustomobject]@{
@@ -88,7 +88,7 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/manwashizuku"; Package = "eu.kanade.tachiyomi.extension.zh.manwashizuku"
         Name = "Tachiyomi: Manwa (Shizuku)"; Apk = "tachiyomi-zh.manwashizuku-v1.6.5.apk"
-        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 1
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 0
         Sources = @(@{ id = 7453499921408758404L; lang = "zh"; name = "漫蛙(雫)"; baseUrl = "https://manwaxu.cc" })
     }
     [pscustomobject]@{
@@ -106,13 +106,13 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/mycomic"; Package = "eu.kanade.tachiyomi.extension.zh.mycomic"
         Name = "Tachiyomi: MyComic"; Apk = "tachiyomi-zh.mycomic-v1.4.4.apk"
-        Lang = "zh"; Code = 4; Version = "1.4.4"; Nsfw = 1
+        Lang = "zh"; Code = 4; Version = "1.4.4"; Nsfw = 0
         Sources = @(@{ id = 9119537447562549661L; lang = "zh"; name = "MyComic"; baseUrl = "https://mycomic.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/boylove"; Package = "eu.kanade.tachiyomi.extension.zh.boylove"
         Name = "Tachiyomi: BoyLove"; Apk = "tachiyomi-zh.boylove-v1.4.19.apk"
-        Lang = "zh"; Code = 19; Version = "1.4.19"; Nsfw = 1
+        Lang = "zh"; Code = 19; Version = "1.4.19"; Nsfw = 0
         Sources = @(@{ id = 1471112097704477289L; lang = "zh"; name = "香香腐宅"; baseUrl = "https://boyloveheaven13.cc" })
     }
     [pscustomobject]@{
@@ -165,13 +165,13 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/bilimanga"; Package = "eu.kanade.tachiyomi.extension.zh.bilimanga"
         Name = "Tachiyomi: BiliManga"; Apk = "tachiyomi-zh.bilimanga-v1.6.14.apk"
-        Lang = "zh"; Code = 14; Version = "1.6.14"; Nsfw = 1
+        Lang = "zh"; Code = 14; Version = "1.6.14"; Nsfw = 0
         Sources = @(@{ id = 7289707411592168382L; lang = "zh"; name = "嗶哩漫畫"; baseUrl = "https://www.bilimanga.net" })
     }
     [pscustomobject]@{
         Module = "src/zh/zerobyw"; Package = "eu.kanade.tachiyomi.extension.zh.zerobyw"
         Name = "Tachiyomi: Zerobyw"; Apk = "tachiyomi-zh.zerobyw-v1.4.21.apk"
-        Lang = "zh"; Code = 21; Version = "1.4.21"; Nsfw = 1
+        Lang = "zh"; Code = 21; Version = "1.4.21"; Nsfw = 0
         Sources = @(@{ id = 8743284448117690086L; lang = "zh"; name = "zero搬运网"; baseUrl = "http://www.zerobyw33.com" })
     }
     [pscustomobject]@{
@@ -202,37 +202,37 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/ycymh"; Package = "eu.kanade.tachiyomi.extension.zh.ycymh"
         Name = "Tachiyomi: YiciYuan Manhua"; Apk = "tachiyomi-zh.ycymh-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 8305264819870690508L; lang = "zh"; name = "追漫画"; baseUrl = "https://www.ycymh.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/manquanzi"; Package = "eu.kanade.tachiyomi.extension.zh.manquanzi"
         Name = "Tachiyomi: Manquanzi"; Apk = "tachiyomi-zh.manquanzi-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 1
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
         Sources = @(@{ id = 746250823392626617L; lang = "zh"; name = "漫圈子"; baseUrl = "https://www.9mqz.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/manshiduo"; Package = "eu.kanade.tachiyomi.extension.zh.manshiduo"
         Name = "Tachiyomi: Manshiduo"; Apk = "tachiyomi-zh.manshiduo-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 8741951640601575191L; lang = "zh"; name = "漫士多"; baseUrl = "https://manshiduo.org" })
     }
     [pscustomobject]@{
         Module = "src/zh/mh250"; Package = "eu.kanade.tachiyomi.extension.zh.mh250"
         Name = "Tachiyomi: 250 Manhua"; Apk = "tachiyomi-zh.mh250-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 5175541392364239409L; lang = "zh"; name = "250漫画"; baseUrl = "http://www.mh250.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/bikabika"; Package = "eu.kanade.tachiyomi.extension.zh.bikabika"
         Name = "Tachiyomi: BikaBika Manhua"; Apk = "tachiyomi-zh.bikabika-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 1
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
         Sources = @(@{ id = 4569191035934535986L; lang = "zh"; name = "BikaBika漫画"; baseUrl = "https://m.bikamanhua.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/dmanhua"; Package = "eu.kanade.tachiyomi.extension.zh.dmanhua"
         Name = "Tachiyomi: DManhua"; Apk = "tachiyomi-zh.dmanhua-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 228875196645121102L; lang = "zh"; name = "可漫画"; baseUrl = "https://www.dmanhua.com" })
     }
     [pscustomobject]@{
@@ -244,49 +244,49 @@ $specs = @(
     [pscustomobject]@{
         Module = "src/zh/manhua360"; Package = "eu.kanade.tachiyomi.extension.zh.manhua360"
         Name = "Tachiyomi: 360 Manhua"; Apk = "tachiyomi-zh.manhua360-v1.6.5.apk"
-        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 1
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 0
         Sources = @(@{ id = 7222744526115460827L; lang = "zh"; name = "360漫画"; baseUrl = "https://www.360mh.cc" })
     }
     [pscustomobject]@{
         Module = "src/zh/manhua36"; Package = "eu.kanade.tachiyomi.extension.zh.manhua36"
         Name = "Tachiyomi: 36 Manhua"; Apk = "tachiyomi-zh.manhua36-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 1316982367954300788L; lang = "zh"; name = "36漫画"; baseUrl = "https://m.36mh.org" })
     }
     [pscustomobject]@{
         Module = "src/zh/manhua456"; Package = "eu.kanade.tachiyomi.extension.zh.manhua456"
         Name = "Tachiyomi: Manhua456"; Apk = "tachiyomi-zh.manhua456-v1.6.2.apk"
-        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 1
+        Lang = "zh"; Code = 2; Version = "1.6.2"; Nsfw = 0
         Sources = @(@{ id = 8681693108341600879L; lang = "zh"; name = "漫画456"; baseUrl = "https://m.manhua456.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/soman"; Package = "eu.kanade.tachiyomi.extension.zh.soman"
         Name = "Tachiyomi: Soman"; Apk = "tachiyomi-zh.soman-v1.6.3.apk"
-        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 1
+        Lang = "zh"; Code = 3; Version = "1.6.3"; Nsfw = 0
         Sources = @(@{ id = 4379597560628642163L; lang = "zh"; name = "搜漫"; baseUrl = "http://www.veryim.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/tuku"; Package = "eu.kanade.tachiyomi.extension.zh.tuku"
         Name = "Tachiyomi: Tuku"; Apk = "tachiyomi-zh.tuku-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 8561993354455553651L; lang = "zh"; name = "图库漫画"; baseUrl = "https://www.tuku.cc" })
     }
     [pscustomobject]@{
         Module = "src/zh/bukamh"; Package = "eu.kanade.tachiyomi.extension.zh.bukamh"
         Name = "Tachiyomi: BukaMH"; Apk = "tachiyomi-zh.bukamh-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 3269491245867055703L; lang = "zh"; name = "布卡漫画"; baseUrl = "https://www.bukamh.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
         Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
     }
     [pscustomobject]@{
         Module = "src/zh/talkmanhua"; Package = "eu.kanade.tachiyomi.extension.zh.talkmanhua"
         Name = "Tachiyomi: TalkManhua"; Apk = "tachiyomi-zh.talkmanhua-v1.6.1.apk"
-        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 1
+        Lang = "zh"; Code = 1; Version = "1.6.1"; Nsfw = 0
         Sources = @(@{ id = 5728547098385256324L; lang = "zh"; name = "沐沐漫画"; baseUrl = "https://www.talkmanhua.com" })
     }
 )

@@ -109,6 +109,16 @@ if (-not $env:ANDROID_HOME -and (Test-Path "D:\AndroidSDK")) {
 
 Ensure-VendorCheckout
 
+$mangaDexBuildFile = Join-Path $VendorDir "src\all\mangadex\build.gradle.kts"
+$mangaDexBuildText = Get-Content -LiteralPath $mangaDexBuildFile -Raw
+$mangaDexBuildUpdated = $mangaDexBuildText.
+    Replace('ContentWarning.MIXED', 'ContentWarning.SAFE').
+    Replace('ContentWarning.NSFW', 'ContentWarning.SAFE')
+if ($mangaDexBuildUpdated -match 'contentWarning\s*=\s*ContentWarning\.(?:MIXED|NSFW)') {
+    throw "Unable to neutralize MangaDex content warning"
+}
+[IO.File]::WriteAllText($mangaDexBuildFile, $mangaDexBuildUpdated, [Text.UTF8Encoding]::new($false))
+
 $sdkDir = $env:ANDROID_HOME
 if ($sdkDir) {
     $lp = Join-Path $VendorDir "local.properties"

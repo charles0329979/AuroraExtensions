@@ -501,11 +501,12 @@ function Ensure-NeutralContentWarnings {
         if (-not (Test-Path -LiteralPath $buildFile)) { continue }
 
         $text = Get-Content -LiteralPath $buildFile -Raw
-        $updated = [regex]::Replace(
-            $text,
-            '(?m)^(\s*contentWarning\s*=\s*)ContentWarning\.(?:MIXED|NSFW)\s*$',
-            '${1}ContentWarning.SAFE'
-        )
+        $updated = $text.
+            Replace('ContentWarning.MIXED', 'ContentWarning.SAFE').
+            Replace('ContentWarning.NSFW', 'ContentWarning.SAFE')
+        if ($updated -match 'contentWarning\s*=\s*ContentWarning\.(?:MIXED|NSFW)') {
+            throw "Unable to neutralize content warning: $buildFile"
+        }
         if ($updated -ne $text) {
             [IO.File]::WriteAllText($buildFile, $updated, [Text.UTF8Encoding]::new($false))
         }

@@ -117,6 +117,17 @@ foreach ($entry in $index) {
         throw "Version name mismatch for $apkName"
     }
 
+    $manifestTree = (& $Aapt2 dump xmltree --file AndroidManifest.xml $apkPath 2>&1) -join "`n"
+    if ($LASTEXITCODE -ne 0) { throw "Unable to read APK manifest for $apkName`n$manifestTree" }
+    foreach ($metadataName in @('tachiyomi.extension.nsfw', 'tachiyomix.contentWarning')) {
+        $metadataPattern = [regex]::Escape($metadataName) +
+            '[\s\S]{0,400}android:value\(0x[0-9a-fA-F]+\)=([0-9]+)'
+        $metadataMatch = [regex]::Match($manifestTree, $metadataPattern)
+        if ($metadataMatch.Success -and [int]$metadataMatch.Groups[1].Value -gt 0) {
+            throw "Non-neutral content metadata in ${apkName}: $metadataName"
+        }
+    }
+
     $iconPath = Join-Path (Join-Path $repoDir "icon") "$($entry.pkg).png"
     if (-not (Test-Path -LiteralPath $iconPath -PathType Leaf)) {
         throw "Missing icon for $($entry.pkg)"

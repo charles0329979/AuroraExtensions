@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T09:23:28Z",
+  "generatedAt": "2026-10-05T09:38:01Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -23,9 +23,9 @@
   },
   "summary": {
     "grades": {
-      "A": 32,
+      "A": 33,
       "B": 8,
-      "C": 1,
+      "C": 0,
       "D": 2,
       "Q": 0,
       "U": 0,
@@ -915,8 +915,8 @@
       "name": "Tachiyomi: ManhuaBa",
       "version": "1.6.5",
       "versionCode": 5,
-      "grade": "C",
-      "state": "verification_pending",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -928,16 +928,21 @@
           "id": 2463343216724262794,
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com",
-          "validation": "device_pending",
-          "limitation": "Version 5 uses current search endpoints plus a title fallback; signed-device verification is pending.",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-05",
-          "evidence": "Version 5 compiled verification is pending.",
-          "passedStages": null
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "Version 5 uses current search endpoints plus a title fallback; signed-device verification is pending."
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",

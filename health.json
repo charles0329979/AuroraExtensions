@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T12:03:00Z",
+  "generatedAt": "2026-10-05T09:06:07Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -9,7 +9,7 @@
   "audit": {
     "snapshot": "healthy-sources-20261004.json",
     "snapshotDate": "2026-10-04",
-    "ageDays": 0,
+    "ageDays": 1,
     "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
@@ -475,8 +475,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
       "name": "Tachiyomi: BukaMH",
-      "version": "1.6.3",
-      "versionCode": 3,
+      "version": "1.6.4",
+      "versionCode": 4,
       "grade": "C",
       "state": "verification_pending",
       "role": "reading_source",
@@ -491,14 +491,14 @@
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com",
           "validation": "device_pending",
-          "limitation": "Version 3 uses the current suspend search path directly; signed-device verification is pending.",
-          "checkedAt": "2026-10-04",
-          "evidence": "Version 3 compiled verification is pending.",
+          "limitation": "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending.",
+          "checkedAt": "2026-10-05",
+          "evidence": "Version 4 compiled verification is pending.",
           "passedStages": null
         }
       ],
       "limitations": [
-        "Version 3 uses the current suspend search path directly; signed-device verification is pending."
+        "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending."
       ]
     },
     {

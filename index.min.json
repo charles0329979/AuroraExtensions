@@ -836,12 +836,12 @@
   {
     "name": "Tachiyomi: BukaMH",
     "pkg": "eu.kanade.tachiyomi.extension.zh.bukamh",
-    "apk": "tachiyomi-zh.bukamh-v1.6.3.apk",
-    "sha256": "c2c407f5bdd7c0b95daff0bb8cff3f0bb7abda9b417f71502992107da6f7f129",
+    "apk": "tachiyomi-zh.bukamh-v1.6.4.apk",
+    "sha256": "dd550f6d08165b5effddbab4b6f4fd907064f64bea455428c484bf4315a5065f",
     "size": 37650,
     "lang": "zh",
-    "code": 3,
-    "version": "1.6.3",
+    "code": 4,
+    "version": "1.6.4",
     "nsfw": 0,
     "sources": [
       {

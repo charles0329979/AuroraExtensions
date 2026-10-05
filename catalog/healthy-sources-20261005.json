@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "auditDate": "2026-10-05",
-  "sourceReport": "device-health-gufeng-v165-20261005.json",
+  "sourceReport": "device-health-chinese-search-recheck-20261005.json",
   "rule": "Publication health considers the signed extension version, real-device reading-chain probe, and confirmed site limitations.",
   "summary": {
     "totalInventory": 136,
@@ -734,7 +734,7 @@
       "coverage": "exact",
       "validation": "device_degraded",
       "limitation": "search=fail:Search returned no manga for tested queries",
-      "checkedAt": "2026-10-03",
+      "checkedAt": "2026-10-05",
       "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
       "passedStages": [
         "browse",
@@ -758,7 +758,7 @@
       "coverage": "exact",
       "validation": "device_degraded",
       "limitation": "search=fail:Search returned no manga for tested queries",
-      "checkedAt": "2026-10-03",
+      "checkedAt": "2026-10-05",
       "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
       "passedStages": [
         "browse",
@@ -1004,7 +1004,7 @@
       "coverage": "exact",
       "validation": "device_degraded",
       "limitation": "search=fail:Search returned no manga for tested queries",
-      "checkedAt": "2026-10-03",
+      "checkedAt": "2026-10-05",
       "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
       "passedStages": [
         "browse",

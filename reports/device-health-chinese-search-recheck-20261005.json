@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-05T10:27:11.495385Z",
+  "completed": true,
+  "extensionCount": 3,
+  "sourceCount": 3,
+  "summary": {
+    "healthy": 0,
+    "partial": 3,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuadaquan",
+      "versionCode": 1,
+      "sourceId": 6318419290037862216,
+      "sourceName": "漫画大全",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 256, "message": null },
+        "search": { "status": "fail", "durationMs": 171, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 61, "message": null },
+        "chapters": { "status": "pass", "durationMs": 63, "message": null },
+        "pages": { "status": "pass", "durationMs": 106, "message": null },
+        "image": { "status": "pass", "durationMs": 1243, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manshiduo",
+      "versionCode": 1,
+      "sourceId": 8741951640601575191,
+      "sourceName": "漫士多",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 1091, "message": null },
+        "search": { "status": "fail", "durationMs": 1585, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 1894, "message": null },
+        "chapters": { "status": "pass", "durationMs": 682, "message": null },
+        "pages": { "status": "pass", "durationMs": 326, "message": null },
+        "image": { "status": "pass", "durationMs": 4580, "message": null }
+      }
+    },
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.ttkmh",
+      "versionCode": 2,
+      "sourceId": 1608992848159007798,
+      "sourceName": "天天看漫画",
+      "language": "zh",
+      "status": "partial",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 1164, "message": null },
+        "search": { "status": "fail", "durationMs": 847, "message": "Search returned no manga for tested queries" },
+        "details": { "status": "pass", "durationMs": 320, "message": null },
+        "chapters": { "status": "pass", "durationMs": 349, "message": null },
+        "pages": { "status": "pass", "durationMs": 320, "message": null },
+        "image": { "status": "pass", "durationMs": 2481, "message": null }
+      }
+    }
+  ]
+}

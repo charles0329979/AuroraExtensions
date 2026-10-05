@@ -551,12 +551,12 @@
   {
     "name": "Tachiyomi: Gufeng Manhua",
     "pkg": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-    "apk": "tachiyomi-zh.gufengmh-v1.6.4.apk",
-    "sha256": "9dafd0c64bf215b4b371545bb4bf522dcfb4d2daca1efc6d3a40ce2d3ef2da7d",
+    "apk": "tachiyomi-zh.gufengmh-v1.6.5.apk",
+    "sha256": "7fabf390062a8bd1609a0aab6a847c1249c90af0f69304586def75f9f3263238",
     "size": 37650,
     "lang": "zh",
-    "code": 4,
-    "version": "1.6.4",
+    "code": 5,
+    "version": "1.6.5",
     "nsfw": 0,
     "sources": [
       {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T09:38:01Z",
+  "generatedAt": "2026-10-05T10:22:12Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -674,8 +674,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
       "name": "Tachiyomi: Gufeng Manhua",
-      "version": "1.6.4",
-      "versionCode": 4,
+      "version": "1.6.5",
+      "versionCode": 5,
       "grade": "B",
       "state": "degraded",
       "role": "reading_source",

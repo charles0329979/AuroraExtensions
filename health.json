@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T10:36:10Z",
+  "generatedAt": "2026-10-05T10:50:32Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -965,7 +965,7 @@
           "baseUrl": "http://www.yueman1.cc",
           "validation": "device_degraded",
           "limitation": "search=fail:Search returned no manga for tested queries",
-          "checkedAt": "2026-10-03",
+          "checkedAt": "2026-10-05",
           "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
           "passedStages": [
             "browse",
@@ -1035,7 +1035,7 @@
           "baseUrl": "https://manshiduo.org",
           "validation": "device_degraded",
           "limitation": "search=fail:Search returned no manga for tested queries",
-          "checkedAt": "2026-10-03",
+          "checkedAt": "2026-10-05",
           "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
           "passedStages": [
             "browse",
@@ -1463,7 +1463,7 @@
           "baseUrl": "https://www.ttkmh.com",
           "validation": "device_degraded",
           "limitation": "search=fail:Search returned no manga for tested queries",
-          "checkedAt": "2026-10-03",
+          "checkedAt": "2026-10-05",
           "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
           "passedStages": [
             "browse",

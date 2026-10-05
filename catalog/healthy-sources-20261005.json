@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "auditDate": "2026-10-05",
-  "sourceReport": "device-health-manhuaba-v165-20261005.json",
-  "rule": "Publication health is derived from the signed extension version and a real-device browse, search, details, chapters, pages, and image probe.",
+  "sourceReport": "device-health-gufeng-v165-20261005.json",
+  "rule": "Publication health considers the signed extension version, real-device reading-chain probe, and confirmed site limitations.",
   "summary": {
     "totalInventory": 136,
     "totalUsable": 136,
@@ -77,12 +77,13 @@
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
       "packageVersionCode": 5,
       "coverage": "exact",
-      "validation": "device_degraded",
-      "limitation": "search=fail:Search returned no manga for tested queries",
-      "checkedAt": "2026-10-04",
-      "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+      "validation": "device_verified_site_degraded",
+      "limitation": "Site search returned zero results for known titles; fallback search matches homepage titles only.",
+      "checkedAt": "2026-10-05",
+      "evidence": "AuroraReader v5 device probe passed all six stages; direct site search checks found the broader search index unavailable.",
       "passedStages": [
         "browse",
+        "search",
         "details",
         "chapters",
         "pages",

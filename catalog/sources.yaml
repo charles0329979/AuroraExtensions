@@ -690,8 +690,8 @@
           "baseUrl": "https://www.gfmh.app"
         }
       ],
-      "statusReason": "Version 3 supplies the Referer required by the primary image host; signed-device verification is pending.",
-      "statusChangedAt": "2026-10-04T00:00:00Z"
+      "statusReason": "Version 5 passed the signed-device reading-chain probe. The site's search index returned zero results for known titles, so fallback search is limited to matching homepage titles.",
+      "statusChangedAt": "2026-10-05T00:00:00Z"
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.dumanwu",

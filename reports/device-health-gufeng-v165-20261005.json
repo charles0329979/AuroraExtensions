@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-05T10:24:40.377437Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
+      "versionCode": 5,
+      "sourceId": 8452091260243947804,
+      "sourceName": "古风漫画",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": { "status": "pass", "durationMs": 2307, "message": null },
+        "search": { "status": "pass", "durationMs": 1223, "message": null },
+        "details": { "status": "pass", "durationMs": 485, "message": null },
+        "chapters": { "status": "pass", "durationMs": 403, "message": null },
+        "pages": { "status": "pass", "durationMs": 605, "message": null },
+        "image": { "status": "pass", "durationMs": 2167, "message": null }
+      }
+    }
+  ]
+}

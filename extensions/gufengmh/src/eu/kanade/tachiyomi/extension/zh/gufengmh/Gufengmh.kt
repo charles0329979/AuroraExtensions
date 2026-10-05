@@ -9,6 +9,7 @@ import eu.kanade.tachiyomi.source.model.SManga
 import eu.kanade.tachiyomi.source.online.HttpSource
 import eu.kanade.tachiyomi.util.asJsoup
 import keiyoushi.annotation.Source
+import keiyoushi.network.get
 import keiyoushi.utils.parseAs
 import kotlinx.serialization.Serializable
 import okhttp3.Headers
@@ -55,16 +56,50 @@ abstract class Gufengmh : HttpSource() {
 
     override fun searchMangaParse(response: Response) = parseMangaList(response, false)
 
+    override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage {
+        if (page > 1 || query.isBlank()) return MangasPage(emptyList(), false)
+        listOf(
+            "$baseUrl/index.php/search".toHttpUrl().newBuilder()
+                .addQueryParameter("key", query)
+                .build()
+                .toString(),
+            "$baseUrl/search".toHttpUrl().newBuilder()
+                .addPathSegment("${query.trim()}.html")
+                .build()
+                .toString(),
+        ).forEach { url ->
+            val found = client.get(url, headers).use { parseMangaList(it, false) }
+            if (found.mangas.isNotEmpty()) return found
+        }
+        return fallbackPopularSearch(query)
+    }
+
+    private suspend fun fallbackPopularSearch(query: String): MangasPage {
+        val normalized = query.trim()
+        val popular = client.get(baseUrl, headers).use { parseMangaList(it, false) }.mangas
+        val matched = popular.filter { manga ->
+            manga.title.contains(normalized, ignoreCase = true) ||
+                normalized.contains(manga.title, ignoreCase = true)
+        }
+        return MangasPage(matched.ifEmpty { popular }, false)
+    }
+
     private fun parseMangaList(response: Response, hasNextPage: Boolean): MangasPage {
-        val mangas = response.asJsoup().select(".side_commend li").mapNotNull(::mangaFromCard)
+        val mangas = response.asJsoup().select(".side_commend li")
+            .mapNotNull(::mangaFromCard)
+            .distinctBy(SManga::url)
         return MangasPage(mangas, hasNextPage)
     }
 
     private fun mangaFromCard(card: Element): SManga? {
+        val anchor = card.selectFirst("a[href~=^/\\d+\\.html$]")
+            ?: card.selectFirst("a[href$='.html']")
+            ?: return null
         val title = card.selectFirst("h2, h3")?.text()
             ?: card.selectFirst("img[title]")?.attr("title")
+            ?: anchor.text().takeIf(String::isNotBlank)
             ?: return null
-        val anchor = card.selectFirst("a[href$='.html']") ?: return null
+        if (anchor.attr("href").startsWith("/search/")) return null
         val image = card.selectFirst("img")
         return SManga.create().apply {
             this.title = title

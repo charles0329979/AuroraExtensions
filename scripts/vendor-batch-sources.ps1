@@ -184,8 +184,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/gufengmh"; Package = "eu.kanade.tachiyomi.extension.zh.gufengmh"
-        Name = "Tachiyomi: Gufeng Manhua"; Apk = "tachiyomi-zh.gufengmh-v1.6.4.apk"
-        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
+        Name = "Tachiyomi: Gufeng Manhua"; Apk = "tachiyomi-zh.gufengmh-v1.6.5.apk"
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 0
         Sources = @(@{ id = 8452091260243947804L; lang = "zh"; name = "古风漫画"; baseUrl = "https://www.gfmh.app" })
     }
     [pscustomobject]@{

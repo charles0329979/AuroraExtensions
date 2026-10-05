@@ -67,12 +67,12 @@
       "resultTiles": 0,
       "importState": "active_device_pending",
       "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
-      "packageVersionCode": 3,
+      "packageVersionCode": 4,
       "coverage": "exact",
       "validation": "device_pending",
-      "limitation": "Version 3 uses the current suspend search path directly; signed-device verification is pending.",
-      "checkedAt": "2026-10-04",
-      "evidence": "Version 3 compiled verification is pending.",
+      "limitation": "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending.",
+      "checkedAt": "2026-10-05",
+      "evidence": "Version 4 compiled verification is pending.",
       "passedStages": []
     },
     {

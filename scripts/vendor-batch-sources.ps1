@@ -280,8 +280,8 @@ $specs = @(
     }
     [pscustomobject]@{
         Module = "src/zh/manhuaba"; Package = "eu.kanade.tachiyomi.extension.zh.manhuaba"
-        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.4.apk"
-        Lang = "zh"; Code = 4; Version = "1.6.4"; Nsfw = 0
+        Name = "Tachiyomi: ManhuaBa"; Apk = "tachiyomi-zh.manhuaba-v1.6.5.apk"
+        Lang = "zh"; Code = 5; Version = "1.6.5"; Nsfw = 0
         Sources = @(@{ id = 2463343216724262794L; lang = "zh"; name = "漫画吧"; baseUrl = "https://www.manhuaba.com" })
     }
     [pscustomobject]@{

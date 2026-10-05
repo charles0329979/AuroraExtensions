@@ -1,20 +1,45 @@
 {
   "schemaVersion": 3,
-  "auditDate": "2026-10-04",
-  "sourceReport": "device-health-gufeng-manhuaba-20261004.json",
+  "auditDate": "2026-10-05",
+  "sourceReport": "device-health-buka-v164-20261005.json",
   "rule": "Publication health is derived from the signed extension version and a real-device browse, search, details, chapters, pages, and image probe.",
   "summary": {
     "totalInventory": 136,
     "totalUsable": 136,
     "supportedManga": 124,
     "unsupportedKind": 12,
-    "activeVerified": 31,
+    "activeVerified": 32,
     "activeDegraded": 14,
-    "activeDevicePending": 2,
+    "activeDevicePending": 1,
     "activeFailed": 2,
     "implementationMissing": 75
   },
   "sources": [
+    {
+      "id": 3269491245867055703,
+      "name": "布卡漫画",
+      "url": "https://www.bukamh.com",
+      "kind": "manga",
+      "health": "可用",
+      "functionalClass": "FullReadingChain",
+      "resultTiles": 0,
+      "importState": "active_verified",
+      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
+      "packageVersionCode": 4,
+      "coverage": "exact",
+      "validation": "device_verified",
+      "limitation": null,
+      "checkedAt": "2026-10-05",
+      "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+      "passedStages": [
+        "browse",
+        "search",
+        "details",
+        "chapters",
+        "pages",
+        "image"
+      ]
+    },
     {
       "id": 8452091260243947804,
       "name": "古风漫画",
@@ -55,24 +80,6 @@
       "limitation": "Version 5 uses current search endpoints plus a title fallback; signed-device verification is pending.",
       "checkedAt": "2026-10-05",
       "evidence": "Version 5 compiled verification is pending.",
-      "passedStages": []
-    },
-    {
-      "id": 3269491245867055703,
-      "name": "布卡漫画",
-      "url": "https://www.bukamh.com",
-      "kind": "manga",
-      "health": "待设备验证",
-      "functionalClass": "DevicePending",
-      "resultTiles": 0,
-      "importState": "active_device_pending",
-      "package": "eu.kanade.tachiyomi.extension.zh.bukamh",
-      "packageVersionCode": 4,
-      "coverage": "exact",
-      "validation": "device_pending",
-      "limitation": "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending.",
-      "checkedAt": "2026-10-05",
-      "evidence": "Version 4 compiled verification is pending.",
       "passedStages": []
     },
     {

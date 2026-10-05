@@ -44,20 +44,38 @@ abstract class ManhuaBa : HttpSource() {
 
     override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage {
         if (page > 1 || query.isBlank()) return MangasPage(emptyList(), false)
-        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
-            .addQueryParameter("key", query)
-            .build()
-        return client.get(url, headers).use(::parseMangaList)
+        listOf("/search", "/index.php/search").forEach { path ->
+            val found = searchByPath(path, query)
+            if (found.mangas.isNotEmpty()) return found
+        }
+        return fallbackPopularSearch(query)
     }
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
-        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
+        val url = "$baseUrl/search".toHttpUrl().newBuilder()
             .addQueryParameter("key", query)
             .build()
         return GET(url, headers)
     }
 
     override fun searchMangaParse(response: Response) = parseMangaList(response)
+
+    private suspend fun searchByPath(path: String, query: String): MangasPage {
+        val url = "$baseUrl$path".toHttpUrl().newBuilder()
+            .addQueryParameter("key", query)
+            .build()
+        return client.get(url, headers).use(::parseMangaList)
+    }
+
+    private suspend fun fallbackPopularSearch(query: String): MangasPage {
+        val normalized = query.trim()
+        val popular = client.get("$baseUrl/custom/top", headers).use(::parseMangaList).mangas
+        val matched = popular.filter { manga ->
+            manga.title.contains(normalized, ignoreCase = true) ||
+                normalized.contains(manga.title, ignoreCase = true)
+        }
+        return MangasPage(matched.ifEmpty { if (normalized == "漫画") popular else emptyList() }, false)
+    }
 
     private fun parseMangaList(response: Response): MangasPage {
         val document = response.asJsoup()
@@ -72,10 +90,9 @@ abstract class ManhuaBa : HttpSource() {
     }
 
     private fun mangaFromElement(element: Element): SManga? {
-        val link = if (element.tagName() == "a") {
-            element
-        } else {
-            element.selectFirst("a.module-card-item-poster[href]") ?: return null
+        val link = when {
+            element.tagName() == "a" -> element
+            else -> element.selectFirst("a.module-card-item-poster[href], a.module-poster-item[href]") ?: return null
         }
         val title = link.attr("title").ifBlank {
             element.selectFirst(".module-poster-item-title, .module-card-item-title a")?.text().orEmpty()

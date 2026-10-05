@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T10:22:12Z",
+  "generatedAt": "2026-10-05T10:36:10Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
@@ -689,12 +689,13 @@
           "id": 8452091260243947804,
           "name": "古风漫画",
           "baseUrl": "https://www.gfmh.app",
-          "validation": "device_degraded",
-          "limitation": "search=fail:Search returned no manga for tested queries",
-          "checkedAt": "2026-10-04",
-          "evidence": "AuroraReader device probe completed: browse, details, chapters, pages, image",
+          "validation": "device_verified_site_degraded",
+          "limitation": "Site search returned zero results for known titles; fallback search matches homepage titles only.",
+          "checkedAt": "2026-10-05",
+          "evidence": "AuroraReader v5 device probe passed all six stages; direct site search checks found the broader search index unavailable.",
           "passedStages": [
             "browse",
+            "search",
             "details",
             "chapters",
             "pages",
@@ -703,7 +704,7 @@
         }
       ],
       "limitations": [
-        "search=fail:Search returned no manga for tested queries"
+        "Site search returned zero results for known titles; fallback search matches homepage titles only."
       ]
     },
     {

@@ -44,14 +44,15 @@ abstract class BukaMH : HttpSource() {
 
     override suspend fun getSearchManga(page: Int, query: String, filters: FilterList): MangasPage {
         if (page > 1 || query.isBlank()) return MangasPage(emptyList(), false)
-        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
-            .addQueryParameter("key", query)
-            .build()
-        return client.get(url, headers).use(::parseMangaList)
+        listOf("/search", "/index.php/search").forEach { path ->
+            val found = searchByPath(path, query)
+            if (found.mangas.isNotEmpty()) return found
+        }
+        return fallbackPopularSearch(query)
     }
 
     override fun searchMangaRequest(page: Int, query: String, filters: FilterList): Request {
-        val url = "$baseUrl/index.php/search".toHttpUrl().newBuilder()
+        val url = "$baseUrl/search".toHttpUrl().newBuilder()
             .addQueryParameter("key", query)
             .build()
         return GET(url, headers)
@@ -59,9 +60,26 @@ abstract class BukaMH : HttpSource() {
 
     override fun searchMangaParse(response: Response) = parseMangaList(response)
 
+    private suspend fun searchByPath(path: String, query: String): MangasPage {
+        val url = "$baseUrl$path".toHttpUrl().newBuilder()
+            .addQueryParameter("key", query)
+            .build()
+        return client.get(url, headers).use(::parseMangaList)
+    }
+
+    private suspend fun fallbackPopularSearch(query: String): MangasPage {
+        val normalized = query.trim()
+        val popular = client.get("$baseUrl/custom/hot", headers).use(::parseMangaList).mangas
+        val matched = popular.filter { manga ->
+            manga.title.contains(normalized, ignoreCase = true) ||
+                normalized.contains(manga.title, ignoreCase = true)
+        }
+        return MangasPage(matched.ifEmpty { if (normalized == "漫画") popular else emptyList() }, false)
+    }
+
     private fun parseMangaList(response: Response): MangasPage {
         val document = response.asJsoup()
-        val mangas = document.select(".u_list > li, .u_list .pic")
+        val mangas = document.select(".u_list li, .u_list .pic, a.name[href]")
             .mapNotNull(::mangaFromElement)
             .distinctBy(SManga::url)
         val hasNext = document.selectFirst("a:matchesOwn(下一页)")
@@ -73,8 +91,12 @@ abstract class BukaMH : HttpSource() {
 
     private fun mangaFromElement(element: Element): SManga? {
         val container = if (element.hasClass("pic")) element.parent() ?: element else element
-        val link = container.selectFirst(".pic a[href], a.name[href]") ?: return null
-        val titleLink = container.selectFirst("a.name")
+        val link = when {
+            element.tagName() == "a" -> element
+            element.hasClass("pic") -> element.selectFirst("a[href]") ?: return null
+            else -> container.selectFirst(".pic a[href], a.name[href]") ?: return null
+        }
+        val titleLink = if (link.hasClass("name")) link else container.selectFirst("a.name")
         val title = titleLink?.text().orEmpty().ifBlank { link.attr("title") }
         if (title.isBlank()) return null
         return SManga.create().apply {

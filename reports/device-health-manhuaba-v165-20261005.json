@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-05T09:24:41.337429Z",
+  "completed": true,
+  "extensionCount": 1,
+  "sourceCount": 1,
+  "summary": {
+    "healthy": 1,
+    "partial": 0,
+    "failed": 0,
+    "login_required": 0
+  },
+  "sources": [
+    {
+      "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
+      "versionCode": 5,
+      "sourceId": 2463343216724262794,
+      "sourceName": "漫画吧",
+      "language": "zh",
+      "status": "healthy",
+      "stages": {
+        "browse": {
+          "status": "pass",
+          "durationMs": 3073,
+          "message": null
+        },
+        "search": {
+          "status": "pass",
+          "durationMs": 2183,
+          "message": null
+        },
+        "details": {
+          "status": "pass",
+          "durationMs": 398,
+          "message": null
+        },
+        "chapters": {
+          "status": "pass",
+          "durationMs": 611,
+          "message": null
+        },
+        "pages": {
+          "status": "pass",
+          "durationMs": 397,
+          "message": null
+        },
+        "image": {
+          "status": "pass",
+          "durationMs": 1188,
+          "message": null
+        }
+      }
+    }
+  ]
+}

@@ -81,7 +81,7 @@ abstract class Gufengmh : HttpSource() {
             manga.title.contains(normalized, ignoreCase = true) ||
                 normalized.contains(manga.title, ignoreCase = true)
         }
-        return MangasPage(matched.ifEmpty { popular }, false)
+        return MangasPage(matched, false)
     }
 
     private fun parseMangaList(response: Response, hasNextPage: Boolean): MangasPage {

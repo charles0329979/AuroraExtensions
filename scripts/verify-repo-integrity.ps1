@@ -169,6 +169,7 @@ $orphanIcons = @(Get-ChildItem -LiteralPath (Join-Path $repoDir "icon") -Filter 
 if ($orphanIcons.Count -gt 0) { throw "Orphan icon(s): $($orphanIcons.Name -join ', ')" }
 
 $healthCatalogPaths = @(Get-ChildItem -LiteralPath (Join-Path $RepoRoot "catalog") -Filter "healthy-sources-*.json" -File -ErrorAction SilentlyContinue | Sort-Object Name)
+$currentHealthCatalogPath = if ($healthCatalogPaths.Count -gt 0) { $healthCatalogPaths[-1].FullName } else { $null }
 foreach ($healthCatalogFile in $healthCatalogPaths) {
     $healthCatalogPath = $healthCatalogFile.FullName
     $healthCatalog = Get-Content -LiteralPath $healthCatalogPath -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -195,7 +196,10 @@ foreach ($healthCatalogFile in $healthCatalogPaths) {
         if ($isActive -and [string]$catalogPackage.state -eq 'published' -and -not $seenPackages.Contains($sourcePackage)) {
             throw "Active healthy source has no indexed APK: $($source.id) $($source.name)"
         }
-        if ([int]$healthCatalog.schemaVersion -ge 3 -and $isActive -and
+        # Historical snapshots describe APK versions that were current when audited.
+        # Only the latest snapshot must match the APK currently being published.
+        if ($healthCatalogPath -eq $currentHealthCatalogPath -and
+            [int]$healthCatalog.schemaVersion -ge 3 -and $isActive -and
             [long]$source.packageVersionCode -ne [long]$catalogPackage.versionCode) {
             throw "Active health evidence version does not match the catalogue: $($source.id) $($source.name)"
         }

@@ -855,12 +855,12 @@
   {
     "name": "Tachiyomi: ManhuaBa",
     "pkg": "eu.kanade.tachiyomi.extension.zh.manhuaba",
-    "apk": "tachiyomi-zh.manhuaba-v1.6.4.apk",
-    "sha256": "6ba5f11a76507b5914ff0601958699007fdc383390a912e23842562234290221",
+    "apk": "tachiyomi-zh.manhuaba-v1.6.5.apk",
+    "sha256": "0629d8fe19846c4b19c22d3cba9582002736c5869e53c5679b54c9dedcc8a6a4",
     "size": 37650,
     "lang": "zh",
-    "code": 4,
-    "version": "1.6.4",
+    "code": 5,
+    "version": "1.6.5",
     "nsfw": 0,
     "sources": [
       {

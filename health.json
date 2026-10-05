@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T09:06:07Z",
+  "generatedAt": "2026-10-05T09:23:28Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
     "indexedPackages": 45
   },
   "audit": {
-    "snapshot": "healthy-sources-20261004.json",
-    "snapshotDate": "2026-10-04",
-    "ageDays": 1,
+    "snapshot": "healthy-sources-20261005.json",
+    "snapshotDate": "2026-10-05",
+    "ageDays": 0,
     "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
@@ -23,9 +23,9 @@
   },
   "summary": {
     "grades": {
-      "A": 31,
+      "A": 32,
       "B": 8,
-      "C": 2,
+      "C": 1,
       "D": 2,
       "Q": 0,
       "U": 0,
@@ -477,8 +477,8 @@
       "name": "Tachiyomi: BukaMH",
       "version": "1.6.4",
       "versionCode": 4,
-      "grade": "C",
-      "state": "verification_pending",
+      "grade": "A",
+      "state": "healthy",
       "role": "reading_source",
       "implementation": "native",
       "channel": "stable",
@@ -490,16 +490,21 @@
           "id": 3269491245867055703,
           "name": "布卡漫画",
           "baseUrl": "https://www.bukamh.com",
-          "validation": "device_pending",
-          "limitation": "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending.",
+          "validation": "device_verified",
+          "limitation": null,
           "checkedAt": "2026-10-05",
-          "evidence": "Version 4 compiled verification is pending.",
-          "passedStages": null
+          "evidence": "AuroraReader device probe completed: browse, search, details, chapters, pages, image",
+          "passedStages": [
+            "browse",
+            "search",
+            "details",
+            "chapters",
+            "pages",
+            "image"
+          ]
         }
       ],
-      "limitations": [
-        "Version 4 uses current search endpoints plus a title fallback; signed-device verification is pending."
-      ]
+      "limitations": []
     },
     {
       "package": "eu.kanade.tachiyomi.extension.zh.creativecomic",
@@ -908,8 +913,8 @@
     {
       "package": "eu.kanade.tachiyomi.extension.zh.manhuaba",
       "name": "Tachiyomi: ManhuaBa",
-      "version": "1.6.4",
-      "versionCode": 4,
+      "version": "1.6.5",
+      "versionCode": 5,
       "grade": "C",
       "state": "verification_pending",
       "role": "reading_source",
@@ -924,14 +929,14 @@
           "name": "漫画吧",
           "baseUrl": "https://www.manhuaba.com",
           "validation": "device_pending",
-          "limitation": "Version 4 uses the current suspend search path directly; signed-device verification is pending.",
-          "checkedAt": "2026-10-04",
-          "evidence": "Version 4 compiled verification is pending.",
+          "limitation": "Version 5 uses current search endpoints plus a title fallback; signed-device verification is pending.",
+          "checkedAt": "2026-10-05",
+          "evidence": "Version 5 compiled verification is pending.",
           "passedStages": null
         }
       ],
       "limitations": [
-        "Version 4 uses the current suspend search path directly; signed-device verification is pending."
+        "Version 5 uses current search endpoints plus a title fallback; signed-device verification is pending."
       ]
     },
     {

@@ -75,7 +75,7 @@
       "resultTiles": 0,
       "importState": "active_degraded",
       "package": "eu.kanade.tachiyomi.extension.zh.gufengmh",
-      "packageVersionCode": 4,
+      "packageVersionCode": 5,
       "coverage": "exact",
       "validation": "device_degraded",
       "limitation": "search=fail:Search returned no manga for tested queries",

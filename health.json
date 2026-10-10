@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T10:50:32Z",
+  "generatedAt": "2026-10-10T14:04:40Z",
   "repository": {
     "name": "Aurora Extensions",
     "signingKeyFingerprint": "ab89095763a830aedbf82018c5179b9be53fa999a11e8cd69f563e0b5486d7e0",
-    "indexedPackages": 45
+    "indexedPackages": 43
   },
   "audit": {
     "snapshot": "healthy-sources-20261005.json",
     "snapshotDate": "2026-10-05",
-    "ageDays": 0,
+    "ageDays": 5,
     "freshness": "current",
     "publishableWithinDays": 14,
     "requiredReadingChain": [
@@ -29,46 +29,14 @@
       "D": 2,
       "Q": 0,
       "U": 0,
-      "N": 2
+      "N": 0
     },
     "assessedPackages": 43,
     "unassessedPackages": 0,
-    "nonReadingPackages": 2,
+    "nonReadingPackages": 0,
     "implementationBacklog": 75
   },
   "packages": [
-    {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorascripted",
-      "name": "Tachiyomi: Aurora Scripted",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "N",
-      "state": "not_applicable",
-      "role": "runtime_container",
-      "implementation": "scripted_runtime",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
-    {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorastub",
-      "name": "Tachiyomi: Aurora Stub",
-      "version": "1.6.1",
-      "versionCode": 1,
-      "grade": "N",
-      "state": "not_applicable",
-      "role": "test_fixture",
-      "implementation": "test_fixture",
-      "channel": "stable",
-      "publicationState": "published",
-      "catalogueFreshness": "current",
-      "auditedSources": 0,
-      "sources": [],
-      "limitations": []
-    },
     {
       "package": "eu.kanade.tachiyomi.extension.all.mangadex",
       "name": "Tachiyomi: MangaDex",

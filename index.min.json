@@ -1,43 +1,5 @@
 [
   {
-    "name": "Tachiyomi: Aurora Stub",
-    "pkg": "eu.kanade.tachiyomi.extension.all.aurorastub",
-    "apk": "tachiyomi-all.aurorastub-v1.6.1.apk",
-    "sha256": "41be33e6416e2185bb9e4fad9540ad6dfbbc2256d672d57c14732b3d2c70d946",
-    "size": 21201,
-    "lang": "all",
-    "code": 1,
-    "version": "1.6.1",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 6249362991217644113,
-        "lang": "en",
-        "name": "Aurora Stub",
-        "baseUrl": "https://example.invalid"
-      }
-    ]
-  },
-  {
-    "name": "Tachiyomi: Aurora Scripted",
-    "pkg": "eu.kanade.tachiyomi.extension.all.aurorascripted",
-    "apk": "tachiyomi-all.aurorascripted-v1.6.1.apk",
-    "sha256": "a1d14b134231e806cfd68bf03037112882418a72214337a65cd051f2a2e3ed61",
-    "size": 632139,
-    "lang": "all",
-    "code": 1,
-    "version": "1.6.1",
-    "nsfw": 0,
-    "sources": [
-      {
-        "id": 1195485303194217759,
-        "lang": "en",
-        "name": "Aurora Scripted",
-        "baseUrl": "https://aurora.scripted.invalid"
-      }
-    ]
-  },
-  {
     "name": "Tachiyomi: MangaDex",
     "pkg": "eu.kanade.tachiyomi.extension.all.mangadex",
     "apk": "tachiyomi-all.mangadex-v1.4.211.apk",

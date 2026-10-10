@@ -60,6 +60,10 @@ $ScriptedSourceLang = "en"
 $ScriptedVersionId = 1
 $ScriptedBaseUrl = "https://aurora.scripted.invalid"
 
+$catalogPackages = @((Get-Content -LiteralPath (Join-Path $RepoRoot 'catalog\sources.yaml') -Raw | ConvertFrom-Json).packages.package)
+$publishStub = $StubPkg -in $catalogPackages
+$publishScripted = $ScriptedPkg -in $catalogPackages
+
 # --- MangaDex (pin 1.4.211) ---
 $MdPkg = "eu.kanade.tachiyomi.extension.all.mangadex"
 $MdVersionName = "1.4.211"
@@ -141,7 +145,7 @@ if ($stubSize -gt 100KB) {
 }
 
 $stubIconPath = Join-Path $IconDir "$StubPkg.png"
-if (-not (Test-Path $stubIconPath)) {
+if ($publishStub -and -not (Test-Path $stubIconPath)) {
     throw "Missing Stub icon: $stubIconPath (place a 128x128 or 512 PNG there)"
 }
 
@@ -184,7 +188,7 @@ $scriptedSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $destScriptedApk)
 Write-Host "==> Scripted APK -> $destScriptedApk ($scriptedSize bytes)"
 
 $scriptedIconPath = Join-Path $IconDir "$ScriptedPkg.png"
-if (-not (Test-Path $scriptedIconPath)) {
+if ($publishScripted -and -not (Test-Path $scriptedIconPath)) {
     throw "Missing Scripted icon: $scriptedIconPath"
 }
 

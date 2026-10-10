@@ -394,7 +394,7 @@ function Ensure-AuroraCustomSources {
         Copy-Item -Path (Join-Path $source "src\*") -Destination $targetSource -Recurse -Force
 
         $iconDir = Join-Path $target "res\mipmap-hdpi"
-        $genericIcon = Join-Path $RepoRoot "repo\icon\eu.kanade.tachiyomi.extension.all.aurorastub.png"
+        $genericIcon = Join-Path $RepoRoot "scripts\assets\generic-source.png"
         New-Item -ItemType Directory -Force -Path $iconDir | Out-Null
         Copy-Item -LiteralPath $genericIcon -Destination (Join-Path $iconDir "ic_launcher.png") -Force
     }

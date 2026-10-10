@@ -380,6 +380,24 @@ if (-not $?) { throw "vendor-batch-sources.ps1 failed" }
 & (Join-Path $PSScriptRoot "sync-source-catalog.ps1") -RepoRoot $RepoRoot -Mode WriteDerived
 if (-not $?) { throw "sync-source-catalog.ps1 failed" }
 
+# Legacy demo APKs are built for developer smoke tests, but must not remain in
+# the user-facing repository when the catalogue no longer publishes them.
+$publishedPackages = @((Get-Content -LiteralPath (Join-Path $RepoDir 'index.min.json') -Raw | ConvertFrom-Json).pkg)
+foreach ($fixture in @(
+    @{ Package = $StubPkg; Apk = $StubApkName },
+    @{ Package = $ScriptedPkg; Apk = $ScriptedApkName }
+)) {
+    if ($fixture.Package -in $publishedPackages) { continue }
+    foreach ($asset in @(
+        (Join-Path $ApkDir $fixture.Apk),
+        (Join-Path $IconDir "$($fixture.Package).png")
+    )) {
+        if (Test-Path -LiteralPath $asset -PathType Leaf) {
+            Remove-Item -LiteralPath $asset -Force
+        }
+    }
+}
+
 Write-Host "==> Done. Repo artefacts in $RepoDir"
 Get-ChildItem $RepoDir -Recurse -File | ForEach-Object {
     "{0}`t{1}" -f $_.Length, $_.FullName.Substring($RepoDir.Length + 1)

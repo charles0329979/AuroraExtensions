@@ -2,28 +2,6 @@
   "schemaVersion": 1,
   "packages": [
     {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorastub",
-      "builder": "standalone",
-      "ownerModule": "extensions/aurorastub",
-      "gradleModule": "extensions/aurorastub",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-all.aurorastub-v1.6.1.apk",
-      "channel": "stable",
-      "state": "published"
-    },
-    {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorascripted",
-      "builder": "standalone",
-      "ownerModule": "extensions/aurorascripted",
-      "gradleModule": "extensions/aurorascripted",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-all.aurorascripted-v1.6.1.apk",
-      "channel": "stable",
-      "state": "published"
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.all.mangadex",
       "builder": "vendor_mangadex",
       "ownerModule": "vendor/extensions-source/src/all/mangadex",

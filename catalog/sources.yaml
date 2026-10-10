@@ -6,52 +6,6 @@
   },
   "packages": [
     {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorastub",
-      "displayName": "Tachiyomi: Aurora Stub",
-      "language": "all",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-all.aurorastub-v1.6.1.apk",
-      "icon": "eu.kanade.tachiyomi.extension.all.aurorastub.png",
-      "module": "extensions/aurorastub",
-      "implementation": "test_fixture",
-      "role": "test_fixture",
-      "channel": "stable",
-      "state": "published",
-      "nsfw": 0,
-      "sources": [
-        {
-          "id": 6249362991217644113,
-          "language": "en",
-          "name": "Aurora Stub",
-          "baseUrl": "https://example.invalid"
-        }
-      ]
-    },
-    {
-      "package": "eu.kanade.tachiyomi.extension.all.aurorascripted",
-      "displayName": "Tachiyomi: Aurora Scripted",
-      "language": "all",
-      "versionCode": 1,
-      "versionName": "1.6.1",
-      "apk": "tachiyomi-all.aurorascripted-v1.6.1.apk",
-      "icon": "eu.kanade.tachiyomi.extension.all.aurorascripted.png",
-      "module": "extensions/aurorascripted",
-      "implementation": "scripted_runtime",
-      "role": "runtime_container",
-      "channel": "stable",
-      "state": "published",
-      "nsfw": 0,
-      "sources": [
-        {
-          "id": 1195485303194217759,
-          "language": "en",
-          "name": "Aurora Scripted",
-          "baseUrl": "https://aurora.scripted.invalid"
-        }
-      ]
-    },
-    {
       "package": "eu.kanade.tachiyomi.extension.all.mangadex",
       "displayName": "Tachiyomi: MangaDex",
       "language": "all",
